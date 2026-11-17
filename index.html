@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>匡子闲的空间</title>
+  <meta name="description" content="匡子闲的空间。签名：※別迷戀哥，哥祇是個傳說※ 后端工程师。微信读书已阅读 2,001 天，读完 108 本。">
+  <meta name="author" content="匡子闲">
+  <meta name="keywords" content="匡子闲,kuangzixian,后端工程师,微信读书,阅读">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="匡子闲的空间">
+  <meta property="og:title" content="匡子闲的空间">
+  <meta property="og:description" content="签名：※別迷戀哥，哥祇是個傳說※ 后端工程师。微信读书已阅读 2,001 天，读完 108 本。">
+  <meta property="og:url" content="https://kuangzixian.pages.dev/">
+  <meta property="og:image" content="https://kuangzixian.pages.dev/images/avatar.jpg">
+  <meta property="og:image:alt" content="匡子闲">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="匡子闲的空间">
+  <meta name="twitter:description" content="签名：※別迷戀哥，哥祇是個傳說※ 后端工程师。微信读书已阅读 2,001 天，读完 108 本。">
+  <meta name="twitter:image" content="https://kuangzixian.pages.dev/images/avatar.jpg">
+  <meta name="twitter:image:alt" content="匡子闲">
+  <meta name="theme-color" content="#4a9de0" id="themeColor">
+  <script>
+  (function () {
+    try {
+      var l = localStorage.getItem("kuang-lang");
+      if (l === "en") document.documentElement.setAttribute("lang", "en");
+      var s = localStorage.getItem("kuang-skin");
+      if (s !== "blue" && s !== "pink" && s !== "night") {
+        s = localStorage.getItem("kuang-theme") === "dark" ? "night" : "blue";
+      }
+      document.documentElement.setAttribute("data-skin", s);
+      document.documentElement.setAttribute("data-theme", s === "night" ? "dark" : "light");
+      var colors = { blue: "#4a9de0", pink: "#ee7aa8", night: "#1b1530" };
+      var m = document.getElementById("themeColor");
+      if (m) m.setAttribute("content", colors[s] || colors.blue);
+    } catch (e) {}
+    var raw = (location.hash || "#home").replace(/^#/, "").split("?")[0];
+    var map = {
+      "": "home", top: "home", home: "home",
+      writing: "writing", logs: "writing", log: "writing",
+      reading: "reading",
+      music: "music",
+      boardgames: "boardgames", games: "boardgames",
+      sites: "sites", links: "sites", friends: "sites",
+      guestbook: "guestbook",
+      profile: "profile", projects: "profile", social: "profile",
+      ideas: "home"
+    };
+    var tab = map[raw] || "home";
+    document.documentElement.setAttribute("data-tab", tab);
+  })();
+  </script>
+  <link rel="icon" href="images/avatar.jpg" type="image/jpeg">
+  <link rel="canonical" href="https://kuangzixian.pages.dev/">
+  <link rel="alternate" type="text/markdown" href="/index.md" title="Markdown homepage">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
+  <link rel="alternate" type="application/json" href="data/profile.json" title="Machine-readable profile">
+  <link rel="alternate" type="application/json" href="data/reading.json" title="WeChat Reading summary">
+  <link rel="alternate" type="application/json" href="data/chats.json" title="ChatGPT conversations">
+  <link rel="alternate" type="application/json" href="data/music.json" title="Music taste summary">
+  <link rel="alternate" type="text/markdown" href="/music.md" title="Markdown music taste">
+  <link rel="alternate" type="application/json" href="data/boardgames.json" title="Board games">
+  <link rel="alternate" type="text/markdown" href="/boardgames.md" title="Markdown board games">
+  <link rel="alternate" type="application/json" href="data/sites.json" title="Recommended sites">
+  <link rel="alternate" type="text/markdown" href="/sites.md" title="Markdown recommended sites">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/qzone.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "匡子闲",
+    "alternateName": "kuangzixian",
+    "url": "https://kuangzixian.pages.dev/",
+    "image": "https://kuangzixian.pages.dev/images/avatar.jpg",
+    "jobTitle": "后端工程师",
+    "description": "后端工程师。空间签名：※別迷戀哥，哥祇是個傳說※ 知乎签名：计科，炒股。",
+    "sameAs": [
+      "https://juejin.cn/user/395479918591006",
+      "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F",
+      "https://github.com/kuangzixian",
+      "https://www.zhihu.com/people/b26a1e7eb8e8f94af557647b44bf1bad"
+    ],
+    "knowsAbout": [
+      {"@type": "Game", "name": "狼人杀", "alternateName": "Werewolf"},
+      {"@type": "Game", "name": "阿瓦隆", "alternateName": "The Resistance: Avalon"},
+      {"@type": "Game", "name": "璀璨宝石", "alternateName": "Splendor"},
+      {"@type": "Game", "name": "Scout"},
+      {"@type": "Game", "name": "炸弹猫", "alternateName": "Exploding Kittens"},
+      {"@type": "Game", "name": "花砖物语", "alternateName": "Azul"},
+      {"@type": "Game", "name": "奶酪大盗", "alternateName": "Cheese Thief"}
+    ]
+  }
+  </script>
+</head>
+  <body class="qzone-body">
+  <a class="skip" href="#main">跳到正文 Skip to content</a>
+  <div class="qz-topbar">
+    <div class="qz-topbar-inner">
+      <a class="qz-top-name" href="#home">匡子闲的空间</a>
+      <span class="qz-top-extra zh">黄钻装扮</span>
+      <span class="qz-top-extra en-only">Yellow Diamond skin</span>
+      <div class="qz-top-actions">
+        <button type="button" id="qzMusic" class="qz-music" aria-expanded="false" aria-controls="qzMusicBox" aria-label="背景音乐">
+          ♫ <span id="qzMusicState" class="qz-music-state"><span class="zh">背景音乐</span><span class="en-only">Music</span></span>
+        </button>
+        <button type="button" id="qzSnowBtn" class="qz-snow-btn" aria-pressed="true" title="飘雪特效" aria-label="飘雪特效：开">❄</button>
+        <div class="qz-desktop-tools">
+          <button type="button" class="qz-skin-dot" data-skin-set="blue" title="晴空蓝" aria-label="晴空蓝皮肤"></button>
+          <button type="button" class="qz-skin-dot" data-skin-set="pink" title="粉钻粉" aria-label="粉钻粉皮肤"></button>
+          <button type="button" class="qz-skin-dot" data-skin-set="night" title="夜空" aria-label="夜空皮肤"></button>
+          <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
+        </div>
+        <div class="qz-menu">
+          <button type="button" id="qzMenuBtn" class="qz-menu-btn" aria-expanded="false" aria-controls="qzMenuPanel">
+            <span class="zh">设置</span><span class="en-only">Menu</span>
+          </button>
+          <div id="qzMenuPanel" class="qz-menu-panel" hidden>
+            <p class="qz-menu-label"><span class="zh">皮肤</span><span class="en-only">Skin</span></p>
+            <div class="qz-skin-row">
+              <button type="button" class="qz-skin-choice" data-skin-set="blue">晴空蓝</button>
+              <button type="button" class="qz-skin-choice" data-skin-set="pink">粉钻粉</button>
+              <button type="button" class="qz-skin-choice" data-skin-set="night">夜空</button>
+            </div>
+            <button type="button" id="qzSnowToggle" class="qz-snow-toggle" aria-pressed="true">
+              <span class="zh">飘雪特效：开</span><span class="en-only">Snow: On</span>
+            </button>
+            <button class="lang-toggle qz-menu-lang" type="button" id="langToggleMobile" aria-label="Switch language">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="qz-banner" id="top">
+    <span class="qz-cloud"></span>
+    <span class="qz-cloud"></span>
+    <span class="qz-cloud"></span>
+    <span class="qz-sun" aria-hidden="true"></span>
+    <span class="qz-sparkle"></span>
+    <span class="qz-sparkle"></span>
+    <span class="qz-sparkle"></span>
+    <span class="qz-sparkle"></span>
+    <div class="qz-banner-text">
+      <h1 class="qz-space-name">匡子闲的空间</h1>
+      <p class="qz-sign zh"><span class="type-target">※別迷戀哥，哥祇是個傳說※</span></p>
+      <p class="qz-sign en-only"><span class="type-target">Don't fall for me, I'm just a legend.</span></p>
+    </div>
+  </div>
+
+  <div class="qz-shell">
+    <aside class="qz-side">
+      <div class="qz-avatar-wrap">
+        <img class="portrait" src="images/avatar.jpg" width="160" height="160" alt="匡子闲的公开即刻头像：江南水乡场景中的个人照片">
+      </div>
+      <p class="qz-nick">匡子闲</p>
+      <p class="qz-handle">kuangzixian</p>
+      <div class="qz-vip">
+            <div class="qz-diamond" aria-hidden="true">
+              <svg viewBox="0 0 86 72" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="qzGold" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#fff4a8"/>
+                    <stop offset="45%" stop-color="#f5c400"/>
+                    <stop offset="100%" stop-color="#c68600"/>
+                  </linearGradient>
+                  <linearGradient id="qzGoldSide" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffe56a"/>
+                    <stop offset="100%" stop-color="#d4a000"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="43,4 82,28 43,68 4,28" fill="url(#qzGold)" stroke="#a87800" stroke-width="1.5"/>
+                <polygon points="43,4 60,28 43,68 26,28" fill="url(#qzGoldSide)" opacity="0.85"/>
+                <polygon points="4,28 43,4 82,28 70,28 43,16 16,28" fill="#fff6c0" opacity="0.55"/>
+                <text x="43" y="42" text-anchor="middle" font-size="13" font-weight="700" font-family="Tahoma, 'Microsoft YaHei', sans-serif" fill="#7a4a00">LV7</text>
+              </svg>
+              <span class="shine"></span>
+            </div>
+        <p class="qz-vip-label" title="空间装扮：自制黄钻徽章 LV7，非腾讯会员标识">
+          <span class="zh">黄钻 LV7 · 装扮</span>
+          <span class="en-only">Yellow Diamond LV7 · costume</span>
+        </p>
+      </div>
+      <div class="qz-tags tags">
+        <span class="tag">后端工程师</span>
+        <span class="tag">IFTech</span>
+        <span class="tag">计科，炒股</span>
+      </div>
+      <div class="qz-counter" id="qzVisitBoard" aria-label="访问量">
+        <div class="qz-counter-kicker">人气 / Popularity</div>
+        <div class="qz-counter-total" id="qzVisitTotal">287</div>
+        <div class="qz-counter-sub">
+          <span><span class="zh">今日</span><span class="en-only">Today</span> <strong id="qzVisitToday">63</strong></span>
+          <span><span class="zh">累计</span><span class="en-only">Total</span></span>
+        </div>
+      </div>
+      <p class="qz-note zh">黄钻标识为网站自制装扮，不是腾讯服务。</p>
+      <p class="qz-note en-only">The Yellow Diamond badge is a homemade costume, not a Tencent product.</p>
+    </aside>
+
+    <div class="qz-content">
+      <nav class="qz-tabs" id="qzTabs" role="tablist" aria-label="空间栏目">
+        <a class="qz-tab" role="tab" data-tab="home" href="#home" aria-controls="home"><span class="zh">主页</span><span class="en-only">Home</span></a>
+        <a class="qz-tab" role="tab" data-tab="writing" href="#writing" aria-controls="writing"><span class="zh">日志</span><span class="en-only">Logs</span></a>
+        <a class="qz-tab" role="tab" data-tab="reading" href="#reading" aria-controls="reading"><span class="zh">读书</span><span class="en-only">Reading</span></a>
+        <a class="qz-tab" role="tab" data-tab="music" href="#music" aria-controls="music"><span class="zh">音乐</span><span class="en-only">Music</span></a>
+        <a class="qz-tab" role="tab" data-tab="boardgames" href="#boardgames" aria-controls="boardgames"><span class="zh">桌游</span><span class="en-only">Games</span></a>
+        <a class="qz-tab" role="tab" data-tab="sites" href="#sites" aria-controls="sites"><span class="zh">推荐网站</span><span class="en-only">Sites</span></a>
+        <a class="qz-tab" role="tab" data-tab="guestbook" href="#guestbook" aria-controls="guestbook"><span class="zh">留言板</span><span class="en-only">Guestbook</span></a>
+        <a class="qz-tab" role="tab" data-tab="profile" href="#profile" aria-controls="profile"><span class="zh">个人档</span><span class="en-only">Profile</span></a>
+      </nav>
+
+      <main id="main" class="qz-main">
+        <div id="home" class="tab-panel" role="tabpanel" aria-labelledby="home">
+      <section class="hero">
+      <div>
+        <p class="kicker">Personal homepage</p>
+        <h1>匡子闲</h1>
+        <p class="handle">kuangzixian</p>
+        <p class="motto zh">※別迷戀哥，哥祇是個傳說※</p>
+        <p class="motto en-only">Don't fall for me, I'm just a legend.</p>
+        <div class="tags">
+          <span class="tag">后端工程师</span>
+          <span class="tag">IFTech</span>
+          <span class="tag">计科，炒股</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-stats" aria-label="阅读概览">
+      <a class="rstat" href="#reading">
+        <p class="rstat-value" data-count="1267" data-format="comma">1,267</p>
+        <p class="rstat-label zh">累计阅读小时</p>
+        <p class="rstat-label en-only">hours read</p>
+      </a>
+      <a class="rstat" href="#reading">
+        <p class="rstat-value" data-count="2001" data-format="comma">2,001</p>
+        <p class="rstat-label zh">有效阅读天数</p>
+        <p class="rstat-label en-only">days with reading</p>
+      </a>
+      <a class="rstat" href="#reading">
+        <p class="rstat-value" data-count="108">108</p>
+        <p class="rstat-label zh">读完的书</p>
+        <p class="rstat-label en-only">books finished</p>
+      </a>
+      <a class="rstat" href="#reading">
+        <p class="rstat-value" data-count="38">38</p>
+        <p class="rstat-label zh">今年读过 · 读完 11 本</p>
+        <p class="rstat-label en-only">opened in 2026 · 11 finished</p>
+      </a>
+    </div>
+
+
+    <section id="ideas">
+      <div class="section-head">
+        <h2>说说</h2>
+        <span class="en">Mood</span>
+      </div>
+      <p class="lede zh">即刻上一些还找得到的句子。知乎上有 71 条回答、1,301 个赞同，但回答列表接口未能打开，这里先不罗列单条内容。</p>
+      <p class="lede en-only">A few lines still visible on Jike. The Zhihu profile shows 71 answers and 1,301 upvotes, but the answers list could not be fetched, so individual answers are not listed here.</p>
+
+      <div class="thoughts">
+        <article class="card thought">
+          <blockquote>相信国运，定投科创。珍爱生命，远离纳指。</blockquote>
+          <footer><span class="zh">即刻 · 检索时显示「9天前」</span><span class="en-only">Jike · shown as “9 days ago” when retrieved</span></footer>
+        </article>
+        <article class="card thought">
+          <blockquote>距离生产端越近，距离消费端就越远。</blockquote>
+          <footer><span class="zh">即刻 · 检索时显示「1月前」</span><span class="en-only">Jike · shown as “1 month ago” when retrieved</span></footer>
+        </article>
+        <article class="card thought">
+          <blockquote>落枕做理疗的时候想，朱自清他爸可能也是因为落枕了🤔</blockquote>
+          <footer><span class="zh">即刻 · 检索时显示「3月前」</span><span class="en-only">Jike · shown as “3 months ago” when retrieved</span></footer>
+        </article>
+        <article class="card thought">
+          <blockquote>就这么听着歌，看完一本小说，无所事事也挺好。要是不感冒就更棒了😏</blockquote>
+          <footer><span class="zh">即刻 · 检索时显示「3月前」</span><span class="en-only">Jike · shown as “3 months ago” when retrieved</span></footer>
+        </article>
+        <article class="card thought">
+          <blockquote>像《东京八平米》里面描述的一样，第一次体验🤓</blockquote>
+          <footer><span class="zh">即刻 · 检索时显示「7天前」</span><span class="en-only">Jike · shown as “7 days ago” when retrieved</span></footer>
+        </article>
+        <article class="card thought">
+          <blockquote>多喝咖啡！</blockquote>
+          <footer><span class="zh">即刻 · 检索时显示「1月前」</span><span class="en-only">Jike · shown as “1 month ago” when retrieved</span></footer>
+        </article>
+      </div>
+    </section>
+
+        </div>
+
+                <section id="reading" class="tab-panel" role="tabpanel">
+      <div class="section-head">
+        <h2>读书</h2>
+        <span class="en">Reading</span>
+      </div>
+      <p class="lede zh">来自微信读书，检索于 2026-11-14（Asia/Shanghai）。统计数字是官方汇总口径，可能包含未出现在公开书架上的记录。下面的书单、封面、划线和想法只展示公开书架里的内容；已排除 9 本私密书和「文章收藏」。</p>
+      <p class="lede en-only">From WeChat Reading, retrieved on 14 Nov 2026 (Asia/Shanghai). Official totals may include records not on the public shelf. Titles, covers and notes below are public-shelf items only; 9 private books and the “Articles” entry are omitted.</p>
+
+      <article class="card year-progress">
+        <h3><span class="zh">2026 年阅读进度</span><span class="en-only">2026 reading progress</span></h3>
+        <p class="tiny zh">截至 2026-11-14。数字来自微信读书官方统计，不是逐日打卡热力图。</p>
+        <p class="tiny en-only">As of 14 Nov 2026. Official WeChat Reading totals, not a day-by-day heatmap.</p>
+        <div class="yp-rows">
+          <div class="yp-row">
+            <div class="yp-label"><span class="zh">这一年已过</span><span class="en-only">Year elapsed</span></div>
+            <div class="progress" role="img" aria-label="318 / 365"><span style="width:87.1%"></span></div>
+            <div class="yp-num">318<span class="yp-den"> / 365</span></div>
+          </div>
+          <div class="yp-row">
+            <div class="yp-label"><span class="zh">其中有阅读</span><span class="en-only">Days with reading</span></div>
+            <div class="progress" role="img" aria-label="227 / 318"><span style="width:71.4%"></span></div>
+            <div class="yp-num">227<span class="yp-den"> / 318</span></div>
+          </div>
+          <div class="yp-row">
+            <div class="yp-label"><span class="zh">11 月</span><span class="en-only">November</span></div>
+            <div class="progress" role="img" aria-label="14 / 14"><span style="width:100%"></span></div>
+            <div class="yp-num">14<span class="yp-den"> / 14</span></div>
+          </div>
+        </div>
+        <p class="tiny zh">今年已读 38 本、读完 11 本；11 月截至检索日，每天都有阅读。</p>
+        <p class="tiny en-only">38 books opened and 11 finished this year. In November, every day up to the retrieval date had reading.</p>
+      </article>
+
+      <aside class="draw-panel" aria-label="随机抽一本书">
+        <button class="play-btn" type="button" id="drawBook">
+          <span class="zh">随机抽一本书</span><span class="en-only">Random book</span>
+        </button>
+        <div class="card draw-result" id="drawResult" hidden></div>
+      </aside>
+
+      <div class="stat-grid">
+        <article class="card">
+          <h3>累计</h3>
+          <div class="kv"><span class="k">总时长</span><span class="v">1,267小时7分钟</span></div>
+<div class="kv"><span class="k">有效阅读</span><span class="v">2,001 天</span></div>
+<div class="kv"><span class="k">读过 / 读完</span><span class="v">376本 / 108本</span></div>
+<div class="kv"><span class="k">笔记</span><span class="v">1545条</span></div>
+<div class="kv"><span class="k">内容偏好</span><span class="v">文学</span></div>
+<div class="kv"><span class="k">时段偏好</span><span class="v">夜晚</span></div>
+        </article>
+        <article class="card">
+          <h3>2026 年</h3>
+          <div class="kv"><span class="k">时长</span><span class="v">232小时6分钟</span></div>
+<div class="kv"><span class="k">有效阅读</span><span class="v">227天</span></div>
+<div class="kv"><span class="k">自然日均</span><span class="v">43分钟</span></div>
+<div class="kv"><span class="k">读过 / 读完</span><span class="v">38本 / 11本</span></div>
+<div class="kv"><span class="k">偏好</span><span class="v">文学</span></div>
+        </article>
+        <article class="card">
+          <h3>2026 年 11 月</h3>
+          <div class="kv"><span class="k">时长</span><span class="v">2小时10分钟</span></div>
+<div class="kv"><span class="k">有效阅读</span><span class="v">14天</span></div>
+<div class="kv"><span class="k">自然日均</span><span class="v">9分钟</span></div>
+<div class="kv"><span class="k">读过 / 读完</span><span class="v">2本 / 1本</span></div>
+<div class="kv"><span class="k">偏好</span><span class="v">个人成长</span></div>
+        </article>
+        <article class="card">
+          <h3>分类偏好</h3>
+          <p class="tiny zh">按时长排列，来自官方阅读统计。</p>
+          <div class="bars"><div class="bar-row"><span>文学</span><div class="bar" aria-hidden="true"><span style="width:62%"></span></div><span>58本</span></div><div class="bar-row"><span>影视原著</span><div class="bar" aria-hidden="true"><span style="width:61%"></span></div><span>36本</span></div><div class="bar-row"><span>计算机</span><div class="bar" aria-hidden="true"><span style="width:42%"></span></div><span>90本</span></div><div class="bar-row"><span>经济理财</span><div class="bar" aria-hidden="true"><span style="width:40%"></span></div><span>53本</span></div><div class="bar-row"><span>社会小说</span><div class="bar" aria-hidden="true"><span style="width:25%"></span></div><span>25本</span></div><div class="bar-row"><span>历史</span><div class="bar" aria-hidden="true"><span style="width:21%"></span></div><span>12本</span></div></div>
+        </article>
+      </div>
+
+      <h3 class="subhead">正在读</h3>
+      <div class="now-grid">
+        <article class="card now-card"><a class="book-link" href="https://weread.qq.com/web/reader/9c832160726e7bfb9c8c02d" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-40795131.jpg" alt="《Go语言底层原理剖析》封面" width="72" height="96" loading="lazy">
+        <div class="now-body">
+          <h3>Go语言底层原理剖析 </h3>
+          <p class="by">郑建勋</p>
+          <div class="progress" aria-label="进度 95%"><span style="width:95%"></span></div>
+          <p class="meta">95% · 最近阅读 2026-10-08</p>
+        </div></a></article><article class="card now-card"><a class="book-link" href="https://weread.qq.com/web/reader/0683235058c1e6068bd239f" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-573926.jpg" alt="《如何高效学习：1年完成麻省理工4年33门课程的整体性学习法》封面" width="72" height="96" loading="lazy">
+        <div class="now-body">
+          <h3>如何高效学习：1年完成麻省理工4年33门课程的整体性学习法 <span class="pill">重读</span></h3>
+          <p class="by">斯科特·扬</p>
+          <div class="progress" aria-label="进度 99%"><span style="width:99%"></span></div>
+          <p class="meta">99% · 最近阅读 2026-10-17</p>
+        </div></a></article><article class="card now-card"><a class="book-link" href="https://weread.qq.com/web/reader/55e32900813ab9640g017ec0" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-3300122247.jpg" alt="《因为独特》封面" width="72" height="96" loading="lazy">
+        <div class="now-body">
+          <h3>因为独特 </h3>
+          <p class="by">李翔</p>
+          <div class="progress" aria-label="进度 15%"><span style="width:15%"></span></div>
+          <p class="meta">15% · 最近阅读 2026-10-28</p>
+        </div></a></article><article class="card now-card"><a class="book-link" href="https://weread.qq.com/web/reader/3fe328b072517cbf3fea609" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-38894783.jpg" alt="《凤凰架构：构建可靠的大型分布式系统》封面" width="72" height="96" loading="lazy">
+        <div class="now-body">
+          <h3>凤凰架构：构建可靠的大型分布式系统 </h3>
+          <p class="by">周志明</p>
+          <div class="progress" aria-label="进度 9%"><span style="width:9%"></span></div>
+          <p class="meta">9% · 最近阅读 2026-10-25</p>
+        </div></a></article><article class="card now-card"><a class="book-link" href="https://weread.qq.com/web/reader/e9032c1071e8af44e90ae59" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-32026436.jpg" alt="《日本蜡烛图技术：古老东方投资术的现代指南》封面" width="72" height="96" loading="lazy">
+        <div class="now-body">
+          <h3>日本蜡烛图技术：古老东方投资术的现代指南 </h3>
+          <p class="by">史蒂夫·尼森</p>
+          <div class="progress" aria-label="进度 6%"><span style="width:6%"></span></div>
+          <p class="meta">6% · 最近阅读 2026-10-20</p>
+        </div></a></article><article class="card now-card"><a class="book-link" href="https://weread.qq.com/web/reader/657323107171e29b657dacd" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-24240795.jpg" alt="《撒旦探戈（2025诺奖得主作品）》封面" width="72" height="96" loading="lazy">
+        <div class="now-body">
+          <h3>撒旦探戈（2025诺奖得主作品） </h3>
+          <p class="by">[匈牙利]克拉斯诺霍尔卡伊·拉斯洛</p>
+          <div class="progress" aria-label="进度 5%"><span style="width:5%"></span></div>
+          <p class="meta">5% · 最近阅读 2026-10-25</p>
+        </div></a></article>
+      </div>
+
+      <h3 class="subhead">读完</h3>
+      <p class="lede zh">官方统计累计读完 108 本、今年 11 本。这里只列出公开书架上能核对到读完时间的书。</p>
+      <p class="lede en-only">Official totals: 108 finished in all, 11 this year. Only public-shelf titles with a finish date are listed here.</p>
+      <div class="fin-grid">
+        <article class="card fin-card"><a class="book-link" href="https://weread.qq.com/web/reader/c4332ab0813ab7f5cg017038" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-3300063647.jpg" alt="《东京八平米》封面" width="72" height="96" loading="lazy">
+        <div>
+          <h3>东京八平米</h3>
+          <p class="by">吉井忍</p>
+          <p class="meta">读完于 2026-10-20</p>
+        </div></a></article><article class="card fin-card"><a class="book-link" href="https://weread.qq.com/web/reader/0683235058c1e6068bd239f" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-573926.jpg" alt="《如何高效学习：1年完成麻省理工4年33门课程的整体性学习法》封面" width="72" height="96" loading="lazy">
+        <div>
+          <h3>如何高效学习：1年完成麻省理工4年33门课程的整体性学习法</h3>
+          <p class="by">斯科特·扬</p>
+          <p class="meta">读完于 2023-06-03 · 后来又翻到 99%</p>
+        </div></a></article><article class="card fin-card"><a class="book-link" href="https://weread.qq.com/web/reader/f343248072895ed9f34f408" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-42557145.jpg" alt="《Go语言精进之路：从新手到高手的编程思想、方法和技巧1》封面" width="72" height="96" loading="lazy">
+        <div>
+          <h3>Go语言精进之路：从新手到高手的编程思想、方法和技巧1</h3>
+          <p class="by">白明</p>
+          <p class="meta">读完于 2022-05-11 · 后来又翻到 79%</p>
+        </div></a></article><article class="card fin-card"><a class="book-link" href="https://weread.qq.com/web/reader/cc0329f0720867eecc0f00a" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-34105326.jpg" alt="《Head First Go语言程序设计》封面" width="72" height="96" loading="lazy">
+        <div>
+          <h3>Head First Go语言程序设计</h3>
+          <p class="by">杰伊·麦克格瑞恩</p>
+          <p class="meta">读完于 2021-11-26 · 后来又翻到 86%</p>
+        </div></a></article>
+      </div>
+
+      <h3 class="subhead">几本简介</h3>
+      <p class="lede zh">简介摘自微信读书的书籍介绍，略作截取，不是我自己写的书评。</p>
+      <p class="lede en-only">Short blurbs are taken from WeChat Reading’s official book introductions, not personal reviews.</p>
+      <div class="feat-grid">
+        <article class="card feat-card"><a class="book-link" href="https://weread.qq.com/web/reader/c4332ab0813ab7f5cg017038" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-3300063647.jpg" alt="《东京八平米》封面" width="80" height="108" loading="lazy">
+        <div>
+          <h3>东京八平米</h3>
+          <p class="by">吉井忍</p>
+          <p class="intro">日籍华语作家吉井忍的全新散文集，是其对在东京亲手建立起另一种日常的记录。八平米在日本被称为“四畳半”，即只有四个半榻榻米大小的房间，租金便宜。</p>
+        </div></a></article><article class="card feat-card"><a class="book-link" href="https://weread.qq.com/web/reader/0683235058c1e6068bd239f" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-573926.jpg" alt="《如何高效学习：1年完成麻省理工4年33门课程的整体性学习法》封面" width="80" height="108" loading="lazy">
+        <div>
+          <h3>如何高效学习：1年完成麻省理工4年33门课程的整体性学习法</h3>
+          <p class="by">斯科特·扬</p>
+          <p class="intro">一位因为快速学习而成名的神奇小子，他应用自己发明的学习方法，完成了10天搞定线性代数，1年学习4年MIT课程的“不可能任务”。</p>
+        </div></a></article><article class="card feat-card"><a class="book-link" href="https://weread.qq.com/web/reader/f343248072895ed9f34f408" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-42557145.jpg" alt="《Go语言精进之路：从新手到高手的编程思想、方法和技巧1》封面" width="80" height="108" loading="lazy">
+        <div>
+          <h3>Go语言精进之路：从新手到高手的编程思想、方法和技巧1</h3>
+          <p class="by">白明</p>
+          <p class="intro">Go入门容易，精进难，如何才能像Go开发团队那样写出符合Go思维和语言惯例的高质量代码呢？本书将从编程思维和实践技巧2个维度给出答案，帮助你在Go进阶的路上事半功倍。</p>
+        </div></a></article><article class="card feat-card"><a class="book-link" href="https://weread.qq.com/web/reader/55e32900813ab9640g017ec0" rel="noopener noreferrer">
+        <img class="cover" src="images/books/b-3300122247.jpg" alt="《因为独特》封面" width="80" height="108" loading="lazy">
+        <div>
+          <h3>因为独特</h3>
+          <p class="by">李翔</p>
+          <p class="intro">“详谈”系列是知名商业记者李翔撰写的系列人物访谈，“详谈·商业现场”是对仍在一线的企业家的采访，带着来自现场的粗粝与力量、残酷与希望，是一部以人为单位的价值创造史。</p>
+        </div></a></article>
+      </div>
+
+      <h3 class="subhead">笔记与划线</h3>
+      <p class="lede zh">从公开书架里笔记较多的书中选了一部分自己的划线和想法。笔记总数按「想法 + 划线 + 书签」计算；这里不展示书签内容，也不收录他人书评。</p>
+      <p class="lede en-only">A selection of my own highlights and thoughts from public-shelf books with the most notes. Totals use thoughts + underlines + bookmarks; bookmark text and third-party reviews are not included.</p>
+      <div class="quote-stage">
+        <div class="quote-toolbar">
+          <p class="tiny zh">先看一句精选划线或想法。</p>
+          <p class="tiny en-only">A curated highlight or thought.</p>
+          <button class="play-btn" type="button" id="quoteNext">
+            <span class="zh">换一句</span><span class="en-only">Another line</span>
+          </button>
+        </div>
+        <article class="card quote-card" id="quoteCard" aria-live="polite"></article>
+      </div>
+      <div class="note-stack">
+        <details class="card note-book" open><summary>东京八平米 <span class="note-count">9 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-3300063647.jpg" alt="《东京八平米》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-hl"><span class="pill">划线</span><blockquote>我想把这本书悄悄地献给将要创建新生活的人。你的“小”不成问题，因为外面的世界足够大。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>只要能够保持基本的卫生条件（包括采光和通风）以及健康需求（包括噪音小和空气质量好），房间的大小或装修好坏和你的幸福指数没有太大的关系，更重要的反而是人际关系和你的行动力。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>若在北京或台北，我肯定会骂他一句“看什么看！”但这句用中文讲起来才爽，而日语只能说成“你看我干吗呢（何見てるんですか）”，有点长，语气笨拙</blockquote></li></ul></div></details><details class="card note-book"><summary>Go语言精进之路：从新手到高手的编程思想、方法和技巧1 <span class="note-count">62 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-42557145.jpg" alt="《Go语言精进之路：从新手到高手的编程思想、方法和技巧1》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-hl"><span class="pill">划线</span><blockquote>Rob Pike的观点：“并发关乎结构，并行关乎执行。”</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>defer让进行资源释放（如文件描述符、锁）的过程变得优雅很多，也不易出错。但在性能敏感的程序中，defer带来的性能负担也是Gopher必须知晓和权衡的。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>当使用close函数关闭channel时，所有阻塞到该channel上的goroutine都会得到通知</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>append、cap、len、make、new等内置函数是不可以直接作为deferred函数的，而close、copy、delete、print、recover等可以。</blockquote></li></ul></div></details><details class="card note-book"><summary>Head First Go语言程序设计 <span class="note-count">59 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-34105326.jpg" alt="《Head First Go语言程序设计》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-thought"><span class="pill">想法</span><blockquote>可以在一个单独的函数中放置一个recover调用，并在引发panic的代码之前使用defer调用该函数。</blockquote><p>妙哇</p></li><li class="note-hl"><span class="pill">划线</span><blockquote>调用panic应该留给“不可能的”情况：错误表示的是程序中的错误，而不是用户方面的错误。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>“defer”关键字确保函数调用发生，即使调用函数提前退出了。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>在同一个包中定义多个同名的函数不被允许，即使它们有不同类型的参数。你可以定义多个相同名字的方法，只要它们分别属于不同的类型。</blockquote></li></ul></div></details><details class="card note-book"><summary>Go语言底层原理剖析 <span class="note-count">48 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-40795131.jpg" alt="《Go语言底层原理剖析》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-thought"><span class="pill">想法</span><blockquote>但是在Go语言使用range时，变量k是一个堆上地址不变的对象，该地址存储的值会随着range遍历而发生变化。如果此时我们将变量k的地址放入协程save，以提供并发存储而不堵塞程序，那么最后的结果可能是后面的数据覆盖前面的数据，同时导致一些数据不被存储，并且每一次执行完存储的数据也是不明确的。</blockquote><p>Go 1.22解决了这个问题，现在直接调用没问题的</p></li><li class="note-hl"><span class="pill">划线</span><blockquote>如果你不知道如何退出一个协程，那么就不要创建这个协程</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>如果有一个长期运行的Goroutine并定期有defer和recover调用，则程序内存的使用量可能无限增长。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>context在很大程度上利用了通道在close时会通知所有监听它的协程这一特性来实现</blockquote></li></ul></div></details><details class="card note-book"><summary>亲密关系（第6版） <span class="note-count">56 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-3300014124.jpg" alt="《亲密关系（第6版）》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-thought"><span class="pill">想法</span><blockquote>另一个复杂之处是个体的CLalt是他/她主观认识的产物，从而存在一系列因素影响着人们对它的认知。自尊就是影响因素之一。如果人们不喜欢自己，他们会怀疑自己的吸引力，从而会低估自己与其他替代伴侣相处的前景</blockquote><p>这也是为什么一些优秀的女生会被PUA</p></li><li class="note-hl"><span class="pill">划线</span><blockquote>理想容易黯淡，魔咒会被打破，戏法终将被戳穿……浪漫随着时间推移而逐渐消逝，因为熟悉能使人更现实、毫无保留地审视对方；晌午刺眼的阳光最终驱散了月亮留下的迷人光晕</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>女性的友谊是“面对面”(face-to-face)，而男性的友谊则是“肩并肩”(side-by-side)。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>失去通常比同等程度的得到对我们的影响更大；我们喜欢得到，但我们更憎恨失去</blockquote></li></ul></div></details><details class="card note-book"><summary>高性能MySQL（第4版） <span class="note-count">31 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-3300035678.jpg" alt="《高性能MySQL（第4版）》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-hl"><span class="pill">划线</span><blockquote>InnoDB默认为REPEATABLE READ隔离级别，并且通过间隙锁(next-key locking)策略来防止在这个隔离级别上的幻读：InnoDB不只锁定在查询中涉及的行，还会对索引结构中的间隙进行锁定，以防止幻行被插入。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>MVCC的工作原理是使用数据在某个时间点的快照来实现的。这意味着，无论事务运行多长时间，都可以看到数据的一致视图，也意味着不同的事务可以在同一时间看到同一张表中的不同数据！</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>最好不要在应用程序中混合使用存储引擎。失败的事务可能导致不一致的结果，因为某些部分可以回滚，而其他部分不能回滚。</blockquote></li></ul></div></details><details class="card note-book"><summary>股市趋势技术分析（原书第10版） <span class="note-count">30 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-917658.jpg" alt="《股市趋势技术分析（原书第10版）》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-thought"><span class="pill">想法</span><blockquote>我们对止损指令的强调有所减弱，因为与新手相比，经验丰富的交易者不那么需要止损指令。</blockquote><p>我也从来不止损，不说话装高手。。。。。</p></li><li class="note-hl"><span class="pill">划线</span><blockquote>华尔街有一个经典说法：股票涨起来需要买盘推动，跌起来却像自由落体。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>股价停留在三角形区域的时间越久，该形态的效力就越小（这恰恰与弹簧的原理相反）。</blockquote></li></ul></div></details><details class="card note-book"><summary>操作系统导论 <span class="note-count">22 条笔记</span></summary><div class="note-body"><img class="cover" src="images/books/b-30179184.jpg" alt="《操作系统导论》封面" width="56" height="76" loading="lazy"><ul class="note-list"><li class="note-hl"><span class="pill">划线</span><blockquote>即使它正确运行过一次，也不意味着它是正确的。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>自旋锁不提供任何公平性保证。实际上，自旋的线程在竞争条件下可能会永远自旋。自旋锁没有公平性，可能会导致饿死。</blockquote></li><li class="note-hl"><span class="pill">划线</span><blockquote>与进程相比，线程之间的上下文切换有一点主要区别：地址空间保持不变（即不需要切换当前使用的页表）。</blockquote></li></ul></div></details>
+      </div>
+
+      <h3 class="subhead">书架</h3>
+      <p class="lede zh">公开书架 179 本电子书 + 2 本有声书，按最近阅读排列。</p>
+      <p class="lede en-only">179 public ebooks and 2 audiobooks, sorted by last read.</p>
+      <div class="shelf-filters" role="toolbar" aria-label="按分类筛选书架"><button type="button" class="chip is-on" data-shelf-filter="all">全部 181</button><button type="button" class="chip" data-shelf-filter="计算机">计算机 62</button><button type="button" class="chip" data-shelf-filter="经济理财">经济理财 36</button><button type="button" class="chip" data-shelf-filter="文学">文学 20</button><button type="button" class="chip" data-shelf-filter="精品小说">精品小说 18</button><button type="button" class="chip" data-shelf-filter="个人成长">个人成长 8</button><button type="button" class="chip" data-shelf-filter="政治军事">政治军事 7</button><button type="button" class="chip" data-shelf-filter="历史">历史 5</button><button type="button" class="chip" data-shelf-filter="科学技术">科学技术 5</button><button type="button" class="chip" data-shelf-filter="哲学宗教">哲学宗教 3</button><button type="button" class="chip" data-shelf-filter="教育学习">教育学习 3</button><button type="button" class="chip" data-shelf-filter="心理">心理 3</button><button type="button" class="chip" data-shelf-filter="有声书">有声书 2</button><button type="button" class="chip" data-shelf-filter="原版书">原版书 2</button><button type="button" class="chip" data-shelf-filter="社会文化">社会文化 2</button><button type="button" class="chip" data-shelf-filter="男生小说">男生小说 1</button><button type="button" class="chip" data-shelf-filter="艺术">艺术 1</button><button type="button" class="chip" data-shelf-filter="人物传记">人物传记 1</button><button type="button" class="chip" data-shelf-filter="医学健康">医学健康 1</button><button type="button" class="chip" data-shelf-filter="生活百科">生活百科 1</button></div>
+      <div class="shelf-grid" id="shelfGrid">
+        <a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/44f32bb071e1265344f0481" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-31532627.jpg" alt="《领域驱动设计（Thoughtworks洞见）》封面" width="90" height="120" loading="lazy">
+      <h3>领域驱动设计（Thoughtworks洞见） </h3>
+      <p class="by">ThoughtWorks中国</p>
+      <p class="meta">计算机 · 最近 2026-11-14</p></a><a class="shelf-card" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/69932920813abb4f8g018c3b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300200888.jpg" alt="《黑凤凰》封面" width="90" height="120" loading="lazy">
+      <h3>黑凤凰 </h3>
+      <p class="by">郑证因</p>
+      <p class="meta">精品小说 · 最近 2026-11-13</p></a><a class="shelf-card" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/4d13201072205fa34d14987" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35676067.jpg" alt="《致敬本格推理黄金时代（套装共6册）》封面" width="90" height="120" loading="lazy">
+      <h3>致敬本格推理黄金时代（套装共6册） </h3>
+      <p class="by">[日]岛田庄司 [日]江户川乱步 [法]保罗·霍尔特等</p>
+      <p class="meta">精品小说 · 最近 2026-11-13</p></a><article class="shelf-card" data-cat="有声书" data-kind="album">
+      <img class="cover" src="images/books/a-3103003368.jpg" alt="《穷查理宝典》封面" width="90" height="120" loading="lazy">
+      <h3>穷查理宝典 <span class="pill">有声书</span></h3>
+      <p class="by">中信出版君</p>
+      <p class="meta">有声书 · 最近 2026-11-08</p></article><a class="shelf-card" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/55e32900813ab9640g017ec0" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300122247.jpg" alt="《因为独特》封面" width="90" height="120" loading="lazy">
+      <h3>因为独特 </h3>
+      <p class="by">李翔</p>
+      <p class="meta">经济理财 · 最近 2026-10-28</p></a><a class="shelf-card" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/657323107171e29b657dacd" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24240795.jpg" alt="《撒旦探戈（2025诺奖得主作品）》封面" width="90" height="120" loading="lazy">
+      <h3>撒旦探戈（2025诺奖得主作品） </h3>
+      <p class="by">[匈牙利]克拉斯诺霍尔卡伊·拉斯洛</p>
+      <p class="meta">精品小说 · 最近 2026-10-25</p></a><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/3fe328b072517cbf3fea609" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-38894783.jpg" alt="《凤凰架构：构建可靠的大型分布式系统》封面" width="90" height="120" loading="lazy">
+      <h3>凤凰架构：构建可靠的大型分布式系统 </h3>
+      <p class="by">周志明</p>
+      <p class="meta">计算机 · 最近 2026-10-25</p></a><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/ebb32f60813abb083g012f6c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300189472.jpg" alt="《大模型技术30讲》封面" width="90" height="120" loading="lazy">
+      <h3>大模型技术30讲 </h3>
+      <p class="by">[美]塞巴斯蒂安·拉施卡</p>
+      <p class="meta">计算机 · 最近 2026-10-25</p></a><a class="shelf-card" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/e9032c1071e8af44e90ae59" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-32026436.jpg" alt="《日本蜡烛图技术：古老东方投资术的现代指南》封面" width="90" height="120" loading="lazy">
+      <h3>日本蜡烛图技术：古老东方投资术的现代指南 </h3>
+      <p class="by">史蒂夫·尼森</p>
+      <p class="meta">经济理财 · 最近 2026-10-20</p></a><a class="shelf-card" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/c4332ab0813ab7f5cg017038" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300063647.jpg" alt="《东京八平米》封面" width="90" height="120" loading="lazy">
+      <h3>东京八平米 <span class="pill">读完</span></h3>
+      <p class="by">吉井忍</p>
+      <p class="meta">文学 · 最近 2026-10-20</p></a><a class="shelf-card" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/0683235058c1e6068bd239f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-573926.jpg" alt="《如何高效学习：1年完成麻省理工4年33门课程的整体性学习法》封面" width="90" height="120" loading="lazy">
+      <h3>如何高效学习：1年完成麻省理工4年33门课程的整体性学习法 <span class="pill">读完</span></h3>
+      <p class="by">斯科特·扬</p>
+      <p class="meta">个人成长 · 最近 2026-10-17</p></a><a class="shelf-card" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/088320005ced5c088746c42" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-847196.jpg" alt="《君主论》封面" width="90" height="120" loading="lazy">
+      <h3>君主论 </h3>
+      <p class="by">尼科洛·马基雅维利</p>
+      <p class="meta">政治军事 · 最近 2026-10-12</p></a><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/9c832160726e7bfb9c8c02d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-40795131.jpg" alt="《Go语言底层原理剖析》封面" width="90" height="120" loading="lazy">
+      <h3>Go语言底层原理剖析 </h3>
+      <p class="by">郑建勋</p>
+      <p class="meta">计算机 · 最近 2026-10-08</p></a><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/d6132e40813abb567g014920" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300201994.jpg" alt="《LangChain简明讲义：从0到1构建LLM应用程序》封面" width="90" height="120" loading="lazy">
+      <h3>LangChain简明讲义：从0到1构建LLM应用程序 </h3>
+      <p class="by">刘伟舟</p>
+      <p class="meta">计算机 · 最近 2026-10-08</p></a><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/6393276071bc6e966392234" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-29126294.jpg" alt="《深入理解TypeScript》封面" width="90" height="120" loading="lazy">
+      <h3>深入理解TypeScript </h3>
+      <p class="by">Basarat Ali Syed</p>
+      <p class="meta">计算机 · 最近 2026-10-08</p></a><a class="shelf-card" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/39e32320813ab80a9g0141fd" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300066974.jpg" alt="《以交易为生：20余年惊人获利，短线交易大师的内训体系》封面" width="90" height="120" loading="lazy">
+      <h3>以交易为生：20余年惊人获利，短线交易大师的内训体系 </h3>
+      <p class="by">[美]迈克·贝拉菲奥雷</p>
+      <p class="meta">经济理财 · 最近 2026-10-08</p></a><article class="shelf-card" data-cat="有声书" data-kind="album">
+      <img class="cover" src="images/books/a-3103002518.jpg" alt="《思考，快与慢》封面" width="90" height="120" loading="lazy">
+      <h3>思考，快与慢 <span class="pill">有声书</span></h3>
+      <p class="by">中信出版君</p>
+      <p class="meta">有声书 · 最近 2026-09-28</p></article><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/47932570813abb024g01529d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300188525.jpg" alt="《Vibe Coding：AI 编程时代的认知重构》封面" width="90" height="120" loading="lazy">
+      <h3>Vibe Coding：AI 编程时代的认知重构 </h3>
+      <p class="by">张昕东</p>
+      <p class="meta">计算机 · 最近 2026-09-24</p></a><a class="shelf-card" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/d563257071600c24d5666b9" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23071780.jpg" alt="《人生新算法：用人工智能解读时间、幸运与财富》封面" width="90" height="120" loading="lazy">
+      <h3>人生新算法：用人工智能解读时间、幸运与财富 </h3>
+      <p class="by">矢野和男</p>
+      <p class="meta">个人成长 · 最近 2026-09-23</p></a><a class="shelf-card" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/41432f705de453414ca0b4a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-910419.jpg" alt="《红楼梦（全集）（果麦经典）》封面" width="90" height="120" loading="lazy">
+      <h3>红楼梦（全集）（果麦经典） </h3>
+      <p class="by">[清]曹雪芹</p>
+      <p class="meta">文学 · 最近 2026-09-18</p></a><a class="shelf-card" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/a2c321c0721cac5ea2c585f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35433566.jpg" alt="《TypeScript入门与实战》封面" width="90" height="120" loading="lazy">
+      <h3>TypeScript入门与实战 </h3>
+      <p class="by">钟胜平编著</p>
+      <p class="meta">计算机 · 最近 2026-09-18</p></a><a class="shelf-card" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/dc432dd059c805dc4045f8a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-641029.jpg" alt="《动物庄园（奥威尔作品集）》封面" width="90" height="120" loading="lazy">
+      <h3>动物庄园（奥威尔作品集） </h3>
+      <p class="by">乔治·奥威尔</p>
+      <p class="meta">文学 · 最近 2026-09-18</p></a><a class="shelf-card" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/cc832eb071898cf7cc880aa" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25791735.jpg" alt="《了不起的盖茨比（英文版｜同名电影原著）》封面" width="90" height="120" loading="lazy">
+      <h3>了不起的盖茨比（英文版｜同名电影原著） </h3>
+      <p class="by">弗·司各特·菲茨杰拉德</p>
+      <p class="meta">精品小说 · 最近 2026-09-18</p></a><a class="shelf-card" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/e9b32130813ab9a8cg011534" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300133241.jpg" alt="《金瓶梅（崇祯本原版）》封面" width="90" height="120" loading="lazy">
+      <h3>金瓶梅（崇祯本原版） </h3>
+      <p class="by">[明]兰陵笑笑生</p>
+      <p class="meta">文学 · 最近 2026-09-09</p></a><a class="shelf-card" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/de832290716ce792de86f9c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23914386.jpg" alt="《迭代：新商业，新媒体与逆袭之路》封面" width="90" height="120" loading="lazy">
+      <h3>迭代：新商业，新媒体与逆袭之路 </h3>
+      <p class="by">沈帅波</p>
+      <p class="meta">经济理财 · 最近 2026-09-06</p></a><a class="shelf-card" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/df032030813abb26ag011e59" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300194341.jpg" alt="《基层中国的运行逻辑》封面" width="90" height="120" loading="lazy">
+      <h3>基层中国的运行逻辑 </h3>
+      <p class="by">聂辉华</p>
+      <p class="meta">政治军事 · 最近 2026-08-20</p></a><a class="shelf-card" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/7fe32070813ab7684g012bbf" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300041002.jpg" alt="《面纱（珍藏版）》封面" width="90" height="120" loading="lazy">
+      <h3>面纱（珍藏版） </h3>
+      <p class="by">[英]W.毛姆·萨默塞特</p>
+      <p class="meta">精品小说 · 最近 2026-08-20</p></a><a class="shelf-card" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/94432000813abb0d3g015bed" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300190275.jpg" alt="《我身上有个不可战胜的夏天》封面" width="90" height="120" loading="lazy">
+      <h3>我身上有个不可战胜的夏天 </h3>
+      <p class="by">[法]阿尔贝·加缪</p>
+      <p class="meta">文学 · 最近 2026-08-17</p></a><a class="shelf-card" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/238324d072206eb4238d918" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35679924.jpg" alt="《雪球专刊·特别版：段永平投资问答录投资逻辑篇》封面" width="90" height="120" loading="lazy">
+      <h3>雪球专刊·特别版：段永平投资问答录投资逻辑篇 </h3>
+      <p class="by">雪球专刊</p>
+      <p class="meta">经济理财 · 最近 2026-08-16</p></a><a class="shelf-card" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/36b321405d05b236bb0ce7d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-853426.jpg" alt="《稀缺：我们是如何陷入贫穷与忙碌的》封面" width="90" height="120" loading="lazy">
+      <h3>稀缺：我们是如何陷入贫穷与忙碌的 </h3>
+      <p class="by">塞德希尔·穆来纳森</p>
+      <p class="meta">经济理财 · 最近 2026-08-16</p></a><a class="shelf-card is-hidden" data-cat="男生小说" data-kind="book" href="https://weread.qq.com/web/reader/4de326a0721770aa4de95f4" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35090602.jpg" alt="《天之下》封面" width="90" height="120" loading="lazy">
+      <h3>天之下 </h3>
+      <p class="by">三弦</p>
+      <p class="meta">男生小说 · 最近 2026-08-15</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/2a332d10726332f72a34943" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-40055543.jpg" alt="《置身事内：中国政府与经济发展》封面" width="90" height="120" loading="lazy">
+      <h3>置身事内：中国政府与经济发展 </h3>
+      <p class="by">兰小欢</p>
+      <p class="meta">经济理财 · 最近 2026-07-30</p></a><a class="shelf-card is-hidden" data-cat="历史" data-kind="book" href="https://weread.qq.com/web/reader/ca632ad05a4f5eca6543d01" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-675678.jpg" alt="《大秦帝国（套装版）》封面" width="90" height="120" loading="lazy">
+      <h3>大秦帝国（套装版） </h3>
+      <p class="by">孙皓晖</p>
+      <p class="meta">历史 · 最近 2026-06-08</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/20832bf071f8f05c208da05" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-33091676.jpg" alt="《量价分析：量价分析创始人威科夫的盘口解读方法》封面" width="90" height="120" loading="lazy">
+      <h3>量价分析：量价分析创始人威科夫的盘口解读方法 </h3>
+      <p class="by">安娜·库林</p>
+      <p class="meta">经济理财 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/13132760813abaf53g013644" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300186433.jpg" alt="《AI Agent智能体与MCP开发实践：基于Qwen3大模型》封面" width="90" height="120" loading="lazy">
+      <h3>AI Agent智能体与MCP开发实践：基于Qwen3大模型 </h3>
+      <p class="by">王晓华</p>
+      <p class="meta">计算机 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/3f032590813abb5f1g016388" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300203376.jpg" alt="《AI Agent智能体开发实践》封面" width="90" height="120" loading="lazy">
+      <h3>AI Agent智能体开发实践 </h3>
+      <p class="by">邓立国 邓淇文</p>
+      <p class="meta">计算机 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="原版书" data-kind="book" href="https://weread.qq.com/web/reader/e0932e60813abb3f2g014aad" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300198264.jpg" alt="《Context Engineering for Multi-Agent Systems》封面" width="90" height="120" loading="lazy">
+      <h3>Context Engineering for Multi-Agent Systems </h3>
+      <p class="by">Denis Rothman</p>
+      <p class="meta">原版书 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="原版书" data-kind="book" href="https://weread.qq.com/web/reader/3d4325b0813abad39g010504" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300181050.jpg" alt="《LLM Engineer&#x27;s Handbook》封面" width="90" height="120" loading="lazy">
+      <h3>LLM Engineer&#x27;s Handbook </h3>
+      <p class="by">Paul Iusztin Maxime Labonne  Julien Chaumond  Hamza Tahir  Antonio Gulli</p>
+      <p class="meta">原版书 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/01032a107168bb4a0107b4a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23640906.jpg" alt="《毛泽东传（全6卷）》封面" width="90" height="120" loading="lazy">
+      <h3>毛泽东传（全6卷） </h3>
+      <p class="by">中共中央文献研究室</p>
+      <p class="meta">政治军事 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/0b432ca0813ab83bcg019c3d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300074849.jpg" alt="《仁慈的关系（2025诺奖得主作品）》封面" width="90" height="120" loading="lazy">
+      <h3>仁慈的关系（2025诺奖得主作品） </h3>
+      <p class="by">[匈牙利]克拉斯诺霍尔卡伊·拉斯洛</p>
+      <p class="meta">文学 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/13032990813ab7607g018de3" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300039758.jpg" alt="《启示录》封面" width="90" height="120" loading="lazy">
+      <h3>启示录 </h3>
+      <p class="by">赵祥亦</p>
+      <p class="meta">精品小说 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="社会文化" data-kind="book" href="https://weread.qq.com/web/reader/57e320607186fbc357eb475" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25623491.jpg" alt="《创世记：从细胞到文明，社会的深层起源》封面" width="90" height="120" loading="lazy">
+      <h3>创世记：从细胞到文明，社会的深层起源 </h3>
+      <p class="by">爱德华·威尔逊</p>
+      <p class="meta">社会文化 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/04d32ae0721b9f6004dff5c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35364704.jpg" alt="《不拘一格：网飞的自由与责任工作法》封面" width="90" height="120" loading="lazy">
+      <h3>不拘一格：网飞的自由与责任工作法 </h3>
+      <p class="by">里德·哈斯廷斯 艾琳·迈耶</p>
+      <p class="meta">经济理财 · 最近 2026-05-03</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/9eb327e0813ab9e2bg015edf" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300142515.jpg" alt="《蛇结（果麦经典）》封面" width="90" height="120" loading="lazy">
+      <h3>蛇结（果麦经典） </h3>
+      <p class="by">[法]弗朗索瓦·莫里亚克</p>
+      <p class="meta">精品小说 · 最近 2026-04-25</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/1d5321b0813aba8e6g012b1e" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300169982.jpg" alt="《温克海姆男爵返乡（2025诺奖得主最新作品，《撒旦探戈》续篇）》封面" width="90" height="120" loading="lazy">
+      <h3>温克海姆男爵返乡（2025诺奖得主最新作品，《撒旦探戈》续篇） </h3>
+      <p class="by">[匈牙利]克拉斯诺霍尔卡伊·拉斯洛</p>
+      <p class="meta">文学 · 最近 2026-04-25</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/81632030813abb06cg01922b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300189249.jpg" alt="《AI Agent实战指南：构建高效、可协作的智能体》封面" width="90" height="120" loading="lazy">
+      <h3>AI Agent实战指南：构建高效、可协作的智能体 </h3>
+      <p class="by">谭星星</p>
+      <p class="meta">计算机 · 最近 2026-04-14</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/8c332c50813aba0ddg019e24" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300149419.jpg" alt="《软件工程3.0：大模型驱动的研发新范式》封面" width="90" height="120" loading="lazy">
+      <h3>软件工程3.0：大模型驱动的研发新范式 </h3>
+      <p class="by">朱少民 王千祥</p>
+      <p class="meta">计算机 · 最近 2026-02-21</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/cef32470719bdd31cef5a8a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26991921.jpg" alt="《你一生的故事（译林幻系列）》封面" width="90" height="120" loading="lazy">
+      <h3>你一生的故事（译林幻系列） </h3>
+      <p class="by">特德·姜</p>
+      <p class="meta">精品小说 · 最近 2026-01-21</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/027324c0813abab7eg010db9" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300176620.jpg" alt="《金阁寺（2025经典无删减版）》封面" width="90" height="120" loading="lazy">
+      <h3>金阁寺（2025经典无删减版） </h3>
+      <p class="by">[日]三岛由纪夫著
+黄洪涛译</p>
+      <p class="meta">精品小说 · 最近 2026-01-06</p></a><a class="shelf-card is-hidden" data-cat="艺术" data-kind="book" href="https://weread.qq.com/web/reader/181320f07167992d1816043" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23566637.jpg" alt="《艺术的故事》封面" width="90" height="120" loading="lazy">
+      <h3>艺术的故事 </h3>
+      <p class="by">房龙</p>
+      <p class="meta">艺术 · 最近 2025-12-25</p></a><a class="shelf-card is-hidden" data-cat="哲学宗教" data-kind="book" href="https://weread.qq.com/web/reader/a2332ee0813aba1a7g0123df" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300151432.jpg" alt="《人生解忧：佛学入门四十讲》封面" width="90" height="120" loading="lazy">
+      <h3>人生解忧：佛学入门四十讲 </h3>
+      <p class="by">成庆</p>
+      <p class="meta">哲学宗教 · 最近 2025-12-18</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/a2332920813ab7e12g01223c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300060342.jpg" alt="《TypeScript全栈开发》封面" width="90" height="120" loading="lazy">
+      <h3>TypeScript全栈开发 </h3>
+      <p class="by">赵卓</p>
+      <p class="meta">计算机 · 最近 2025-11-20</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/58e323d0813ab880cg019556" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300085889.jpg" alt="《刚性泡沫（增订版）：中国经济的增长和风险》封面" width="90" height="120" loading="lazy">
+      <h3>刚性泡沫（增订版）：中国经济的增长和风险 </h3>
+      <p class="by">朱宁</p>
+      <p class="meta">经济理财 · 最近 2025-11-04</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/26a3299071eeef0026a40f1" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-32435968.jpg" alt="《架构解密：从分布式到微服务（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>架构解密：从分布式到微服务（第2版） </h3>
+      <p class="by">吴治辉</p>
+      <p class="meta">计算机 · 最近 2025-10-07</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/6a132360716c1f5f6a1af30" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23863135.jpg" alt="《深入理解以太坊》封面" width="90" height="120" loading="lazy">
+      <h3>深入理解以太坊 </h3>
+      <p class="by">王欣 史钦锋 程杰</p>
+      <p class="meta">计算机 · 最近 2025-10-07</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/6f5323f071bd7f7b6f521e8" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-29196155.jpg" alt="《文明、现代化、价值投资与中国》封面" width="90" height="120" loading="lazy">
+      <h3>文明、现代化、价值投资与中国 </h3>
+      <p class="by">李录</p>
+      <p class="meta">经济理财 · 最近 2025-07-22</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/2c032e80813ab95aag019524" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300120749.jpg" alt="《不被大风吹倒（莫言陪女儿高考也这样！ ）》封面" width="90" height="120" loading="lazy">
+      <h3>不被大风吹倒（莫言陪女儿高考也这样！ ） </h3>
+      <p class="by">莫言</p>
+      <p class="meta">文学 · 最近 2025-04-11</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/3fd32bd0813ab89c6g0150df" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300090305.jpg" alt="《大模型应用开发极简入门：基于GPT-4和ChatGPT》封面" width="90" height="120" loading="lazy">
+      <h3>大模型应用开发极简入门：基于GPT-4和ChatGPT </h3>
+      <p class="by">奥利维耶·卡埃朗  [法]玛丽-艾丽斯·布莱特</p>
+      <p class="meta">计算机 · 最近 2025-02-22</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/e39320b0813ab8447g0133f8" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300076233.jpg" alt="《晴耕雨读，得闲饮茶》封面" width="90" height="120" loading="lazy">
+      <h3>晴耕雨读，得闲饮茶 </h3>
+      <p class="by">季羡林 汪曾祺 梁实秋 等</p>
+      <p class="meta">文学 · 最近 2024-12-31</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/88132470813ab7eeag012b8d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300062502.jpg" alt="《芒格之道——查理·芒格股东会讲话1987-2022》封面" width="90" height="120" loading="lazy">
+      <h3>芒格之道——查理·芒格股东会讲话1987-2022 </h3>
+      <p class="by">查理·芒格 芒格书院</p>
+      <p class="meta">经济理财 · 最近 2024-12-24</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/73c32c5071c790f073c460a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-29855984.jpg" alt="《三国演义（人民文学版）》封面" width="90" height="120" loading="lazy">
+      <h3>三国演义（人民文学版） </h3>
+      <p class="by">[明]罗贯中</p>
+      <p class="meta">文学 · 最近 2024-12-14</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/d1b32290718ff65fd1befcc" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26211935.jpg" alt="《深入浅出Node.js》封面" width="90" height="120" loading="lazy">
+      <h3>深入浅出Node.js </h3>
+      <p class="by">朴灵</p>
+      <p class="meta">计算机 · 最近 2024-11-05</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/19332dd0728b621d193d571" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-42689053.jpg" alt="《原则：应对变化中的世界秩序》封面" width="90" height="120" loading="lazy">
+      <h3>原则：应对变化中的世界秩序 </h3>
+      <p class="by">瑞·达利欧</p>
+      <p class="meta">经济理财 · 最近 2024-10-29</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/22a327a0813ab86fbg010c7d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300083150.jpg" alt="《时间贫困》封面" width="90" height="120" loading="lazy">
+      <h3>时间贫困 </h3>
+      <p class="by">[英]凯茜·霍姆斯</p>
+      <p class="meta">经济理财 · 最近 2024-10-05</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/9a1323d0724b5da99a1fb47" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-38493609.jpg" alt="《UNIX传奇：历史与回忆》封面" width="90" height="120" loading="lazy">
+      <h3>UNIX传奇：历史与回忆 </h3>
+      <p class="by">布莱恩·W.克尼汉</p>
+      <p class="meta">计算机 · 最近 2024-09-17</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/e7f32350813ab8475g0126a1" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300076692.jpg" alt="《河边的错误（朱一龙主演同名电影原著｜微信读书联合出品）》封面" width="90" height="120" loading="lazy">
+      <h3>河边的错误（朱一龙主演同名电影原著｜微信读书联合出品） </h3>
+      <p class="by">余华</p>
+      <p class="meta">精品小说 · 最近 2024-08-20</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/dde328c071860af6dde328f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25561846.jpg" alt="《一九八四（译文经典）》封面" width="90" height="120" loading="lazy">
+      <h3>一九八四（译文经典） </h3>
+      <p class="by">乔治·奥威尔</p>
+      <p class="meta">文学 · 最近 2024-08-04</p></a><a class="shelf-card is-hidden" data-cat="教育学习" data-kind="book" href="https://weread.qq.com/web/reader/272326407169ff22272934f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23723810.jpg" alt="《如何阅读一本书》封面" width="90" height="120" loading="lazy">
+      <h3>如何阅读一本书 </h3>
+      <p class="by">莫提默·艾德勒 查尔斯·范多伦</p>
+      <p class="meta">教育学习 · 最近 2024-08-03</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/7e932d4058c2417e9d91f1a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-574017.jpg" alt="《21世纪资本论》封面" width="90" height="120" loading="lazy">
+      <h3>21世纪资本论 </h3>
+      <p class="by">托马斯·皮凯蒂</p>
+      <p class="meta">经济理财 · 最近 2024-08-01</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/962328a0813ab7c20g0153af" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300055365.jpg" alt="《分布式服务框架原理与实践》封面" width="90" height="120" loading="lazy">
+      <h3>分布式服务框架原理与实践 </h3>
+      <p class="by">李林锋</p>
+      <p class="meta">计算机 · 最近 2024-07-31</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/92532760718b9cce9259f4d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25926862.jpg" alt="《美丽新世界（译文经典）》封面" width="90" height="120" loading="lazy">
+      <h3>美丽新世界（译文经典） </h3>
+      <p class="by">奥尔德斯·赫胥黎</p>
+      <p class="meta">文学 · 最近 2024-07-13</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/f343248072895ed9f34f408" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-42557145.jpg" alt="《Go语言精进之路：从新手到高手的编程思想、方法和技巧1》封面" width="90" height="120" loading="lazy">
+      <h3>Go语言精进之路：从新手到高手的编程思想、方法和技巧1 <span class="pill">读完</span></h3>
+      <p class="by">白明</p>
+      <p class="meta">计算机 · 最近 2024-07-09</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/db8329d071cc7f70db8a479" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-30179184.jpg" alt="《操作系统导论》封面" width="90" height="120" loading="lazy">
+      <h3>操作系统导论 </h3>
+      <p class="by">雷姆兹·H.阿帕希杜塞尔 安德莉亚·C.阿帕希杜塞尔</p>
+      <p class="meta">计算机 · 最近 2024-06-22</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/29232250813ab7182g014cb5" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300028184.jpg" alt="《云原生Kubernetes全栈架构师实战》封面" width="90" height="120" loading="lazy">
+      <h3>云原生Kubernetes全栈架构师实战 </h3>
+      <p class="by">杜宽</p>
+      <p class="meta">计算机 · 最近 2024-06-22</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/f9c32dc07184876ef9cdeb6" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25462638.jpg" alt="《Elasticsearch源码解析与优化实战》封面" width="90" height="120" loading="lazy">
+      <h3>Elasticsearch源码解析与优化实战 </h3>
+      <p class="by">张超</p>
+      <p class="meta">计算机 · 最近 2024-05-28</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/eb432a1059346feb43178b3" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-603247.jpg" alt="《Linux内核设计的艺术：图解Linux操作系统架构设计与实现原理（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>Linux内核设计的艺术：图解Linux操作系统架构设计与实现原理（第2版） </h3>
+      <p class="by">新设计团队</p>
+      <p class="meta">计算机 · 最近 2024-05-28</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/86232ea0813ab7e2fg01089a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300060630.jpg" alt="《这就是推荐系统：核心技术原理与企业应用》封面" width="90" height="120" loading="lazy">
+      <h3>这就是推荐系统：核心技术原理与企业应用 </h3>
+      <p class="by">胡澜涛 等</p>
+      <p class="meta">计算机 · 最近 2024-05-27</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/e9a32a0071848698e9a39b8" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25462424.jpg" alt="《深入理解Kafka：核心设计与实践原理》封面" width="90" height="120" loading="lazy">
+      <h3>深入理解Kafka：核心设计与实践原理 </h3>
+      <p class="by">朱忠华</p>
+      <p class="meta">计算机 · 最近 2024-05-27</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/d733256071eeeed9d7322fd" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-32435929.jpg" alt="《Rust权威指南》封面" width="90" height="120" loading="lazy">
+      <h3>Rust权威指南 </h3>
+      <p class="by">史蒂夫·克拉伯尼克 卡罗尔·尼科尔斯</p>
+      <p class="meta">计算机 · 最近 2024-05-27</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/18832880717cf0511881c78" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24965201.jpg" alt="《平凡的世界（全三册）》封面" width="90" height="120" loading="lazy">
+      <h3>平凡的世界（全三册） </h3>
+      <p class="by">路遥</p>
+      <p class="meta">精品小说 · 最近 2024-05-26</p></a><a class="shelf-card is-hidden" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/110322705bfdf6110a98949" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-785910.jpg" alt="《毛泽东传：名著珍藏版（插图本）》封面" width="90" height="120" loading="lazy">
+      <h3>毛泽东传：名著珍藏版（插图本） </h3>
+      <p class="by">罗斯·特里尔</p>
+      <p class="meta">政治军事 · 最近 2024-05-26</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/00a32b70813ab746fg018ec7" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300035678.jpg" alt="《高性能MySQL（第4版）》封面" width="90" height="120" loading="lazy">
+      <h3>高性能MySQL（第4版） </h3>
+      <p class="by">Silvia Botros   Jeremy Tinley</p>
+      <p class="meta">计算机 · 最近 2024-05-24</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/af532c005a007caf51371b1" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-655484.jpg" alt="《计算机网络》封面" width="90" height="120" loading="lazy">
+      <h3>计算机网络 </h3>
+      <p class="by">谢希仁编著</p>
+      <p class="meta">计算机 · 最近 2024-05-24</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/3da32b505dd9f43da9a1aca" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-907764.jpg" alt="《图解HTTP》封面" width="90" height="120" loading="lazy">
+      <h3>图解HTTP </h3>
+      <p class="by">上野宣</p>
+      <p class="meta">计算机 · 最近 2024-05-24</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/cf1320d071a1a78ecf19254" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-27371406.jpg" alt="《深入理解Java虚拟机：JVM高级特性与最佳实践（第3版）》封面" width="90" height="120" loading="lazy">
+      <h3>深入理解Java虚拟机：JVM高级特性与最佳实践（第3版） </h3>
+      <p class="by">周志明</p>
+      <p class="meta">计算机 · 最近 2024-05-24</p></a><a class="shelf-card is-hidden" data-cat="历史" data-kind="book" href="https://weread.qq.com/web/reader/aa532a205cf92daa5a4e44d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-850221.jpg" alt="《全球通史》封面" width="90" height="120" loading="lazy">
+      <h3>全球通史 </h3>
+      <p class="by">乔治·威尔斯 卡尔顿·海斯</p>
+      <p class="meta">历史 · 最近 2024-05-11</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/33332af0813ab89bcg011b17" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300090201.jpg" alt="《苏东坡的生活禅》封面" width="90" height="120" loading="lazy">
+      <h3>苏东坡的生活禅 </h3>
+      <p class="by">师雅惠</p>
+      <p class="meta">文学 · 最近 2024-05-07</p></a><a class="shelf-card is-hidden" data-cat="历史" data-kind="book" href="https://weread.qq.com/web/reader/fa932fc0813ab7f99g019743" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300064259.jpg" alt="《弃长安（《长安三万里》背后的大唐之变和历史真相）》封面" width="90" height="120" loading="lazy">
+      <h3>弃长安（《长安三万里》背后的大唐之变和历史真相） </h3>
+      <p class="by">张明扬</p>
+      <p class="meta">历史 · 最近 2024-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/0e03209071c96a420e02710" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-29977154.jpg" alt="《名师讲坛：Java微服务架构实战（SpringBoot+SpringCloud+Docker+RabbitMQ）》封面" width="90" height="120" loading="lazy">
+      <h3>名师讲坛：Java微服务架构实战（SpringBoot+SpringCloud+Docker+RabbitMQ） </h3>
+      <p class="by">李兴华</p>
+      <p class="meta">计算机 · 最近 2024-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/cc0329f0720867eecc0f00a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-34105326.jpg" alt="《Head First Go语言程序设计》封面" width="90" height="120" loading="lazy">
+      <h3>Head First Go语言程序设计 <span class="pill">读完</span></h3>
+      <p class="by">杰伊·麦克格瑞恩</p>
+      <p class="meta">计算机 · 最近 2024-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/d0032f10813ab6d7dg015756" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300017895.jpg" alt="《云原生应用架构：微服务开发最佳实战》封面" width="90" height="120" loading="lazy">
+      <h3>云原生应用架构：微服务开发最佳实战 </h3>
+      <p class="by">FreeWheel核心业务系统开发团队</p>
+      <p class="meta">计算机 · 最近 2024-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/74d32120813ab6de0g019b0e" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300018889.jpg" alt="《用Go语言自制解释器》封面" width="90" height="120" loading="lazy">
+      <h3>用Go语言自制解释器 </h3>
+      <p class="by">索斯藤·鲍尔</p>
+      <p class="meta">计算机 · 最近 2024-05-03</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/d7432d00813ab820bg010313" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300070510.jpg" alt="《软技能：代码之外的生存指南（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>软技能：代码之外的生存指南（第2版） </h3>
+      <p class="by">约翰·Z.森梅兹</p>
+      <p class="meta">计算机 · 最近 2024-05-03</p></a><a class="shelf-card is-hidden" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/a233272057f7dda23713095" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-522205.jpg" alt="《人性的弱点（果麦经典）》封面" width="90" height="120" loading="lazy">
+      <h3>人性的弱点（果麦经典） </h3>
+      <p class="by">卡耐基</p>
+      <p class="meta">个人成长 · 最近 2024-04-29</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/69e327a071eeeee269e177e" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-32435938.jpg" alt="《微服务治理：体系、架构及实践》封面" width="90" height="120" loading="lazy">
+      <h3>微服务治理：体系、架构及实践 </h3>
+      <p class="by">李鑫</p>
+      <p class="meta">计算机 · 最近 2024-04-24</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/5ac32750719db0995acc95d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-27111577.jpg" alt="《从偶然到必然：华为研发投资与管理实践》封面" width="90" height="120" loading="lazy">
+      <h3>从偶然到必然：华为研发投资与管理实践 </h3>
+      <p class="by">夏忠毅</p>
+      <p class="meta">经济理财 · 最近 2024-04-12</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/f19320605cb502f19ec8c13" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-832770.jpg" alt="《白话大数据与机器学习》封面" width="90" height="120" loading="lazy">
+      <h3>白话大数据与机器学习 </h3>
+      <p class="by">高扬 卫峥 尹会生等</p>
+      <p class="meta">计算机 · 最近 2024-04-12</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/46d32a3059335d46d02eba6" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-602973.jpg" alt="《MySQL技术内幕：SQL编程》封面" width="90" height="120" loading="lazy">
+      <h3>MySQL技术内幕：SQL编程 </h3>
+      <p class="by">姜承尧</p>
+      <p class="meta">计算机 · 最近 2024-04-12</p></a><a class="shelf-card is-hidden" data-cat="教育学习" data-kind="book" href="https://weread.qq.com/web/reader/21832c90715aadd921897f0" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-22719961.jpg" alt="《超实用15000词分类速记》封面" width="90" height="120" loading="lazy">
+      <h3>超实用15000词分类速记 </h3>
+      <p class="by">俞敏洪</p>
+      <p class="meta">教育学习 · 最近 2024-04-03</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/50d32ae0813ab6d13g01661b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300016836.jpg" alt="《在路上（李继宏译版）》封面" width="90" height="120" loading="lazy">
+      <h3>在路上（李继宏译版） </h3>
+      <p class="by">杰克·凯鲁亚克</p>
+      <p class="meta">文学 · 最近 2024-03-27</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/948326f0813ab7294g014bb7" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300030924.jpg" alt="《分布式架构原理与实践》封面" width="90" height="120" loading="lazy">
+      <h3>分布式架构原理与实践 </h3>
+      <p class="by">崔皓 　著</p>
+      <p class="meta">计算机 · 最近 2024-03-25</p></a><a class="shelf-card is-hidden" data-cat="科学技术" data-kind="book" href="https://weread.qq.com/web/reader/121323f0729ac578121ce6f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-43697528.jpg" alt="《我们为什么要睡觉？》封面" width="90" height="120" loading="lazy">
+      <h3>我们为什么要睡觉？ </h3>
+      <p class="by">马修·沃克</p>
+      <p class="meta">科学技术 · 最近 2024-03-17</p></a><a class="shelf-card is-hidden" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/e96326005e3d2ae9692ce4b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-933162.jpg" alt="《历史深处的忧虑：近距离看美国之一》封面" width="90" height="120" loading="lazy">
+      <h3>历史深处的忧虑：近距离看美国之一 </h3>
+      <p class="by">林达</p>
+      <p class="meta">政治军事 · 最近 2024-03-10</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/08d329d0813ab6c03g016242" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300014116.jpg" alt="《聪明的投资者（第4版，注疏点评版）》封面" width="90" height="120" loading="lazy">
+      <h3>聪明的投资者（第4版，注疏点评版） </h3>
+      <p class="by">[美]本杰明·格雷厄姆 [美]贾森·兹威格　著</p>
+      <p class="meta">经济理财 · 最近 2024-03-08</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/b8f32d2072895edbb8fbb04" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-42557147.jpg" alt="《Go语言精进之路：从新手到高手的编程思想、方法和技巧2》封面" width="90" height="120" loading="lazy">
+      <h3>Go语言精进之路：从新手到高手的编程思想、方法和技巧2 </h3>
+      <p class="by">白明</p>
+      <p class="meta">计算机 · 最近 2024-03-08</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/3b432af0717075be3b46928" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24147390.jpg" alt="《银河系搭车客指南（五部曲套装）》封面" width="90" height="120" loading="lazy">
+      <h3>银河系搭车客指南（五部曲套装） </h3>
+      <p class="by">道格拉斯·亚当斯</p>
+      <p class="meta">精品小说 · 最近 2024-03-08</p></a><a class="shelf-card is-hidden" data-cat="人物传记" data-kind="book" href="https://weread.qq.com/web/reader/d2e325c0813ab8234g019ba2" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300070929.jpg" alt="《埃隆·马斯克传》封面" width="90" height="120" loading="lazy">
+      <h3>埃隆·马斯克传 </h3>
+      <p class="by">沃尔特·艾萨克森</p>
+      <p class="meta">人物传记 · 最近 2024-03-08</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/bd632340718ff622bd6a540" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26211874.jpg" alt="《SQL进阶教程（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>SQL进阶教程（第2版） </h3>
+      <p class="by">[日]MICK</p>
+      <p class="meta">计算机 · 最近 2024-03-08</p></a><a class="shelf-card is-hidden" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/0633241059b4260632af2bf" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-635942.jpg" alt="《反脆弱：从不确定性中获益》封面" width="90" height="120" loading="lazy">
+      <h3>反脆弱：从不确定性中获益 </h3>
+      <p class="by">纳西姆·尼古拉斯·塔勒布</p>
+      <p class="meta">个人成长 · 最近 2024-02-29</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/09f325105e009a09f7bb132" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-917658.jpg" alt="《股市趋势技术分析（原书第10版）》封面" width="90" height="120" loading="lazy">
+      <h3>股市趋势技术分析（原书第10版） </h3>
+      <p class="by">罗伯特D.爱德华兹 约翰·迈吉 W.H.C.巴塞蒂</p>
+      <p class="meta">经济理财 · 最近 2024-02-29</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/52032b107193a9465202478" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26454342.jpg" alt="《证券分析：投资者的圣经》封面" width="90" height="120" loading="lazy">
+      <h3>证券分析：投资者的圣经 </h3>
+      <p class="by">[美]本杰明·格雷厄姆 [美]戴维·多德</p>
+      <p class="meta">经济理财 · 最近 2024-02-25</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/1f132a805a61751f1674656" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-680309.jpg" alt="《剑指Offer》封面" width="90" height="120" loading="lazy">
+      <h3>剑指Offer </h3>
+      <p class="by">何海涛著</p>
+      <p class="meta">计算机 · 最近 2024-02-24</p></a><a class="shelf-card is-hidden" data-cat="心理" data-kind="book" href="https://weread.qq.com/web/reader/515320a0813ab6c04g014eb6" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300014124.jpg" alt="《亲密关系（第6版）》封面" width="90" height="120" loading="lazy">
+      <h3>亲密关系（第6版） </h3>
+      <p class="by">[美]罗兰·米勒</p>
+      <p class="meta">心理 · 最近 2024-02-18</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/b83329305e0d73b83076d07" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-920947.jpg" alt="《金融炼金术（令全球投资者醍醐灌顶的著作）》封面" width="90" height="120" loading="lazy">
+      <h3>金融炼金术（令全球投资者醍醐灌顶的著作） </h3>
+      <p class="by">乔治·索罗斯</p>
+      <p class="meta">经济理财 · 最近 2024-02-17</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/6eb32020717c3b9e6ebcaf6" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24918942.jpg" alt="《海边的卡夫卡》封面" width="90" height="120" loading="lazy">
+      <h3>海边的卡夫卡 </h3>
+      <p class="by">[日]村上春树</p>
+      <p class="meta">文学 · 最近 2024-02-17</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/90632910813ab7a87g017afb" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300051277.jpg" alt="《信任代理》封面" width="90" height="120" loading="lazy">
+      <h3>信任代理 </h3>
+      <p class="by">克里斯·布洛根 朱利恩·史密斯</p>
+      <p class="meta">经济理财 · 最近 2023-12-01</p></a><a class="shelf-card is-hidden" data-cat="医学健康" data-kind="book" href="https://weread.qq.com/web/reader/d1032f707277a9d7d10e95d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-41396695.jpg" alt="《病人家属，请来一下（译文科学）》封面" width="90" height="120" loading="lazy">
+      <h3>病人家属，请来一下（译文科学） </h3>
+      <p class="by">王兴</p>
+      <p class="meta">医学健康 · 最近 2023-10-11</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/d3132660813ab70b7g01103b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300026151.jpg" alt="《向心城市：迈向未来的活力、宜居与和谐》封面" width="90" height="120" loading="lazy">
+      <h3>向心城市：迈向未来的活力、宜居与和谐 </h3>
+      <p class="by">陆铭</p>
+      <p class="meta">经济理财 · 最近 2023-10-06</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/480328505d095c4808beaf4" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-854364.jpg" alt="《大国大城：当代中国的统一、发展与平衡》封面" width="90" height="120" loading="lazy">
+      <h3>大国大城：当代中国的统一、发展与平衡 </h3>
+      <p class="by">陆铭</p>
+      <p class="meta">经济理财 · 最近 2023-10-06</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/e1232d40813ab81a5g011c9a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300069491.jpg" alt="《奥本海默传（诺兰导演电影《奥本海默》 灵感来源、普利策奖获奖传记）》封面" width="90" height="120" loading="lazy">
+      <h3>奥本海默传（诺兰导演电影《奥本海默》 灵感来源、普利策奖获奖传记） </h3>
+      <p class="by">[美]凯·伯德 [美]马丁·J.舍温</p>
+      <p class="meta">文学 · 最近 2023-09-20</p></a><a class="shelf-card is-hidden" data-cat="哲学宗教" data-kind="book" href="https://weread.qq.com/web/reader/ffa32b8071f88186ffa6842" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-33063302.jpg" alt="《被检验的人生：哲学沉思（二十世纪西方哲学经典）》封面" width="90" height="120" loading="lazy">
+      <h3>被检验的人生：哲学沉思（二十世纪西方哲学经典） </h3>
+      <p class="by">罗伯特·诺齐克</p>
+      <p class="meta">哲学宗教 · 最近 2023-09-08</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/8bc329705e46708bcb0c164" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-935536.jpg" alt="《百年孤独》封面" width="90" height="120" loading="lazy">
+      <h3>百年孤独 </h3>
+      <p class="by">[哥]加西亚•马尔克斯</p>
+      <p class="meta">文学 · 最近 2023-08-20</p></a><a class="shelf-card is-hidden" data-cat="科学技术" data-kind="book" href="https://weread.qq.com/web/reader/11e32230715554c811e0e9f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-22369480.jpg" alt="《规模》封面" width="90" height="120" loading="lazy">
+      <h3>规模 </h3>
+      <p class="by">杰弗里·韦斯特</p>
+      <p class="meta">科学技术 · 最近 2023-08-03</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/99632b00719376c6996d2d2" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26441414.jpg" alt="《霍乱时期的爱情》封面" width="90" height="120" loading="lazy">
+      <h3>霍乱时期的爱情 </h3>
+      <p class="by">[哥]加西亚•马尔克斯</p>
+      <p class="meta">文学 · 最近 2023-08-02</p></a><a class="shelf-card is-hidden" data-cat="历史" data-kind="book" href="https://weread.qq.com/web/reader/90932f60813ab6b57g010132" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300012390.jpg" alt="《中国历代政治得失(汉英对照)(博雅双语名家名作)》封面" width="90" height="120" loading="lazy">
+      <h3>中国历代政治得失(汉英对照)(博雅双语名家名作) </h3>
+      <p class="by">钱穆</p>
+      <p class="meta">历史 · 最近 2023-07-26</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/37a329e053963537abbca8b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-235061.jpg" alt="《历代经济变革得失》封面" width="90" height="120" loading="lazy">
+      <h3>历代经济变革得失 </h3>
+      <p class="by">吴晓波</p>
+      <p class="meta">经济理财 · 最近 2023-07-21</p></a><a class="shelf-card is-hidden" data-cat="哲学宗教" data-kind="book" href="https://weread.qq.com/web/reader/f1c32f005e0d6bf1c506c79" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-920939.jpg" alt="《资本论（超值白金版）》封面" width="90" height="120" loading="lazy">
+      <h3>资本论（超值白金版） </h3>
+      <p class="by">[德]马克思</p>
+      <p class="meta">哲学宗教 · 最近 2023-07-13</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/9b932ce071726c119b94961" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24275985.jpg" alt="《贫穷的本质：我们为什么摆脱不了贫穷（修订版）》封面" width="90" height="120" loading="lazy">
+      <h3>贫穷的本质：我们为什么摆脱不了贫穷（修订版） </h3>
+      <p class="by">[美]阿比吉特·班纳吉 [法]埃斯特·迪弗洛</p>
+      <p class="meta">经济理财 · 最近 2023-07-12</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/c5b32250813ab7a5cg015ca8" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300050845.jpg" alt="《x86汇编语言：从实模式到保护模式（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>x86汇编语言：从实模式到保护模式（第2版） </h3>
+      <p class="by">李忠 王晓波 余洁</p>
+      <p class="meta">计算机 · 最近 2023-06-18</p></a><a class="shelf-card is-hidden" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/e7432f905e0df0e7448717c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-921072.jpg" alt="《快速阅读》封面" width="90" height="120" loading="lazy">
+      <h3>快速阅读 </h3>
+      <p class="by">克里斯蒂安·格吕宁</p>
+      <p class="meta">个人成长 · 最近 2023-06-16</p></a><a class="shelf-card is-hidden" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/1a8327305e0d3a1a862a6a2" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-920890.jpg" alt="《超级快速阅读》封面" width="90" height="120" loading="lazy">
+      <h3>超级快速阅读 </h3>
+      <p class="by">克里斯蒂安·格吕宁</p>
+      <p class="meta">个人成长 · 最近 2023-05-18</p></a><a class="shelf-card is-hidden" data-cat="心理" data-kind="book" href="https://weread.qq.com/web/reader/9ad32d40727950039add092" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-41504771.jpg" alt="《影响力（全新升级版）》封面" width="90" height="120" loading="lazy">
+      <h3>影响力（全新升级版） </h3>
+      <p class="by">罗伯特·西奥迪尼</p>
+      <p class="meta">心理 · 最近 2023-05-04</p></a><a class="shelf-card is-hidden" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/2bb32ff0813ab6ffcg014315" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-3300024284.jpg" alt="《毛泽东选集（全四卷）》封面" width="90" height="120" loading="lazy">
+      <h3>毛泽东选集（全四卷） </h3>
+      <p class="by"></p>
+      <p class="meta">政治军事 · 最近 2023-05-04</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/e0932c0071863d0ce099437" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25574668.jpg" alt="《精通区块链编程：加密货币原理、方法和应用开发（原书第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>精通区块链编程：加密货币原理、方法和应用开发（原书第2版） </h3>
+      <p class="by">安德烈亚斯·M.安东波罗斯</p>
+      <p class="meta">经济理财 · 最近 2023-04-26</p></a><a class="shelf-card is-hidden" data-cat="生活百科" data-kind="book" href="https://weread.qq.com/web/reader/a8a323405b73f2a8aeea63c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-750578.jpg" alt="《囚徒健身：用失传的技艺练就强大的生存实力》封面" width="90" height="120" loading="lazy">
+      <h3>囚徒健身：用失传的技艺练就强大的生存实力 </h3>
+      <p class="by">保罗·威德</p>
+      <p class="meta">生活百科 · 最近 2023-04-26</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/6da3218071fd5aa16dabd75" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-33381025.jpg" alt="《性能之巅：洞悉系统、企业与云计算》封面" width="90" height="120" loading="lazy">
+      <h3>性能之巅：洞悉系统、企业与云计算 </h3>
+      <p class="by">布兰登·格雷格</p>
+      <p class="meta">计算机 · 最近 2023-04-26</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/7cc32910718ff66b7cc8d9d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26211947.jpg" alt="《算法（第4版）》封面" width="90" height="120" loading="lazy">
+      <h3>算法（第4版） </h3>
+      <p class="by">Robert Sedgewick  Kevin Wayne</p>
+      <p class="meta">计算机 · 最近 2023-03-11</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/fa3322105ca0ecfa382cac6" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-827628.jpg" alt="《鲁迅全集（全20卷）》封面" width="90" height="120" loading="lazy">
+      <h3>鲁迅全集（全20卷） </h3>
+      <p class="by">鲁迅</p>
+      <p class="meta">文学 · 最近 2023-02-18</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/b9b324005dd9f0b9b9e6f17" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-907760.jpg" alt="《计算机是怎样跑起来的》封面" width="90" height="120" loading="lazy">
+      <h3>计算机是怎样跑起来的 </h3>
+      <p class="by">矢泽久雄</p>
+      <p class="meta">计算机 · 最近 2022-11-02</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/98432a70726e82339840d31" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-40796723.jpg" alt="《计算机系统解密：从理解计算机到编写高效代码》封面" width="90" height="120" loading="lazy">
+      <h3>计算机系统解密：从理解计算机到编写高效代码 </h3>
+      <p class="by">乔纳森·E.斯坦哈特</p>
+      <p class="meta">计算机 · 最近 2022-09-08</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/96b32bb05df4d596b5c360d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-914645.jpg" alt="《海龟交易法则（第3版）》封面" width="90" height="120" loading="lazy">
+      <h3>海龟交易法则（第3版） </h3>
+      <p class="by">柯蒂斯·费思</p>
+      <p class="meta">经济理财 · 最近 2022-08-07</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/4e132bc07263ff664e11075" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-40107878.jpg" alt="《剑指Offer（专项突破版）：数据结构与算法名企面试题精讲》封面" width="90" height="120" loading="lazy">
+      <h3>剑指Offer（专项突破版）：数据结构与算法名企面试题精讲 </h3>
+      <p class="by">何海涛</p>
+      <p class="meta">计算机 · 最近 2022-05-09</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/c8332b6071a5ee45c83c518" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-27651653.jpg" alt="《程序员必读经典（算法基础+计算机系统）》封面" width="90" height="120" loading="lazy">
+      <h3>程序员必读经典（算法基础+计算机系统） </h3>
+      <p class="by">科尔曼 钱晓捷</p>
+      <p class="meta">计算机 · 最近 2022-05-07</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/1be32b907184877a1be90a2" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25462650.jpg" alt="《程序员代码面试指南：IT名企算法与数据结构题目最优解（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>程序员代码面试指南：IT名企算法与数据结构题目最优解（第2版） </h3>
+      <p class="by">左程云</p>
+      <p class="meta">计算机 · 最近 2022-05-02</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/36632c9071a12348366a182" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-27337544.jpg" alt="《Kafka权威指南》封面" width="90" height="120" loading="lazy">
+      <h3>Kafka权威指南 </h3>
+      <p class="by">妮哈·纳克海德 格温·沙皮拉 托德·帕利诺</p>
+      <p class="meta">计算机 · 最近 2022-04-17</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/bf93256071a122bebf98d95" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-27337406.jpg" alt="《程序员面试金典（第6版）》封面" width="90" height="120" loading="lazy">
+      <h3>程序员面试金典（第6版） </h3>
+      <p class="by">盖尔·拉克曼·麦克道尔</p>
+      <p class="meta">计算机 · 最近 2022-04-10</p></a><a class="shelf-card is-hidden" data-cat="科学技术" data-kind="book" href="https://weread.qq.com/web/reader/f69329f071dd8b0bf69fef7" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-31296267.jpg" alt="《生命密码（套装共2册）》封面" width="90" height="120" loading="lazy">
+      <h3>生命密码（套装共2册） </h3>
+      <p class="by">尹烨</p>
+      <p class="meta">科学技术 · 最近 2022-03-29</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/8cb322605e2c008cb4c4217" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-928768.jpg" alt="《巴菲特致股东的信：投资者和公司高管教程（原书第4版）》封面" width="90" height="120" loading="lazy">
+      <h3>巴菲特致股东的信：投资者和公司高管教程（原书第4版） </h3>
+      <p class="by">沃伦E.巴菲特 劳伦斯A.坎宁安</p>
+      <p class="meta">经济理财 · 最近 2022-03-28</p></a><a class="shelf-card is-hidden" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/56d325907203e8a856def7f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-33810600.jpg" alt="《高效能人士的七个习惯（30周年纪念版）（全新增订版）》封面" width="90" height="120" loading="lazy">
+      <h3>高效能人士的七个习惯（30周年纪念版）（全新增订版） </h3>
+      <p class="by">史蒂芬·柯维</p>
+      <p class="meta">个人成长 · 最近 2022-02-20</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/292320805e1b8929299074d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-924553.jpg" alt="《技术领导力：程序员如何才能带团队》封面" width="90" height="120" loading="lazy">
+      <h3>技术领导力：程序员如何才能带团队 </h3>
+      <p class="by">周明耀</p>
+      <p class="meta">计算机 · 最近 2022-01-27</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/20432b605a7f7a204dd47db" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-687994.jpg" alt="《编程之美》封面" width="90" height="120" loading="lazy">
+      <h3>编程之美 </h3>
+      <p class="by">《编程之美》小组</p>
+      <p class="meta">计算机 · 最近 2022-01-13</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/d5c329b071543c05d5c796f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-22297605.jpg" alt="《算法之美》封面" width="90" height="120" loading="lazy">
+      <h3>算法之美 </h3>
+      <p class="by">布莱恩·克里斯汀 汤姆·格里菲思</p>
+      <p class="meta">计算机 · 最近 2021-10-25</p></a><a class="shelf-card is-hidden" data-cat="科学技术" data-kind="book" href="https://weread.qq.com/web/reader/67f323e071889fbe67ff2f1" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25731006.jpg" alt="《自私的基因（40周年增订精装版）》封面" width="90" height="120" loading="lazy">
+      <h3>自私的基因（40周年增订精装版） </h3>
+      <p class="by">理查德·道金斯</p>
+      <p class="meta">科学技术 · 最近 2021-10-10</p></a><a class="shelf-card is-hidden" data-cat="社会文化" data-kind="book" href="https://weread.qq.com/web/reader/48032df071f3ab37480b27a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-32746295.jpg" alt="《刑法学讲义：第二版》封面" width="90" height="120" loading="lazy">
+      <h3>刑法学讲义：第二版 </h3>
+      <p class="by">罗翔</p>
+      <p class="meta">社会文化 · 最近 2021-10-04</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/69a32fe0717f542069a15e9" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25121824.jpg" alt="《福尔摩斯探案全集（图注本）（全9册）》封面" width="90" height="120" loading="lazy">
+      <h3>福尔摩斯探案全集（图注本）（全9册） </h3>
+      <p class="by">柯南·道尔</p>
+      <p class="meta">精品小说 · 最近 2021-09-21</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/1f7323105e25f51f76df5d5" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-927221.jpg" alt="《哥儿》封面" width="90" height="120" loading="lazy">
+      <h3>哥儿 </h3>
+      <p class="by">夏目漱石</p>
+      <p class="meta">精品小说 · 最近 2021-07-17</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/611329b059346e611427f1c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-603246.jpg" alt="《MySQL技术内幕：InnoDB存储引擎(第2版)》封面" width="90" height="120" loading="lazy">
+      <h3>MySQL技术内幕：InnoDB存储引擎(第2版) </h3>
+      <p class="by">姜承尧</p>
+      <p class="meta">计算机 · 最近 2021-06-29</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/2a3328e05934522a3f38d15" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-603218.jpg" alt="《深入理解计算机网络》封面" width="90" height="120" loading="lazy">
+      <h3>深入理解计算机网络 </h3>
+      <p class="by">王达</p>
+      <p class="meta">计算机 · 最近 2021-06-15</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/63b324007224e31963b206e" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35971865.jpg" alt="《支付方法论》封面" width="90" height="120" loading="lazy">
+      <h3>支付方法论 </h3>
+      <p class="by">王伟</p>
+      <p class="meta">经济理财 · 最近 2021-04-10</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/86e32e70718ff5f586eea7d" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26211829.jpg" alt="《MongoDB权威指南（第2版）》封面" width="90" height="120" loading="lazy">
+      <h3>MongoDB权威指南（第2版） </h3>
+      <p class="by">Kristina Chodorow</p>
+      <p class="meta">计算机 · 最近 2021-04-10</p></a><a class="shelf-card is-hidden" data-cat="教育学习" data-kind="book" href="https://weread.qq.com/web/reader/bdd3284071965c94bdddb3c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26631316.jpg" alt="《读英国《金融时报》学英语（二）（套装10本）》封面" width="90" height="120" loading="lazy">
+      <h3>读英国《金融时报》学英语（二）（套装10本） </h3>
+      <p class="by">[英]英国《金融时报》</p>
+      <p class="meta">教育学习 · 最近 2021-04-03</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/29c32330717058a329cf17c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24139939.jpg" alt="《大雪无痕》封面" width="90" height="120" loading="lazy">
+      <h3>大雪无痕 </h3>
+      <p class="by">陆天明</p>
+      <p class="meta">精品小说 · 最近 2021-04-02</p></a><a class="shelf-card is-hidden" data-cat="科学技术" data-kind="book" href="https://weread.qq.com/web/reader/1b732490718b72661b755f1" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25916006.jpg" alt="《概率论与数理统计》封面" width="90" height="120" loading="lazy">
+      <h3>概率论与数理统计 </h3>
+      <p class="by">同济大学数学系</p>
+      <p class="meta">科学技术 · 最近 2021-03-21</p></a><a class="shelf-card is-hidden" data-cat="文学" data-kind="book" href="https://weread.qq.com/web/reader/3dc32bf071d29b4e3dc2d95" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-30579534.jpg" alt="《八百万种死法》封面" width="90" height="120" loading="lazy">
+      <h3>八百万种死法 </h3>
+      <p class="by">劳伦斯·布洛克</p>
+      <p class="meta">文学 · 最近 2021-03-07</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/5e632060720439455e6be44" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-33831237.jpg" alt="《程序员修炼之道：从小工到专家》封面" width="90" height="120" loading="lazy">
+      <h3>程序员修炼之道：从小工到专家 </h3>
+      <p class="by">Andrew Hunt David Thomas</p>
+      <p class="meta">计算机 · 最近 2021-03-07</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/0a732fd07182263a0a7280f" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25306682.jpg" alt="《美国陷阱》封面" width="90" height="120" loading="lazy">
+      <h3>美国陷阱 </h3>
+      <p class="by">弗雷德里克·皮耶鲁齐 马修·阿伦</p>
+      <p class="meta">经济理财 · 最近 2021-02-28</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/f12326b071d88314f12ac8e" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-30966548.jpg" alt="《一生的旅程：迪士尼CEO自述》封面" width="90" height="120" loading="lazy">
+      <h3>一生的旅程：迪士尼CEO自述 </h3>
+      <p class="by">罗伯特·艾格 乔尔·洛弗尔</p>
+      <p class="meta">经济理财 · 最近 2021-02-28</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/d14328d07195f90bd148088" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26605835.jpg" alt="《财富的起源：探讨关税对财富根源的作用》封面" width="90" height="120" loading="lazy">
+      <h3>财富的起源：探讨关税对财富根源的作用 </h3>
+      <p class="by">埃里克·拜因霍克</p>
+      <p class="meta">经济理财 · 最近 2020-09-11</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/86532a50718a8a01865d2d6" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25856513.jpg" alt="《奇鸟行状录》封面" width="90" height="120" loading="lazy">
+      <h3>奇鸟行状录 </h3>
+      <p class="by">[日]村上春树</p>
+      <p class="meta">精品小说 · 最近 2020-08-04</p></a><a class="shelf-card is-hidden" data-cat="历史" data-kind="book" href="https://weread.qq.com/web/reader/4ea32b207195f9074ea6153" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26605831.jpg" alt="《历史的温度（全四册-独家定制版）》封面" width="90" height="120" loading="lazy">
+      <h3>历史的温度（全四册-独家定制版） </h3>
+      <p class="by">张玮</p>
+      <p class="meta">历史 · 最近 2020-08-04</p></a><a class="shelf-card is-hidden" data-cat="心理" data-kind="book" href="https://weread.qq.com/web/reader/9a2321d05ae29b9a241382b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-713371.jpg" alt="《爱的博弈：建立信任、避免背叛与不忠》封面" width="90" height="120" loading="lazy">
+      <h3>爱的博弈：建立信任、避免背叛与不忠 </h3>
+      <p class="by">约翰·戈特曼 娜恩·西尔弗</p>
+      <p class="meta">心理 · 最近 2020-07-26</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/40432bd071728d2d4049c5b" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-24284461.jpg" alt="《经济学原理（超值白金版）》封面" width="90" height="120" loading="lazy">
+      <h3>经济学原理（超值白金版） </h3>
+      <p class="by">[英]马歇尔</p>
+      <p class="meta">经济理财 · 最近 2020-06-01</p></a><a class="shelf-card is-hidden" data-cat="个人成长" data-kind="book" href="https://weread.qq.com/web/reader/86a32490718ea51d86a0045" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-26125597.jpg" alt="《博弈论》封面" width="90" height="120" loading="lazy">
+      <h3>博弈论 </h3>
+      <p class="by">翟文明</p>
+      <p class="meta">个人成长 · 最近 2020-05-06</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/01a32c5071d7c79a01a0831" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-30918554.jpg" alt="《Elasticsearch实战与原理解析》封面" width="90" height="120" loading="lazy">
+      <h3>Elasticsearch实战与原理解析 </h3>
+      <p class="by">牛冬</p>
+      <p class="meta">计算机 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/bd43298071fd1081bd4cb34" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-33362049.jpg" alt="《结构性改革》封面" width="90" height="120" loading="lazy">
+      <h3>结构性改革 </h3>
+      <p class="by">黄奇帆</p>
+      <p class="meta">经济理财 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/943329407260a653943ae3c" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-39888467.jpg" alt="《后疫情时代的中国经济（套装共21册）》封面" width="90" height="120" loading="lazy">
+      <h3>后疫情时代的中国经济（套装共21册） </h3>
+      <p class="by">吴晓波 王德培 管清友 秦朔等</p>
+      <p class="meta">经济理财 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="经济理财" data-kind="book" href="https://weread.qq.com/web/reader/b3c32a205df4b5b3c640369" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-914613.jpg" alt="《千年金融史：金融如何塑造文明，从5000年前到21世纪》封面" width="90" height="120" loading="lazy">
+      <h3>千年金融史：金融如何塑造文明，从5000年前到21世纪 </h3>
+      <p class="by">威廉·戈兹曼</p>
+      <p class="meta">经济理财 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="计算机" data-kind="book" href="https://weread.qq.com/web/reader/44232e40717db787442af8a" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-25016199.jpg" alt="《持续交付：发布可靠软件的系统方法》封面" width="90" height="120" loading="lazy">
+      <h3>持续交付：发布可靠软件的系统方法 </h3>
+      <p class="by">Jez Humble  David Farley</p>
+      <p class="meta">计算机 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/2ea323407218bcfc2eaa6d9" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-35175676.jpg" alt="《沉默的病人》封面" width="90" height="120" loading="lazy">
+      <h3>沉默的病人 </h3>
+      <p class="by">亚历克斯·麦克利兹</p>
+      <p class="meta">精品小说 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="政治军事" data-kind="book" href="https://weread.qq.com/web/reader/9a832c5071681dbe9a88b31" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-23600574.jpg" alt="《图说世界格局》封面" width="90" height="120" loading="lazy">
+      <h3>图说世界格局 </h3>
+      <p class="by">王伟</p>
+      <p class="meta">政治军事 · 尚未阅读</p></a><a class="shelf-card is-hidden" data-cat="精品小说" data-kind="book" href="https://weread.qq.com/web/reader/07132c605e1932071334850" rel="noopener noreferrer">
+      <img class="cover" src="images/books/b-923954.jpg" alt="《北洋夜行记》封面" width="90" height="120" loading="lazy">
+      <h3>北洋夜行记 </h3>
+      <p class="by">金醉 魔宙</p>
+      <p class="meta">精品小说 · 尚未阅读</p></a>
+      </div>
+      <p class="shelf-more-wrap"><button type="button" class="chip" id="shelfMore">显示全部 181 册</button></p>
+    </section>
+
+        <section id="music" class="tab-panel" role="tabpanel">
+      <div class="section-head">
+        <h2>音乐</h2>
+        <span class="en">Music</span>
+      </div>
+      <p class="lede zh">来自网易云歌单「匡子闲喜欢的音乐」，共 286 首，导出于 2026-11-17 15:48（Asia/Shanghai）。按网易云「我喜欢的音乐」默认顺序解读：第1首视为最新收藏，第286首较早。用户未另行确认排序。分析来自收藏，不是播放次数。 完整可视化报告可在本站打开，不必访问外部分析页。</p>
+      <p class="lede en-only">From the NetEase Cloud Music playlist “匡子闲喜欢的音乐”: 286 tracks, exported at 2026-11-17 15:48 (Asia/Shanghai). Read in NetEase Cloud Music’s default Liked Songs order: #1 is treated as the newest save, #286 as earlier. This order was not separately confirmed. The analysis is based on saves, not play counts. The full visual report is hosted on this site.</p>
+      <div class="music-heroes" aria-label="代表封面">
+        <a class="music-hero" href="https://music.163.com/#/song?id=65766" target="_blank" rel="noopener noreferrer">
+          <img src="images/music/fuji.jpg" alt="富士山下 — 陈奕迅 封面" width="160" height="160" loading="lazy">
+          <span class="music-hero-cap"><strong>富士山下</strong><span>陈奕迅</span></span>
+        </a>
+        <a class="music-hero" href="https://music.163.com/#/song?id=30431367" target="_blank" rel="noopener noreferrer">
+          <img src="images/music/zouma.jpg" alt="走马 — 陈粒 封面" width="160" height="160" loading="lazy">
+          <span class="music-hero-cap"><strong>走马</strong><span>陈粒</span></span>
+        </a>
+        <a class="music-hero" href="https://music.163.com/#/song?id=1466598056" target="_blank" rel="noopener noreferrer">
+          <img src="images/music/lemon.jpg" alt="Lemon — 米津玄師 封面" width="160" height="160" loading="lazy">
+          <span class="music-hero-cap"><strong>Lemon</strong><span>米津玄師</span></span>
+        </a>
+        <a class="music-hero" href="https://music.163.com/#/song?id=26113988" target="_blank" rel="noopener noreferrer">
+          <img src="images/music/paomo.jpg" alt="泡沫 — G.E.M.邓紫棋 封面" width="160" height="160" loading="lazy">
+          <span class="music-hero-cap"><strong>泡沫</strong><span>G.E.M.邓紫棋</span></span>
+        </a>
+      </div>
+      <article class="card music-summary">
+        <h3><span class="zh">先把喜欢留下来</span><span class="en-only">A map of saved songs</span></h3>
+        <p class="zh">依据286首收藏，不是播放次数。华语流行为主，民谣、日语与欧美流行并存。</p>
+        <p class="en-only">Based on 286 saved songs, not play counts. Mandopop is the main line, with folk, Japanese, and Western pop also present.</p>
+        <ul class="music-stats">
+          <li><strong>286</strong><span class="zh">首收藏</span><span class="en-only">saved tracks</span></li>
+          <li><strong>243</strong><span class="zh">位艺人（按参与计）</span><span class="en-only">artists (participations)</span></li>
+          <li><strong>12</strong><span class="zh">首已核实推荐</span><span class="en-only">verified recommendations</span></li>
+        </ul>
+        <h4><span class="zh">出现最多的艺人</span><span class="en-only">Artists who appear most often</span></h4>
+        <ul class="music-artists"><li><span class="music-artist-name">陈粒</span><span class="music-artist-n">7</span></li><li><span class="music-artist-name">G.E.M.邓紫棋</span><span class="music-artist-n">7</span></li><li><span class="music-artist-name">陈奕迅</span><span class="music-artist-n">6</span></li><li><span class="music-artist-name">王力宏</span><span class="music-artist-n">6</span></li><li><span class="music-artist-name">莫文蔚</span><span class="music-artist-n">5</span></li><li><span class="music-artist-name">李荣浩</span><span class="music-artist-n">5</span></li><li><span class="music-artist-name">孙燕姿</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">周杰伦</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">张宇</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">杨宗纬</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">米津玄師</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">毛不易</span><span class="music-artist-n">4</span></li></ul>
+        <p class="tiny zh">次数含合作与不同发行，不是播放次数，也不能直接当流派比例。专辑上收藏较多的有：毛不易《平凡的一天》4 首、陈粒《如也》3 首、莫文蔚《就 i Karen 莫文蔚精选》2 首。</p>
+        <p class="tiny en-only">Counts include collaborations and different releases, not play counts, and are not genre shares. Albums with more saves: 毛不易 “平凡的一天” ×4; 陈粒 “如也” ×3; 莫文蔚 “就 i Karen 莫文蔚精选” ×2.</p>
+        <ul class="tiny music-limits zh"><li>艺人次数按演唱参与计，合作曲会叠加，不能当作流派占比。</li><li>同一首歌的不同发行只增加覆盖，不重复计为独立偏好。</li><li>没有播放次数、听歌年份或音频特征值。</li></ul>
+        <ul class="tiny music-limits en-only"><li>Artist counts include collaborations and are not additive genre shares.</li><li>Different releases of the same song add coverage, not extra preference votes.</li><li>No play counts, listening years, or audio features are inferred.</li></ul>
+        <p class="tiny zh">歌单：<a href="https://music.163.com/#/playlist?id=114831730" target="_blank" rel="noopener noreferrer">网易云「匡子闲喜欢的音乐」</a></p>
+        <p class="tiny en-only">Playlist: <a href="https://music.163.com/#/playlist?id=114831730" target="_blank" rel="noopener noreferrer">NetEase “匡子闲喜欢的音乐”</a></p>
+      </article>
+      <div class="section-head music-subhead">
+        <h3>偏好</h3>
+        <span class="en">Taste</span>
+      </div>
+      <div class="music-insights">
+        <article class="card music-insight">
+          <p class="music-kicker">华语流行</p>
+          <h3 class="zh">华语流行是歌单的主轴</h3>
+          <h3 class="en-only">Mandopop is the main line</h3>
+          <p class="zh">陈奕迅、邓紫棋、王力宏、孙燕姿、林俊杰、周杰伦、莫文蔚等反复出现。</p>
+          <p class="en-only">Eason Chan, G.E.M., Leehom Wang, Stefanie Sun, JJ Lin, Jay Chou and Karen Mok appear repeatedly.</p>
+          <p class="zh">286首里，华语流行艺人最显眼：陈奕迅有《富士山下》《十年》《红玫瑰》《孤勇者》，邓紫棋有成组的《泡沫》《喜欢你》《光年之外》，王力宏连续多首，孙燕姿、林俊杰、周杰伦、莫文蔚、李荣浩、郭静也反复出现。这是收藏密度最高的一条线，但不是唯一的线。</p>
+          <p class="en-only">Across 286 songs, Mandopop artists are the most visible line: Eason Chan, a cluster of G.E.M. tracks, a run of Leehom Wang songs, plus Stefanie Sun, JJ Lin, Jay Chou, Karen Mok, Ronghao Li and Claire Kuo. It is the densest line, but not the only one.</p>
+          <ul class="music-evidence"><li><span class="music-ev-title">富士山下</span> <span class="music-ev-artist">陈奕迅</span> — 较新一端的陈奕迅粤语代表作，说明这条线一直在延续。</li><li><span class="music-ev-title">泡沫</span> <span class="music-ev-artist">G.E.M.邓紫棋</span> — 邓紫棋成组收藏里的一首，和前后的《喜欢你》《后会无期》连在一起。</li><li><span class="music-ev-title">你不知道的事</span> <span class="music-ev-artist">王力宏</span> — 王力宏连续多首中的一首，体现的是成簇收藏，不是单曲点赞。</li></ul>
+        </article>
+        <article class="card music-insight">
+          <p class="music-kicker">民谣叙事</p>
+          <h3 class="zh">城市民谣是第二条主线</h3>
+          <h3 class="en-only">City folk is the second line</h3>
+          <p class="zh">陈粒、毛不易、赵雷、宋冬野、陈鸿宇、房东的猫在不同阶段反复出现。</p>
+          <p class="en-only">Chen Li, Mao Buyi, Zhao Lei, Song Dongye, Chen Hongyu and 房东的猫 return across stages.</p>
+          <p class="zh">陈粒《走马》《小半》《易燃易爆炸》《历历万乡》覆盖《如也》与《小梦大半》。毛不易《消愁》《借》《一荤一素》《像我这样的人》集中来自《平凡的一天》。赵雷《成都》有两个发行，宋冬野《董小姐》也有两个版本。陈鸿宇、房东的猫让这条线不只是一两首歌。</p>
+          <p class="en-only">Chen Li covers 如也 and 小梦大半; Mao Buyi’s 消愁, 借, 一荤一素 and 像我这样的人 come from the same album. Zhao Lei’s “成都” and Song Dongye’s “董小姐” each appear in two releases. Chen Hongyu and 房东的猫 show the line is more than one or two songs.</p>
+          <ul class="music-evidence"><li><span class="music-ev-title">走马</span> <span class="music-ev-artist">陈粒</span> — 《如也》里的《走马》，是陈粒在歌单中最有代表性的一首。</li><li><span class="music-ev-title">消愁</span> <span class="music-ev-artist">毛不易</span> — 《平凡的一天》里的《消愁》，和同专辑多首一起出现。</li><li><span class="music-ev-title">成都</span> <span class="music-ev-artist">赵雷</span> — 赵雷《成都》的单曲版；另一发行在《无法长大》，只算覆盖。</li></ul>
+        </article>
+        <article class="card music-insight">
+          <p class="music-kicker">版本覆盖</p>
+          <h3 class="zh">熟歌会以不同发行再出现</h3>
+          <h3 class="en-only">Familiar songs reappear in other releases</h3>
+          <p class="zh">多首同名作品出现两次，增加的是发行覆盖，不是播放次数。</p>
+          <p class="en-only">Several same-title tracks appear twice. That adds release coverage, not play counts.</p>
+          <p class="zh">《董小姐》有摩登天空7与《安和桥北》两个版本，《成都》《年少有为》《遇见》《Butter-Fly》《挪威的森林》《追光者》《护花使者》《Counting Stars》《红玫瑰》等也重复出现。这只说明同一作品被再次收进不同发行，不能推断哪一首听得更多，也不能当成两票偏好。</p>
+          <p class="en-only">“董小姐” appears in both Modern Sky 7 and 安和桥北 editions; “成都”, “年少有为”, “遇见”, Butter-Fly and others also repeat. This only shows the same work was saved again in another release. It does not say which one was played more, and it should not count as two preference votes.</p>
+          <ul class="music-evidence"><li><span class="music-ev-title">董小姐</span> <span class="music-ev-artist">宋冬野</span> — 《董小姐》的《安和桥北》版，是较新一端附近的一次再收藏。</li><li><span class="music-ev-title">董小姐</span> <span class="music-ev-artist">宋冬野</span> — 同一首歌的摩登天空7版，出现在歌单较早一端。</li><li><span class="music-ev-title">成都</span> <span class="music-ev-artist">赵雷</span> — 《成都》的《无法长大》版，和单曲版并存，只增加覆盖。</li></ul>
+        </article>
+        <article class="card music-insight">
+          <p class="music-kicker">日语与动漫</p>
+          <h3 class="zh">日语流行和动漫歌是稳定支线</h3>
+          <h3 class="en-only">Japanese pop and anime songs are a steady side line</h3>
+          <p class="zh">米津玄師、YOASOBI、GARNiDELiA 与动画、游戏原声多次出现。</p>
+          <p class="en-only">Kenshi Yonezu, YOASOBI, GARNiDELiA, plus anime and game scores, appear more than once.</p>
+          <p class="zh">米津玄師有《Lemon》《LOSER》《打上花火》《打ち上げ花火》。YOASOBI《群青》在较新一端，旁边还有中文翻唱。GARNiDELiA《極楽浄土》与 MARiA 版并存。和田光司《Butter-Fly》出现两次，另有初音相关作品、名侦探柯南主题、Silent Hill 2 原声和一人之下曲目。汉字书写的日语曲会被语言计数低估。</p>
+          <p class="en-only">Kenshi Yonezu appears with Lemon, LOSER and fireworks tracks; YOASOBI’s “群青” is near the newer end, with a Chinese cover nearby. GARNiDELiA and MARiA versions of 極楽浄土 both appear, as do Butter-Fly (twice), Vocaloid-related tracks, Detective Conan, Silent Hill 2 and Under One Person cues. Japanese titles written in kanji are easy to undercount.</p>
+          <ul class="music-evidence"><li><span class="music-ev-title">群青</span> <span class="music-ev-artist">YOASOBI</span> — YOASOBI《群青》出现在较新一端，旁边还有一首中文翻唱。</li><li><span class="music-ev-title">Lemon</span> <span class="music-ev-artist">米津玄師</span> — 米津玄師《Lemon》说明日语流行不只是动画插入。</li><li><span class="music-ev-title">打上花火</span> <span class="music-ev-artist">Daoko、米津玄師</span> — 与 Daoko 合作的《打上花火》，连接日语流行和动画场景。</li></ul>
+        </article>
+        <article class="card music-insight">
+          <p class="music-kicker">欧美与配乐</p>
+          <h3 class="zh">欧美流行和电影歌贯穿全单</h3>
+          <h3 class="en-only">Western pop and film songs run through the list</h3>
+          <p class="zh">从较早一端的电影歌，到电音和老牌流行，这条线一直没有消失。</p>
+          <p class="en-only">From earlier-end film songs to electronic and catalogue pop, this line never disappears.</p>
+          <p class="zh">较早一端已有《See You Again》《Love The Way You Lie》《Love Me Like You Do》。之后还有《Counting Stars》《Sugar》《Faded》、The Beatles《Norwegian Wood》、《City Of Stars》，以及克莱德曼和 Silent Hill 原声。它们分散在各阶段，不像某一时期的突发兴趣。</p>
+          <p class="en-only">The earlier end already has See You Again, Love The Way You Lie and Love Me Like You Do. Later come Counting Stars, Sugar, Faded, The Beatles’ Norwegian Wood, City Of Stars, Clayderman piano and Silent Hill cues. They are spread across stages, not a short-lived burst.</p>
+          <ul class="music-evidence"><li><span class="music-ev-title">See You Again</span> <span class="music-ev-artist">Wiz Khalifa、Charlie Puth</span> — 较早一端的电影主题曲，说明欧美影视歌从一开始就在歌单里。</li><li><span class="music-ev-title">City Of Stars (From &quot;La La Land&quot; Soundtrack)</span> <span class="music-ev-artist">Ryan Gosling、Emma Stone</span> — 《La La Land》插曲，把电影原声和欧美流行连在一起。</li><li><span class="music-ev-title">Faded</span> <span class="music-ev-artist">Alan Walker</span> — Alan Walker《Faded》出现在中段，电音流行也被收进。</li></ul>
+        </article>
+        <article class="card music-insight">
+          <p class="music-kicker">戏腔古风</p>
+          <h3 class="zh">戏腔、古风和民族色彩反复出现</h3>
+          <h3 class="en-only">Opera-tinged, guofeng and folk colors keep returning</h3>
+          <p class="zh">任素汐、凤凰传奇、古风翻唱、红昭愿与民歌并不是偶尔点缀。</p>
+          <p class="en-only">Ren Suxi, Phoenix Legend, guofeng covers, 红昭愿 and folk songs are not one-off ornaments.</p>
+          <p class="zh">较新一端有任素汐《王招君》、凤凰传奇《奢香夫人》、闻人听書_《虞兮叹》、额尔古纳乐队《鸿雁》。更早还有任素汐《我要你》、以冬和不才的古风翻唱、音阙诗听《红昭愿》、戴荃《悟空》、刀郎《西海情歌》、双笙《我的一个道姑朋友》。这条线跨越多段，不是单次尝鲜。</p>
+          <p class="en-only">Near the newer end are Ren Suxi’s “王招君”, Phoenix Legend, 闻人听書_ and 鸿雁. Earlier stretches also have “我要你”, guofeng covers, 红昭愿, Dai Quan’s “悟空”, Dao Lang and 双笙. The line crosses several stages, not a single trial.</p>
+          <ul class="music-evidence"><li><span class="music-ev-title">王招君</span> <span class="music-ev-artist">任素汐</span> — 任素汐《王招君》在较新一端，戏腔表现很突出。</li><li><span class="music-ev-title">奢香夫人</span> <span class="music-ev-artist">凤凰传奇</span> — 凤凰传奇《奢香夫人》把民族旋律放进流行编曲。</li><li><span class="music-ev-title">红昭愿</span> <span class="music-ev-artist">音阙诗听</span> — 音阙诗听《红昭愿》是古风流行里较常被收藏的一首。</li></ul>
+        </article>
+      </div>
+      <div class="section-head music-subhead">
+        <h3>风格时间线</h3>
+        <span class="en">Timeline</span>
+      </div>
+      <p class="tiny music-tl-note zh">九段按确认的旧→新方向排列。因为按默认顺序第1首是最新的，时间线从第286首读到第1首。编号是歌单位置，不是年份。</p>
+      <p class="tiny music-tl-note en-only">Nine stretches run from earlier saves to newer ones. Because #1 is treated as newest, the timeline reads from #286 to #1. Numbers are playlist positions, not years.</p>
+      <ol class="music-timeline">
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">经典华语</span><span class="en-only">Classic Mandopop</span> <span class="music-range">#286–#256</span></p>
+          <h3 class="zh">情歌与电影里的声音</h3>
+          <h3 class="en-only">Ballads and film songs</h3>
+          <p class="music-sub zh">按默认顺序，这是歌单较早的一端</p>
+          <p class="music-sub en-only">Songs and film music, at the earlier end</p>
+          <p class="zh">较早一端以华语情歌和影视主题曲为主：梁静茹《爱久见人心》、李健《传奇》、齐秦《大约在冬季》，以及周杰伦《红尘客栈》《不能说的秘密》、陈奕迅《十年》。郭静连续出现多首。同时收有《See You Again》等欧美电影歌曲。宋冬野《董小姐》是摩登天空7版。</p>
+          <p class="en-only">The earlier end is mostly Mandopop ballads and film themes: Fish Leong, Li Jian, Chyi Chin, Jay Chou, Eason Chan, and a run of Claire Kuo tracks. Western film pop such as See You Again is already here. Song Dongye’s “董小姐” appears in the Modern Sky 7 edition.</p>
+          <p class="tiny music-stage-insight zh">华语情歌是底座，影视与欧美流行已经并存。</p>
+          <p class="tiny music-stage-insight en-only">Mandopop ballads are the base; film and Western pop are already present.</p>
+          <p class="tiny music-anchors">十年 / 陈奕迅 · 红尘客栈 / 周杰伦 · See You Again / Wiz Khalifa、Charlie Puth</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">华语主力</span><span class="en-only">Mandopop core</span> <span class="music-range">#255–#224</span></p>
+          <h3 class="zh">邓紫棋与王力宏成簇出现</h3>
+          <h3 class="en-only">G.E.M. and Leehom Wang appear in clusters</h3>
+          <p class="music-sub zh">同一艺人的多首作品被连续收进歌单</p>
+          <p class="music-sub en-only">Several artists appear in clusters</p>
+          <p class="zh">王力宏《依然爱你》《你不知道的事》《唯一》《我们的歌》《心中的日月》连成一串，邓紫棋《后会无期》《泡沫》《喜欢你》《你把我灌醉》也成组出现。旁边还有林俊杰《她说》、薛之谦《丑八怪》，以及《Counting Stars》《Sugar》、初音相关和马頔《南山南》。</p>
+          <p class="en-only">Leehom Wang songs sit in a row, and G.E.M. also appears as a group, with JJ Lin, Xue Zhiqian, Counting Stars, Sugar, Vocaloid-related tracks and Ma Di’s “南山南” nearby.</p>
+          <p class="tiny music-stage-insight zh">流行偶像作品会成组收藏，不是零散点赞。</p>
+          <p class="tiny music-stage-insight en-only">Idol-pop tracks are saved in clusters, not as isolated likes.</p>
+          <p class="tiny music-anchors">你不知道的事 / 王力宏 · 泡沫 / G.E.M.邓紫棋 · 她说 / 林俊杰</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">民谣城市</span><span class="en-only">City folk</span> <span class="music-range">#223–#192</span></p>
+          <h3 class="zh">陈粒、成都与城市叙事</h3>
+          <h3 class="en-only">Chen Li, Chengdu, and city narratives</h3>
+          <p class="music-sub zh">民谣叙事和钢琴小品一起出现</p>
+          <p class="music-sub en-only">Folk narratives appear with piano pieces</p>
+          <p class="zh">这一段出现陈粒《小半》、赵雷《成都》、陈鸿宇《理想三旬》、李荣浩《老街》、戴荃《悟空》。理查德·克莱德曼的《秋日私语》《星空》也被收进，说明器乐小品可以和华语叙事并存。金玟岐《岁月神偷》、杨宗纬《洋葱》仍是华语流行旋律。</p>
+          <p class="en-only">This stretch includes Chen Li’s “小半”, Zhao Lei’s “成都”, Chen Hongyu, Ronghao Li’s “老街”, and Dai Quan’s “悟空”. Richard Clayderman piano pieces sit beside them, along with Mandopop from Jin Wenqi and Aska Yang.</p>
+          <p class="tiny music-stage-insight zh">城市民谣开始与流行、器乐交错。</p>
+          <p class="tiny music-stage-insight en-only">City folk begins to interleave with pop and instrumental pieces.</p>
+          <p class="tiny music-anchors">小半 / 陈粒 · 成都 / 赵雷 · 理想三旬 / 陈鸿宇</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">古风混编</span><span class="en-only">Guofeng mix</span> <span class="music-range">#191–#160</span></p>
+          <h3 class="zh">陈粒加厚，古风翻唱并置</h3>
+          <h3 class="en-only">More Chen Li, with guofeng covers alongside</h3>
+          <p class="music-sub zh">原作与翻唱、古风与电影歌混在同一段</p>
+          <p class="music-sub en-only">Originals, covers, guofeng and film songs share the stretch</p>
+          <p class="zh">陈粒在这一段变密：《奇妙能力歌》《易燃易爆炸》《虚拟》《性空山》。旁边是以冬、不才的古风翻唱，以及任素汐《我要你》。同时再次出现 Eminem 的作品，还有《City Of Stars》《Galway Girl》。一人之下相关曲目也在其中。这是混编，不是单一风格替换。</p>
+          <p class="en-only">Chen Li becomes denser here (奇妙能力歌, 易燃易爆炸, 虚拟, 性空山), next to guofeng covers and Ren Suxi’s “我要你”. Eminem, City Of Stars and Galway Girl also appear, as do Under One Person soundtrack tracks. This is a mix, not a style replacement.</p>
+          <p class="tiny music-stage-insight zh">陈粒作品加厚，古风翻唱与欧美影视并存。</p>
+          <p class="tiny music-stage-insight en-only">Chen Li deepens; guofeng covers sit beside Western film pop.</p>
+          <p class="tiny music-anchors">易燃易爆炸 / 陈粒 · 我要你 / 任素汐 · City Of Stars (From &quot;La La Land&quot; Soundtrack) / Ryan Gosling、Emma Stone</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">跨界扩大</span><span class="en-only">Wider sources</span> <span class="music-range">#159–#128</span></p>
+          <h3 class="zh">动漫、电音与华语并行</h3>
+          <h3 class="en-only">Anime, electronic, and Mandopop in parallel</h3>
+          <p class="music-sub zh">华语之外的来源明显变多</p>
+          <p class="music-sub en-only">Non-Chinese sources become more visible</p>
+          <p class="zh">这一段来源更杂：米津玄師与 Daoko《打上花火》、邓紫棋《光年之外》、音阙诗听《红昭愿》、岑宁儿《追光者》，也有 TheFatRat《Monody》、Carpenters《Yesterday Once More》。许巍《蓝莲花》《曾经的你》和陈鸿宇《一如年少模样》把华语摇滚与民谣留在同一段。</p>
+          <p class="en-only">This stretch is more mixed: Kenshi Yonezu and Daoko’s “打上花火”, G.E.M.’s “光年之外”, “红昭愿”, “追光者”, plus TheFatRat and the Carpenters. Xu Wei and Chen Hongyu keep Chinese rock and folk in the same stretch.</p>
+          <p class="tiny music-stage-insight zh">收藏范围变宽，但仍不断回看华语。</p>
+          <p class="tiny music-stage-insight en-only">The range widens, but the playlist keeps returning to Chinese songs.</p>
+          <p class="tiny music-anchors">打上花火 / Daoko、米津玄師 · 光年之外 / G.E.M.邓紫棋 · 红昭愿 / 音阙诗听</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">专辑加厚</span><span class="en-only">Album digging</span> <span class="music-range">#127–#96</span></p>
+          <h3 class="zh">平凡之路与专辑深挖</h3>
+          <h3 class="en-only">Ordinary Path and deeper album saves</h3>
+          <p class="music-sub zh">整专曲目和经典摇滚一起被收进来</p>
+          <p class="music-sub en-only">Full-album tracks and classic rock are added</p>
+          <p class="zh">毛不易《像我这样的人》来自《平凡的一天》，李荣浩《年少有为》也在此出现。Beyond《海阔天空》《光辉岁月》、朴树《平凡之路》构成华语摇滚经典簇。陈粒《历历万乡》继续《如也》线。另有 Silent Hill 2 的《Promise》《Theme of Laura》，以及《Faded》和李健《贝加尔湖畔》。</p>
+          <p class="en-only">Mao Buyi’s “像我这样的人” comes from the album 平凡的一天; Ronghao Li’s “年少有为” is here too. Beyond, Pu Shu, Chen Li’s “历历万乡”, Silent Hill 2 cues, Faded and Li Jian’s “贝加尔湖畔” share the stretch.</p>
+          <p class="tiny music-stage-insight zh">开始按专辑和经典专集补充，不只收单曲。</p>
+          <p class="tiny music-stage-insight en-only">Saves start filling out albums and classics, not only singles.</p>
+          <p class="tiny music-anchors">像我这样的人 / 毛不易 · 海阔天空 / Beyond · 历历万乡 / 陈粒</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">再回民谣</span><span class="en-only">Folk again</span> <span class="music-range">#95–#64</span></p>
+          <h3 class="zh">消愁、成都与李荣浩</h3>
+          <h3 class="en-only">Xiao Chou, Chengdu, and Ronghao Li</h3>
+          <p class="music-sub zh">毛不易专辑曲与城市民谣再次集中</p>
+          <p class="music-sub en-only">Mao Buyi album tracks and city folk concentrate again</p>
+          <p class="zh">毛不易《消愁》《借》《一荤一素》同属《平凡的一天》，和李荣浩《麻雀》《不将就》排在一起。赵雷《成都》是《无法长大》版，与前面的单曲版不是同一发行。还有陈奕迅《孤勇者》、房东的猫《云烟成雨》、米津玄師《Lemon》，以及伍佰的作品。华语民谣与流行再次拧紧。</p>
+          <p class="en-only">Mao Buyi’s 消愁, 借 and 一荤一素 (all from 平凡的一天) sit with Ronghao Li. Zhao Lei’s “成都” here is the 无法长大 edition, not the earlier single. Eason Chan’s “孤勇者”, 房东的猫, Kenshi Yonezu’s Lemon and Wu Bai also appear.</p>
+          <p class="tiny music-stage-insight zh">同一专辑会被继续补完，城市民谣再次集中。</p>
+          <p class="tiny music-stage-insight en-only">The same album continues to be completed; city folk concentrates again.</p>
+          <p class="tiny music-anchors">消愁 / 毛不易 · 成都 / 赵雷 · Lemon / 米津玄師</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">重听对照</span><span class="en-only">Re-saves</span> <span class="music-range">#63–#32</span></p>
+          <h3 class="zh">走马、董小姐与再收藏</h3>
+          <h3 class="en-only">Zouma, Miss Dong, and re-saves</h3>
+          <p class="music-sub zh">许多熟歌以不同发行再次进入歌单</p>
+          <p class="music-sub en-only">Familiar songs re-enter in different releases</p>
+          <p class="zh">陈粒《走马》补上《如也》的重要一首。宋冬野《董小姐》是《安和桥北》版，与较早的摩登天空7版并存。孙燕姿《遇见》、李荣浩《年少有为》、和田光司《Butter-Fly》也以不同发行再出现。新加入的有草东没有派对《山海》、五月天《温柔》，以及米津玄師《LOSER》与《打ち上げ花火》。</p>
+          <p class="en-only">Chen Li’s “走马” adds a key 如也 track. Song Dongye’s “董小姐” appears in the 安和桥北 edition beside the earlier Modern Sky 7 edition. Stefanie Sun, Ronghao Li and Butter-Fly also reappear in other releases, with new adds from No Party For Cao Dong, Mayday and Kenshi Yonezu.</p>
+          <p class="tiny music-stage-insight zh">熟歌换发行再收，同时补进摇滚与日语。</p>
+          <p class="tiny music-stage-insight en-only">Familiar songs are saved again in other editions, while rock and Japanese tracks are added.</p>
+          <p class="tiny music-anchors">走马 / 陈粒 · 董小姐 / 宋冬野 · 山海 / 草东没有派对</p>
+        </li>
+        <li class="card music-stage">
+          <p class="music-stage-tag"><span class="zh">最近收藏</span><span class="en-only">Latest saves</span> <span class="music-range">#31–#1</span></p>
+          <h3 class="zh">晚风、富士山与戏腔回声</h3>
+          <h3 class="en-only">Evening wind, Fuji, and opera-tinged echoes</h3>
+          <p class="music-sub zh">按默认顺序，第1首是最新收藏</p>
+          <p class="music-sub en-only">By the default order, #1 is the newest save</p>
+          <p class="zh">按网易云「我喜欢的音乐」默认，第1首《晚风心里吹》视为最新。紧邻的是陈奕迅《富士山下》、孙燕姿《我怀念的》、李玟与周杰伦《刀马旦》。任素汐《王招君》、凤凰传奇《奢香夫人》、闻人听書_《虞兮叹》让戏腔和民族色彩再次出现。YOASOBI《群青》和许嵩《如果当时》说明主线仍是华语，来源更杂。</p>
+          <p class="en-only">Under NetEase’s default Liked-Songs order, “晚风心里吹” is treated as the newest save, next to Eason Chan’s “富士山下”, Stefanie Sun, and Leehom/Jay’s “刀马旦”. Ren Suxi, Phoenix Legend and 闻人听書_ bring opera-tinged and folk colors back. YOASOBI’s “群青” and Xu Song show the main line is still Mandopop, just from more sources.</p>
+          <p class="tiny music-stage-insight zh">最新一端仍以华语流行为主，戏腔与日语穿插其中。</p>
+          <p class="tiny music-stage-insight en-only">The newest end is still mainly Mandopop, with opera-tinged and Japanese tracks mixed in.</p>
+          <p class="tiny music-anchors">富士山下 / 陈奕迅 · 我怀念的 / 孙燕姿 · 王招君 / 任素汐</p>
+        </li>
+      </ol>
+      <div class="section-head music-subhead">
+        <h3>推荐</h3>
+        <span class="en">Recommendations</span>
+      </div>
+      <p class="tiny zh">12 首都不在这张歌单里，曲目和封面都已核对过来源。喜欢与否要听过才知道。</p>
+      <p class="tiny en-only">None of these 12 tracks were found in the playlist. Titles, artists and covers were verified against official sources. Whether they fit still depends on a listen.</p>
+      <div class="music-recs">
+        <section class="music-tier">
+          <h4><span class="zh">大概率合口味</span><span class="en-only">Very likely</span></h4>
+          <div class="music-rec-grid">
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=65800" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-zuijia-sunyou.jpg" alt="最佳损友 — 陈奕迅 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>最佳损友</h3>
+                <p class="music-rec-artist">陈奕迅 · Life Continues…</p>
+                <p class="zh">歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。</p>
+                <p class="en-only">歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。</p>
+                <p class="tiny zh">可能的差别：粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。</p>
+                <p class="tiny en-only">What may not fit: 粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=421563713" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-qiaodou-madal.jpg" alt="桥豆麻袋 — 陈粒 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>桥豆麻袋</h3>
+                <p class="music-rec-artist">陈粒 · 小梦大半</p>
+                <p class="zh">已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。</p>
+                <p class="en-only">已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。</p>
+                <p class="tiny zh">可能的差别：口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。</p>
+                <p class="tiny en-only">What may not fit: 口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=569214247" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-pingfan-yitian.jpg" alt="平凡的一天 — 毛不易 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>平凡的一天</h3>
+                <p class="music-rec-artist">毛不易 · 平凡的一天</p>
+                <p class="zh">已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。</p>
+                <p class="en-only">已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。</p>
+                <p class="tiny zh">可能的差别：标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。</p>
+                <p class="tiny en-only">What may not fit: 标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=36270426" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-tiantang-mogui.jpg" alt="来自天堂的魔鬼 — G.E.M.邓紫棋 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>来自天堂的魔鬼</h3>
+                <p class="music-rec-artist">G.E.M.邓紫棋 · 新的心跳</p>
+                <p class="zh">已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。</p>
+                <p class="en-only">已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。</p>
+                <p class="tiny zh">可能的差别：比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。</p>
+                <p class="tiny en-only">What may not fit: 比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=27731176" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-mote.jpg" alt="模特 — 李荣浩 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>模特</h3>
+                <p class="music-rec-artist">李荣浩 · 模特</p>
+                <p class="zh">已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。</p>
+                <p class="en-only">已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。</p>
+                <p class="tiny zh">可能的差别：口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。</p>
+                <p class="tiny en-only">What may not fit: 口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=287611" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-lvguang.jpg" alt="绿光 — 孙燕姿 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>绿光</h3>
+                <p class="music-rec-artist">孙燕姿 · 风筝</p>
+                <p class="zh">已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。</p>
+                <p class="en-only">已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。</p>
+                <p class="tiny zh">可能的差别：节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。</p>
+                <p class="tiny en-only">What may not fit: 节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="music-tier">
+          <h4><span class="zh">相邻风格</span><span class="en-only">Nearby style</span></h4>
+          <div class="music-rec-grid">
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=27646205" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-anheqiao.jpg" alt="安和桥 — 宋冬野 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>安和桥</h3>
+                <p class="music-rec-artist">宋冬野 · 安和桥北</p>
+                <p class="zh">《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。</p>
+                <p class="en-only">《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。</p>
+                <p class="tiny zh">可能的差别：更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。</p>
+                <p class="tiny en-only">What may not fit: 更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=185811" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-qinghuaci.jpg" alt="青花瓷 — 周杰伦 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>青花瓷</h3>
+                <p class="music-rec-artist">周杰伦 · 我很忙</p>
+                <p class="zh">已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。</p>
+                <p class="en-only">已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。</p>
+                <p class="tiny zh">可能的差别：古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。</p>
+                <p class="tiny en-only">What may not fit: 古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=1409311773" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-yoru-ni-kakeru.jpg" alt="夜に駆ける — YOASOBI 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>夜に駆ける</h3>
+                <p class="music-rec-artist">YOASOBI · 夜に駆ける</p>
+                <p class="zh">已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。</p>
+                <p class="en-only">已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。</p>
+                <p class="tiny zh">可能的差别：叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。</p>
+                <p class="tiny en-only">What may not fit: 叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.apple.com/us/album/skyfall/566322358?i=566322365" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-skyfall.jpg" alt="Skyfall — Adele 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>Skyfall</h3>
+                <p class="music-rec-artist">Adele · Skyfall - Single</p>
+                <p class="zh">歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。</p>
+                <p class="en-only">歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。</p>
+                <p class="tiny zh">可能的差别：比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。</p>
+                <p class="tiny en-only">What may not fit: 比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="music-tier">
+          <h4><span class="zh">探索</span><span class="en-only">Explore</span></h4>
+          <div class="music-rec-grid">
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=386844" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-shijiazhuang.jpg" alt="杀死那个石家庄人 — 万能青年旅店 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>杀死那个石家庄人</h3>
+                <p class="music-rec-artist">万能青年旅店 · 万能青年旅店 同名专辑</p>
+                <p class="zh">已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。</p>
+                <p class="en-only">已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。</p>
+                <p class="tiny zh">可能的差别：编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。</p>
+                <p class="tiny en-only">What may not fit: 编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。</p>
+              </div>
+            </article>
+            <article class="card music-rec">
+              <a class="music-rec-cover" href="https://music.163.com/#/song?id=426881487" target="_blank" rel="noopener noreferrer">
+                <img src="images/music/rec-zenzenzense.jpg" alt="前前前世 (movie ver.) — RADWIMPS 封面" width="96" height="96" loading="lazy">
+              </a>
+              <div class="music-rec-body">
+                <h3>前前前世 (movie ver.)</h3>
+                <p class="music-rec-artist">RADWIMPS · 君の名は。</p>
+                <p class="zh">已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。</p>
+                <p class="en-only">已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。</p>
+                <p class="tiny zh">可能的差别：电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。</p>
+                <p class="tiny en-only">What may not fit: 电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <p class="music-report-actions">
+        <a class="play-btn" href="music/report.html"> <span class="zh">完整报告</span><span class="en-only">Full report</span></a>
+      </p>
+      <p class="music-powered">
+        <a class="music-powered-link" href="https://github.com/ryohgicc/musicanalysis" target="_blank" rel="noopener noreferrer">
+          <img src="images/music/ryohgicc.png" alt="" width="28" height="28">
+          <span>Powered by <strong>musicanalysis</strong></span>
+        </a>
+      </p>
+    </section>
+
+        <section id="boardgames" class="tab-panel" role="tabpanel">
+      <div class="section-head">
+        <h2>桌游</h2>
+        <span class="en">Board games</span>
+      </div>
+      <p class="lede zh" id="qzBoardgamesIntroZh">玩过、也爱玩的桌游。后面想起再补。下面只写公开的人数和类型，没有个人评分或对局次数。</p>
+      <p class="lede en-only" id="qzBoardgamesIntroEn">Board games he has played and enjoys. More will be added later. Each entry lists only public player counts and genre, not personal ratings or play counts.</p>
+      <div class="bgames-grid" id="qzBoardgamesList">
+        <article class="card bgame-card" data-game="werewolf">
+          <span class="bgame-icon" data-game="werewolf" aria-hidden="true">🐺</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">狼人杀</span><span class="en-only">Werewolf</span></h3>
+          <p class="bgame-aka zh">Werewolf</p>
+          <p class="bgame-aka en-only">狼人杀</p>
+            <p class="bgame-desc zh">社交推理派对游戏，人数视版本而定，常见 6–18 人。</p>
+            <p class="bgame-desc en-only">A social deduction party game; player count depends on the edition, often 6–18.</p>
+          </div>
+        </article>
+        <article class="card bgame-card" data-game="avalon">
+          <span class="bgame-icon" data-game="avalon" aria-hidden="true">🏰</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">阿瓦隆</span><span class="en-only">The Resistance: Avalon</span></h3>
+          <p class="bgame-aka zh">The Resistance: Avalon</p>
+          <p class="bgame-aka en-only">阿瓦隆</p>
+            <p class="bgame-desc zh">社交推理游戏，5–10 人，隐藏阵营、任务投票。</p>
+            <p class="bgame-desc en-only">A social deduction game for 5–10 players, with hidden teams and quest votes.</p>
+          </div>
+        </article>
+        <article class="card bgame-card" data-game="splendor">
+          <span class="bgame-icon" data-game="splendor" aria-hidden="true">💎</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">璀璨宝石</span><span class="en-only">Splendor</span></h3>
+          <p class="bgame-aka zh">Splendor</p>
+          <p class="bgame-aka en-only">璀璨宝石</p>
+            <p class="bgame-desc zh">引擎构建卡牌游戏，2–4 人，收集宝石卡发展引擎。</p>
+            <p class="bgame-desc en-only">An engine-building card game for 2–4 players, collecting gem cards to grow an engine.</p>
+          </div>
+        </article>
+        <article class="card bgame-card" data-game="scout">
+          <span class="bgame-icon" data-game="scout" aria-hidden="true">🎪</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">Scout</span><span class="en-only">Scout</span></h3>
+            <p class="bgame-desc zh">Oink Games 的爬梯出牌游戏，2–5 人。</p>
+            <p class="bgame-desc en-only">A ladder-climbing card game from Oink Games, for 2–5 players.</p>
+          </div>
+        </article>
+        <article class="card bgame-card" data-game="exploding-kittens">
+          <span class="bgame-icon" data-game="exploding-kittens" aria-hidden="true">💣</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">炸弹猫</span><span class="en-only">Exploding Kittens</span></h3>
+          <p class="bgame-aka zh">Exploding Kittens</p>
+          <p class="bgame-aka en-only">炸弹猫</p>
+            <p class="bgame-desc zh">派对卡牌游戏，原版 2–5 人。</p>
+            <p class="bgame-desc en-only">A party card game; the original edition is for 2–5 players.</p>
+          </div>
+        </article>
+        <article class="card bgame-card" data-game="azul">
+          <span class="bgame-icon" data-game="azul" aria-hidden="true">🟦</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">花砖物语</span><span class="en-only">Azul</span></h3>
+          <p class="bgame-aka zh">Azul</p>
+          <p class="bgame-aka en-only">花砖物语</p>
+            <p class="bgame-desc zh">抽象铺砖游戏，2–4 人，起草花砖并摆进墙面。</p>
+            <p class="bgame-desc en-only">An abstract tile-placement game for 2–4 players, drafting tiles onto a wall.</p>
+          </div>
+        </article>
+        <article class="card bgame-card" data-game="cheese-thief">
+          <span class="bgame-icon" data-game="cheese-thief" aria-hidden="true">🧀</span>
+          <div class="bgame-body">
+            <h3 class="bgame-name"><span class="zh">奶酪大盗</span><span class="en-only">Cheese Thief</span></h3>
+          <p class="bgame-aka zh">Cheese Thief</p>
+          <p class="bgame-aka en-only">奶酪大盗</p>
+            <p class="bgame-desc zh">社交推理聚会游戏，4–8 人，约 10–15 分钟。</p>
+            <p class="bgame-desc en-only">A social deduction party game for 4–8 players, about 10–15 minutes.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+        <section id="sites" class="tab-panel" role="tabpanel">
+      <div class="section-head">
+        <h2>推荐网站</h2>
+        <span class="en">Recommended sites</span>
+      </div>
+      <p class="lede zh" id="qzSitesIntroZh">推荐看看的网站。标了「自己做的」的是匡子闲自己的项目。后面想到再补。介绍只摘自站点自己的公开信息，没有编造。</p>
+      <p class="lede en-only" id="qzSitesIntroEn">Sites he recommends. Cards marked “Made by me” are his own projects. More will be added later. Descriptions are taken from the sites themselves and are not invented.</p>
+      <div class="sites-grid" id="qzSitesList">
+        <a class="card site-card" href="https://sinyu1012.cn/" target="_blank" rel="noopener noreferrer">
+          <span class="site-icon-wrap">
+            <img class="site-icon" src="images/sites/sinyu1012.jpg" alt="沈新宇（Sinyu）的个人头像" width="56" height="56">
+          </span>
+          <span class="site-body">
+            <span class="site-head"><strong class="site-name">沈新宇（Sinyu）</strong></span>
+            <span class="site-domain">sinyu1012.cn</span>
+            <span class="site-desc">沈新宇（Sinyu，GitHub @sinyu1012）的个人网站。上海移动端开发者，专注 Flutter、Android、iOS、AI 自动化与开源工具，分享个人项目、开发实践与作品。</span>
+          </span>
+        </a>
+        <a class="card site-card is-own" href="https://easy-life.kznb.workers.dev/" target="_blank" rel="noopener noreferrer">
+          <span class="site-icon-wrap">
+            <img class="site-icon" src="images/sites/easy-life.svg" alt="好好生活图标" width="56" height="56">
+          </span>
+          <span class="site-body">
+            <span class="site-head">
+              <strong class="site-name">好好生活</strong>
+              <span class="site-badge"><span class="zh">自己做的</span><span class="en-only">Made by me</span></span>
+            </span>
+            <span class="site-domain">easy-life.kznb.workers.dev</span>
+            <span class="site-desc">好好生活，把有出处的生活建议装进口袋。慢慢读、搜一搜、抽张卡，不用登录。</span>
+          </span>
+        </a>
+        <a class="card site-card is-own" href="https://easy-offer.kznb.workers.dev/" target="_blank" rel="noopener noreferrer">
+          <span class="site-icon-wrap">
+            <img class="site-icon" src="images/sites/easy-offer.svg" alt="Easy Offer 图标" width="56" height="56">
+          </span>
+          <span class="site-body">
+            <span class="site-head">
+              <strong class="site-name">Easy Offer</strong>
+              <span class="site-badge"><span class="zh">自己做的</span><span class="en-only">Made by me</span></span>
+            </span>
+            <span class="site-domain">easy-offer.kznb.workers.dev</span>
+            <span class="site-desc">从真实项目出发，把你的工作写成一份更有说服力的简历。Easy Offer 支持 GitHub 项目整理、AI 简历与面试准备。</span>
+          </span>
+        </a>
+        <a class="card site-card" href="https://www.puzzle-tapa.com/" target="_blank" rel="noopener noreferrer">
+          <span class="site-icon-wrap">
+            <img class="site-icon" src="images/sites/puzzle-tapa.png" alt="Tapa puzzle game" width="56" height="56">
+          </span>
+          <span class="site-body">
+            <span class="site-head"><strong class="site-name">Tapa</strong></span>
+            <span class="site-domain">puzzle-tapa.com</span>
+            <span class="site-desc">Tapa is a logic puzzle with a bit complicated rules and challenging solutions.</span>
+          </span>
+        </a>
+        <a class="card site-card" href="https://watermelon.shinyou.ng/1698230186558" target="_blank" rel="noopener noreferrer">
+          <span class="site-icon-wrap">
+            <img class="site-icon" src="images/sites/watermelon-melon.png" alt="Watermelon Game logo" width="56" height="56">
+          </span>
+          <span class="site-body">
+            <span class="site-head"><strong class="site-name">Nikke Game</strong></span>
+            <span class="site-domain">watermelon.shinyou.ng</span>
+            <span class="site-desc">Play Watermelon Game! 수박게임을 플레이하세요!</span>
+          </span>
+        </a>
+      
+      </div>
+    </section>
+
+        <section id="writing" class="tab-panel" role="tabpanel">
+      <div class="section-head">
+        <h2>日志</h2>
+        <span class="en">Writing</span>
+      </div>
+      <p class="lede zh">和 ChatGPT 的一些对话，按文章的方式放在这里。点进去是完整对话，内容在本站打开，不必访问 chatgpt.com。</p>
+      <p class="lede en-only">A few conversations with ChatGPT, presented as writing. Each piece opens on this site, so it can be read without chatgpt.com.</p>
+      <div class="idea-grid" id="writingList">
+        <a class="card article" href="chat.html?id=ai-hack-bitcoin">
+          <div class="meta"><span class="zh">对话</span><span class="en-only">Conversation</span><time datetime="2026-11-17">2026-11-17</time></div>
+          <h3><span class="zh">AI 能攻破比特币吗？</span><span class="en-only">Can AI Break Bitcoin?</span></h3>
+          <p class="zh">Bitcoin Core 已被 AI 找出过能把节点打挂的真实漏洞，但“攻破比特币”可能指四种完全不同的事。截至 2026 年 11 月 17 日，没有可靠证据表明 AI 已经能在不知道私钥的情况下花走别人的币。</p>
+          <p class="en-only">AI has already found a real Bitcoin Core bug that can crash nodes, but “breaking Bitcoin” can mean four very different things. As of 17 Nov 2026, there is no reliable public evidence that AI can spend someone else’s coins without the private key.</p>
+          <div class="article-tags"><span class="pill">BTC</span><span class="pill">AI</span><span class="pill">Security</span></div>
+        </a>
+        <a class="card article" href="chat.html?id=ship-your-life">
+          <div class="meta"><span class="zh">对话</span><span class="en-only">Conversation</span><time datetime="2026-11-04">2026-11-04</time></div>
+          <h3><span class="zh">别再优化人生的架构了，先把人生上线</span><span class="en-only">Stop Architecting Your Life. Ship It.</span></h3>
+          <p class="zh">我让 GPT 根据过往聊天记录毫不留情地骂了我一顿。它从后端工程、创业规划、投资、小红书运营和用 AI 的方式说起，最后指出：我不是缺一个更强的模型，而是缺把事情做完并上线的执行力。</p>
+          <p class="en-only">I asked GPT to roast me, no holding back, based on our past chats. It went after my backend work, startup plans, investing, Xiaohongshu ops, and how I use AI — and landed on this: I don’t need a stronger model, I need to ship something.</p>
+          <div class="article-tags"><span class="pill">ChatGPT</span><span class="pill">吐槽</span><span class="pill">执行力</span></div>
+        </a>
+        <a class="card article" href="chat.html?id=freedom-to-shape">
+          <div class="meta"><span class="zh">对话</span><span class="en-only">Conversation</span><time datetime="2026-10-05">2026-10-05</time></div>
+          <h3><span class="zh">既要有不工作的自由，也要有影响世界的机会</span><span class="en-only">Freedom From Work, and the Chance to Shape the World</span></h3>
+          <p class="zh">我问 GPT：如果 AI 帮助突破可控核聚变，普通人是否会变得只剩吃喝玩乐，只有少数明星研究员才有工作的特权。它认为物质极大丰富不一定等于精神极大自由，更值得争取的是：人既有不工作的自由，也有参与和影响世界的机会。</p>
+          <p class="en-only">I asked whether a fusion-powered, AI-rich future would leave most people at home entertaining themselves, with only a few star researchers still allowed to work. GPT’s reply: abundance is not the same as freedom. The better goal is both the freedom not to work, and a real chance to shape the world.</p>
+          <div class="article-tags"><span class="pill">AI</span><span class="pill">核聚变</span><span class="pill">未来社会</span></div>
+        </a>
+      </div>
+    </section>
+
+        <section id="profile" class="tab-panel" role="tabpanel">
+    <section id="projects">
+      <div class="section-head">
+        <h2>项目</h2>
+        <span class="en">Projects</span>
+      </div>
+      <p class="lede zh">GitHub 上确认是原创（非 fork）的公开仓库。没有简介的仓库只放名字，不编造说明。</p>
+      <p class="lede en-only">Public GitHub repositories confirmed as originals (not forks). Repositories without a description are listed by name only.</p>
+      <div class="project-grid">
+        <a class="card project" href="https://github.com/kuangzixian/easy-life" rel="noopener noreferrer">
+          <span class="lang-pill">JavaScript</span>
+          <h3>easy-life</h3>
+          <p>好好生活：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。</p>
+        </a>
+        <a class="card project" href="https://github.com/kuangzixian/Strawberrrrrrry" rel="noopener noreferrer">
+          <span class="lang-pill">TypeScript</span>
+          <h3>Strawberrrrrrry</h3>
+          <p class="zh">本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知。</p>
+          <p class="en-only">A local-first project manager with AI Q&amp;A, MCP integration, and multi-channel notifications.</p>
+        </a>
+        <a class="card project" href="https://github.com/kuangzixian/easy-offer" rel="noopener noreferrer">
+          <span class="lang-pill">TypeScript</span>
+          <h3>easy-offer</h3>
+          <p class="zh">公开仓库，暂无简介。</p>
+          <p class="en-only">Public repository; no description published.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="section-head">
+        <h2>社交链接</h2>
+        <span class="en">Social</span></div>
+      <p class="lede zh">只放已经核对过、显示名精确匹配「匡子闲」的主页。小红书、微博、抖音和 X 目前还没能公开确认，不编造链接。</p>
+      <p class="lede en-only">Only profiles verified with the exact display name 匡子闲 are linked. Xiaohongshu, Weibo, Douyin and X could not be publicly confirmed, so no guessed URLs are included.</p>
+      <div class="social-grid">
+        <a class="card social" href="https://juejin.cn/user/395479918591006" rel="noopener noreferrer">
+          <div class="platform">JUEJIN · 掘金</div>
+          <h3>匡子闲</h3>
+          <p>后端工程师</p>
+          <div class="counts">2 关注者 · 5 篇文章 · 4,863 阅读</div>
+        </a>
+        <a class="card social" href="https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F" rel="noopener noreferrer">
+          <div class="platform">JIKE · 即刻</div>
+          <h3>匡子闲</h3>
+          <div class="counts">56 被关注 · 115 关注</div>
+        </a>
+        <a class="card social" href="https://github.com/kuangzixian" rel="noopener noreferrer">
+          <div class="platform">GITHUB</div>
+          <h3>kuangzixian</h3>
+          <p>显示名 匡子闲 · 公司字段 IFTech</p>
+          <div class="counts">7 关注者 · 17 个公开仓库 · 2017 年加入</div>
+        </a>
+        <a class="card social" href="https://www.zhihu.com/people/b26a1e7eb8e8f94af557647b44bf1bad" rel="noopener noreferrer">
+          <div class="platform">ZHIHU · 知乎</div>
+          <h3>匡子闲</h3>
+          <p class="zh">计科，炒股<br>计算机软件 · 上海市</p>
+          <p class="en-only">Headline: 计科，炒股<br>Computer software · Shanghai</p>
+          <div class="counts">68 关注者 · 71 回答 · 1,301 赞同</div>
+        </a>
+        <div class="card social missing">
+          <span class="badge-miss">未确认 / unverified</span>
+          <h3>小红书 · 微博 · 抖音 · X</h3>
+          <p class="zh">检索时这些平台未能找到精确匹配的公开主页，或站点拦截了访问。确认账号后可以补上。</p>
+          <p class="en-only">No exact-match public profile could be retrieved, or the site blocked access. Links can be added once the accounts are confirmed.</p>
+        </div>
+      </div>
+    </section>
+
+        </section>
+        <section id="guestbook" class="tab-panel" role="tabpanel">
+      <div class="section-head">
+        <h2>留言板</h2>
+        <span class="en">Guestbook</span>
+      </div>
+      <p class="lede zh">来坐坐，留个名字和一句话就行，不用登录。请不要放链接。</p>
+      <p class="lede en-only">Leave a nickname and a short note. No login required. Please don’t include links.</p>
+      <form class="card gb-form" id="gbForm" autocomplete="on">
+        <label class="gb-hp">Leave blank
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        </label>
+        <div class="gb-field">
+          <label for="gbNickname"><span class="zh">昵称</span><span class="en-only">Nickname</span><span class="gb-count" id="gbNickCount">0/20</span></label>
+          <input id="gbNickname" name="nickname" type="text" maxlength="20" required autocomplete="nickname">
+        </div>
+        <div class="gb-field">
+          <label for="gbContent"><span class="zh">留言</span><span class="en-only">Note</span><span class="gb-count" id="gbContentCount">0/500</span></label>
+          <textarea id="gbContent" name="content" maxlength="500" required rows="4"></textarea>
+        </div>
+        <div class="gb-actions">
+          <button class="play-btn" type="submit" id="gbSubmit"><span class="zh">写下留言</span><span class="en-only">Post note</span></button>
+          <p class="gb-status" id="gbStatus" role="status"></p>
+        </div>
+      </form>
+      <div class="gb-list" id="gbList">
+        <p class="gb-empty lede zh">正在载入留言…</p>
+        <p class="gb-empty lede en-only">Loading notes…</p>
+      </div>
+    </section>
+
+      </main>
+    </div>
+  </div>
+
+
+
+  <div id="qzMusicBox" class="qz-music-box" hidden>
+    <div class="qz-music-box-inner" role="dialog" aria-modal="true" aria-labelledby="qzMusicTitle">
+      <header class="qz-music-head">
+        <strong id="qzMusicTitle"><span class="zh">背景音乐</span><span class="en-only">Background music</span></strong>
+        <button type="button" class="qz-music-close" id="qzMusicClose" aria-label="关闭音乐盒">×</button>
+      </header>
+      <ul class="qz-playlist">
+        <li class="qz-track" data-song-id="167827" data-outchain="1">
+          <div class="qz-track-meta">
+            <span class="qz-track-title">素颜</span>
+            <span class="qz-track-artist">许嵩 / 何曼婷</span>
+          </div>
+          <button type="button" class="qz-track-load play-btn">
+            <span class="zh">播放</span><span class="en-only">Play</span>
+          </button>
+          <a class="qz-track-link" href="https://music.163.com/song?id=167827" target="_blank" rel="noopener noreferrer">
+            <span class="zh">网易云</span><span class="en-only">NetEase</span>
+          </a>
+          <div class="qz-track-player" hidden></div>
+        </li>
+        <li class="qz-track" data-song-id="174956" data-outchain="1">
+          <div class="qz-track-meta">
+            <span class="qz-track-title">坏女孩</span>
+            <span class="qz-track-artist">徐良 / 小凌</span>
+          </div>
+          <button type="button" class="qz-track-load play-btn">
+            <span class="zh">播放</span><span class="en-only">Play</span>
+          </button>
+          <a class="qz-track-link" href="https://music.163.com/song?id=174956" target="_blank" rel="noopener noreferrer">
+            <span class="zh">网易云</span><span class="en-only">NetEase</span>
+          </a>
+          <div class="qz-track-player" hidden></div>
+        </li>
+      </ul>
+      <p class="qz-music-note zh">使用网易云官方外链播放器，点播放后才会加载，不会自动播放。</p>
+      <p class="qz-music-note en-only">Official NetEase Cloud Music player. It loads only after you click, and never autoplays.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="zh">匡子闲 · 本页资料均来自 2026-11-14（Asia/Shanghai）检索到的公开信息，未收录未核实的账号。</p>
+      <p class="en-only">匡子闲 · Facts on this page come from public sources retrieved on 14 Nov 2026 (Asia/Shanghai). Unverified accounts are omitted.</p>
+      <p><a href="data/profile.json">profile.json</a> · <a href="data/reading.json">reading.json</a> · <a href="data/chats.json">chats.json</a> · <a href="data/sites.json">sites.json</a> · <a href="data/music.json">music.json</a> · <a href="data/boardgames.json">boardgames.json</a></p>
+      <p><a href="/llms.txt">For AI agents: llms.txt</a></p>
+    </div>
+  </footer>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="egg" id="egg" role="dialog" aria-modal="true" aria-labelledby="eggTitle" hidden>
+    <div class="card egg-card">
+      <h2 id="eggTitle"><span class="zh">你发现了彩蛋</span><span class="en-only">You found the easter egg</span></h2>
+      <p class="zh">匡子闲从 2015-10-10 起在微信读书留下记录，已经有效阅读 2,001 天，累计 1,267 小时，偏好夜晚、也偏好文学。他自己说过：多喝咖啡！</p>
+      <p class="en-only">匡子闲 has been on WeChat Reading since 10 Oct 2015: 2,001 days with reading, 1,267 hours in all, usually at night, often in literature. In his own words: 多喝咖啡！</p>
+      <p class="motto-line zh">※別迷戀哥，哥祇是個傳說※</p>
+      <p class="motto-line en-only">Don't fall for me, I'm just a legend.</p>
+      <button class="play-btn" type="button" id="eggClose"><span class="zh">收起来</span><span class="en-only">Close</span></button>
+    </div>
+  </div>
+  <script src="js/play-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/markdown.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/guestbook.js"></script>
+  <script src="js/qzone.js"></script>
+  <script src="js/snow.js"></script>
+  <script src="js/visits.js"></script>
+  <script src="js/sites.js"></script>
+  <script src="js/boardgames.js"></script>
+</body>
+</html>

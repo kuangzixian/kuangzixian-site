@@ -1,0 +1,448 @@
+{
+  "name": "匡子闲",
+  "latin_handle": "kuangzixian",
+  "bio": {
+    "jike": "前游戏从业者，现在在黄即搞后端。",
+    "juejin": "Talk is cheap，show me your code",
+    "juejin_title": "后端工程师",
+    "combined_zh": "后端工程师。空间签名：※別迷戀哥，哥祇是個傳說※ 知乎签名：计科，炒股。",
+    "combined_en": "Backend engineer. Space signature: Don't fall for me, I'm just a legend. Zhihu headline: 计科，炒股.",
+    "zhihu": "计科，炒股",
+    "signature_zh": "※別迷戀哥，哥祇是個傳說※",
+    "signature_en": "Don't fall for me, I'm just a legend."
+  },
+  "updated_at": "2026-11-14T23:25:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "research_retrieved_at": "2026-11-14T22:34:00+08:00",
+  "profiles": [
+    {
+      "platform": "juejin",
+      "platform_zh": "掘金",
+      "name": "匡子闲",
+      "url": "https://juejin.cn/user/395479918591006",
+      "user_id": "395479918591006",
+      "title": "后端工程师",
+      "bio": "Talk is cheap，show me your code",
+      "followers": 2,
+      "following": 21,
+      "article_count": 5,
+      "article_views": 4863,
+      "level": 2,
+      "power": 86,
+      "registered_at": "2020-04-04T15:02:00+08:00",
+      "status": "verified"
+    },
+    {
+      "platform": "jike",
+      "platform_zh": "即刻",
+      "name": "匡子闲",
+      "url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F",
+      "user_id": "7200D7D3-3A5A-47E7-B206-FC4033D97E0F",
+      "bio": "前游戏从业者，现在在黄即搞后端。",
+      "followers": 56,
+      "following": 115,
+      "praises": 1,
+      "status": "verified",
+      "note": "即刻不在最初点名的平台列表中，但公开主页用户名精确匹配「匡子闲」，故一并收录。"
+    },
+    {
+      "platform": "github",
+      "platform_zh": "GitHub",
+      "name": "匡子闲",
+      "username": "kuangzixian",
+      "url": "https://github.com/kuangzixian",
+      "company": "IFTech",
+      "public_repos": 17,
+      "followers": 7,
+      "following": 27,
+      "joined_at": "2017-01-26T11:50:04+08:00",
+      "status": "verified",
+      "note": "GitHub 不在最初点名的平台列表中，但登录名 kuangzixian、显示名精确匹配「匡子闲」，故一并收录。joined_at 由 GitHub 返回的 2017-01-26T03:50:04Z 转换而来。"
+    },
+    {
+      "platform": "zhihu",
+      "platform_zh": "知乎",
+      "status": "verified",
+      "source": "user-provided URL, confirmed via Zhihu public API on 2026-11-14",
+      "name": "匡子闲",
+      "url": "https://www.zhihu.com/people/b26a1e7eb8e8f94af557647b44bf1bad",
+      "url_alt": "https://www.zhihu.com/people/kuang-zi-xian-22",
+      "user_id": "b26a1e7eb8e8f94af557647b44bf1bad",
+      "url_token": "kuang-zi-xian-22",
+      "headline": "计科，炒股",
+      "description": "",
+      "followers": 68,
+      "following": 115,
+      "answer_count": 71,
+      "articles_count": 0,
+      "columns_count": 0,
+      "pins_count": 2,
+      "voteup_count": 1301,
+      "thanked_count": 1173,
+      "favorited_count": 58,
+      "location": "上海市",
+      "business": "计算机软件",
+      "medal": {
+        "name": "有口皆碑",
+        "description": "获得 1000 个赞同"
+      },
+      "pins": [
+        {
+          "id": "1709345714633592832",
+          "text": "有口皆碑 徽章佩戴留念，期待在知乎继续前行，探索无尽可能。",
+          "url": "https://www.zhihu.com/pins/1709345714633592832",
+          "created_at": "2023-11-18T23:02:56+08:00",
+          "like_count": 1
+        },
+        {
+          "id": "1700147644255592448",
+          "text": "备受瞩目 徽章佩戴留念，期待在知乎继续前行，探索无尽可能。",
+          "url": "https://www.zhihu.com/pins/1700147644255592448",
+          "created_at": "2023-10-24T13:53:05+08:00",
+          "like_count": 0
+        }
+      ],
+      "answers_access": "blocked",
+      "detail": "用户提供主页链接后，通过 https://www.zhihu.com/api/v4/members/{id|url_token} 取到公开资料，显示名精确匹配「匡子闲」。个人主页 HTML 仍返回 403。回答列表接口需登录或返回无权限，未能取得 71 条回答的标题与链接。文章数为 0。抓到 2 条想法（徽章佩戴留念）。检索于 2026-11-14T22:34:00+08:00。"
+    },
+    {
+      "platform": "xiaohongshu",
+      "platform_zh": "小红书",
+      "status": "not_found",
+      "access": "blocked",
+      "detail": "网页搜索未找到用户名精确匹配「匡子闲」的小红书主页。直接抓取搜索页被重定向后返回空响应（HTTP 500 / 0 bytes）。"
+    },
+    {
+      "platform": "weibo",
+      "platform_zh": "微博",
+      "status": "not_found",
+      "access": "blocked",
+      "detail": "网页搜索未找到用户名精确匹配「匡子闲」的微博账号。访问微博搜索被跳转到新浪访客系统（登录墙），页面中不含「匡子闲」。"
+    },
+    {
+      "platform": "douyin",
+      "platform_zh": "抖音",
+      "status": "not_found",
+      "access": "blocked",
+      "detail": "网页搜索未找到用户名精确匹配「匡子闲」的抖音主页。直接抓取搜索页得到前端壳页面，源码中不含「匡子闲」，无法确认账号是否存在。"
+    },
+    {
+      "platform": "x",
+      "platform_zh": "X / Twitter",
+      "status": "not_found",
+      "access": "ok",
+      "detail": "使用 X 官方接口搜索用户「匡子闲」无精确匹配。用户名 kuangzixian 不存在。相近拼写账号的显示名均不是「匡子闲」，故不收录。"
+    }
+  ],
+  "articles": [
+    {
+      "title": "AMQP  Error: connect ECONNREFUSED ::1:5672 at TCPConnectWrap.afterConnect [as on",
+      "url": "https://juejin.cn/post/7379511966273978431",
+      "platform": "juejin",
+      "published_at": "2024-06-13",
+      "views": 271,
+      "summary_zh": "在 Mac 上用 Node.js 连接 RabbitMQ 时，localhost 被解析成 IPv6 的 ::1，而服务只监听 127.0.0.1，改成 127.0.0.1 或修正 hosts 后恢复。"
+    },
+    {
+      "title": "could not execute statement; SQL [n/a]; constraint [null];",
+      "url": "https://juejin.cn/post/6867391768665686024",
+      "platform": "juejin",
+      "published_at": "2020-09-01",
+      "views": 2615,
+      "summary_zh": "测试环境出现 Hibernate ConstraintViolationException。原因是开发库把某字段改成可空后，未同步到测试库，同步后问题解决。"
+    },
+    {
+      "title": "一道合并数组算法题引发的血案",
+      "url": "https://juejin.cn/post/6858624851557482504",
+      "platform": "juejin",
+      "published_at": "2020-08-08",
+      "views": 287,
+      "summary_zh": "面试时被要求在十分钟内写出合并 n 个有序数组，现场没写完。事后记录了双指针、从后往前合并，以及两两归并的解法。"
+    },
+    {
+      "title": "Not able to find Java executable or version. Please check your Java installation",
+      "url": "https://juejin.cn/post/6857073999642542093",
+      "platform": "juejin",
+      "published_at": "2020-08-04",
+      "views": 1141,
+      "summary_zh": "启动 JMeter 5.3 报找不到 Java 可执行文件。JAVA_HOME 路径含空格，后来用 java -jar ApacheJMeter.jar 直接启动解决。"
+    },
+    {
+      "title": "IDEA如何实现对远程服务器代码进行debug操作",
+      "url": "https://juejin.cn/post/6854573209379930126",
+      "platform": "juejin",
+      "published_at": "2020-07-17",
+      "views": 549,
+      "summary_zh": "同一段代码在本地和开发服务器正常、测试服务器报错。记录了给远程 Jar 加 JDWP 参数，再在 IDEA Remote 里对接调试的步骤。"
+    }
+  ],
+  "jike_posts": [
+    {
+      "text": "像《东京八平米》里面描述的一样，第一次体验🤓",
+      "relative_time_as_retrieved": "7天前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F",
+      "note": "即刻动态没有抓到独立链接，时间是页面上的相对时间，检索于 2026-11-14。"
+    },
+    {
+      "text": "相信国运，定投科创。珍爱生命，远离纳指。",
+      "relative_time_as_retrieved": "9天前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "它好像不是很开心🤓",
+      "relative_time_as_retrieved": "22天前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "新技能 ✅",
+      "relative_time_as_retrieved": "27天前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "距离生产端越近，距离消费端就越远。",
+      "relative_time_as_retrieved": "1月前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "多喝咖啡！",
+      "relative_time_as_retrieved": "1月前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "豆包聊到没额度了😏",
+      "relative_time_as_retrieved": "2月前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "落枕做理疗的时候想，朱自清他爸可能也是因为落枕了🤔",
+      "relative_time_as_retrieved": "3月前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    },
+    {
+      "text": "就这么听着歌，看完一本小说，无所事事也挺好。要是不感冒就更棒了😏",
+      "relative_time_as_retrieved": "3月前",
+      "source_url": "https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F"
+    }
+  ],
+  "projects": [
+    {
+      "name": "easy-life",
+      "url": "https://github.com/kuangzixian/easy-life",
+      "description": "好好生活：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。",
+      "language": "JavaScript",
+      "fork": false,
+      "created_at": "2026-09-30T00:29:16+08:00"
+    },
+    {
+      "name": "easy-offer",
+      "url": "https://github.com/kuangzixian/easy-offer",
+      "description": null,
+      "language": "TypeScript",
+      "fork": false,
+      "created_at": "2026-04-15T14:18:52+08:00",
+      "note": "公开仓库无简介，站点上仅展示仓库名，不编造功能说明。"
+    },
+    {
+      "name": "Strawberrrrrrry",
+      "url": "https://github.com/kuangzixian/Strawberrrrrrry",
+      "description": "本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知",
+      "language": "TypeScript",
+      "fork": false,
+      "created_at": "2026-04-04T00:11:47+08:00"
+    }
+  ],
+  "reading": {
+    "source": "微信读书",
+    "detail_file": "/data/reading.json",
+    "retrieved_at": "2026-11-14T23:25:00+08:00",
+    "privacy_note": "已排除微信读书中标记为私密（secret=1）的条目，以及「文章收藏」入口。官方阅读统计为账号汇总口径，可能包含未出现在公开书架上的阅读记录；书单、封面、划线和想法只来自公开书架。",
+    "stats": {
+      "overall": {
+        "total_read_time_sec": 4561647,
+        "total_read_time": "1267小时7分钟",
+        "read_days": 2001,
+        "books_read": 376,
+        "books_finished": 108,
+        "notes": 1545,
+        "prefer_category_word": "偏好阅读文学",
+        "prefer_time_word": "偏好夜晚阅读",
+        "prefer_categories": [
+          {
+            "title": "文学",
+            "reading_count": 58,
+            "reading_time_sec": 729564,
+            "reading_time": "202小时39分钟"
+          },
+          {
+            "title": "影视原著",
+            "reading_count": 36,
+            "reading_time_sec": 723470,
+            "reading_time": "200小时57分钟"
+          },
+          {
+            "title": "计算机",
+            "reading_count": 90,
+            "reading_time_sec": 498533,
+            "reading_time": "138小时28分钟"
+          },
+          {
+            "title": "经济理财",
+            "reading_count": 53,
+            "reading_time_sec": 468905,
+            "reading_time": "130小时15分钟"
+          },
+          {
+            "title": "社会小说",
+            "reading_count": 25,
+            "reading_time_sec": 293236,
+            "reading_time": "81小时27分钟"
+          },
+          {
+            "title": "历史",
+            "reading_count": 12,
+            "reading_time_sec": 242769,
+            "reading_time": "67小时26分钟"
+          }
+        ],
+        "registered_at": "2015-10-10",
+        "read_rate_percent": 86
+      },
+      "year_2026": {
+        "total_read_time_sec": 835572,
+        "total_read_time": "232小时6分钟",
+        "read_days": 227,
+        "day_average_sec": 2627,
+        "day_average": "43分钟",
+        "books_read": 38,
+        "books_finished": 11,
+        "notes": 54,
+        "prefer_category_word": "偏好阅读文学",
+        "prefer_categories": [
+          {
+            "title": "文学",
+            "reading_count": 8,
+            "reading_time_sec": 144995,
+            "reading_time": "40小时16分钟"
+          },
+          {
+            "title": "社会小说",
+            "reading_count": 5,
+            "reading_time_sec": 101343,
+            "reading_time": "28小时9分钟"
+          },
+          {
+            "title": "影视原著",
+            "reading_count": 7,
+            "reading_time_sec": 98040,
+            "reading_time": "27小时14分钟"
+          },
+          {
+            "title": "男生小说",
+            "reading_count": 4,
+            "reading_time_sec": 490717,
+            "reading_time": "136小时18分钟"
+          },
+          {
+            "title": "古言精品",
+            "reading_count": 2,
+            "reading_time_sec": 77322,
+            "reading_time": "21小时28分钟"
+          },
+          {
+            "title": "玄幻小说",
+            "reading_count": 2,
+            "reading_time_sec": 36927,
+            "reading_time": "10小时15分钟"
+          }
+        ]
+      },
+      "month_2026_11": {
+        "total_read_time_sec": 7839,
+        "total_read_time": "2小时10分钟",
+        "read_days": 14,
+        "day_average_sec": 559,
+        "day_average": "9分钟",
+        "books_read": 2,
+        "books_finished": 1,
+        "notes": 1,
+        "prefer_category_word": "偏好阅读个人成长"
+      }
+    },
+    "public_shelf_counts": {
+      "books": 179,
+      "albums": 2,
+      "excluded_secret_books": 9,
+      "excluded_mp_article_collection": true
+    },
+    "currently_reading": [
+      {
+        "title": "Go语言底层原理剖析",
+        "author": "郑建勋",
+        "progress": 95,
+        "last_read": "2026-10-08"
+      },
+      {
+        "title": "如何高效学习：1年完成麻省理工4年33门课程的整体性学习法",
+        "author": "斯科特·扬",
+        "progress": 99,
+        "last_read": "2026-10-17"
+      },
+      {
+        "title": "因为独特",
+        "author": "李翔",
+        "progress": 15,
+        "last_read": "2026-10-28"
+      },
+      {
+        "title": "凤凰架构：构建可靠的大型分布式系统",
+        "author": "周志明",
+        "progress": 9,
+        "last_read": "2026-10-25"
+      },
+      {
+        "title": "日本蜡烛图技术：古老东方投资术的现代指南",
+        "author": "史蒂夫·尼森",
+        "progress": 6,
+        "last_read": "2026-10-20"
+      },
+      {
+        "title": "撒旦探戈（2025诺奖得主作品）",
+        "author": "[匈牙利]克拉斯诺霍尔卡伊·拉斯洛",
+        "progress": 5,
+        "last_read": "2026-10-25"
+      }
+    ],
+    "finished_on_public_shelf": [
+      {
+        "title": "东京八平米",
+        "author": "吉井忍",
+        "finish_date": "2026-10-20",
+        "progress": 100
+      },
+      {
+        "title": "如何高效学习：1年完成麻省理工4年33门课程的整体性学习法",
+        "author": "斯科特·扬",
+        "finish_date": "2023-06-03",
+        "progress": 99
+      },
+      {
+        "title": "Go语言精进之路：从新手到高手的编程思想、方法和技巧1",
+        "author": "白明",
+        "finish_date": "2022-05-11",
+        "progress": 79
+      },
+      {
+        "title": "Head First Go语言程序设计",
+        "author": "杰伊·麦克格瑞恩",
+        "finish_date": "2021-11-26",
+        "progress": 86
+      }
+    ],
+    "notebooks": {
+      "total_books_with_notes": 214,
+      "total_note_count": 1545,
+      "public_shelf_books_with_notes": 73,
+      "note_count_formula": "reviewCount + noteCount + bookmarkCount"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "updated_at": "2026-11-17T16:40:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "note": "Games 匡子闲 has played and enjoys. Descriptions are factual (player count and genre) only; no personal ratings, rankings, or play counts are recorded.",
+  "how_to_add": "Append a new object to the games array with id, name_zh, name_en, players, genre_zh, genre_en, blurb_zh, blurb_en, and emoji. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
+  "intro_zh": "玩过、也爱玩的桌游。后面想起再补。下面只写公开的人数和类型，没有个人评分或对局次数。",
+  "intro_en": "Board games he has played and enjoys. More will be added later. Each entry lists only public player counts and genre, not personal ratings or play counts.",
+  "games": [
+    {
+      "id": "werewolf",
+      "name_zh": "狼人杀",
+      "name_en": "Werewolf",
+      "players": "6–18",
+      "genre_zh": "社交推理",
+      "genre_en": "Social deduction",
+      "blurb_zh": "社交推理派对游戏，人数视版本而定，常见 6–18 人。",
+      "blurb_en": "A social deduction party game; player count depends on the edition, often 6–18.",
+      "emoji": "🐺"
+    },
+    {
+      "id": "avalon",
+      "name_zh": "阿瓦隆",
+      "name_en": "The Resistance: Avalon",
+      "players": "5–10",
+      "genre_zh": "社交推理",
+      "genre_en": "Social deduction",
+      "blurb_zh": "社交推理游戏，5–10 人，隐藏阵营、任务投票。",
+      "blurb_en": "A social deduction game for 5–10 players, with hidden teams and quest votes.",
+      "emoji": "🏰"
+    },
+    {
+      "id": "splendor",
+      "name_zh": "璀璨宝石",
+      "name_en": "Splendor",
+      "players": "2–4",
+      "genre_zh": "引擎构建",
+      "genre_en": "Engine building",
+      "blurb_zh": "引擎构建卡牌游戏，2–4 人，收集宝石卡发展引擎。",
+      "blurb_en": "An engine-building card game for 2–4 players, collecting gem cards to grow an engine.",
+      "emoji": "💎"
+    },
+    {
+      "id": "scout",
+      "name_zh": "Scout",
+      "name_en": "Scout",
+      "players": "2–5",
+      "genre_zh": "爬梯出牌",
+      "genre_en": "Ladder-climbing",
+      "blurb_zh": "Oink Games 的爬梯出牌游戏，2–5 人。",
+      "blurb_en": "A ladder-climbing card game from Oink Games, for 2–5 players.",
+      "emoji": "🎪"
+    },
+    {
+      "id": "exploding-kittens",
+      "name_zh": "炸弹猫",
+      "name_en": "Exploding Kittens",
+      "players": "2–5",
+      "genre_zh": "派对卡牌",
+      "genre_en": "Party card game",
+      "blurb_zh": "派对卡牌游戏，原版 2–5 人。",
+      "blurb_en": "A party card game; the original edition is for 2–5 players.",
+      "emoji": "💣"
+    },
+    {
+      "id": "azul",
+      "name_zh": "花砖物语",
+      "name_en": "Azul",
+      "players": "2–4",
+      "genre_zh": "抽象铺砖",
+      "genre_en": "Abstract tile placement",
+      "blurb_zh": "抽象铺砖游戏，2–4 人，起草花砖并摆进墙面。",
+      "blurb_en": "An abstract tile-placement game for 2–4 players, drafting tiles onto a wall.",
+      "emoji": "🟦"
+    },
+    {
+      "id": "cheese-thief",
+      "name_zh": "奶酪大盗",
+      "name_en": "Cheese Thief",
+      "players": "4–8",
+      "genre_zh": "社交推理",
+      "genre_en": "Social deduction",
+      "blurb_zh": "社交推理聚会游戏，4–8 人，约 10–15 分钟。",
+      "blurb_en": "A social deduction party game for 4–8 players, about 10–15 minutes.",
+      "emoji": "🧀"
+    }
+  ]
+}

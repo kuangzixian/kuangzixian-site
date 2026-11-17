@@ -1,0 +1,755 @@
+{
+  "schemaVersion": 1,
+  "playlist": {
+    "name": "匡子闲喜欢的音乐",
+    "id": "114831730",
+    "platform": "netease",
+    "platformName": "网易云音乐",
+    "sourceUrl": "https://music.163.com/#/playlist?id=114831730",
+    "shareUrl": "https://163cn.tv/blcL9U0t",
+    "exportedAt": "2026-11-17T07:48:48.865473+00:00",
+    "exportedAtShanghai": "2026-11-17 15:48",
+    "timezone": "Asia/Shanghai",
+    "trackCount": 286,
+    "artistCount": 243,
+    "order": "last-oldest",
+    "orderNoteZh": "按网易云「我喜欢的音乐」默认顺序解读：第1首视为最新收藏，第286首较早。用户未另行确认排序。分析来自收藏，不是播放次数。",
+    "orderNoteEn": "Read in NetEase Cloud Music’s default Liked Songs order: #1 is treated as the newest save, #286 as earlier. This order was not separately confirmed. The analysis is based on saves, not play counts."
+  },
+  "title": "先把喜欢留下来",
+  "summary": "依据286首收藏，不是播放次数。华语流行为主，民谣、日语与欧美流行并存。",
+  "summaryEn": "Based on 286 saved songs, not play counts. Mandopop is the main line, with folk, Japanese, and Western pop also present.",
+  "tool": {
+    "name": "musicanalysis",
+    "url": "https://github.com/ryohgicc/musicanalysis",
+    "reportPath": "music/report.html",
+    "credit": "Powered by musicanalysis",
+    "creditZh": "Powered by musicanalysis"
+  },
+  "limitationsZh": [
+    "艺人次数按演唱参与计，合作曲会叠加，不能当作流派占比。",
+    "同一首歌的不同发行只增加覆盖，不重复计为独立偏好。",
+    "没有播放次数、听歌年份或音频特征值。"
+  ],
+  "limitationsEn": [
+    "Artist counts include collaborations and are not additive genre shares.",
+    "Different releases of the same song add coverage, not extra preference votes.",
+    "No play counts, listening years, or audio features are inferred."
+  ],
+  "topArtists": [
+    {
+      "artist": "陈粒",
+      "count": 7
+    },
+    {
+      "artist": "G.E.M.邓紫棋",
+      "count": 7
+    },
+    {
+      "artist": "陈奕迅",
+      "count": 6
+    },
+    {
+      "artist": "王力宏",
+      "count": 6
+    },
+    {
+      "artist": "莫文蔚",
+      "count": 5
+    },
+    {
+      "artist": "李荣浩",
+      "count": 5
+    },
+    {
+      "artist": "孙燕姿",
+      "count": 4
+    },
+    {
+      "artist": "周杰伦",
+      "count": 4
+    },
+    {
+      "artist": "张宇",
+      "count": 4
+    },
+    {
+      "artist": "杨宗纬",
+      "count": 4
+    },
+    {
+      "artist": "米津玄師",
+      "count": 4
+    },
+    {
+      "artist": "毛不易",
+      "count": 4
+    }
+  ],
+  "topAlbums": [
+    {
+      "album": "平凡的一天",
+      "artists": [
+        "毛不易"
+      ],
+      "count": 4
+    },
+    {
+      "album": "如也",
+      "artists": [
+        "陈粒"
+      ],
+      "count": 3
+    },
+    {
+      "album": "就 i Karen 莫文蔚精选",
+      "artists": [
+        "莫文蔚"
+      ],
+      "count": 2
+    }
+  ],
+  "heroes": [
+    {
+      "index": 2,
+      "title": "富士山下",
+      "artist": "陈奕迅",
+      "album": "What's Going On…?",
+      "image": "images/music/fuji.jpg",
+      "sourceUrl": "https://music.163.com/#/song?id=65766"
+    },
+    {
+      "index": 53,
+      "title": "走马",
+      "artist": "陈粒",
+      "album": "如也",
+      "image": "images/music/zouma.jpg",
+      "sourceUrl": "https://music.163.com/#/song?id=30431367"
+    },
+    {
+      "index": 86,
+      "title": "Lemon",
+      "artist": "米津玄師",
+      "album": "STRAY SHEEP",
+      "image": "images/music/lemon.jpg",
+      "sourceUrl": "https://music.163.com/#/song?id=1466598056"
+    },
+    {
+      "index": 248,
+      "title": "泡沫",
+      "artist": "G.E.M.邓紫棋",
+      "album": "The Best of G.E.M. 2008 - 2012 (Deluxe Version)",
+      "image": "images/music/paomo.jpg",
+      "sourceUrl": "https://music.163.com/#/song?id=26113988"
+    }
+  ],
+  "insights": [
+    {
+      "kicker": "华语流行",
+      "title": "华语流行是歌单的主轴",
+      "summary": "陈奕迅、邓紫棋、王力宏、孙燕姿、林俊杰、周杰伦、莫文蔚等反复出现。",
+      "titleEn": "Mandopop is the main line",
+      "summaryEn": "Eason Chan, G.E.M., Leehom Wang, Stefanie Sun, JJ Lin, Jay Chou and Karen Mok appear repeatedly.",
+      "body": "286首里，华语流行艺人最显眼：陈奕迅有《富士山下》《十年》《红玫瑰》《孤勇者》，邓紫棋有成组的《泡沫》《喜欢你》《光年之外》，王力宏连续多首，孙燕姿、林俊杰、周杰伦、莫文蔚、李荣浩、郭静也反复出现。这是收藏密度最高的一条线，但不是唯一的线。",
+      "bodyEn": "Across 286 songs, Mandopop artists are the most visible line: Eason Chan, a cluster of G.E.M. tracks, a run of Leehom Wang songs, plus Stefanie Sun, JJ Lin, Jay Chou, Karen Mok, Ronghao Li and Claire Kuo. It is the densest line, but not the only one.",
+      "evidence": [
+        {
+          "index": 2,
+          "title": "富士山下",
+          "artist": "陈奕迅",
+          "note": "较新一端的陈奕迅粤语代表作，说明这条线一直在延续。"
+        },
+        {
+          "index": 248,
+          "title": "泡沫",
+          "artist": "G.E.M.邓紫棋",
+          "note": "邓紫棋成组收藏里的一首，和前后的《喜欢你》《后会无期》连在一起。"
+        },
+        {
+          "index": 254,
+          "title": "你不知道的事",
+          "artist": "王力宏",
+          "note": "王力宏连续多首中的一首，体现的是成簇收藏，不是单曲点赞。"
+        }
+      ]
+    },
+    {
+      "kicker": "民谣叙事",
+      "title": "城市民谣是第二条主线",
+      "summary": "陈粒、毛不易、赵雷、宋冬野、陈鸿宇、房东的猫在不同阶段反复出现。",
+      "titleEn": "City folk is the second line",
+      "summaryEn": "Chen Li, Mao Buyi, Zhao Lei, Song Dongye, Chen Hongyu and 房东的猫 return across stages.",
+      "body": "陈粒《走马》《小半》《易燃易爆炸》《历历万乡》覆盖《如也》与《小梦大半》。毛不易《消愁》《借》《一荤一素》《像我这样的人》集中来自《平凡的一天》。赵雷《成都》有两个发行，宋冬野《董小姐》也有两个版本。陈鸿宇、房东的猫让这条线不只是一两首歌。",
+      "bodyEn": "Chen Li covers 如也 and 小梦大半; Mao Buyi’s 消愁, 借, 一荤一素 and 像我这样的人 come from the same album. Zhao Lei’s “成都” and Song Dongye’s “董小姐” each appear in two releases. Chen Hongyu and 房东的猫 show the line is more than one or two songs.",
+      "evidence": [
+        {
+          "index": 53,
+          "title": "走马",
+          "artist": "陈粒",
+          "note": "《如也》里的《走马》，是陈粒在歌单中最有代表性的一首。"
+        },
+        {
+          "index": 92,
+          "title": "消愁",
+          "artist": "毛不易",
+          "note": "《平凡的一天》里的《消愁》，和同专辑多首一起出现。"
+        },
+        {
+          "index": 194,
+          "title": "成都",
+          "artist": "赵雷",
+          "note": "赵雷《成都》的单曲版；另一发行在《无法长大》，只算覆盖。"
+        }
+      ]
+    },
+    {
+      "kicker": "版本覆盖",
+      "title": "熟歌会以不同发行再出现",
+      "summary": "多首同名作品出现两次，增加的是发行覆盖，不是播放次数。",
+      "titleEn": "Familiar songs reappear in other releases",
+      "summaryEn": "Several same-title tracks appear twice. That adds release coverage, not play counts.",
+      "body": "《董小姐》有摩登天空7与《安和桥北》两个版本，《成都》《年少有为》《遇见》《Butter-Fly》《挪威的森林》《追光者》《护花使者》《Counting Stars》《红玫瑰》等也重复出现。这只说明同一作品被再次收进不同发行，不能推断哪一首听得更多，也不能当成两票偏好。",
+      "bodyEn": "“董小姐” appears in both Modern Sky 7 and 安和桥北 editions; “成都”, “年少有为”, “遇见”, Butter-Fly and others also repeat. This only shows the same work was saved again in another release. It does not say which one was played more, and it should not count as two preference votes.",
+      "evidence": [
+        {
+          "index": 34,
+          "title": "董小姐",
+          "artist": "宋冬野",
+          "note": "《董小姐》的《安和桥北》版，是较新一端附近的一次再收藏。"
+        },
+        {
+          "index": 282,
+          "title": "董小姐",
+          "artist": "宋冬野",
+          "note": "同一首歌的摩登天空7版，出现在歌单较早一端。"
+        },
+        {
+          "index": 71,
+          "title": "成都",
+          "artist": "赵雷",
+          "note": "《成都》的《无法长大》版，和单曲版并存，只增加覆盖。"
+        }
+      ]
+    },
+    {
+      "kicker": "日语与动漫",
+      "title": "日语流行和动漫歌是稳定支线",
+      "summary": "米津玄師、YOASOBI、GARNiDELiA 与动画、游戏原声多次出现。",
+      "titleEn": "Japanese pop and anime songs are a steady side line",
+      "summaryEn": "Kenshi Yonezu, YOASOBI, GARNiDELiA, plus anime and game scores, appear more than once.",
+      "body": "米津玄師有《Lemon》《LOSER》《打上花火》《打ち上げ花火》。YOASOBI《群青》在较新一端，旁边还有中文翻唱。GARNiDELiA《極楽浄土》与 MARiA 版并存。和田光司《Butter-Fly》出现两次，另有初音相关作品、名侦探柯南主题、Silent Hill 2 原声和一人之下曲目。汉字书写的日语曲会被语言计数低估。",
+      "bodyEn": "Kenshi Yonezu appears with Lemon, LOSER and fireworks tracks; YOASOBI’s “群青” is near the newer end, with a Chinese cover nearby. GARNiDELiA and MARiA versions of 極楽浄土 both appear, as do Butter-Fly (twice), Vocaloid-related tracks, Detective Conan, Silent Hill 2 and Under One Person cues. Japanese titles written in kanji are easy to undercount.",
+      "evidence": [
+        {
+          "index": 20,
+          "title": "群青",
+          "artist": "YOASOBI",
+          "note": "YOASOBI《群青》出现在较新一端，旁边还有一首中文翻唱。"
+        },
+        {
+          "index": 86,
+          "title": "Lemon",
+          "artist": "米津玄師",
+          "note": "米津玄師《Lemon》说明日语流行不只是动画插入。"
+        },
+        {
+          "index": 129,
+          "title": "打上花火",
+          "artist": "Daoko、米津玄師",
+          "note": "与 Daoko 合作的《打上花火》，连接日语流行和动画场景。"
+        }
+      ]
+    },
+    {
+      "kicker": "欧美与配乐",
+      "title": "欧美流行和电影歌贯穿全单",
+      "summary": "从较早一端的电影歌，到电音和老牌流行，这条线一直没有消失。",
+      "titleEn": "Western pop and film songs run through the list",
+      "summaryEn": "From earlier-end film songs to electronic and catalogue pop, this line never disappears.",
+      "body": "较早一端已有《See You Again》《Love The Way You Lie》《Love Me Like You Do》。之后还有《Counting Stars》《Sugar》《Faded》、The Beatles《Norwegian Wood》、《City Of Stars》，以及克莱德曼和 Silent Hill 原声。它们分散在各阶段，不像某一时期的突发兴趣。",
+      "bodyEn": "The earlier end already has See You Again, Love The Way You Lie and Love Me Like You Do. Later come Counting Stars, Sugar, Faded, The Beatles’ Norwegian Wood, City Of Stars, Clayderman piano and Silent Hill cues. They are spread across stages, not a short-lived burst.",
+      "evidence": [
+        {
+          "index": 277,
+          "title": "See You Again",
+          "artist": "Wiz Khalifa、Charlie Puth",
+          "note": "较早一端的电影主题曲，说明欧美影视歌从一开始就在歌单里。"
+        },
+        {
+          "index": 169,
+          "title": "City Of Stars (From \"La La Land\" Soundtrack)",
+          "artist": "Ryan Gosling、Emma Stone",
+          "note": "《La La Land》插曲，把电影原声和欧美流行连在一起。"
+        },
+        {
+          "index": 115,
+          "title": "Faded",
+          "artist": "Alan Walker",
+          "note": "Alan Walker《Faded》出现在中段，电音流行也被收进。"
+        }
+      ]
+    },
+    {
+      "kicker": "戏腔古风",
+      "title": "戏腔、古风和民族色彩反复出现",
+      "summary": "任素汐、凤凰传奇、古风翻唱、红昭愿与民歌并不是偶尔点缀。",
+      "titleEn": "Opera-tinged, guofeng and folk colors keep returning",
+      "summaryEn": "Ren Suxi, Phoenix Legend, guofeng covers, 红昭愿 and folk songs are not one-off ornaments.",
+      "body": "较新一端有任素汐《王招君》、凤凰传奇《奢香夫人》、闻人听書_《虞兮叹》、额尔古纳乐队《鸿雁》。更早还有任素汐《我要你》、以冬和不才的古风翻唱、音阙诗听《红昭愿》、戴荃《悟空》、刀郎《西海情歌》、双笙《我的一个道姑朋友》。这条线跨越多段，不是单次尝鲜。",
+      "bodyEn": "Near the newer end are Ren Suxi’s “王招君”, Phoenix Legend, 闻人听書_ and 鸿雁. Earlier stretches also have “我要你”, guofeng covers, 红昭愿, Dai Quan’s “悟空”, Dao Lang and 双笙. The line crosses several stages, not a single trial.",
+      "evidence": [
+        {
+          "index": 5,
+          "title": "王招君",
+          "artist": "任素汐",
+          "note": "任素汐《王招君》在较新一端，戏腔表现很突出。"
+        },
+        {
+          "index": 6,
+          "title": "奢香夫人",
+          "artist": "凤凰传奇",
+          "note": "凤凰传奇《奢香夫人》把民族旋律放进流行编曲。"
+        },
+        {
+          "index": 145,
+          "title": "红昭愿",
+          "artist": "音阙诗听",
+          "note": "音阙诗听《红昭愿》是古风流行里较常被收藏的一首。"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "range": [
+        256,
+        286
+      ],
+      "tag": "经典华语",
+      "title": "情歌与电影里的声音",
+      "subtitle": "按默认顺序，这是歌单较早的一端",
+      "body": "较早一端以华语情歌和影视主题曲为主：梁静茹《爱久见人心》、李健《传奇》、齐秦《大约在冬季》，以及周杰伦《红尘客栈》《不能说的秘密》、陈奕迅《十年》。郭静连续出现多首。同时收有《See You Again》等欧美电影歌曲。宋冬野《董小姐》是摩登天空7版。",
+      "insight": "华语情歌是底座，影视与欧美流行已经并存。",
+      "tagEn": "Classic Mandopop",
+      "titleEn": "Ballads and film songs",
+      "subtitleEn": "Songs and film music, at the earlier end",
+      "bodyEn": "The earlier end is mostly Mandopop ballads and film themes: Fish Leong, Li Jian, Chyi Chin, Jay Chou, Eason Chan, and a run of Claire Kuo tracks. Western film pop such as See You Again is already here. Song Dongye’s “董小姐” appears in the Modern Sky 7 edition.",
+      "insightEn": "Mandopop ballads are the base; film and Western pop are already present.",
+      "anchors": [
+        {
+          "index": 271,
+          "title": "十年",
+          "artist": "陈奕迅"
+        },
+        {
+          "index": 283,
+          "title": "红尘客栈",
+          "artist": "周杰伦"
+        },
+        {
+          "index": 277,
+          "title": "See You Again",
+          "artist": "Wiz Khalifa、Charlie Puth"
+        }
+      ]
+    },
+    {
+      "range": [
+        224,
+        255
+      ],
+      "tag": "华语主力",
+      "title": "邓紫棋与王力宏成簇出现",
+      "subtitle": "同一艺人的多首作品被连续收进歌单",
+      "body": "王力宏《依然爱你》《你不知道的事》《唯一》《我们的歌》《心中的日月》连成一串，邓紫棋《后会无期》《泡沫》《喜欢你》《你把我灌醉》也成组出现。旁边还有林俊杰《她说》、薛之谦《丑八怪》，以及《Counting Stars》《Sugar》、初音相关和马頔《南山南》。",
+      "insight": "流行偶像作品会成组收藏，不是零散点赞。",
+      "tagEn": "Mandopop core",
+      "titleEn": "G.E.M. and Leehom Wang appear in clusters",
+      "subtitleEn": "Several artists appear in clusters",
+      "bodyEn": "Leehom Wang songs sit in a row, and G.E.M. also appears as a group, with JJ Lin, Xue Zhiqian, Counting Stars, Sugar, Vocaloid-related tracks and Ma Di’s “南山南” nearby.",
+      "insightEn": "Idol-pop tracks are saved in clusters, not as isolated likes.",
+      "anchors": [
+        {
+          "index": 254,
+          "title": "你不知道的事",
+          "artist": "王力宏"
+        },
+        {
+          "index": 248,
+          "title": "泡沫",
+          "artist": "G.E.M.邓紫棋"
+        },
+        {
+          "index": 241,
+          "title": "她说",
+          "artist": "林俊杰"
+        }
+      ]
+    },
+    {
+      "range": [
+        192,
+        223
+      ],
+      "tag": "民谣城市",
+      "title": "陈粒、成都与城市叙事",
+      "subtitle": "民谣叙事和钢琴小品一起出现",
+      "body": "这一段出现陈粒《小半》、赵雷《成都》、陈鸿宇《理想三旬》、李荣浩《老街》、戴荃《悟空》。理查德·克莱德曼的《秋日私语》《星空》也被收进，说明器乐小品可以和华语叙事并存。金玟岐《岁月神偷》、杨宗纬《洋葱》仍是华语流行旋律。",
+      "insight": "城市民谣开始与流行、器乐交错。",
+      "tagEn": "City folk",
+      "titleEn": "Chen Li, Chengdu, and city narratives",
+      "subtitleEn": "Folk narratives appear with piano pieces",
+      "bodyEn": "This stretch includes Chen Li’s “小半”, Zhao Lei’s “成都”, Chen Hongyu, Ronghao Li’s “老街”, and Dai Quan’s “悟空”. Richard Clayderman piano pieces sit beside them, along with Mandopop from Jin Wenqi and Aska Yang.",
+      "insightEn": "City folk begins to interleave with pop and instrumental pieces.",
+      "anchors": [
+        {
+          "index": 201,
+          "title": "小半",
+          "artist": "陈粒"
+        },
+        {
+          "index": 194,
+          "title": "成都",
+          "artist": "赵雷"
+        },
+        {
+          "index": 218,
+          "title": "理想三旬",
+          "artist": "陈鸿宇"
+        }
+      ]
+    },
+    {
+      "range": [
+        160,
+        191
+      ],
+      "tag": "古风混编",
+      "title": "陈粒加厚，古风翻唱并置",
+      "subtitle": "原作与翻唱、古风与电影歌混在同一段",
+      "body": "陈粒在这一段变密：《奇妙能力歌》《易燃易爆炸》《虚拟》《性空山》。旁边是以冬、不才的古风翻唱，以及任素汐《我要你》。同时再次出现 Eminem 的作品，还有《City Of Stars》《Galway Girl》。一人之下相关曲目也在其中。这是混编，不是单一风格替换。",
+      "insight": "陈粒作品加厚，古风翻唱与欧美影视并存。",
+      "tagEn": "Guofeng mix",
+      "titleEn": "More Chen Li, with guofeng covers alongside",
+      "subtitleEn": "Originals, covers, guofeng and film songs share the stretch",
+      "bodyEn": "Chen Li becomes denser here (奇妙能力歌, 易燃易爆炸, 虚拟, 性空山), next to guofeng covers and Ren Suxi’s “我要你”. Eminem, City Of Stars and Galway Girl also appear, as do Under One Person soundtrack tracks. This is a mix, not a style replacement.",
+      "insightEn": "Chen Li deepens; guofeng covers sit beside Western film pop.",
+      "anchors": [
+        {
+          "index": 190,
+          "title": "易燃易爆炸",
+          "artist": "陈粒"
+        },
+        {
+          "index": 179,
+          "title": "我要你",
+          "artist": "任素汐"
+        },
+        {
+          "index": 169,
+          "title": "City Of Stars (From \"La La Land\" Soundtrack)",
+          "artist": "Ryan Gosling、Emma Stone"
+        }
+      ]
+    },
+    {
+      "range": [
+        128,
+        159
+      ],
+      "tag": "跨界扩大",
+      "title": "动漫、电音与华语并行",
+      "subtitle": "华语之外的来源明显变多",
+      "body": "这一段来源更杂：米津玄師与 Daoko《打上花火》、邓紫棋《光年之外》、音阙诗听《红昭愿》、岑宁儿《追光者》，也有 TheFatRat《Monody》、Carpenters《Yesterday Once More》。许巍《蓝莲花》《曾经的你》和陈鸿宇《一如年少模样》把华语摇滚与民谣留在同一段。",
+      "insight": "收藏范围变宽，但仍不断回看华语。",
+      "tagEn": "Wider sources",
+      "titleEn": "Anime, electronic, and Mandopop in parallel",
+      "subtitleEn": "Non-Chinese sources become more visible",
+      "bodyEn": "This stretch is more mixed: Kenshi Yonezu and Daoko’s “打上花火”, G.E.M.’s “光年之外”, “红昭愿”, “追光者”, plus TheFatRat and the Carpenters. Xu Wei and Chen Hongyu keep Chinese rock and folk in the same stretch.",
+      "insightEn": "The range widens, but the playlist keeps returning to Chinese songs.",
+      "anchors": [
+        {
+          "index": 129,
+          "title": "打上花火",
+          "artist": "Daoko、米津玄師"
+        },
+        {
+          "index": 146,
+          "title": "光年之外",
+          "artist": "G.E.M.邓紫棋"
+        },
+        {
+          "index": 145,
+          "title": "红昭愿",
+          "artist": "音阙诗听"
+        }
+      ]
+    },
+    {
+      "range": [
+        96,
+        127
+      ],
+      "tag": "专辑加厚",
+      "title": "平凡之路与专辑深挖",
+      "subtitle": "整专曲目和经典摇滚一起被收进来",
+      "body": "毛不易《像我这样的人》来自《平凡的一天》，李荣浩《年少有为》也在此出现。Beyond《海阔天空》《光辉岁月》、朴树《平凡之路》构成华语摇滚经典簇。陈粒《历历万乡》继续《如也》线。另有 Silent Hill 2 的《Promise》《Theme of Laura》，以及《Faded》和李健《贝加尔湖畔》。",
+      "insight": "开始按专辑和经典专集补充，不只收单曲。",
+      "tagEn": "Album digging",
+      "titleEn": "Ordinary Path and deeper album saves",
+      "subtitleEn": "Full-album tracks and classic rock are added",
+      "bodyEn": "Mao Buyi’s “像我这样的人” comes from the album 平凡的一天; Ronghao Li’s “年少有为” is here too. Beyond, Pu Shu, Chen Li’s “历历万乡”, Silent Hill 2 cues, Faded and Li Jian’s “贝加尔湖畔” share the stretch.",
+      "insightEn": "Saves start filling out albums and classics, not only singles.",
+      "anchors": [
+        {
+          "index": 99,
+          "title": "像我这样的人",
+          "artist": "毛不易"
+        },
+        {
+          "index": 98,
+          "title": "海阔天空",
+          "artist": "Beyond"
+        },
+        {
+          "index": 114,
+          "title": "历历万乡",
+          "artist": "陈粒"
+        }
+      ]
+    },
+    {
+      "range": [
+        64,
+        95
+      ],
+      "tag": "再回民谣",
+      "title": "消愁、成都与李荣浩",
+      "subtitle": "毛不易专辑曲与城市民谣再次集中",
+      "body": "毛不易《消愁》《借》《一荤一素》同属《平凡的一天》，和李荣浩《麻雀》《不将就》排在一起。赵雷《成都》是《无法长大》版，与前面的单曲版不是同一发行。还有陈奕迅《孤勇者》、房东的猫《云烟成雨》、米津玄師《Lemon》，以及伍佰的作品。华语民谣与流行再次拧紧。",
+      "insight": "同一专辑会被继续补完，城市民谣再次集中。",
+      "tagEn": "Folk again",
+      "titleEn": "Xiao Chou, Chengdu, and Ronghao Li",
+      "subtitleEn": "Mao Buyi album tracks and city folk concentrate again",
+      "bodyEn": "Mao Buyi’s 消愁, 借 and 一荤一素 (all from 平凡的一天) sit with Ronghao Li. Zhao Lei’s “成都” here is the 无法长大 edition, not the earlier single. Eason Chan’s “孤勇者”, 房东的猫, Kenshi Yonezu’s Lemon and Wu Bai also appear.",
+      "insightEn": "The same album continues to be completed; city folk concentrates again.",
+      "anchors": [
+        {
+          "index": 92,
+          "title": "消愁",
+          "artist": "毛不易"
+        },
+        {
+          "index": 71,
+          "title": "成都",
+          "artist": "赵雷"
+        },
+        {
+          "index": 86,
+          "title": "Lemon",
+          "artist": "米津玄師"
+        }
+      ]
+    },
+    {
+      "range": [
+        32,
+        63
+      ],
+      "tag": "重听对照",
+      "title": "走马、董小姐与再收藏",
+      "subtitle": "许多熟歌以不同发行再次进入歌单",
+      "body": "陈粒《走马》补上《如也》的重要一首。宋冬野《董小姐》是《安和桥北》版，与较早的摩登天空7版并存。孙燕姿《遇见》、李荣浩《年少有为》、和田光司《Butter-Fly》也以不同发行再出现。新加入的有草东没有派对《山海》、五月天《温柔》，以及米津玄師《LOSER》与《打ち上げ花火》。",
+      "insight": "熟歌换发行再收，同时补进摇滚与日语。",
+      "tagEn": "Re-saves",
+      "titleEn": "Zouma, Miss Dong, and re-saves",
+      "subtitleEn": "Familiar songs re-enter in different releases",
+      "bodyEn": "Chen Li’s “走马” adds a key 如也 track. Song Dongye’s “董小姐” appears in the 安和桥北 edition beside the earlier Modern Sky 7 edition. Stefanie Sun, Ronghao Li and Butter-Fly also reappear in other releases, with new adds from No Party For Cao Dong, Mayday and Kenshi Yonezu.",
+      "insightEn": "Familiar songs are saved again in other editions, while rock and Japanese tracks are added.",
+      "anchors": [
+        {
+          "index": 53,
+          "title": "走马",
+          "artist": "陈粒"
+        },
+        {
+          "index": 34,
+          "title": "董小姐",
+          "artist": "宋冬野"
+        },
+        {
+          "index": 39,
+          "title": "山海",
+          "artist": "草东没有派对"
+        }
+      ]
+    },
+    {
+      "range": [
+        1,
+        31
+      ],
+      "tag": "最近收藏",
+      "title": "晚风、富士山与戏腔回声",
+      "subtitle": "按默认顺序，第1首是最新收藏",
+      "body": "按网易云「我喜欢的音乐」默认，第1首《晚风心里吹》视为最新。紧邻的是陈奕迅《富士山下》、孙燕姿《我怀念的》、李玟与周杰伦《刀马旦》。任素汐《王招君》、凤凰传奇《奢香夫人》、闻人听書_《虞兮叹》让戏腔和民族色彩再次出现。YOASOBI《群青》和许嵩《如果当时》说明主线仍是华语，来源更杂。",
+      "insight": "最新一端仍以华语流行为主，戏腔与日语穿插其中。",
+      "tagEn": "Latest saves",
+      "titleEn": "Evening wind, Fuji, and opera-tinged echoes",
+      "subtitleEn": "By the default order, #1 is the newest save",
+      "bodyEn": "Under NetEase’s default Liked-Songs order, “晚风心里吹” is treated as the newest save, next to Eason Chan’s “富士山下”, Stefanie Sun, and Leehom/Jay’s “刀马旦”. Ren Suxi, Phoenix Legend and 闻人听書_ bring opera-tinged and folk colors back. YOASOBI’s “群青” and Xu Song show the main line is still Mandopop, just from more sources.",
+      "insightEn": "The newest end is still mainly Mandopop, with opera-tinged and Japanese tracks mixed in.",
+      "anchors": [
+        {
+          "index": 2,
+          "title": "富士山下",
+          "artist": "陈奕迅"
+        },
+        {
+          "index": 3,
+          "title": "我怀念的",
+          "artist": "孙燕姿"
+        },
+        {
+          "index": 5,
+          "title": "王招君",
+          "artist": "任素汐"
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "最佳损友",
+      "artist": "陈奕迅",
+      "tier": "大概率合口味",
+      "tierEn": "Very likely",
+      "reason": "歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。",
+      "difference": "粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。",
+      "source": "https://music.163.com/#/song?id=65800",
+      "album": "Life Continues…",
+      "image": "images/music/rec-zuijia-sunyou.jpg"
+    },
+    {
+      "title": "桥豆麻袋",
+      "artist": "陈粒",
+      "tier": "大概率合口味",
+      "tierEn": "Very likely",
+      "reason": "已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。",
+      "difference": "口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。",
+      "source": "https://music.163.com/#/song?id=421563713",
+      "album": "小梦大半",
+      "image": "images/music/rec-qiaodou-madal.jpg"
+    },
+    {
+      "title": "平凡的一天",
+      "artist": "毛不易",
+      "tier": "大概率合口味",
+      "tierEn": "Very likely",
+      "reason": "已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。",
+      "difference": "标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。",
+      "source": "https://music.163.com/#/song?id=569214247",
+      "album": "平凡的一天",
+      "image": "images/music/rec-pingfan-yitian.jpg"
+    },
+    {
+      "title": "来自天堂的魔鬼",
+      "artist": "G.E.M.邓紫棋",
+      "tier": "大概率合口味",
+      "tierEn": "Very likely",
+      "reason": "已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。",
+      "difference": "比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。",
+      "source": "https://music.163.com/#/song?id=36270426",
+      "album": "新的心跳",
+      "image": "images/music/rec-tiantang-mogui.jpg"
+    },
+    {
+      "title": "模特",
+      "artist": "李荣浩",
+      "tier": "大概率合口味",
+      "tierEn": "Very likely",
+      "reason": "已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。",
+      "difference": "口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。",
+      "source": "https://music.163.com/#/song?id=27731176",
+      "album": "模特",
+      "image": "images/music/rec-mote.jpg"
+    },
+    {
+      "title": "绿光",
+      "artist": "孙燕姿",
+      "tier": "大概率合口味",
+      "tierEn": "Very likely",
+      "reason": "已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。",
+      "difference": "节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。",
+      "source": "https://music.163.com/#/song?id=287611",
+      "album": "风筝",
+      "image": "images/music/rec-lvguang.jpg"
+    },
+    {
+      "title": "安和桥",
+      "artist": "宋冬野",
+      "tier": "相邻风格",
+      "tierEn": "Nearby style",
+      "reason": "《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。",
+      "difference": "更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。",
+      "source": "https://music.163.com/#/song?id=27646205",
+      "album": "安和桥北",
+      "image": "images/music/rec-anheqiao.jpg"
+    },
+    {
+      "title": "青花瓷",
+      "artist": "周杰伦",
+      "tier": "相邻风格",
+      "tierEn": "Nearby style",
+      "reason": "已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。",
+      "difference": "古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。",
+      "source": "https://music.163.com/#/song?id=185811",
+      "album": "我很忙",
+      "image": "images/music/rec-qinghuaci.jpg"
+    },
+    {
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "tier": "相邻风格",
+      "tierEn": "Nearby style",
+      "reason": "已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。",
+      "difference": "叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。",
+      "source": "https://music.163.com/#/song?id=1409311773",
+      "album": "夜に駆ける",
+      "image": "images/music/rec-yoru-ni-kakeru.jpg"
+    },
+    {
+      "title": "Skyfall",
+      "artist": "Adele",
+      "tier": "相邻风格",
+      "tierEn": "Nearby style",
+      "reason": "歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。",
+      "difference": "比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。",
+      "source": "https://music.apple.com/us/album/skyfall/566322358?i=566322365",
+      "album": "Skyfall - Single",
+      "image": "images/music/rec-skyfall.jpg"
+    },
+    {
+      "title": "杀死那个石家庄人",
+      "artist": "万能青年旅店",
+      "tier": "探索",
+      "tierEn": "Explore",
+      "reason": "已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。",
+      "difference": "编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。",
+      "source": "https://music.163.com/#/song?id=386844",
+      "album": "万能青年旅店 同名专辑",
+      "image": "images/music/rec-shijiazhuang.jpg"
+    },
+    {
+      "title": "前前前世 (movie ver.)",
+      "artist": "RADWIMPS",
+      "tier": "探索",
+      "tierEn": "Explore",
+      "reason": "已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。",
+      "difference": "电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。",
+      "source": "https://music.163.com/#/song?id=426881487",
+      "album": "君の名は。",
+      "image": "images/music/rec-zenzenzense.jpg"
+    }
+  ]
+}

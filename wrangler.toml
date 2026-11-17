@@ -1,0 +1,22 @@
+# Cloudflare Pages + D1 guestbook.
+# wrangler.toml is the source of truth for bindings when deploying with wrangler.
+# A dashboard-only D1 binding would be overwritten by `wrangler pages deploy`
+# if it is missing from this file. Keep the binding here.
+#
+# Before the first remote deploy, create the database and replace database_id:
+#   npx wrangler d1 create kuangzixian-guestbook
+# scripts/deploy.sh does this automatically when CLOUDFLARE_API_TOKEN is set.
+#
+# Secrets (do not put values here): ADMIN_TOKEN, IP_HASH_SALT
+#   npx wrangler pages secret put ADMIN_TOKEN --project-name kuangzixian
+#   npx wrangler pages secret put IP_HASH_SALT --project-name kuangzixian
+
+name = "kuangzixian"
+compatibility_date = "2026-11-17"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kuangzixian-guestbook"
+database_id = "bcedb31b-8b7b-4d26-9f1c-c2bc573861fd"
+migrations_dir = "migrations"

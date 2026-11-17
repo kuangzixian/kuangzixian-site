@@ -1,0 +1,43 @@
+# Secrets and local env (keep the empty *.example files)
+.dev.vars
+.env
+.env.*
+!.env.example
+!.dev.vars.example
+
+# Local wrangler state, D1/KV databases, and build output
+.wrangler/
+node_modules/
+dist/
+
+# Keys and secret directories
+*.pem
+*.key
+secrets
+secrets/
+
+# Local databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
+# Preview screenshots (local only)
+preview.png
+preview*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
