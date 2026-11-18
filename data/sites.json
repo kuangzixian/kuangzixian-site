@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-17T20:25:45+08:00",
+  "updated_at": "2026-11-18T14:49:04+08:00",
   "timezone": "Asia/Shanghai",
-  "note": "Names, titles, descriptions and images were taken from the live sites on 2026-11-17. Nothing here is invented. URLs are stored exactly as published. Entries with own=true are 匡子闲's own projects.",
+  "note": "Names, titles, descriptions and images were taken from the live sites (latest check 2026-11-18). Nothing here is invented. URLs are stored exactly as published. Entries with own=true are 匡子闲's own projects.",
   "how_to_add": "Append a new object to the sites array with id, url, name, and optional canonical, domain, title, description, image, image_alt, image_source, favicon, emoji, own. Set own to true for 匡子闲's own projects (shows a 自己做的 / Made by me badge). Keep url exactly as given. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
   "intro_zh": "推荐看看的网站。标了「自己做的」的是匡子闲自己的项目。后面想到再补。介绍只摘自站点自己的公开信息，没有编造。",
   "intro_en": "Sites he recommends. Cards marked “Made by me” are his own projects. More will be added later. Descriptions are taken from the sites themselves and are not invented.",
@@ -76,6 +76,20 @@
       "image_alt": "Watermelon Game logo",
       "image_source": "https://watermelon.shinyou.ng/assets/logo/melon.png",
       "favicon": "https://watermelon.shinyou.ng/assets/logo/melon.png",
+      "emoji": "🌐"
+    },
+    {
+      "id": "boardgamearena",
+      "url": "https://zh-cn.boardgamearena.com/",
+      "canonical": "https://zh-cn.boardgamearena.com/",
+      "domain": "zh-cn.boardgamearena.com",
+      "name": "Board Game Arena",
+      "title": "Board Game Arena - 免费在线玩桌游！",
+      "description": "全球最大的在线桌游社区。超过1000款游戏可直接在浏览器中畅玩。",
+      "image": "images/sites/boardgamearena.png",
+      "image_alt": "BGA",
+      "image_source": "https://x.boardgamearena.net/data/themereleases/261117-1646/img/logo/logo.png",
+      "favicon": "https://x.boardgamearena.net/data/themereleases/261117-1646/img/favicon/favicon-32x32.png?2",
       "emoji": "🌐"
     }
   ]
