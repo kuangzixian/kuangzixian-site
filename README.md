@@ -1,6 +1,6 @@
 # 匡子闲的个人主页
 
-QQ 空间风格的个人主页，线上地址：[https://kuangzixian.pages.dev](https://kuangzixian.pages.dev)
+[匡子闲（kuangzixian）的个人主页](https://kuangzixian.pages.dev/)，也是一个 QQ 空间风格的小站。我是一名后端工程师，做过 [Easy Offer](https://github.com/kuangzixian/easy-offer) 和[「好好生活」](https://github.com/kuangzixian/easy-life)。
 
 静态 HTML / CSS / 原生 JavaScript，部署在 Cloudflare Pages。没有构建工具链，也不引用会被中国大陆拦截的外部字体或脚本 CDN。主页、日志、读书、音乐、桌游、推荐网站、留言板、个人档用选项卡切换。留言板和访问量由 Cloudflare Pages Functions + D1 提供；访问量每人每天最多计 1 次。
 
@@ -50,7 +50,7 @@ npx wrangler pages deploy dist --project-name kuangzixian --branch main
 - `/index.md`、`/reading.md`、`/writing.md`、`/writing/<id>.md`、`/music.md`、`/boardgames.md`、`/sites.md`
 - `/sitemap.md`、`/sitemap.xml`、`/robots.txt`
 
-访问 `/?mode=agent` 会跳转到 `/index.md`。`robots.txt` 里的 `Content-Signal` 目前是 `ai-train=no`（允许检索和作为回答依据，不允许用来训练），如需修改，改 `scripts/build_ai.py` 后再部署。不要手改这些生成文件，改数据后再构建即可。
+访问 `/?mode=agent` 会跳转到 `/index.md`。`robots.txt` 里的 `Content-Signal` 目前是 `ai-train=no`（允许检索和作为回答依据，不允许用来训练），并显式允许用于 ChatGPT 搜索的 OAI-SearchBot、拒绝用于训练的 GPTBot，如需修改，改 `scripts/build_ai.py` 后再部署。不要手改这些生成文件，改数据后再构建即可。
 
 ## 留言板
 

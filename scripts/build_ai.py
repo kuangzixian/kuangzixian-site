@@ -361,7 +361,7 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
     lines = [
         "# 匡子闲",
         "",
-        f"> 匡子闲（{profile.get('latin_handle') or 'kuangzixian'}）是后端工程师，知乎签名「{(bio.get('zhihu') or '计科，炒股')}」。空间签名「{bio.get('signature_zh') or ''}」。本站是他的个人主页，收录公开的微信读书记录、开源项目，以及与 GPT 的对话。",
+        f"> {bio['combined_zh']}",
         "",
         "## Canonical URLs",
         "",
@@ -484,7 +484,7 @@ def build_index_md(profile: dict, reading: dict, chats: list[dict], sites: dict 
     lines = [
         "# 匡子闲",
         "",
-        f"匡子闲（{profile.get('latin_handle') or 'kuangzixian'}）是后端工程师，知乎签名「{bio.get('zhihu') or ''}」。",
+        bio["combined_zh"],
         f"空间签名：「{bio.get('signature_zh') or ''}」",
         "",
         "这是他的个人主页，页面装扮成经典 QQ 空间的样子。用来介绍自己、公开的微信读书记录、音乐口味、玩过的桌游、推荐网站、开源项目，以及与 GPT 的对话。本站不是公开 API。",
@@ -532,7 +532,7 @@ def build_index_md(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "",
         "## 即刻动态",
         "",
-        f"以下动态来自即刻公开主页，检索于 {profile.get('updated_at') or reading.get('retrieved_at')}。时间是当时页面上的相对时间，多数没有独立链接。",
+        f"以下动态来自即刻公开主页，检索于 {profile.get('research_retrieved_at') or reading.get('retrieved_at')}。时间是当时页面上的相对时间，多数没有独立链接。",
         "",
     ]
     for post in profile.get("jike_posts") or []:
@@ -805,6 +805,8 @@ def build_llms_full(profile: dict, reading: dict, chats: list[dict], sites: dict
         "",
         "## 身份 / Profile",
         "",
+        bio["combined_zh"],
+        "",
         f"- 姓名：匡子闲",
         f"- 拉丁名 / handle：{profile.get('latin_handle') or 'kuangzixian'}",
         f"- 职业：{bio.get('juejin_title') or '后端工程师'}",
@@ -981,7 +983,14 @@ def build_sitemap_xml(profile: dict, reading: dict, chats: list[dict], music: di
 def build_robots() -> str:
     return (
         "User-agent: *\n"
+        "Content-Signal: search=yes, ai-input=yes, ai-train=no\n"
         "Allow: /\n"
+        "\n"
+        "User-agent: OAI-SearchBot\n"
+        "Allow: /\n"
+        "\n"
+        "User-agent: GPTBot\n"
+        "Disallow: /\n"
         "\n"
         "User-agent: ChatGPT-User\n"
         "Allow: /\n"
@@ -1003,8 +1012,6 @@ def build_robots() -> str:
         "\n"
         "User-agent: Bytespider\n"
         "Disallow: /\n"
-        "\n"
-        "Content-Signal: search=yes, ai-input=yes, ai-train=no\n"
         "\n"
         f"Sitemap: {SITE}/sitemap.xml\n"
     )
