@@ -823,8 +823,8 @@ html[data-skin="night"] .qz-track { background: rgba(255,255,255,0.04); }
 .qzone-body .cursor-glow { opacity: 0.35; }
 html[data-skin="night"] .qzone-body .cursor-glow { opacity: 0.2; }
 
-/* tab visibility driven by html[data-tab], works without JS after the early boot script */
-.tab-panel { display: none !important; }
+/* Without JavaScript, sections remain readable and the tab links work as anchors. */
+html[data-tab] .tab-panel { display: none !important; }
 html[data-tab="home"] #home,
 html[data-tab="writing"] #writing,
 html[data-tab="reading"] #reading,
