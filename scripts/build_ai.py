@@ -11,6 +11,15 @@ from xml.sax.saxutils import escape as xml_escape
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://kuangzixian.pages.dev"
 DATA = ROOT / "data"
+MUSIC_REPORT = f"{SITE}/music/report"
+
+
+def writing_html_url(chat_id: str) -> str:
+    return f"{SITE}/writing/{chat_id}"
+
+
+def writing_md_url(chat_id: str) -> str:
+    return f"{SITE}/writing/{chat_id}.md"
 
 
 def load_json(name: str) -> Any:
@@ -197,7 +206,7 @@ def music_brief_lines(music: dict | None) -> list[str]:
         f"- 按网易云「我喜欢的音乐」默认顺序解读：第 1 首视为最新收藏。用户未另行确认排序，编号不是年份。",
         f"- 出现较多的艺人（按演唱参与计，含合作与不同发行）：{artists}。",
         f"- 口味摘要：{music.get('summary') or ''}",
-        f"- 音乐栏目：[HTML]({SITE}/#music)，[Markdown]({SITE}/music.md)，完整「声迹」报告：[music/report.html]({SITE}/music/report.html)，JSON：[music.json]({SITE}/data/music.json)。Powered by [musicanalysis]({tool.get('url') or 'https://github.com/ryohgicc/musicanalysis'})。",
+        f"- 音乐栏目：[HTML]({SITE}/#music)，[Markdown]({SITE}/music.md)，完整「声迹」报告：[music/report]({SITE}/music/report)，JSON：[music.json]({SITE}/data/music.json)。Powered by [musicanalysis]({tool.get('url') or 'https://github.com/ryohgicc/musicanalysis'})。",
     ]
 
 
@@ -276,7 +285,7 @@ def build_music_md(music: dict | None) -> str:
         "",
         "## 完整报告与工具",
         "",
-        f"- 本站托管的「声迹」完整报告：[music/report.html]({SITE}/music/report.html)",
+        f"- 本站托管的「声迹」完整报告：[music/report]({SITE}/music/report)",
         f"- 空间里的音乐选项卡：[{SITE}/#music]({SITE}/#music)",
         f"- 机器可读 JSON：[{SITE}/data/music.json]({SITE}/data/music.json)",
         f"- Powered by [musicanalysis]({tool.get('url') or 'https://github.com/ryohgicc/musicanalysis'})",
@@ -372,14 +381,14 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         f"- [Writing]({SITE}/writing.md)",
         f"- [Music]({SITE}/music.md)",
         f"- [Music tab]({SITE}/#music)",
-        f"- [Music report]({SITE}/music/report.html)",
+        f"- [Music report]({SITE}/music/report)",
         f"- [Board games]({SITE}/boardgames.md)",
         f"- [Board games tab]({SITE}/#boardgames)",
         f"- [Recommended sites]({SITE}/sites.md)",
         f"- [Recommended sites tab]({SITE}/#sites)",
     ]
     for chat in chats:
-        lines.append(f"- [{chat['title']}]({SITE}/writing/{chat['id']}.md)")
+        lines.append(f"- [{chat['title']}]({writing_html_url(chat['id'])})（Markdown：[writing/{chat['id']}.md]({writing_md_url(chat['id'])})）")
     lines += [
         f"- [Guestbook]({SITE}/#guestbook)",
         f"- [Full agent context]({SITE}/llms-full.txt)",
@@ -429,7 +438,7 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "- 与 GPT 的对话，按技术文章的形式呈现，点开可见完整问答：",
     ]
     for chat in chats:
-        lines.append(f"  - [{chat['title']}]({SITE}/chat?id={chat['id']})（{chat.get('date') or ''}），Markdown：[writing/{chat['id']}.md]({SITE}/writing/{chat['id']}.md)")
+        lines.append(f"  - [{chat['title']}]({writing_html_url(chat['id'])})（{chat.get('date') or ''}），Markdown：[writing/{chat['id']}.md]({writing_md_url(chat['id'])})")
     lines += [
         "- 留言板：访客可留下昵称和评论，无需登录。数据保存在本站自己的数据库中。",
     ]
@@ -508,7 +517,7 @@ def build_index_md(profile: dict, reading: dict, chats: list[dict], sites: dict 
     lines += ["", "## 文章 / Writing", ""]
     for chat in chats:
         summary = chat.get("summary") or ""
-        lines.append(f"- [{chat['title']}]({SITE}/writing/{chat['id']}.md)（{chat.get('date') or ''}）：{summary} HTML：[chat?id={chat['id']}]({SITE}/chat?id={chat['id']})")
+        lines.append(f"- [{chat['title']}]({writing_html_url(chat['id'])})（{chat.get('date') or ''}）：{summary} Markdown：[writing/{chat['id']}.md]({writing_md_url(chat['id'])})")
     lines += [
         "",
         "## 音乐",
@@ -748,7 +757,7 @@ def build_writing_md(chats: list[dict]) -> str:
     ]
     for chat in chats:
         tags = ", ".join(chat.get("tags") or [])
-        lines.append(f"## [{chat['title']}]({SITE}/writing/{chat['id']}.md)")
+        lines.append(f"## [{chat['title']}]({writing_html_url(chat['id'])})")
         lines.append("")
         meta = [chat.get("date") or ""]
         if chat.get("title_en"):
@@ -760,7 +769,7 @@ def build_writing_md(chats: list[dict]) -> str:
         if chat.get("summary"):
             lines.append(chat["summary"])
             lines.append("")
-        lines.append(f"HTML：[chat?id={chat['id']}]({SITE}/chat?id={chat['id']})")
+        lines.append(f"HTML：[{writing_html_url(chat['id'])}]({writing_html_url(chat['id'])}) · Markdown：[writing/{chat['id']}.md]({writing_md_url(chat['id'])})")
         lines.append("")
     return "\n".join(lines)
 
@@ -786,7 +795,7 @@ def build_writing_post_md(chat: dict) -> str:
     if chat.get("summary_en"):
         lines.append(chat["summary_en"])
         lines.append("")
-    lines.append(f"HTML 版本：[{SITE}/chat?id={chat['id']}]({SITE}/chat?id={chat['id']})")
+    lines.append(f"HTML 版本：[{writing_html_url(chat['id'])}]({writing_html_url(chat['id'])})")
     if chat.get("source_url"):
         lines.append(f"原始分享链接：{chat['source_url']}")
     if chat.get("prompt_url"):
@@ -889,7 +898,8 @@ def md_pages(chats: list[dict]) -> list[tuple[str, str, str]]:
         ("/sites.md", "推荐网站"),
     ]
     for chat in chats:
-        pages.append((f"/writing/{chat['id']}.md", chat["title"]))
+        pages.append((f"/writing/{chat['id']}", chat["title"]))
+        pages.append((f"/writing/{chat['id']}.md", chat["title"] + "（Markdown）"))
     pages += [
         ("/llms.txt", "llms.txt"),
         ("/llms-full.txt", "llms-full.txt"),
@@ -911,8 +921,8 @@ def build_sitemap_md(chats: list[dict]) -> str:
         f"- [Agent 视图]({SITE}/?mode=agent)（重定向到 /index.md）",
     ]
     for chat in chats:
-        lines.append(f"- [{chat['title']}]({SITE}/chat?id={chat['id']})")
-    lines += [f"- [留言板]({SITE}/#guestbook)", f"- [音乐]({SITE}/#music)", f"- [音乐完整报告]({SITE}/music/report.html)", f"- [桌游]({SITE}/#boardgames)", f"- [推荐网站]({SITE}/#sites)", "", "## Markdown 与文本", ""]
+        lines.append(f"- [{chat['title']}]({writing_html_url(chat['id'])})")
+    lines += [f"- [留言板]({SITE}/#guestbook)", f"- [音乐]({SITE}/#music)", f"- [音乐完整报告]({SITE}/music/report)", f"- [桌游]({SITE}/#boardgames)", f"- [推荐网站]({SITE}/#sites)", "", "## Markdown 与文本", ""]
     for path, title in [
         ("/index.md", "首页"),
         ("/reading.md", "阅读"),
@@ -923,7 +933,7 @@ def build_sitemap_md(chats: list[dict]) -> str:
     ]:
         lines.append(f"- [{title}]({SITE}{path})")
     for chat in chats:
-        lines.append(f"- [{chat['title']}]({SITE}/writing/{chat['id']}.md)")
+        lines.append(f"- [{chat['title']}（Markdown）]({writing_md_url(chat['id'])})")
     lines += [
         f"- [llms.txt]({SITE}/llms.txt)",
         f"- [llms-full.txt]({SITE}/llms-full.txt)",
@@ -952,7 +962,7 @@ def build_sitemap_xml(profile: dict, reading: dict, chats: list[dict], music: di
         (f"{SITE}/reading.md", reading_last, "weekly"),
         (f"{SITE}/writing.md", home_last, "weekly"),
         (f"{SITE}/music.md", home_last, "weekly"),
-        (f"{SITE}/music/report.html", home_last, "weekly"),
+        (f"{SITE}/music/report", home_last, "weekly"),
         (f"{SITE}/boardgames.md", home_last, "weekly"),
         (f"{SITE}/sites.md", home_last, "weekly"),
         (f"{SITE}/llms.txt", home_last, "weekly"),
@@ -961,7 +971,7 @@ def build_sitemap_xml(profile: dict, reading: dict, chats: list[dict], music: di
     ]
     for chat in chats:
         last = iso_date(chat.get("date") or chat.get("datetime")) or home_last
-        urls.append((f"{SITE}/chat?id={chat['id']}", last, "monthly"))
+        urls.append((f"{SITE}/writing/{chat['id']}", last, "monthly"))
         urls.append((f"{SITE}/writing/{chat['id']}.md", last, "monthly"))
     parts = [
         '<?xml version="1.0" encoding="UTF-8"?>',

@@ -34,12 +34,12 @@ npx wrangler pages deploy dist --project-name kuangzixian --branch main
 
 ## 增收内容
 
-- **文章 / 对话**：把条目加进 `data/chats.json`，或运行 `python3 scripts/add_chat.py <ChatGPT分享链接>`，再补上标题和摘要。对话正文在 `chat.html?id=...`。
+- **文章 / 对话**：把条目加进 `data/chats.json`，或运行 `python3 scripts/add_chat.py <ChatGPT分享链接>`，再补上标题和摘要。对话正文在 `/writing/<id>`。旧地址 `/chat?id=<id>` 和 `/chat.html?id=<id>` 会跳转到新地址。
 - **桌游**：往 `data/boardgames.json` 的 `games` 数组追加一条（`id`、`name_zh`、`name_en`、`players`、`genre_zh`、`genre_en`、`blurb_zh`、`blurb_en`、`emoji`）。介绍只写公开的人数和类型，不要编个人评分或对局次数。
 - **推荐网站**：往 `data/sites.json` 的 `sites` 数组追加一条（必填 `id`、`url`、`name`；可选 `canonical`、`domain`、`title`、`description`、`image`、`image_alt`、`image_source`、`favicon`、`emoji`、`own`）。`own` 为 true 时显示「自己做的 / Made by me」标记。介绍只摘自站点自己的公开信息，不要编造，网址保持原样。数组顺序就是页面上的顺序。旧地址 `#friends`、`#links` 会转到 `#sites`。
-- **音乐**：口味数据在 `data/music.json`，分析报告在 `music/report.html`。
+- **音乐**：口味数据在 `data/music.json`，分析报告在 `/music/report`。
 
-改完数据后运行 `python3 scripts/build_dist.py` 再部署。`index.html` 里对应栏目有一份静态底稿，JavaScript 会再用 JSON 覆盖；新增条目时最好同步改一下底稿，以免脚本加载失败时缺项。
+改完数据后运行 `python3 scripts/build_dist.py` 再部署。构建时会把 `data/sites.json`、`data/chats.json` 和 `data/boardgames.json` 写进 `dist/index.html`，并为每篇对话生成独立的 `/writing/<id>` 页面（含标题、摘要、正文和结构化数据）。未知路径由 `404.html` 以 HTTP 404 返回，不要加 SPA 回退。`index.html` 里仍保留一份静态底稿，JavaScript 会再用 JSON 覆盖。
 
 ## AI 友好页面
 
@@ -47,6 +47,7 @@ npx wrangler pages deploy dist --project-name kuangzixian --branch main
 
 - `/llms.txt`：身份、项目、阅读概况、对话列表和 agent 使用说明
 - `/llms-full.txt`：更完整的档案，含公开书架、划线和对话全文
+- `/writing/<id>`：每篇对话的独立 HTML 页面
 - `/index.md`、`/reading.md`、`/writing.md`、`/writing/<id>.md`、`/music.md`、`/boardgames.md`、`/sites.md`
 - `/sitemap.md`、`/sitemap.xml`、`/robots.txt`
 

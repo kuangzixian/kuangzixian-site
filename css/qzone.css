@@ -1238,3 +1238,34 @@ html[data-skin="night"] .site-desc { color: var(--ink-soft, #c8c4bc); }
 @media (prefers-reduced-motion: reduce) {
   .site-card { transition: none; }
 }
+
+
+/* 404 */
+.qz-404 {
+  text-align: center;
+  padding: 36px 16px 56px;
+}
+.qz-404-code {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 12vw, 7rem);
+  line-height: 1;
+  letter-spacing: 0.12em;
+  color: var(--qz-gold, #f5c400);
+  text-shadow: 1px 2px 0 rgba(0,0,0,0.08);
+}
+.qz-404-title {
+  margin: 12px 0 16px;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.qz-404 .lede { margin: 0 auto 8px; max-width: 28em; }
+.qz-404-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 28px 0 0;
+}
+.qz-404-actions .play-btn { text-decoration: none; padding: 8px 16px; }

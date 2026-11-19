@@ -7,6 +7,31 @@
     return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
   }
 
+  function pathChatId() {
+    var m = window.location.pathname.match(/^\/writing\/([^/]+?)\/?$/);
+    if (!m) return "";
+    var id = decodeURIComponent(m[1]);
+    if (/\.(md|html)$/i.test(id)) return "";
+    return id;
+  }
+
+  function currentChatId() {
+    return pathChatId() || qs("id");
+  }
+
+  function maybeRedirectLegacyChat() {
+    var path = window.location.pathname;
+    var isLegacy = path === "/chat" || path === "/chat.html" || /\/chat\.html$/.test(path);
+    if (!isLegacy) return false;
+    var id = qs("id");
+    if (id) {
+      window.location.replace("/writing/" + encodeURIComponent(id));
+    } else {
+      window.location.replace("/#writing");
+    }
+    return true;
+  }
+
   function isEn() {
     return document.documentElement.getAttribute("lang") === "en";
   }
@@ -33,7 +58,7 @@
       return;
     }
     listEl.innerHTML = chats.map(function (c) {
-      var href = "chat.html?id=" + encodeURIComponent(c.id);
+      var href = "/writing/" + encodeURIComponent(c.id);
       var title = window.escapeHtml(c.title || "");
       var titleEn = window.escapeHtml(c.title_en || c.title || "");
       var sum = window.escapeHtml(c.summary || "");
@@ -80,7 +105,7 @@
     if (twt) twt.setAttribute("content", title + " · 匡子闲");
     var twd = document.querySelector('meta[name="twitter:description"]');
     if (twd) twd.setAttribute("content", chat.summary || title);
-    var pageUrl = "https://kuangzixian.pages.dev/chat?id=" + encodeURIComponent(chat.id);
+    var pageUrl = "https://kuangzixian.pages.dev/writing/" + encodeURIComponent(chat.id);
     var ogu = document.querySelector('meta[property="og:url"]');
     if (ogu) ogu.setAttribute("content", pageUrl);
     var canon = document.querySelector('link[rel="canonical"]');
@@ -136,7 +161,7 @@
     }
 
     postEl.innerHTML =
-      '<p class="post-back"><a href="index.html#writing"><span class="zh">← 返回文章列表</span><span class="en-only">← Back to writing</span></a></p>' +
+      '<p class="post-back"><a href="/#writing"><span class="zh">← 返回文章列表</span><span class="en-only">← Back to writing</span></a></p>' +
       '<header class="post-head">' +
         '<p class="kicker">Writing</p>' +
         "<h1><span class=\"zh\">" + window.escapeHtml(title) + "</span>" +
@@ -156,24 +181,30 @@
     if (!postEl) return;
     document.title = "未找到 · 匡子闲";
     postEl.innerHTML =
-      '<p class="post-back"><a href="index.html#writing"><span class="zh">← 返回文章列表</span><span class="en-only">← Back to writing</span></a></p>' +
+      '<p class="post-back"><a href="/#writing"><span class="zh">← 返回文章列表</span><span class="en-only">← Back to writing</span></a></p>' +
       '<p class="lede zh">没有找到这篇对话。</p>' +
       '<p class="lede en-only">This conversation could not be found.</p>';
+  }
+
+  function hasStaticPost() {
+    return !!(postEl && postEl.getAttribute("data-rendered") === "static" && postEl.querySelector(".thread"));
   }
 
   function init(data) {
     var chats = (data && data.chats) || [];
     if (listEl) renderList(chats);
     if (postEl) {
-      var id = qs("id");
+      var id = currentChatId();
       var found = null;
       chats.some(function (c) { if (c.id === id) { found = c; return true; } return false; });
       if (found) renderPost(found);
-      else renderMissing();
+      else if (!hasStaticPost()) renderMissing();
     }
   }
 
-  fetch("data/chats.json")
+  if (maybeRedirectLegacyChat()) return;
+
+  fetch("/data/chats.json")
     .then(function (res) {
       if (!res.ok) throw new Error("chats.json " + res.status);
       return res.json();
@@ -185,9 +216,9 @@
           el.classList.add("reveal", "is-in");
         });
       }
-      if (postEl) {
+      if (postEl && !hasStaticPost()) {
         postEl.innerHTML =
-          '<p class="post-back"><a href="index.html#writing"><span class="zh">← 返回文章列表</span><span class="en-only">← Back to writing</span></a></p>' +
+          '<p class="post-back"><a href="/#writing"><span class="zh">← 返回文章列表</span><span class="en-only">← Back to writing</span></a></p>' +
           '<p class="lede zh">对话数据加载失败，请稍后再试。</p>' +
           '<p class="lede en-only">Failed to load the conversation. Please try again later.</p>';
       }

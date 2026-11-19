@@ -3,6 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function () {
+    try {
+      var path = location.pathname;
+      var isLegacy = path === "/chat" || path === "/chat.html" || /\/chat\.html$/.test(path);
+      if (isLegacy) {
+        var m = /(?:^|[?&])id=([^&]*)/.exec(location.search);
+        var id = m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+        location.replace(id ? "/writing/" + encodeURIComponent(id) : "/#writing");
+      }
+    } catch (e) {}
+  })();
+  </script>
   <title>对话 · 匡子闲</title>
   <meta name="description" content="匡子闲与 GPT 的对话。">
   <meta name="author" content="匡子闲">
@@ -38,12 +51,12 @@
     } catch (e) {}
   })();
   </script>
-  <link rel="icon" href="images/avatar.jpg" type="image/jpeg">
+  <link rel="icon" href="/images/avatar.jpg" type="image/jpeg">
   <link rel="canonical" href="https://kuangzixian.pages.dev/chat">
   <link rel="alternate" type="text/markdown" href="/writing.md" title="Markdown writing" id="mdAlternate">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/qzone.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/qzone.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,8 +80,8 @@
   <a class="skip" href="#main">跳到正文 Skip to content</a>
   <div class="qz-topbar">
     <div class="qz-topbar-inner">
-      <a class="qz-top-name" href="index.html">匡子闲的空间</a>
-      <a href="index.html#writing"><span class="zh">返回日志</span><span class="en-only">Back to logs</span></a>
+      <a class="qz-top-name" href="/">匡子闲的空间</a>
+      <a href="/#writing"><span class="zh">返回日志</span><span class="en-only">Back to logs</span></a>
       <div class="qz-top-actions">
         <button type="button" id="qzMusic" class="qz-music" aria-expanded="false" aria-controls="qzMusicBox" aria-label="背景音乐">
           ♫ <span id="qzMusicState" class="qz-music-state"><span class="zh">背景音乐</span><span class="en-only">Music</span></span>
@@ -106,7 +119,7 @@
     <span class="qz-cloud"></span>
     <span class="qz-sun" aria-hidden="true"></span>
     <div class="qz-banner-text">
-      <h1 class="qz-space-name">匡子闲的空间</h1>
+      <p class="qz-space-name">匡子闲的空间</p>
       <p class="qz-sign zh">日志</p>
       <p class="qz-sign en-only">Diary / Logs</p>
     </div>
@@ -115,12 +128,14 @@
   <div class="qz-shell">
     <div class="qz-content">
       <nav class="qz-tabs" aria-label="空间栏目">
-        <a class="qz-tab" href="index.html#home"><span class="zh">主页</span><span class="en-only">Home</span></a>
-        <a class="qz-tab is-on" href="index.html#writing" aria-current="page"><span class="zh">日志</span><span class="en-only">Logs</span></a>
-        <a class="qz-tab" href="index.html#reading"><span class="zh">读书</span><span class="en-only">Reading</span></a>
-        <a class="qz-tab" href="index.html#music"><span class="zh">音乐</span><span class="en-only">Music</span></a>
-        <a class="qz-tab" href="index.html#guestbook"><span class="zh">留言板</span><span class="en-only">Guestbook</span></a>
-        <a class="qz-tab" href="index.html#profile"><span class="zh">个人档</span><span class="en-only">Profile</span></a>
+        <a class="qz-tab" href="/#home"><span class="zh">主页</span><span class="en-only">Home</span></a>
+        <a class="qz-tab is-on" href="/#writing" aria-current="page"><span class="zh">日志</span><span class="en-only">Logs</span></a>
+        <a class="qz-tab" href="/#reading"><span class="zh">读书</span><span class="en-only">Reading</span></a>
+        <a class="qz-tab" href="/#music"><span class="zh">音乐</span><span class="en-only">Music</span></a>
+        <a class="qz-tab" href="/#boardgames"><span class="zh">桌游</span><span class="en-only">Games</span></a>
+        <a class="qz-tab" href="/#sites"><span class="zh">推荐网站</span><span class="en-only">Sites</span></a>
+        <a class="qz-tab" href="/#guestbook"><span class="zh">留言板</span><span class="en-only">Guestbook</span></a>
+        <a class="qz-tab" href="/#profile"><span class="zh">个人档</span><span class="en-only">Profile</span></a>
       </nav>
       <main id="main" class="qz-main post-wrap">
         <p class="qz-log-kicker"><span class="zh">日志</span><span class="en-only">Log</span></p>
@@ -176,16 +191,16 @@
     <div class="wrap">
       <p class="zh">匡子闲 · 对话原文在本站呈现，便于国内访问。</p>
       <p class="en-only">匡子闲 · The conversation is hosted here so it can be read without chatgpt.com.</p>
-      <p><a href="index.html">首页</a> · <a href="data/chats.json">chats.json</a></p>
+      <p><a href="/">首页</a> · <a href="/data/chats.json">chats.json</a></p>
       <p><a href="/llms.txt">For AI agents: llms.txt</a></p>
     </div>
   </footer>
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-  <script src="js/main.js"></script>
-  <script src="js/markdown.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/qzone.js"></script>
-  <script src="js/snow.js"></script>
-  <script src="js/visits.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/markdown.js"></script>
+  <script src="/js/chat.js"></script>
+  <script src="/js/qzone.js"></script>
+  <script src="/js/snow.js"></script>
+  <script src="/js/visits.js"></script>
 </body>
 </html>

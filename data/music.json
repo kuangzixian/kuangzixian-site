@@ -22,7 +22,7 @@
   "tool": {
     "name": "musicanalysis",
     "url": "https://github.com/ryohgicc/musicanalysis",
-    "reportPath": "music/report.html",
+    "reportPath": "music/report",
     "credit": "Powered by musicanalysis",
     "creditZh": "Powered by musicanalysis"
   },

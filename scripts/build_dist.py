@@ -83,8 +83,10 @@ def main() -> None:
     ensure_report_credit(DIST / "music" / "report.html")
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from build_ai import write_ai_files
+    from build_html import write_pages
 
     write_ai_files(DIST)
+    write_pages(DIST)
 
     headers = DIST / "_headers"
     headers.write_text(
@@ -99,6 +101,12 @@ def main() -> None:
         "/*.txt\n"
         "  Content-Type: text/plain; charset=utf-8\n"
         "  X-Content-Type-Options: nosniff\n",
+        encoding="utf-8",
+    )
+    # Pretty URL for the music report. Do not add a /* /index.html 200 SPA fallback:
+    # unknown paths must hit 404.html with HTTP 404.
+    (DIST / "_redirects").write_text(
+        "/music/report.html /music/report 301\n",
         encoding="utf-8",
     )
     print(f"Built {DIST}")
