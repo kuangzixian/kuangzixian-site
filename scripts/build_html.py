@@ -67,12 +67,12 @@ def tags_html(tags: list | None) -> str:
 
 def site_card_html(site: dict, loc: str = "zh") -> str:
     url = site.get("url") or site.get("canonical") or ""
-    name = site.get("name") or site.get("title") or url
+    name = site.get("name") or i18n_lib.pick(site, "title", loc) or url
     domain = site.get("domain") or ""
-    desc = site.get("description") or ""
+    desc = i18n_lib.pick(site, "description", loc)
     own_class = " is-own" if site.get("own") else ""
     emoji = site.get("emoji") or "🌐"
-    alt = site.get("image_alt") or name
+    alt = i18n_lib.pick(site, "image_alt", loc) or name
     src = site.get("image") or site.get("favicon") or ""
     if src and not src.startswith(("http://", "https://", "/")):
         src = "/" + src
@@ -123,7 +123,7 @@ def writing_card_html(chat: dict, loc: str = "zh") -> str:
         f'<div class="meta"><span class="zh">对话</span><span class="en-only">Conversation</span>{time_html}</div>'
         f"<h3>{title}</h3>"
         f"<p>{summary}</p>"
-        f"{tags_html(chat.get('tags'))}"
+        f"{tags_html(i18n_lib.pick_list(chat, 'tags', loc))}"
         "</a>"
     )
 
@@ -182,74 +182,95 @@ def role_label(msg: dict) -> tuple[str, str, str]:
     return name, name, "is-user"
 
 
-def prompt_block_html(chat: dict) -> str:
-    if not chat.get("prompt"):
+def prompt_text(chat: dict, loc: str = "zh") -> str:
+    return i18n_lib.pick(chat, "prompt", loc)
+
+
+def prompt_block_html(chat: dict, loc: str = "zh") -> str:
+    prompt = prompt_text(chat, loc)
+    if not prompt:
         return ""
     kind = chat.get("prompt_kind") or "prompt"
-    label_zh = "我的问题" if kind == "question" else "我的 Prompt"
-    label_en = "My question" if kind == "question" else "My prompt"
+    key = "my_question" if kind == "question" else "my_prompt"
+    # Fall back to the zh/en pair labels if ui keys are absent; use known UI keys via i18n.js names in catalog if present.
+    label = i18n_lib.t_ui("my_question" if kind == "question" else "my_prompt", loc)
     return (
         '<aside class="prompt-block">'
-        f'<p class="prompt-kicker"><span class="zh">{label_zh}</span><span class="en-only">{label_en}</span></p>'
-        f'<div class="prompt-body">{render_markdown(chat["prompt"])}</div>'
+        f'<p class="prompt-kicker">{escape_html(label)}</p>'
+        f'<div class="prompt-body">{render_markdown(prompt)}</div>'
         "</aside>"
     )
 
 
-def thread_html(chat: dict) -> str:
+def thread_html(chat: dict, loc: str = "zh") -> str:
     parts = []
     for msg in visible_messages(chat):
         zh, en, cls = role_label(msg)
+        name = zh
+        content = i18n_lib.pick(msg, "content", loc)
         parts.append(
             f'<section class="turn {cls}">'
-            f'<p class="turn-role"><span class="zh">{escape_html(zh)}</span>'
-            f'<span class="en-only">{escape_html(en)}</span></p>'
-            f'<div class="turn-body md">{render_markdown(msg.get("content") or "")}</div>'
+            f'<p class="turn-role">{escape_html(name)}</p>'
+            f'<div class="turn-body md">{render_markdown(content)}</div>'
             "</section>"
         )
     return "".join(parts)
 
 
-def sources_html(chat: dict) -> str:
+def sources_html(chat: dict, loc: str = "zh") -> str:
     sources = []
     if chat.get("source_url"):
         sources.append(
             f'<a href="{attr(chat["source_url"])}" rel="noopener noreferrer">'
-            '<span class="zh">原始 ChatGPT 分享链接</span>'
-            '<span class="en-only">Original ChatGPT share link</span></a>'
+            f'{escape_html(i18n_lib.t_ui("source_chat", loc))}'
+            "</a>"
         )
     if chat.get("prompt_url"):
         sources.append(
             f'<a href="{attr(chat["prompt_url"])}" rel="noopener noreferrer">'
-            '<span class="zh">原始 Prompt 分享链接</span>'
-            '<span class="en-only">Original prompt share link</span></a>'
+            f'{escape_html(i18n_lib.t_ui("source_prompt", loc))}'
+            "</a>"
         )
     if not sources:
         return ""
     return '<p class="post-source">' + " · ".join(sources) + "</p>"
 
 
-def article_html(chat: dict) -> str:
-    date = chat.get("date") or ""
-    title = chat.get("title") or ""
-    title_en = chat.get("title_en") or title
-    time_html = f'<time datetime="{attr(date)}">{escape_html(date)}</time>' if date else ""
+def original_note_html(chat: dict, loc: str) -> str:
+    if loc == "zh":
+        return ""
+    href = i18n_lib.localize_path(f"/writing/{chat.get('id') or ''}", "zh")
+    note = i18n_lib.t_ui("original_conversation", loc)
+    link = i18n_lib.t_ui("original_link", loc)
     return (
-        '<p class="post-back"><a href="/#writing"><span class="zh">← 返回文章列表</span>'
-        '<span class="en-only">← Back to writing</span></a></p>'
+        f'<p class="post-original-note">{escape_html(note)} '
+        f'<a href="{attr(href)}">{escape_html(link)}</a></p>'
+    )
+
+
+def article_html(chat: dict, loc: str = "zh") -> str:
+    date = chat.get("date") or ""
+    title = i18n_lib.pick(chat, "title", loc) or chat.get("title") or ""
+    date_label = i18n_lib.format_date(date, loc) if date else ""
+    time_html = f'<time datetime="{attr(date)}">{escape_html(date_label)}</time>' if date else ""
+    kicker = i18n_lib.t_ui("writing_kicker", loc)
+    with_gpt = i18n_lib.t_ui("with_gpt", loc)
+    back = i18n_lib.t_ui("back_writing", loc)
+    return (
+        f'<p class="post-back"><a href="/#writing">{escape_html(back)}</a></p>'
         '<header class="post-head">'
-        '<p class="kicker">Writing</p>'
-        f'<h1><span class="zh">{escape_html(title)}</span>'
-        f'<span class="en-only">{escape_html(title_en)}</span></h1>'
+        f'<p class="kicker">{escape_html(kicker)}</p>'
+        f"<h1>{escape_html(title)}</h1>"
         '<div class="meta">'
         f"{time_html}"
-        '<span class="zh">匡子闲 与 GPT</span><span class="en-only">匡子闲 and GPT</span>'
+        f"<span>{escape_html(with_gpt)}</span>"
         "</div>"
-        f"{tags_html(chat.get('tags'))}"
+        f"{tags_html(i18n_lib.pick_list(chat, 'tags', loc))}"
         "</header>"
-        f"{prompt_block_html(chat)}"
-        f'<div class="thread">{thread_html(chat)}</div>'
-        f"{sources_html(chat)}"
+        f"{original_note_html(chat, loc)}"
+        f"{prompt_block_html(chat, loc)}"
+        f'<div class="thread">{thread_html(chat, loc)}</div>'
+        f"{sources_html(chat, loc)}"
     )
 
 
@@ -264,7 +285,7 @@ def json_ld(chat: dict, loc: str = "zh") -> str:
             {
                 "@type": "Comment",
                 "author": {"@type": "Person", "name": "匡子闲", "@id": PERSON_ID},
-                "text": chat["prompt"],
+                "text": i18n_lib.pick(chat, "prompt", loc) or chat.get("prompt") or "",
             }
         )
     for msg in visible_messages(chat):
@@ -272,7 +293,7 @@ def json_ld(chat: dict, loc: str = "zh") -> str:
             author: dict = {"@type": "Organization", "name": msg.get("name") or "GPT"}
         else:
             author = {"@type": "Person", "name": msg.get("name") or "匡子闲", "@id": PERSON_ID}
-        comments.append({"@type": "Comment", "author": author, "text": msg.get("content") or ""})
+        comments.append({"@type": "Comment", "author": author, "text": i18n_lib.pick(msg, "content", loc) or ""})
     data = {
         "@context": "https://schema.org",
         "@type": "DiscussionForumPosting",
@@ -428,7 +449,7 @@ def build_chat_page(chat: dict, loc: str = "zh") -> str:
       <main id="main" class="qz-main post-wrap">
         <p class="qz-log-kicker"><span class="zh">日志</span><span class="en-only">Log</span></p>
     <article id="chatPost" data-chat-id="{attr(chat.get('id') or '')}" data-rendered="static">
-      {article_html(chat)}
+      {article_html(chat, loc)}
     </article>
       </main>
     </div>
@@ -436,9 +457,8 @@ def build_chat_page(chat: dict, loc: str = "zh") -> str:
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="zh">匡子闲 · 对话原文在本站呈现，便于国内访问。</p>
-      <p class="en-only">匡子闲 · The conversation is hosted here so it can be read without chatgpt.com.</p>
-      <p><a href="/">首页</a> · <a href="/#writing">日志</a> · <a href="/data/chats.json">chats.json</a> · <a href="{attr(md_href)}">Markdown</a></p>
+      <p>{escape_html(i18n_lib.t_ui("footer_chat", loc))}</p>
+      <p><a href="/">{escape_html(i18n_lib.t_ui("home_link", loc))}</a> · <a href="/#writing">{escape_html(i18n_lib.t_ui("writing", loc))}</a> · <a href="/data/chats.json">chats.json</a> · <a href="{attr(md_href)}">Markdown</a></p>
       <p><a href="/llms.txt">For AI agents: llms.txt</a></p>
     </div>
   </footer>
@@ -495,9 +515,8 @@ def build_404_page(loc: str = "zh") -> str:
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="zh">匡子闲的空间</p>
-      <p class="en-only">匡子闲’s homepage</p>
-      <p><a href="/">首页</a> · <a href="/llms.txt">For AI agents: llms.txt</a></p>
+      <p>{escape_html(i18n_lib.t_ui("site_name", loc))}</p>
+      <p><a href="/">{escape_html(i18n_lib.t_ui("home_link", loc))}</a> · <a href="/llms.txt">{escape_html(i18n_lib.t_ui("ai_agents", loc))}</a></p>
     </div>
   </footer>
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>

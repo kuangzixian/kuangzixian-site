@@ -101,7 +101,16 @@
     notFoundBody: { zh: "这个地址没有对应的内容。可能是链接写错了，或页面已经换了地方。", en: "Nothing lives at this address. The link may be mistyped, or the page has moved.", es: "No hay nada en esta dirección. Puede que el enlace esté mal escrito o que la página se haya mudado.", ko: "이 주소에는 해당하는 내용이 없습니다. 링크가 잘못되었거나 페이지가 옮겨졌을 수 있습니다.", ja: "このアドレスには内容がありません。リンクの誤りか、ページが移ったのかもしれません。" },
     backHome: { zh: "回到首页", en: "Back to home", es: "Volver al inicio", ko: "홈으로", ja: "ホームに戻る" },
     gbFloor: { zh: "第{n}楼", en: "Floor {n}", es: "Piso {n}", ko: "{n}층", ja: "{n}階" },
-    goLogs: { zh: "去看日志", en: "Read the logs", es: "Ver los diarios", ko: "로그 보기", ja: "日誌を見る" }
+    goLogs: { zh: "去看日志", en: "Read the logs", es: "Ver los diarios", ko: "로그 보기", ja: "日誌を見る" },
+    writingKicker: { zh: "日志", en: "Writing", es: "Diario", ko: "로그", ja: "日誌" },
+    originalConversation: {
+      zh: "这篇对话原文是中文。",
+      en: "This conversation was originally in Chinese.",
+      es: "Esta conversación se escribió originalmente en chino.",
+      ko: "이 대화는 원래 중국어로 이루어졌습니다.",
+      ja: "この対話はもともと中国語で行われました。"
+    },
+    originalLink: { zh: "查看原文", en: "Read the original", es: "Ver el original", ko: "원문 보기", ja: "原文を読む" }
   };
 
   function pathLocale(pathname) {

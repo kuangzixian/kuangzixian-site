@@ -876,6 +876,14 @@ html[lang="ja"] .note-book[open] summary::after { content: "閉じる"; }
 .tok-num { color: var(--gold); }
 .tok-cmt { color: var(--muted); font-style: italic; }
 
+.post-original-note {
+  margin: 0 0 22px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.post-original-note a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.post-original-note a:hover { color: var(--accent); }
+
 .post-source {
   margin: 36px 0 0;
   padding-top: 16px;

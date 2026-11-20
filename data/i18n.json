@@ -444,7 +444,7 @@
       "en": "Computer software · Shanghai",
       "es": "Software informático · Shanghái",
       "ko": "컴퓨터 소프트웨어 · 상하이",
-      "ja": "コンピュータソフトウェア · 上海"
+      "ja": "コンピュータソフトウェア · 上海市"
     },
     "ai_agents": {
       "zh": "给 AI 用：llms.txt",
@@ -718,6 +718,118 @@
       "es": "Audiolibro",
       "ko": "오디오북",
       "ja": "オーディオブック"
+    },
+    "writing_kicker": {
+      "zh": "日志",
+      "en": "Writing",
+      "es": "Diario",
+      "ko": "로그",
+      "ja": "日誌"
+    },
+    "original_conversation": {
+      "zh": "这篇对话原文是中文。",
+      "en": "This conversation was originally in Chinese.",
+      "es": "Esta conversación se escribió originalmente en chino.",
+      "ko": "이 대화는 원래 중국어로 이루어졌습니다.",
+      "ja": "この対話はもともと中国語で行われました。"
+    },
+    "original_link": {
+      "zh": "查看原文",
+      "en": "Read the original",
+      "es": "Ver el original",
+      "ko": "원문 보기",
+      "ja": "原文を読む"
+    },
+    "home_link": {
+      "zh": "首页",
+      "en": "Home",
+      "es": "Inicio",
+      "ko": "홈",
+      "ja": "ホーム"
+    },
+    "footer_chat": {
+      "zh": "匡子闲 · 对话原文在本站呈现，便于国内访问。",
+      "en": "匡子闲 · The conversation is hosted here so it can be read without chatgpt.com.",
+      "es": "匡子闲 · La conversación está alojada aquí para poder leerla sin entrar en chatgpt.com.",
+      "ko": "匡子闲 · 대화 원문은 이 사이트에 두어, chatgpt.com 없이도 읽을 수 있습니다.",
+      "ja": "匡子闲 · 対話の本文はこのサイトに置いてあり、chatgpt.com がなくても読めます。"
+    },
+    "unconfirmed_platforms": {
+      "zh": "小红书 · 微博 · 抖音 · X",
+      "en": "Xiaohongshu · Weibo · Douyin · X",
+      "es": "Xiaohongshu · Weibo · Douyin · X",
+      "ko": "샤오홍슈 · 웨이보 · 더우인 · X",
+      "ja": "小紅書 · 微博 · 抖音 · X"
+    },
+    "my_question": {
+      "zh": "我的问题",
+      "en": "My question",
+      "es": "Mi pregunta",
+      "ko": "내 질문",
+      "ja": "わたしの質問"
+    },
+    "my_prompt": {
+      "zh": "我的 Prompt",
+      "en": "My prompt",
+      "es": "Mi prompt",
+      "ko": "내 프롬프트",
+      "ja": "わたしのプロンプト"
+    },
+    "source_chat": {
+      "zh": "原始 ChatGPT 分享链接",
+      "en": "Original ChatGPT share link",
+      "es": "Enlace original de ChatGPT",
+      "ko": "원래 ChatGPT 공유 링크",
+      "ja": "元の ChatGPT 共有リンク"
+    },
+    "source_prompt": {
+      "zh": "原始 Prompt 分享链接",
+      "en": "Original prompt share link",
+      "es": "Enlace original del prompt",
+      "ko": "원래 프롬프트 공유 링크",
+      "ja": "元のプロンプト共有リンク"
+    },
+    "with_gpt": {
+      "zh": "匡子闲 与 GPT",
+      "en": "匡子闲 and GPT",
+      "es": "匡子闲 y GPT",
+      "ko": "匡子闲과 GPT",
+      "ja": "匡子闲とGPT"
+    },
+    "back_writing": {
+      "zh": "← 返回文章列表",
+      "en": "← Back to writing",
+      "es": "← Volver a los textos",
+      "ko": "← 글 목록으로",
+      "ja": "← 記事一覧に戻る"
+    },
+    "snow_btn_title": {
+      "zh": "飘雪特效",
+      "en": "Snow",
+      "es": "Nieve",
+      "ko": "눈 효과",
+      "ja": "雪の演出"
+    },
+    "snow_on": {
+      "zh": "飘雪特效：开",
+      "en": "Snow: On",
+      "es": "Nieve: activada",
+      "ko": "눈 효과: 켜짐",
+      "ja": "雪の演出：オン"
+    },
+    "random_book": {
+      "zh": "随机抽一本书",
+      "en": "Random book",
+      "es": "Un libro al azar",
+      "ko": "무작위로 한 권",
+      "ja": "ランダムに一冊"
+    },
+    "reread_to": {
+      "zh": "后来又翻到",
+      "en": "later returned to",
+      "es": "más tarde volvió al",
+      "ko": "나중에 다시",
+      "ja": "あとで再び"
     }
   },
   "pairs": [
@@ -1976,10 +2088,10 @@
     },
     {
       "zh": "计科，炒股<br>计算机软件 · 上海市",
-      "en": "Headline: 计科，炒股<br>Computer software · Shanghai",
-      "es": "Titular: 计科，炒股<br>Software informático · Shanghái",
-      "ko": "소개: 计科，炒股<br>컴퓨터 소프트웨어 · 상하이",
-      "ja": "見出し：计科，炒股<br>コンピュータソフトウェア · 上海"
+      "en": "Headline: CS, stock trading<br>Computer software · Shanghai",
+      "es": "Lema: Informática, bolsa<br>Software informático · Shanghái",
+      "ko": "소개: 컴공, 주식<br>컴퓨터 소프트웨어 · 상하이",
+      "ja": "紹介：情報科学、株式<br>コンピュータソフトウェア · 上海市"
     },
     {
       "zh": "检索时这些平台未能找到精确匹配的公开主页，或站点拦截了访问。确认账号后可以补上。",
@@ -2039,10 +2151,10 @@
     },
     {
       "zh": "匡子闲从 2015-10-10 起在微信读书留下记录，已经有效阅读 2,001 天，累计 1,267 小时，偏好夜晚、也偏好文学。他自己说过：多喝咖啡！",
-      "en": "匡子闲 has been on WeChat Reading since 10 Oct 2015: 2,001 days with reading, 1,267 hours in all, usually at night, often in literature. In his own words: 多喝咖啡！",
-      "es": "匡子闲 deja rastro en WeChat Reading desde el 10 oct 2015: ya lleva 2.001 días con lectura y 1.267 horas en total, suele leer de noche y a menudo literatura. En sus propias palabras: 多喝咖啡！",
-      "ko": "匡子闲은 2015년 10월 10일부터 위챗 독서에 기록이 있으며, 실제 독서 2,001일, 누적 1,267시간입니다. 밤과 문학을 좋아하고, 스스로 한 말은: 多喝咖啡！",
-      "ja": "匡子闲は2015年10月10日からWeChat読書に記録があり、実際に読んだ日は2,001日、累計1,267時間です。夜と文学を好み、本人の言葉は：多喝咖啡！"
+      "en": "匡子闲 has been on WeChat Reading since 10 Oct 2015: 2,001 days with reading, 1,267 hours in all, usually at night, often in literature. In his own words: “Drink more coffee!”",
+      "es": "匡子闲 deja rastro en WeChat Reading desde el 10 oct 2015: ya lleva 2.001 días con lectura y 1.267 horas en total, suele leer de noche y a menudo literatura. En sus propias palabras: «¡A beber más café!»",
+      "ko": "匡子闲은 2015년 10월 10일부터 위챗 독서에 기록이 있으며, 실제 독서 2,001일, 누적 1,267시간입니다. 밤과 문학을 좋아하고, 스스로 한 말은: “커피를 더 마셔!”",
+      "ja": "匡子闲は2015年10月10日からWeChat読書に記録があり、実際に読んだ日は2,001日、累計1,267時間です。夜と文学を好み、本人の言葉は：「コーヒーをもっと飲め！」"
     },
     {
       "zh": "收起来",

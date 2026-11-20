@@ -100,6 +100,10 @@ def main() -> None:
         "  Content-Type: text/markdown; charset=utf-8\n"
         "  X-Content-Type-Options: nosniff\n"
         "\n"
+        "/*/writing/*.md\n"
+        "  Content-Type: text/markdown; charset=utf-8\n"
+        "  X-Content-Type-Options: nosniff\n"
+        "\n"
         "/*.txt\n"
         "  Content-Type: text/plain; charset=utf-8\n"
         "  X-Content-Type-Options: nosniff\n",

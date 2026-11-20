@@ -38,6 +38,12 @@ def pick(obj: dict, base: str, loc: str, default: str = "") -> str:
     return obj.get(f"{base}_{loc}") or obj.get(f"{base}_en") or obj.get(base) or obj.get(base + "_zh") or default
 
 
+def pick_list(obj: dict, base: str, loc: str) -> list:
+    if loc == "zh":
+        return list(obj.get(base) or obj.get(base + "_zh") or [])
+    return list(obj.get(f"{base}_{loc}") or obj.get(f"{base}_en") or obj.get(base) or obj.get(base + "_zh") or [])
+
+
 def prefix(loc: str) -> str:
     return locales()[loc]["prefix"]
 
@@ -663,6 +669,7 @@ def apply_reading_chrome(html: str, loc: str) -> str:
         text = text.replace("尚未阅读", t_ui("not_started", loc))
         text = text.replace("最近阅读", t_ui("last_read", loc))
         text = text.replace("读完于", t_ui("finished_on", loc))
+        text = text.replace("后来又翻到", t_ui("reread_to", loc))
         # "最近" after a category middot, not inside last_read which already replaced
         text = re.sub(r"(· )最近( )", lambda m: m.group(1) + t_ui("last", loc) + m.group(2), text)
         return format_zh_counts(format_zh_duration(text, loc), loc)
@@ -758,6 +765,10 @@ def apply_plain_ui(html: str, loc: str) -> str:
         (">风格时间线<", f'>{t_ui("timeline", loc)}<'),
         ('For AI agents: llms.txt', t_ui("ai_agents", loc)),
         ('aria-label="按分类筛选书架"', f'aria-label="{t_ui("shelf_filter", loc)}"'),
+        ('title="飘雪特效"', f'title="{t_ui("snow_btn_title", loc)}"'),
+        ('aria-label="飘雪特效：开"', f'aria-label="{t_ui("snow_on", loc)}"'),
+        ('aria-label="随机抽一本书"', f'aria-label="{t_ui("random_book", loc)}"'),
+
         (">显示名 匡子闲 · 公司字段 IFTech<", f'>{t_ui("display_company", loc)}<'),
         (">未确认 / unverified<", f'>{t_ui("unverified", loc)} / unverified<' if loc == "zh" else f'>{t_ui("unverified", loc)}<'),
     ]
@@ -804,6 +815,11 @@ def apply_plain_ui(html: str, loc: str) -> str:
         lambda m: f'>{m.group(1)} {t_ui("followers", loc)} · {m.group(2)} {t_ui("answers", loc)} · {m.group(3)} {t_ui("upvotes", loc)}<',
         html,
     )
+    if loc != "zh":
+        html = html.replace("JUEJIN · 掘金", "Juejin")
+        html = html.replace("JIKE · 即刻", "Jike")
+        html = html.replace("ZHIHU · 知乎", "Zhihu")
+        html = html.replace("小红书 · 微博 · 抖音 · X", t_ui("unconfirmed_platforms", loc))
     html = html.replace("<h3>easy-life</h3>", "<h3>EasyLife</h3>")
     html = html.replace("<h3>easy-offer</h3>", "<h3>EasyOffer</h3>")
     return html

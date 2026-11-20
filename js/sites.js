@@ -39,12 +39,19 @@
     return '<span class="site-badge">' + esc(label) + "</span>";
   }
 
+  function pickField(obj, base) {
+    var loc = (window.KUANG_I18N && window.KUANG_I18N.locale) || "zh";
+    if (loc === "zh") return obj[base] || obj[base + "_zh"] || "";
+    return obj[base + "_" + loc] || obj[base + "_en"] || obj[base] || "";
+  }
+
   function cardHtml(site) {
     var url = site.url || site.canonical || "";
-    var name = site.name || site.title || url;
+    var name = site.name || pickField(site, "title") || url;
     var domain = site.domain || hostname(url) || hostname(site.canonical || "") || url;
-    var desc = site.description || "";
+    var desc = pickField(site, "description");
     var ownClass = site.own ? " is-own" : "";
+    if (pickField(site, "image_alt")) site = Object.assign({}, site, { image_alt: pickField(site, "image_alt") });
     return (
       '<a class="card site-card' + ownClass + '" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
         iconHtml(site, name) +

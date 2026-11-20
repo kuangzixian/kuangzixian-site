@@ -56,11 +56,18 @@
     return "/#writing";
   }
 
-  function tagsHtml(tags) {
-    if (!tags || !tags.length) return "";
+  function tagsHtml(chat) {
+    var tags = pickList(chat, "tags");
+    if (!tags.length) return "";
     return '<div class="article-tags">' + tags.map(function (t) {
       return '<span class="pill">' + window.escapeHtml(t) + "</span>";
     }).join("") + "</div>";
+  }
+
+  function pickList(obj, base) {
+    var L = loc();
+    if (L === "zh") return obj[base] || obj[base + "_zh"] || [];
+    return obj[base + "_" + L] || obj[base + "_en"] || obj[base] || [];
   }
 
   function renderList(chats) {
@@ -84,7 +91,7 @@
           "</div>" +
           "<h3>" + title + "</h3>" +
           "<p>" + sum + "</p>" +
-          tagsHtml(c.tags) +
+          tagsHtml(c) +
         "</a>"
       );
     }).join("");
@@ -124,14 +131,15 @@
     var mdLink = document.getElementById("mdAlternate");
     if (mdLink) mdLink.setAttribute("href", "/writing/" + encodeURIComponent(chat.id) + ".md");
 
+    var shownPrompt = pickField(chat, "prompt");
     var promptBlock = "";
-    if (chat.prompt) {
+    if (shownPrompt) {
       var kind = chat.prompt_kind || "prompt";
       var label = tr(kind === "question" ? "myQuestion" : "myPrompt");
       promptBlock =
         '<aside class="prompt-block">' +
           '<p class="prompt-kicker">' + window.escapeHtml(label) + "</p>" +
-          '<div class="prompt-body">' + window.renderMarkdown(chat.prompt) + "</div>" +
+          '<div class="prompt-body">' + window.renderMarkdown(shownPrompt) + "</div>" +
         "</aside>";
     }
 
@@ -148,7 +156,7 @@
       return (
         '<section class="turn ' + lab.cls + '">' +
           '<p class="turn-role">' + window.escapeHtml(lab.zh) + "</p>" +
-          '<div class="turn-body md">' + window.renderMarkdown(m.content || "") + "</div>" +
+          '<div class="turn-body md">' + window.renderMarkdown(pickField(m, "content")) + "</div>" +
         "</section>"
       );
     }).join("");
@@ -157,29 +165,39 @@
     if (chat.source_url) {
       sources.push(
         '<a href="' + window.escapeHtml(chat.source_url) + '" rel="noopener noreferrer">' +
-        '<span class="zh">原始 ChatGPT 分享链接</span>' +
-        '<span class="en-only">Original ChatGPT share link</span></a>'
+        window.escapeHtml(tr("sourceChat")) + "</a>"
       );
     }
     if (chat.prompt_url) {
       sources.push(
         '<a href="' + window.escapeHtml(chat.prompt_url) + '" rel="noopener noreferrer">' +
-        '<span class="zh">原始 Prompt 分享链接</span>' +
-        '<span class="en-only">Original prompt share link</span></a>'
+        window.escapeHtml(tr("sourcePrompt")) + "</a>"
       );
     }
+
+    var originalNote = "";
+    if (loc() !== "zh" && chat.id) {
+      originalNote =
+        '<p class="post-original-note">' + window.escapeHtml(tr("originalConversation")) +
+        ' <a href="/writing/' + encodeURIComponent(chat.id) + '">' + window.escapeHtml(tr("originalLink")) + "</a></p>";
+    }
+
+    var mdPath = "/writing/" + encodeURIComponent(chat.id) + ".md";
+    if (I().localizePath) mdPath = I().localizePath(mdPath, loc());
+    if (mdLink) mdLink.setAttribute("href", mdPath);
 
     postEl.innerHTML =
       '<p class="post-back"><a href="' + writingListHref() + '">' + window.escapeHtml(tr("backWriting")) + "</a></p>" +
       '<header class="post-head">' +
-        '<p class="kicker">Writing</p>' +
+        '<p class="kicker">' + window.escapeHtml(tr("writingKicker")) + "</p>" +
         "<h1>" + window.escapeHtml(title) + "</h1>" +
         '<div class="meta">' +
           (date ? '<time datetime="' + window.escapeHtml(date) + '">' + window.escapeHtml((I().formatDate && I().formatDate(date)) || date) + "</time>" : "") +
           "<span>" + window.escapeHtml(tr("withGpt")) + "</span>" +
         "</div>" +
-        tagsHtml(chat.tags) +
+        tagsHtml(chat) +
       "</header>" +
+      originalNote +
       promptBlock +
       '<div class="thread">' + thread + "</div>" +
       (sources.length ? '<p class="post-source">' + sources.join(" · ") + "</p>" : "");

@@ -7,19 +7,27 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 from xml.sax.saxutils import escape as xml_escape
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import i18n_lib
+
 SITE = "https://kuangzixian.pages.dev"
 DATA = ROOT / "data"
 MUSIC_REPORT = f"{SITE}/music/report"
 
 
-def writing_html_url(chat_id: str) -> str:
-    return f"{SITE}/writing/{chat_id}"
+def writing_html_url(chat_id: str, loc: str = "zh") -> str:
+    if loc == "zh":
+        return f"{SITE}/writing/{chat_id}"
+    return f"{SITE}/{loc}/writing/{chat_id}"
 
 
-def writing_md_url(chat_id: str) -> str:
-    return f"{SITE}/writing/{chat_id}.md"
+def writing_md_url(chat_id: str, loc: str = "zh") -> str:
+    if loc == "zh":
+        return f"{SITE}/writing/{chat_id}.md"
+    return f"{SITE}/{loc}/writing/{chat_id}.md"
 
 
 def load_json(name: str) -> Any:
@@ -759,24 +767,26 @@ def build_reading_md(reading: dict) -> str:
     return "\n".join(lines)
 
 
-def chat_body(chat: dict) -> list[str]:
+def chat_body(chat: dict, loc: str = "zh") -> list[str]:
     lines: list[str] = []
-    if chat.get("prompt"):
+    prompt = (i18n_lib.pick(chat, "prompt", loc) or "").strip()
+    if prompt:
         kind = chat.get("prompt_kind") or "prompt"
-        label = "我的问题" if kind == "question" else "我的 Prompt"
-        lines += [f"## {label}", "", (chat.get("prompt") or "").strip(), ""]
-    prompt_text = (chat.get("prompt") or "").strip()
+        label = i18n_lib.t_ui("my_question" if kind == "question" else "my_prompt", loc)
+        lines += [f"## {label}", "", prompt, ""]
+    prompt_orig = (chat.get("prompt") or "").strip()
     messages = list(chat.get("messages") or [])
-    if messages and messages[0].get("role") == "user" and prompt_text and (messages[0].get("content") or "").strip() == prompt_text:
+    if messages and messages[0].get("role") == "user" and prompt_orig and (messages[0].get("content") or "").strip() == prompt_orig:
         messages = messages[1:]
     if messages:
-        lines += ["## 对话", ""]
+        heading = {"zh": "对话", "en": "Conversation", "es": "Conversación", "ko": "대화", "ja": "対話"}[loc]
+        lines += [f"## {heading}", ""]
         for msg in messages:
             role = msg.get("role")
             name = msg.get("name") or ("GPT" if role == "assistant" else "匡子闲")
             lines.append(f"### {name}")
             lines.append("")
-            lines.append((msg.get("content") or "").rstrip())
+            lines.append((i18n_lib.pick(msg, "content", loc) or "").rstrip())
             lines.append("")
     return lines
 
@@ -807,34 +817,51 @@ def build_writing_md(chats: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def build_writing_post_md(chat: dict) -> str:
-    tags = ", ".join(chat.get("tags") or [])
+def build_writing_post_md(chat: dict, loc: str = "zh") -> str:
+    tags = ", ".join(i18n_lib.pick_list(chat, "tags", loc))
+    title = i18n_lib.pick(chat, "title", loc) or chat.get("title") or ""
+    blurb = {
+        "zh": "匡子闲与 GPT 的对话。",
+        "en": "A conversation between 匡子闲 and GPT.",
+        "es": "Una conversación entre 匡子闲 y GPT.",
+        "ko": "匡子闲과 GPT의 대화.",
+        "ja": "匡子闲と GPT の対話。",
+    }[loc]
+    date_label = {"zh": "日期", "en": "Date", "es": "Fecha", "ko": "날짜", "ja": "日付"}[loc]
+    tags_label = {"zh": "标签", "en": "Tags", "es": "Etiquetas", "ko": "태그", "ja": "タグ"}[loc]
+    html_label = {"zh": "HTML 版本", "en": "HTML version", "es": "Versión HTML", "ko": "HTML 버전", "ja": "HTML 版"}[loc]
     lines = [
-        f"# {chat.get('title') or ''}",
+        f"# {title}",
         "",
-        "匡子闲与 GPT 的对话。",
+        blurb,
         "",
     ]
-    if chat.get("title_en"):
+    if loc == "zh" and chat.get("title_en"):
         lines += [chat["title_en"], ""]
-    meta = [f"日期：{chat.get('date') or ''}"]
+    meta = [f"{date_label}：{chat.get('date') or ''}"]
     if tags:
-        meta.append(f"标签：{tags}")
+        meta.append(f"{tags_label}：{tags}")
     lines.append(" · ".join(meta))
     lines.append("")
-    if chat.get("summary"):
-        lines.append(chat["summary"])
+    summary = i18n_lib.pick(chat, "summary", loc)
+    if summary:
+        lines.append(summary)
         lines.append("")
-    if chat.get("summary_en"):
+    if loc == "zh" and chat.get("summary_en"):
         lines.append(chat["summary_en"])
         lines.append("")
-    lines.append(f"HTML 版本：[{writing_html_url(chat['id'])}]({writing_html_url(chat['id'])})")
+    if loc != "zh":
+        lines.append(i18n_lib.t_ui("original_conversation", loc) + f" [{i18n_lib.t_ui('original_link', loc)}]({writing_html_url(chat['id'])})")
+        lines.append("")
+    lines.append(f"{html_label}：[{writing_html_url(chat['id'], loc)}]({writing_html_url(chat['id'], loc)})")
     if chat.get("source_url"):
-        lines.append(f"原始分享链接：{chat['source_url']}")
+        share = {"zh": "原始分享链接", "en": "Original share link", "es": "Enlace original", "ko": "원래 공유 링크", "ja": "元の共有リンク"}[loc]
+        lines.append(f"{share}：{chat['source_url']}")
     if chat.get("prompt_url"):
-        lines.append(f"Prompt 链接：{chat['prompt_url']}")
+        plabel = {"zh": "Prompt 链接", "en": "Prompt link", "es": "Enlace del prompt", "ko": "프롬프트 링크", "ja": "プロンプトのリンク"}[loc]
+        lines.append(f"{plabel}：{chat['prompt_url']}")
     lines.append("")
-    lines += chat_body(chat)
+    lines += chat_body(chat, loc)
     return "\n".join(lines)
 
 
@@ -912,9 +939,15 @@ def build_llms_full(profile: dict, reading: dict, chats: list[dict], sites: dict
         "",
         "## 与 GPT 的对话全文",
         "",
+        "以下为中文原文。英、西、韩、日译文见各语言路径下的 Markdown，例如 `/en/writing/<id>.md`、`/es/writing/<id>.md`、`/ko/writing/<id>.md`、`/ja/writing/<id>.md`。",
+        "",
     ]
     for chat in chats:
         lines.append(build_writing_post_md(chat))
+        extras = []
+        for loc in ("en", "es", "ko", "ja"):
+            extras.append(f"[{loc}]({writing_md_url(chat['id'], loc)})")
+        lines.append("Translations: " + " · ".join(extras))
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -1009,6 +1042,8 @@ def build_sitemap_xml(profile: dict, reading: dict, chats: list[dict], music: di
     for chat in chats:
         last = iso_date(chat.get("date") or chat.get("datetime")) or home_last
         urls.append((f"{SITE}/writing/{chat['id']}.md", last, "monthly"))
+        for loc in ("en", "es", "ko", "ja"):
+            urls.append((writing_md_url(chat["id"], loc), last, "monthly"))
     # Language-specific HTML pages with hreflang alternates.
     alt_paths: list[tuple[str, str, str]] = [
         ("/", home_last, "weekly"),
@@ -1101,6 +1136,10 @@ def write_ai_files(dest: Path) -> None:
     write_text(dest / "sites.md", build_sites_md(sites))
     for chat in chats:
         write_text(dest / "writing" / f"{chat['id']}.md", build_writing_post_md(chat))
+        for loc in ("en", "es", "ko", "ja"):
+            folder = dest / loc / "writing"
+            folder.mkdir(parents=True, exist_ok=True)
+            write_text(folder / f"{chat['id']}.md", build_writing_post_md(chat, loc))
     write_text(dest / "sitemap.md", build_sitemap_md(chats))
     write_text(dest / "sitemap.xml", build_sitemap_xml(profile, reading, chats, music, boardgames, sites))
     write_text(dest / "robots.txt", build_robots())

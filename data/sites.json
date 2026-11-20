@@ -18,7 +18,19 @@
       "image_alt": "沈新宇（Sinyu）的个人头像",
       "image_source": "https://www.sinyu1012.cn/avatar.jpg",
       "favicon": "https://www.sinyu1012.cn/favicon.ico",
-      "emoji": "🌐"
+      "emoji": "🌐",
+      "title_en": "沈新宇 (Sinyu) | Flutter / Android / iOS developer",
+      "title_es": "沈新宇 (Sinyu) | Desarrollador de Flutter / Android / iOS",
+      "title_ko": "沈新宇 (Sinyu) | Flutter / Android / iOS 개발자",
+      "title_ja": "沈新宇（Sinyu）｜Flutter / Android / iOS 開発者",
+      "description_en": "The personal site of 沈新宇 (Sinyu, GitHub @sinyu1012). A mobile developer in Shanghai, focused on Flutter, Android, iOS, AI automation, and open-source tools, sharing personal projects, practice notes, and work.",
+      "description_es": "El sitio personal de 沈新宇 (Sinyu, GitHub @sinyu1012). Desarrollador móvil en Shanghái, centrado en Flutter, Android, iOS, automatización con IA y herramientas de código abierto; comparte proyectos personales, prácticas de desarrollo y trabajos.",
+      "description_ko": "沈新宇(Sinyu, GitHub @sinyu1012)의 개인 사이트입니다. 상하이의 모바일 개발자로, Flutter, Android, iOS, AI 자동화와 오픈소스 도구에 집중하며 개인 프로젝트, 개발 경험, 작품을 공유합니다.",
+      "description_ja": "沈新宇（Sinyu、GitHub @sinyu1012）の個人サイト。上海のモバイル開発者で、Flutter、Android、iOS、AI 自動化、オープンソースのツールに取り組み、個人プロジェクト、開発の実践、作品を公開しています。",
+      "image_alt_en": "Portrait of 沈新宇 (Sinyu)",
+      "image_alt_es": "Retrato de 沈新宇 (Sinyu)",
+      "image_alt_ko": "沈新宇(Sinyu)의 프로필 사진",
+      "image_alt_ja": "沈新宇（Sinyu）のプロフィール写真"
     },
     {
       "id": "easy-life",
@@ -33,7 +45,19 @@
       "image_source": "https://easy-life.kznb.workers.dev/favicon.svg",
       "favicon": "https://easy-life.kznb.workers.dev/favicon.svg",
       "emoji": "🌐",
-      "own": true
+      "own": true,
+      "title_en": "EasyLife · A small change every day",
+      "title_es": "EasyLife · Un pequeño cambio cada día",
+      "title_ko": "EasyLife · 매일 하나의 작은 변화",
+      "title_ja": "EasyLife · 毎日ひとつの小さな変化",
+      "description_en": "Live a little better — pocket life advice with sources. Read slowly, search, or draw a card. No login required.",
+      "description_es": "Vive un poco mejor: lleva en el bolsillo consejos de vida con fuentes. Lee con calma, busca o saca una carta. No hace falta registrarse.",
+      "description_ko": "조금 더 잘 살기. 출처가 있는 생활 조언을 주머니에 담습니다. 천천히 읽고, 검색하고, 카드를 뽑으면 됩니다. 로그인할 필요는 없습니다.",
+      "description_ja": "もう少しよく暮らす。出典のある生活の助言をポケットに。ゆっくり読む、探す、カードを引く。ログインは不要です。",
+      "image_alt_en": "EasyLife icon",
+      "image_alt_es": "Icono de EasyLife",
+      "image_alt_ko": "EasyLife 아이콘",
+      "image_alt_ja": "EasyLife のアイコン"
     },
     {
       "id": "easy-offer",
@@ -48,7 +72,19 @@
       "image_source": "https://easy-offer.kznb.workers.dev/favicon.svg",
       "favicon": "https://easy-offer.kznb.workers.dev/favicon.svg",
       "emoji": "🌐",
-      "own": true
+      "own": true,
+      "title_en": "EasyOffer · Let good work be seen",
+      "title_es": "EasyOffer · Que el buen trabajo se vea",
+      "title_ko": "EasyOffer · 좋은 일이 보이게",
+      "title_ja": "EasyOffer · よい仕事を、見えるように",
+      "description_en": "Start from real projects and turn your work into a more convincing résumé. EasyOffer supports organizing GitHub projects, plus AI résumés and interview prep.",
+      "description_es": "Parte de proyectos reales y convierte tu trabajo en un currículum más convincente. EasyOffer ayuda a organizar proyectos de GitHub, y ofrece currículums y preparación de entrevistas con IA.",
+      "description_ko": "실제 프로젝트에서 출발해, 해 온 일을 더 설득력 있는 이력서로 만듭니다. EasyOffer는 GitHub 프로젝트 정리와 AI 이력서, 면접 준비를 지원합니다.",
+      "description_ja": "本物の制作物から出発し、これまでの仕事をより説得力のある履歴書にします。EasyOffer は GitHub プロジェクトの整理、AI 履歴書、面接準備に対応します。",
+      "image_alt_en": "EasyOffer icon",
+      "image_alt_es": "Icono de EasyOffer",
+      "image_alt_ko": "EasyOffer 아이콘",
+      "image_alt_ja": "EasyOffer のアイコン"
     },
     {
       "id": "puzzle-tapa",
@@ -90,7 +126,19 @@
       "image_alt": "BGA",
       "image_source": "https://x.boardgamearena.net/data/themereleases/261117-1646/img/logo/logo.png",
       "favicon": "https://x.boardgamearena.net/data/themereleases/261117-1646/img/favicon/favicon-32x32.png?2",
-      "emoji": "🌐"
+      "emoji": "🌐",
+      "title_en": "Board Game Arena – Play board games online for free!",
+      "title_es": "Board Game Arena – ¡Juega a juegos de mesa en línea gratis!",
+      "title_ko": "Board Game Arena – 보드게임을 온라인에서 무료로 즐기세요!",
+      "title_ja": "Board Game Arena – ボードゲームをオンラインで無料で!",
+      "description_en": "The world’s largest online board-game community. Play more than 1,000 games right in your browser.",
+      "description_es": "La comunidad de juegos de mesa en línea más grande del mundo. Más de 1.000 juegos para jugar directamente en el navegador.",
+      "description_ko": "세계 최대의 온라인 보드게임 커뮤니티입니다. 1,000종이 넘는 게임을 브라우저에서 바로 즐길 수 있습니다.",
+      "description_ja": "世界最大のオンライン・ボードゲームコミュニティ。1000を超えるゲームを、ブラウザですぐに遊べます。",
+      "image_alt_en": "Board Game Arena logo",
+      "image_alt_es": "Logotipo de Board Game Arena",
+      "image_alt_ko": "Board Game Arena 로고",
+      "image_alt_ja": "Board Game Arena のロゴ"
     }
   ],
   "intro_es": "Sitios que recomienda. Las tarjetas con “Hecho por mí” son sus propios proyectos. Irá añadiendo más. Las descripciones se toman de los propios sitios, no se inventan.",
