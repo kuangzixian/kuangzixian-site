@@ -248,20 +248,21 @@
       btn.setAttribute("aria-pressed", on ? "true" : "false");
       btn.classList.toggle("is-on", on);
       btn.classList.toggle("is-playing", playing);
+      var tr = (window.KUANG_I18N && window.KUANG_I18N.t) || function (k) { return k; };
       if (reducedMotion()) {
-        btn.setAttribute("title", "已按系统设置关闭动态效果");
-        btn.setAttribute("aria-label", "飘雪特效已关闭（减少动态效果）");
+        btn.setAttribute("title", tr("snowReducedTitle"));
+        btn.setAttribute("aria-label", tr("snowReducedLabel"));
       } else {
-        btn.setAttribute("title", on ? "飘雪特效开启，点击可重播或关闭" : "开启飘雪特效");
-        btn.setAttribute("aria-label", on ? "飘雪特效：开" : "飘雪特效：关");
+        btn.setAttribute("title", on ? tr("snowTitleOn") : tr("snowTitleOff"));
+        btn.setAttribute("aria-label", on ? tr("snowOn") : tr("snowOff"));
       }
     }
     var toggle = document.getElementById("qzSnowToggle");
     if (toggle) {
-      var zh = toggle.querySelector(".zh");
-      var en = toggle.querySelector(".en-only");
-      if (zh) zh.textContent = on ? "飘雪特效：开" : "飘雪特效：关";
-      if (en) en.textContent = on ? "Snow: On" : "Snow: Off";
+      var label = (window.KUANG_I18N && window.KUANG_I18N.t)
+        ? window.KUANG_I18N.t(on ? "snowOn" : "snowOff")
+        : (on ? "Snow: On" : "Snow: Off");
+      toggle.textContent = label;
       toggle.setAttribute("aria-pressed", on ? "true" : "false");
       toggle.classList.toggle("is-on", on);
     }

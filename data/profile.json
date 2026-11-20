@@ -5,13 +5,19 @@
     "jike": "前游戏从业者，现在在黄即搞后端。",
     "juejin": "Talk is cheap，show me your code",
     "juejin_title": "后端工程师",
-    "combined_zh": "匡子闲（kuangzixian）是一名后端工程师。他开发了 Easy Offer，用 GitHub 项目经历帮工程师整理简历，也做了「好好生活」（easy-life），方便读者按问题查找有出处的生活建议。",
-    "combined_en": "匡子闲 (kuangzixian) is a backend engineer. He built Easy Offer to help engineers write résumés from their GitHub work and 好好生活 (easy-life) to help readers find sources for everyday advice.",
+    "combined_zh": "匡子闲（kuangzixian）是一名后端工程师。他开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
+    "combined_en": "匡子闲 (kuangzixian) is a backend engineer. He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
     "zhihu": "计科，炒股",
-    "signature_zh": "※別迷戀哥，哥祇是個傳說※",
-    "signature_en": "Don't fall for me, I'm just a legend."
+    "combined_es": "匡子闲 (kuangzixian) es un ingeniero de backend. Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
+    "combined_ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
+    "combined_ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。",
+    "first_zh": "我是匡子闲，一名后端工程师。我做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
+    "first_en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
+    "first_es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+    "first_ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
+    "first_ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
   },
-  "updated_at": "2026-11-19T12:33:36+08:00",
+  "updated_at": "2026-11-20T00:00:00+08:00",
   "timezone": "Asia/Shanghai",
   "research_retrieved_at": "2026-11-14T22:34:00+08:00",
   "profiles": [
@@ -228,7 +234,7 @@
     {
       "name": "easy-life",
       "url": "https://github.com/kuangzixian/easy-life",
-      "description": "好好生活：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。",
+      "description": "EasyLife：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。",
       "language": "JavaScript",
       "fork": false,
       "created_at": "2026-09-30T00:29:16+08:00"

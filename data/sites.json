@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T14:49:04+08:00",
+  "updated_at": "2026-11-20T00:00:00+08:00",
   "timezone": "Asia/Shanghai",
   "note": "Names, titles, descriptions and images were taken from the live sites (latest check 2026-11-18). Nothing here is invented. URLs are stored exactly as published. Entries with own=true are 匡子闲's own projects.",
   "how_to_add": "Append a new object to the sites array with id, url, name, and optional canonical, domain, title, description, image, image_alt, image_source, favicon, emoji, own. Set own to true for 匡子闲's own projects (shows a 自己做的 / Made by me badge). Keep url exactly as given. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
@@ -25,11 +25,11 @@
       "url": "https://easy-life.kznb.workers.dev/",
       "canonical": "https://easy-life.kznb.workers.dev/",
       "domain": "easy-life.kznb.workers.dev",
-      "name": "好好生活",
-      "title": "好好生活 · 每天一个小改变",
+      "name": "EasyLife",
+      "title": "EasyLife · 每天一个小改变",
       "description": "好好生活，把有出处的生活建议装进口袋。慢慢读、搜一搜、抽张卡，不用登录。",
       "image": "images/sites/easy-life.svg",
-      "image_alt": "好好生活图标",
+      "image_alt": "EasyLife 图标",
       "image_source": "https://easy-life.kznb.workers.dev/favicon.svg",
       "favicon": "https://easy-life.kznb.workers.dev/favicon.svg",
       "emoji": "🌐",
@@ -40,11 +40,11 @@
       "url": "https://easy-offer.kznb.workers.dev/",
       "canonical": "https://easy-offer.kznb.workers.dev/",
       "domain": "easy-offer.kznb.workers.dev",
-      "name": "Easy Offer",
-      "title": "Easy Offer · 让好工作被看见",
+      "name": "EasyOffer",
+      "title": "EasyOffer · 让好工作被看见",
       "description": "从真实项目出发，把你的工作写成一份更有说服力的简历。Easy Offer 支持 GitHub 项目整理、AI 简历与面试准备。",
       "image": "images/sites/easy-offer.svg",
-      "image_alt": "Easy Offer 图标",
+      "image_alt": "EasyOffer 图标",
       "image_source": "https://easy-offer.kznb.workers.dev/favicon.svg",
       "favicon": "https://easy-offer.kznb.workers.dev/favicon.svg",
       "emoji": "🌐",
@@ -92,5 +92,8 @@
       "favicon": "https://x.boardgamearena.net/data/themereleases/261117-1646/img/favicon/favicon-32x32.png?2",
       "emoji": "🌐"
     }
-  ]
+  ],
+  "intro_es": "Sitios que recomienda. Las tarjetas con “Hecho por mí” son sus propios proyectos. Irá añadiendo más. Las descripciones se toman de los propios sitios, no se inventan.",
+  "intro_ko": "추천하는 사이트입니다. 「직접 만든 것」이라고 표시된 카드는 본인 프로젝트입니다. 나중에 더 추가할 예정입니다. 소개 문구는 각 사이트에 공개된 내용에서 가져왔으며, 지어내지 않았습니다.",
+  "intro_ja": "おすすめのサイトです。「自分で作った」とあるカードは本人のプロジェクトです。思いついたらまた足します。紹介文は各サイトの公開情報から抜粋したもので、創作していません。"
 }

@@ -58,6 +58,8 @@ def should_skip(path: Path) -> bool:
         return True
     if name.startswith("preview") and name.endswith(".png"):
         return True
+    if name.startswith("_i18n"):
+        return True
     return False
 
 

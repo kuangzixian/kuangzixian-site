@@ -2,7 +2,7 @@
   "updated_at": "2026-11-17T16:40:00+08:00",
   "timezone": "Asia/Shanghai",
   "note": "Games 匡子闲 has played and enjoys. Descriptions are factual (player count and genre) only; no personal ratings, rankings, or play counts are recorded.",
-  "how_to_add": "Append a new object to the games array with id, name_zh, name_en, players, genre_zh, genre_en, blurb_zh, blurb_en, and emoji. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
+  "how_to_add": "Append a new object to the games array with id, name_zh, name_en, name_es, name_ko, name_ja, players, genre_* and blurb_* fields, and emoji. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
   "intro_zh": "玩过、也爱玩的桌游。后面想起再补。下面只写公开的人数和类型，没有个人评分或对局次数。",
   "intro_en": "Board games he has played and enjoys. More will be added later. Each entry lists only public player counts and genre, not personal ratings or play counts.",
   "games": [
@@ -15,7 +15,16 @@
       "genre_en": "Social deduction",
       "blurb_zh": "社交推理派对游戏，人数视版本而定，常见 6–18 人。",
       "blurb_en": "A social deduction party game; player count depends on the edition, often 6–18.",
-      "emoji": "🐺"
+      "emoji": "🐺",
+      "name_es": "Hombre lobo",
+      "name_ko": "마피아(웨어울프)",
+      "name_ja": "人狼",
+      "genre_es": "Deducción social",
+      "genre_ko": "소셜 추론",
+      "genre_ja": "ソーシャル推理",
+      "blurb_es": "Juego de fiesta de deducción social; el número de jugadores depende de la edición, a menudo 6–18.",
+      "blurb_ko": "소셜 추론 파티 게임으로, 인원은 버전에 따라 다르며 흔히 6–18명입니다.",
+      "blurb_ja": "ソーシャル推理のパーティーゲーム。人数は版によって異なり、よくあるのは6–18人です。"
     },
     {
       "id": "avalon",
@@ -26,7 +35,16 @@
       "genre_en": "Social deduction",
       "blurb_zh": "社交推理游戏，5–10 人，隐藏阵营、任务投票。",
       "blurb_en": "A social deduction game for 5–10 players, with hidden teams and quest votes.",
-      "emoji": "🏰"
+      "emoji": "🏰",
+      "name_es": "The Resistance: Avalon",
+      "name_ko": "아발론",
+      "name_ja": "アヴァロン",
+      "genre_es": "Deducción social",
+      "genre_ko": "소셜 추론",
+      "genre_ja": "ソーシャル推理",
+      "blurb_es": "Juego de deducción social para 5–10 jugadores, con bandos ocultos y votaciones de misión.",
+      "blurb_ko": "5–10인용 소셜 추론 게임으로, 진영을 숨기고 임무에 투표합니다.",
+      "blurb_ja": "5–10人のソーシャル推理ゲーム。陣営を隠し、クエストに投票します。"
     },
     {
       "id": "splendor",
@@ -37,7 +55,16 @@
       "genre_en": "Engine building",
       "blurb_zh": "引擎构建卡牌游戏，2–4 人，收集宝石卡发展引擎。",
       "blurb_en": "An engine-building card game for 2–4 players, collecting gem cards to grow an engine.",
-      "emoji": "💎"
+      "emoji": "💎",
+      "name_es": "Splendor",
+      "name_ko": "스플렌더",
+      "name_ja": "宝石の煌き",
+      "genre_es": "Construcción de motor",
+      "genre_ko": "엔진 빌딩",
+      "genre_ja": "エンジン構築",
+      "blurb_es": "Juego de cartas de construcción de motor para 2–4 jugadores, reuniendo gemas para desarrollar el motor.",
+      "blurb_ko": "2–4인용 엔진 빌딩 카드 게임으로, 보석 카드를 모아 엔진을 키웁니다.",
+      "blurb_ja": "2–4人のエンジン構築カードゲーム。宝石カードを集めてエンジンを育てます。"
     },
     {
       "id": "scout",
@@ -48,7 +75,16 @@
       "genre_en": "Ladder-climbing",
       "blurb_zh": "Oink Games 的爬梯出牌游戏，2–5 人。",
       "blurb_en": "A ladder-climbing card game from Oink Games, for 2–5 players.",
-      "emoji": "🎪"
+      "emoji": "🎪",
+      "name_es": "Scout",
+      "name_ko": "Scout",
+      "name_ja": "Scout",
+      "genre_es": "Escalera de cartas",
+      "genre_ko": "래더 클라이밍",
+      "genre_ja": "梯子出し",
+      "blurb_es": "Un juego de cartas de escalera de Oink Games, para 2–5 jugadores.",
+      "blurb_ko": "Oink Games의 래더 클라이밍 카드 게임으로, 2–5인용입니다.",
+      "blurb_ja": "Oink Games の梯子出しカードゲーム。2–5人用です。"
     },
     {
       "id": "exploding-kittens",
@@ -59,7 +95,16 @@
       "genre_en": "Party card game",
       "blurb_zh": "派对卡牌游戏，原版 2–5 人。",
       "blurb_en": "A party card game; the original edition is for 2–5 players.",
-      "emoji": "💣"
+      "emoji": "💣",
+      "name_es": "Exploding Kittens",
+      "name_ko": "익스플로딩 키튼",
+      "name_ja": "爆発する子猫",
+      "genre_es": "Cartas de fiesta",
+      "genre_ko": "파티 카드",
+      "genre_ja": "パーティーカード",
+      "blurb_es": "Juego de cartas de fiesta; la edición original es para 2–5 jugadores.",
+      "blurb_ko": "파티 카드 게임으로, 원판은 2–5인용입니다.",
+      "blurb_ja": "パーティー向けカードゲーム。原版は2–5人です。"
     },
     {
       "id": "azul",
@@ -70,7 +115,16 @@
       "genre_en": "Abstract tile placement",
       "blurb_zh": "抽象铺砖游戏，2–4 人，起草花砖并摆进墙面。",
       "blurb_en": "An abstract tile-placement game for 2–4 players, drafting tiles onto a wall.",
-      "emoji": "🟦"
+      "emoji": "🟦",
+      "name_es": "Azul",
+      "name_ko": "아줄",
+      "name_ja": "アズール",
+      "genre_es": "Colocación abstracta de teselas",
+      "genre_ko": "추상 타일 배치",
+      "genre_ja": "アブストラクト・タイル配置",
+      "blurb_es": "Juego abstracto de colocación de teselas para 2–4 jugadores, eligiendo azulejos y colocándolos en un muro.",
+      "blurb_ko": "2–4인용 추상 타일 배치 게임으로, 타일을 골라 벽에 놓습니다.",
+      "blurb_ja": "2–4人のアブストラクトなタイル配置ゲーム。タイルをドラフトして壁に置きます。"
     },
     {
       "id": "cheese-thief",
@@ -81,7 +135,19 @@
       "genre_en": "Social deduction",
       "blurb_zh": "社交推理聚会游戏，4–8 人，约 10–15 分钟。",
       "blurb_en": "A social deduction party game for 4–8 players, about 10–15 minutes.",
-      "emoji": "🧀"
+      "emoji": "🧀",
+      "name_es": "Cheese Thief",
+      "name_ko": "치즈 도둑",
+      "name_ja": "チーズ泥棒",
+      "genre_es": "Deducción social",
+      "genre_ko": "소셜 추론",
+      "genre_ja": "ソーシャル推理",
+      "blurb_es": "Juego de fiesta de deducción social para 4–8 jugadores, de unos 10–15 minutos.",
+      "blurb_ko": "4–8인용 소셜 추론 파티 게임으로, 약 10–15분입니다.",
+      "blurb_ja": "4–8人のソーシャル推理パーティーゲーム。所要は約10–15分です。"
     }
-  ]
+  ],
+  "intro_es": "Juegos de mesa que ha jugado y le gustan. Irá añadiendo más. Cada entrada solo indica el número de jugadores y el género, no valoraciones personales ni partidas jugadas.",
+  "intro_ko": "직접 해보고 좋아하는 보드게임입니다. 나중에 떠오르는 대로 더 넣을 예정입니다. 아래에는 공개된 인원과 장르만 적었고, 개인적인 평점이나 플레이 횟수는 없습니다.",
+  "intro_ja": "遊んだことのある、好きなボードゲームです。思いついたらまた足します。掲載しているのは公開されている人数とジャンルだけで、個人の評価や対局数はありません。"
 }

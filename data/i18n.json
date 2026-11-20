@@ -1,0 +1,2230 @@
+{
+  "locales": {
+    "zh": {
+      "html_lang": "zh-CN",
+      "hreflang": "zh-CN",
+      "og_locale": "zh_CN",
+      "bcp47": "zh-CN",
+      "prefix": "",
+      "name": "中文",
+      "intl": "zh-CN"
+    },
+    "en": {
+      "html_lang": "en",
+      "hreflang": "en",
+      "og_locale": "en_US",
+      "bcp47": "en",
+      "prefix": "/en",
+      "name": "English",
+      "intl": "en"
+    },
+    "es": {
+      "html_lang": "es",
+      "hreflang": "es",
+      "og_locale": "es_ES",
+      "bcp47": "es",
+      "prefix": "/es",
+      "name": "Español",
+      "intl": "es"
+    },
+    "ko": {
+      "html_lang": "ko",
+      "hreflang": "ko",
+      "og_locale": "ko_KR",
+      "bcp47": "ko",
+      "prefix": "/ko",
+      "name": "한국어",
+      "intl": "ko"
+    },
+    "ja": {
+      "html_lang": "ja",
+      "hreflang": "ja",
+      "og_locale": "ja_JP",
+      "bcp47": "ja",
+      "prefix": "/ja",
+      "name": "日本語",
+      "intl": "ja"
+    }
+  },
+  "order": [
+    "zh",
+    "en",
+    "es",
+    "ko",
+    "ja"
+  ],
+  "ui": {
+    "page_title": {
+      "zh": "匡子闲（kuangzixian）｜后端工程师的个人主页",
+      "en": "匡子闲 (kuangzixian) | Backend engineer’s homepage",
+      "es": "匡子闲 (kuangzixian) | Página personal de un ingeniero de backend",
+      "ko": "匡子闲 (kuangzixian) | 백엔드 엔지니어의 개인 홈페이지",
+      "ja": "匡子闲（kuangzixian）｜バックエンドエンジニアの個人サイト"
+    },
+    "page_desc": {
+      "zh": "匡子闲（kuangzixian）是一名后端工程师。他开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
+      "en": "匡子闲 (kuangzixian) is a backend engineer. He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
+      "es": "匡子闲 (kuangzixian) es un ingeniero de backend. Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
+      "ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
+      "ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。"
+    },
+    "site_name": {
+      "zh": "匡子闲的空间",
+      "en": "匡子闲's Space",
+      "es": "El espacio de 匡子闲",
+      "ko": "匡子闲의 공간",
+      "ja": "匡子闲の空間"
+    },
+    "personal_homepage": {
+      "zh": "个人主页",
+      "en": "Personal homepage",
+      "es": "Página personal",
+      "ko": "개인 홈페이지",
+      "ja": "個人ホーム"
+    },
+    "skip": {
+      "zh": "跳到正文",
+      "en": "Skip to content",
+      "es": "Saltar al contenido",
+      "ko": "본문으로 건너뛰기",
+      "ja": "本文へスキップ"
+    },
+    "job_title": {
+      "zh": "后端工程师",
+      "en": "Backend engineer",
+      "es": "Ingeniero de backend",
+      "ko": "백엔드 엔지니어",
+      "ja": "バックエンドエンジニア"
+    },
+    "tag_cs_stocks": {
+      "zh": "计科，炒股",
+      "en": "CS, stock trading",
+      "es": "Informática, bolsa",
+      "ko": "컴공, 주식",
+      "ja": "情報科学、株式"
+    },
+    "popularity": {
+      "zh": "人气",
+      "en": "Popularity",
+      "es": "Popularidad",
+      "ko": "인기",
+      "ja": "人気"
+    },
+    "visits": {
+      "zh": "访问量",
+      "en": "Visits",
+      "es": "Visitas",
+      "ko": "방문 수",
+      "ja": "アクセス数"
+    },
+    "tabs_label": {
+      "zh": "空间栏目",
+      "en": "Space sections",
+      "es": "Secciones del espacio",
+      "ko": "공간 메뉴",
+      "ja": "空間のコーナー"
+    },
+    "reading_overview": {
+      "zh": "阅读概览",
+      "en": "Reading overview",
+      "es": "Resumen de lectura",
+      "ko": "독서 개요",
+      "ja": "読書の概要"
+    },
+    "skin_blue": {
+      "zh": "晴空蓝",
+      "en": "Clear Blue",
+      "es": "Azul cielo",
+      "ko": "맑은 하늘",
+      "ja": "晴空ブルー"
+    },
+    "skin_pink": {
+      "zh": "粉钻粉",
+      "en": "Pink Diamond",
+      "es": "Rosa diamante",
+      "ko": "핑크 다이아",
+      "ja": "ピンクダイヤ"
+    },
+    "skin_night": {
+      "zh": "夜空",
+      "en": "Night Sky",
+      "es": "Cielo nocturno",
+      "ko": "밤하늘",
+      "ja": "夜空"
+    },
+    "skin_blue_aria": {
+      "zh": "晴空蓝皮肤",
+      "en": "Clear Blue skin",
+      "es": "Apariencia Azul cielo",
+      "ko": "맑은 하늘 스킨",
+      "ja": "晴空ブルーのスキン"
+    },
+    "skin_pink_aria": {
+      "zh": "粉钻粉皮肤",
+      "en": "Pink Diamond skin",
+      "es": "Apariencia Rosa diamante",
+      "ko": "핑크 다이아 스킨",
+      "ja": "ピンクダイヤのスキン"
+    },
+    "skin_night_aria": {
+      "zh": "夜空皮肤",
+      "en": "Night Sky skin",
+      "es": "Apariencia Cielo nocturno",
+      "ko": "밤하늘 스킨",
+      "ja": "夜空のスキン"
+    },
+    "vip_title": {
+      "zh": "空间装扮：自制黄钻徽章 LV7，非腾讯会员标识",
+      "en": "A homemade Yellow Diamond badge LV7, not a Tencent membership mark",
+      "es": "Disfraz del espacio: insignia casera Diamante Amarillo NV7, no es una marca de membresía de Tencent",
+      "ko": "공간 장식: 직접 만든 옐로 다이아 배지 LV7, 텐센트 회원 표시가 아닙니다",
+      "ja": "空間の飾り：手作りのイエローダイヤ徽章 LV7。Tencent の会員標識ではありません"
+    },
+    "avatar_alt": {
+      "zh": "匡子闲的公开即刻头像：江南水乡场景中的个人照片",
+      "en": "匡子闲’s public Jike portrait: a personal photo in a Jiangnan waterside scene",
+      "es": "Retrato público de Jike de 匡子闲: una foto personal en un paisaje de aguas de Jiangnan",
+      "ko": "匡子闲의 공개 즉각 프로필 사진: 강남 수향을 배경으로 한 개인 사진",
+      "ja": "匡子闲の公開即刻アイコン。江南の水郷を背景にした個人写真"
+    },
+    "close_music": {
+      "zh": "关闭音乐盒",
+      "en": "Close the music box",
+      "es": "Cerrar la caja de música",
+      "ko": "음악 상자 닫기",
+      "ja": "音楽ボックスを閉じる"
+    },
+    "show_all": {
+      "zh": "显示全部 {n} 册",
+      "en": "Show all {n}",
+      "es": "Ver los {n}",
+      "ko": "{n}권 모두 보기",
+      "ja": "{n}冊すべて表示"
+    },
+    "filter_all": {
+      "zh": "全部 {n}",
+      "en": "All {n}",
+      "es": "Todos {n}",
+      "ko": "전체 {n}",
+      "ja": "すべて {n}"
+    },
+    "shelf_filter": {
+      "zh": "按分类筛选书架",
+      "en": "Filter the shelf by category",
+      "es": "Filtrar la estantería por categoría",
+      "ko": "분류별로 책장 걸러 보기",
+      "ja": "分類で本棚を絞る"
+    },
+    "by_duration": {
+      "zh": "按时长排列，来自官方阅读统计。",
+      "en": "Sorted by time, from official reading totals.",
+      "es": "Ordenado por tiempo, según los totales oficiales de lectura.",
+      "ko": "시간 순이며, 공식 독서 통계에서 왔습니다.",
+      "ja": "時間順。公式の読書統計によります。"
+    },
+    "category_pref": {
+      "zh": "分类偏好",
+      "en": "Category preferences",
+      "es": "Preferencias por categoría",
+      "ko": "분류 취향",
+      "ja": "分類の好み"
+    },
+    "pref": {
+      "zh": "偏好",
+      "en": "Taste",
+      "es": "Gusto",
+      "ko": "취향",
+      "ja": "好み"
+    },
+    "timeline": {
+      "zh": "风格时间线",
+      "en": "Timeline",
+      "es": "Línea de tiempo",
+      "ko": "스타일 타임라인",
+      "ja": "スタイルの年表"
+    },
+    "recs": {
+      "zh": "推荐",
+      "en": "Recommendations",
+      "es": "Recomendaciones",
+      "ko": "추천",
+      "ja": "おすすめ"
+    },
+    "mood": {
+      "zh": "说说",
+      "en": "Mood",
+      "es": "Estados",
+      "ko": "단문",
+      "ja": "つぶやき"
+    },
+    "reading": {
+      "zh": "读书",
+      "en": "Reading",
+      "es": "Lectura",
+      "ko": "독서",
+      "ja": "読書"
+    },
+    "music": {
+      "zh": "音乐",
+      "en": "Music",
+      "es": "Música",
+      "ko": "음악",
+      "ja": "音楽"
+    },
+    "boardgames": {
+      "zh": "桌游",
+      "en": "Board games",
+      "es": "Juegos de mesa",
+      "ko": "보드게임",
+      "ja": "ボードゲーム"
+    },
+    "sites": {
+      "zh": "推荐网站",
+      "en": "Recommended sites",
+      "es": "Sitios recomendados",
+      "ko": "추천 사이트",
+      "ja": "おすすめサイト"
+    },
+    "writing": {
+      "zh": "日志",
+      "en": "Writing",
+      "es": "Diario",
+      "ko": "로그",
+      "ja": "日誌"
+    },
+    "projects": {
+      "zh": "项目",
+      "en": "Projects",
+      "es": "Proyectos",
+      "ko": "프로젝트",
+      "ja": "プロジェクト"
+    },
+    "social": {
+      "zh": "社交链接",
+      "en": "Social",
+      "es": "Redes",
+      "ko": "소셜 링크",
+      "ja": "ソーシャル"
+    },
+    "guestbook": {
+      "zh": "留言板",
+      "en": "Guestbook",
+      "es": "Libro de visitas",
+      "ko": "방명록",
+      "ja": "伝言板"
+    },
+    "home": {
+      "zh": "主页",
+      "en": "Home",
+      "es": "Inicio",
+      "ko": "홈",
+      "ja": "ホーム"
+    },
+    "profile": {
+      "zh": "个人档",
+      "en": "Profile",
+      "es": "Perfil",
+      "ko": "프로필",
+      "ja": "プロフィール"
+    },
+    "back_home": {
+      "zh": "返回首页",
+      "en": "Back home",
+      "es": "Volver al inicio",
+      "ko": "홈으로",
+      "ja": "ホームに戻る"
+    },
+    "back_logs": {
+      "zh": "返回日志",
+      "en": "Back to logs",
+      "es": "Volver a los diarios",
+      "ko": "로그로",
+      "ja": "日誌に戻る"
+    },
+    "not_found_code_title": {
+      "zh": "页面不存在 · 匡子闲",
+      "en": "Page not found · 匡子闲",
+      "es": "Página no encontrada · 匡子闲",
+      "ko": "페이지 없음 · 匡子闲",
+      "ja": "ページがありません · 匡子闲"
+    },
+    "not_found_desc": {
+      "zh": "这个地址在匡子闲的空间里找不到对应页面。",
+      "en": "This address has no matching page in 匡子闲’s space.",
+      "es": "Esta dirección no tiene una página en el espacio de 匡子闲.",
+      "ko": "이 주소는 匡子闲의 공간에 해당하는 페이지가 없습니다.",
+      "ja": "このアドレスは匡子闲の空間に該当するページがありません。"
+    },
+    "lost": {
+      "zh": "走丢了",
+      "en": "Page not found",
+      "es": "Te has perdido",
+      "ko": "길을 잃었습니다",
+      "ja": "道に迷いました"
+    },
+    "easylife_repo": {
+      "zh": "EasyLife：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。",
+      "en": "EasyLife: a WeChat mini program based on HowToLiveBetter, with sequential reading, sourced local question search, and random advice cards.",
+      "es": "EasyLife: un mini programa de WeChat basado en HowToLiveBetter, con lectura en orden, búsqueda local de preguntas con fuentes y tarjetas de consejo al azar.",
+      "ko": "EasyLife: HowToLiveBetter를 바탕으로 한 위챗 미니 프로그램으로, 순서 읽기, 출처가 있는 로컬 질문 검색, 무작위 조언 카드를 지원합니다.",
+      "ja": "EasyLife：HowToLiveBetter を基にした WeChat ミニプログラム。順に読む、出典つきのローカル質問検索、ランダムなアドバイスカードに対応します。"
+    },
+    "followers": {
+      "zh": "关注者",
+      "en": "followers",
+      "es": "seguidores",
+      "ko": "팔로워",
+      "ja": "フォロワー"
+    },
+    "articles": {
+      "zh": "篇文章",
+      "en": "articles",
+      "es": "artículos",
+      "ko": "편의 글",
+      "ja": "件の記事"
+    },
+    "article_views": {
+      "zh": "阅读",
+      "en": "views",
+      "es": "lecturas",
+      "ko": "읽힘",
+      "ja": "閲覧"
+    },
+    "followed": {
+      "zh": "被关注",
+      "en": "followers",
+      "es": "seguidores",
+      "ko": "팔로워",
+      "ja": "フォロワー"
+    },
+    "following": {
+      "zh": "关注",
+      "en": "following",
+      "es": "siguiendo",
+      "ko": "팔로잉",
+      "ja": "フォロー中"
+    },
+    "public_repos": {
+      "zh": "个公开仓库",
+      "en": "public repositories",
+      "es": "repositorios públicos",
+      "ko": "개의 공개 저장소",
+      "ja": "件の公開リポジトリ"
+    },
+    "joined_year": {
+      "zh": "年加入",
+      "en": "joined",
+      "es": "se unió en",
+      "ko": "년 가입",
+      "ja": "年に参加"
+    },
+    "answers": {
+      "zh": "回答",
+      "en": "answers",
+      "es": "respuestas",
+      "ko": "답변",
+      "ja": "回答"
+    },
+    "upvotes": {
+      "zh": "赞同",
+      "en": "upvotes",
+      "es": "votos a favor",
+      "ko": "찬성",
+      "ja": "賛成"
+    },
+    "unverified": {
+      "zh": "未确认",
+      "en": "unverified",
+      "es": "sin confirmar",
+      "ko": "미확인",
+      "ja": "未確認"
+    },
+    "display_company": {
+      "zh": "显示名 匡子闲 · 公司字段 IFTech",
+      "en": "Display name 匡子闲 · company field IFTech",
+      "es": "Nombre visible 匡子闲 · campo de empresa IFTech",
+      "ko": "표시 이름 匡子闲 · 회사 필드 IFTech",
+      "ja": "表示名 匡子闲 · 会社フィールド IFTech"
+    },
+    "software_shanghai": {
+      "zh": "计算机软件 · 上海市",
+      "en": "Computer software · Shanghai",
+      "es": "Software informático · Shanghái",
+      "ko": "컴퓨터 소프트웨어 · 상하이",
+      "ja": "コンピュータソフトウェア · 上海"
+    },
+    "ai_agents": {
+      "zh": "给 AI 用：llms.txt",
+      "en": "For AI agents: llms.txt",
+      "es": "Para agentes de IA: llms.txt",
+      "ko": "AI 에이전트용: llms.txt",
+      "ja": "AI エージェント向け：llms.txt"
+    },
+    "lang_label": {
+      "zh": "选择语言",
+      "en": "Choose language",
+      "es": "Elegir idioma",
+      "ko": "언어 선택",
+      "ja": "言語を選ぶ"
+    },
+    "home_md": {
+      "zh": "Markdown 主页",
+      "en": "Markdown homepage",
+      "es": "Inicio en Markdown",
+      "ko": "Markdown 홈",
+      "ja": "Markdown ホーム"
+    },
+    "jsonld_name": {
+      "zh": "匡子闲的个人主页",
+      "en": "匡子闲’s homepage",
+      "es": "Página personal de 匡子闲",
+      "ko": "匡子闲의 개인 홈페이지",
+      "ja": "匡子闲の個人サイト"
+    },
+    "by_duration_h3_skip": {
+      "zh": "",
+      "en": "",
+      "es": "",
+      "ko": "",
+      "ja": ""
+    },
+    "bio_first": {
+      "zh": "我是匡子闲，一名后端工程师。我做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
+    },
+    "bio_meta": {
+      "zh": "匡子闲（kuangzixian）是一名后端工程师。他开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
+      "en": "匡子闲 (kuangzixian) is a backend engineer. He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
+      "es": "匡子闲 (kuangzixian) es un ingeniero de backend. Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
+      "ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
+      "ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。"
+    },
+    "reading_now": {
+      "zh": "正在读",
+      "en": "Currently reading",
+      "es": "Leyendo ahora",
+      "ko": "읽는 중",
+      "ja": "読書中"
+    },
+    "finished": {
+      "zh": "读完",
+      "en": "Finished",
+      "es": "Terminados",
+      "ko": "완독",
+      "ja": "読了"
+    },
+    "blurbs": {
+      "zh": "几本简介",
+      "en": "A few blurbs",
+      "es": "Algunas sinopsis",
+      "ko": "짧은 소개",
+      "ja": "短い紹介"
+    },
+    "notes_highlights": {
+      "zh": "笔记与划线",
+      "en": "Notes and highlights",
+      "es": "Notas y subrayados",
+      "ko": "노트와 밑줄",
+      "ja": "ノートとハイライト"
+    },
+    "shelf": {
+      "zh": "书架",
+      "en": "Shelf",
+      "es": "Estantería",
+      "ko": "책장",
+      "ja": "本棚"
+    },
+    "all_time": {
+      "zh": "累计",
+      "en": "All-time",
+      "es": "Acumulado",
+      "ko": "누적",
+      "ja": "累計"
+    },
+    "year_2026": {
+      "zh": "2026 年",
+      "en": "2026",
+      "es": "2026",
+      "ko": "2026년",
+      "ja": "2026年"
+    },
+    "month_2026_11": {
+      "zh": "2026 年 11 月",
+      "en": "Nov 2026",
+      "es": "Nov 2026",
+      "ko": "2026년 11월",
+      "ja": "2026年11月"
+    },
+    "total_time": {
+      "zh": "总时长",
+      "en": "Total time",
+      "es": "Tiempo total",
+      "ko": "총 시간",
+      "ja": "合計時間"
+    },
+    "active_reading": {
+      "zh": "有效阅读",
+      "en": "Active reading",
+      "es": "Lectura efectiva",
+      "ko": "유효 독서",
+      "ja": "有効な読書"
+    },
+    "opened_finished": {
+      "zh": "读过 / 读完",
+      "en": "Opened / finished",
+      "es": "Abiertos / terminados",
+      "ko": "읽음 / 완독",
+      "ja": "開いた / 読了"
+    },
+    "notes": {
+      "zh": "笔记",
+      "en": "Notes",
+      "es": "Notas",
+      "ko": "노트",
+      "ja": "ノート"
+    },
+    "content_pref": {
+      "zh": "内容偏好",
+      "en": "Content preference",
+      "es": "Preferencia de contenido",
+      "ko": "콘텐츠 취향",
+      "ja": "コンテンツの好み"
+    },
+    "time_pref": {
+      "zh": "时段偏好",
+      "en": "Time-of-day preference",
+      "es": "Preferencia de horario",
+      "ko": "시간대 취향",
+      "ja": "時間帯の好み"
+    },
+    "duration": {
+      "zh": "时长",
+      "en": "Time",
+      "es": "Tiempo",
+      "ko": "시간",
+      "ja": "時間"
+    },
+    "daily_avg": {
+      "zh": "自然日均",
+      "en": "Daily average",
+      "es": "Promedio diario",
+      "ko": "일평균",
+      "ja": "1日平均"
+    },
+    "highlight": {
+      "zh": "划线",
+      "en": "Highlight",
+      "es": "Subrayado",
+      "ko": "밑줄",
+      "ja": "ハイライト"
+    },
+    "thought": {
+      "zh": "想法",
+      "en": "Thought",
+      "es": "Idea",
+      "ko": "생각",
+      "ja": "感想"
+    },
+    "not_started": {
+      "zh": "尚未阅读",
+      "en": "not started",
+      "es": "aún no leído",
+      "ko": "아직 안 읽음",
+      "ja": "未読"
+    },
+    "last_read": {
+      "zh": "最近阅读",
+      "en": "last read",
+      "es": "última lectura",
+      "ko": "최근 독서",
+      "ja": "最近の読書"
+    },
+    "last": {
+      "zh": "最近",
+      "en": "last",
+      "es": "última vez",
+      "ko": "최근",
+      "ja": "最近"
+    },
+    "finished_on": {
+      "zh": "读完于",
+      "en": "finished",
+      "es": "terminado el",
+      "ko": "완독일",
+      "ja": "読了日"
+    },
+    "reread": {
+      "zh": "重读",
+      "en": "Reread",
+      "es": "Relectura",
+      "ko": "재독",
+      "ja": "再読"
+    },
+    "editions": {
+      "zh": "版本覆盖",
+      "en": "Editions",
+      "es": "Ediciones",
+      "ko": "버전",
+      "ja": "版"
+    },
+    "unit_hour": {
+      "zh": "小时",
+      "en": "hr",
+      "es": "h",
+      "ko": "시간",
+      "ja": "時間"
+    },
+    "unit_minute": {
+      "zh": "分钟",
+      "en": "min",
+      "es": "min",
+      "ko": "분",
+      "ja": "分"
+    },
+    "unit_day": {
+      "zh": "天",
+      "en": "days",
+      "es": "días",
+      "ko": "일",
+      "ja": "日"
+    },
+    "unit_book": {
+      "zh": "本",
+      "en": "",
+      "es": "",
+      "ko": "권",
+      "ja": "冊"
+    },
+    "unit_book_word": {
+      "zh": "本",
+      "en": "books",
+      "es": "libros",
+      "ko": "권",
+      "ja": "冊"
+    },
+    "unit_note": {
+      "zh": "条",
+      "en": "notes",
+      "es": "notas",
+      "ko": "개",
+      "ja": "件"
+    },
+    "n_notes": {
+      "zh": "{n} 条笔记",
+      "en": "{n} notes",
+      "es": "{n} notas",
+      "ko": "노트 {n}개",
+      "ja": "ノート {n}件"
+    },
+    "audiobook": {
+      "zh": "有声书",
+      "en": "Audiobook",
+      "es": "Audiolibro",
+      "ko": "오디오북",
+      "ja": "オーディオブック"
+    }
+  },
+  "pairs": [
+    {
+      "zh": "黄钻装扮",
+      "en": "Yellow Diamond skin",
+      "es": "Apariencia Diamante Amarillo",
+      "ko": "옐로 다이아 스킨",
+      "ja": "イエローダイヤの装飾"
+    },
+    {
+      "zh": "背景音乐",
+      "en": "Music",
+      "es": "Música de fondo",
+      "ko": "배경 음악",
+      "ja": "BGM"
+    },
+    {
+      "zh": "设置",
+      "en": "Menu",
+      "es": "Ajustes",
+      "ko": "설정",
+      "ja": "設定"
+    },
+    {
+      "zh": "皮肤",
+      "en": "Skin",
+      "es": "Apariencia",
+      "ko": "스킨",
+      "ja": "スキン"
+    },
+    {
+      "zh": "飘雪特效：开",
+      "en": "Snow: On",
+      "es": "Nieve: activada",
+      "ko": "눈 효과: 켜짐",
+      "ja": "雪の演出：オン"
+    },
+    {
+      "zh": "<span class=\"type-target\">※別迷戀哥，哥祇是個傳說※</span>",
+      "en": "<span class=\"type-target\">Don't fall for me, I'm just a legend.</span>",
+      "es": "BIO_PLACEHOLDER",
+      "ko": "BIO_PLACEHOLDER",
+      "ja": "BIO_PLACEHOLDER"
+    },
+    {
+      "zh": "黄钻 LV7 · 装扮",
+      "en": "Yellow Diamond LV7 · costume",
+      "es": "Diamante Amarillo NV7 · disfraz",
+      "ko": "옐로 다이아 LV7 · 장식",
+      "ja": "イエローダイヤ LV7 · 飾り"
+    },
+    {
+      "zh": "今日",
+      "en": "Today",
+      "es": "Hoy",
+      "ko": "오늘",
+      "ja": "今日"
+    },
+    {
+      "zh": "累计",
+      "en": "Total",
+      "es": "Total",
+      "ko": "누적",
+      "ja": "累計"
+    },
+    {
+      "zh": "黄钻标识为网站自制装扮，不是腾讯服务。",
+      "en": "The Yellow Diamond badge is a homemade costume, not a Tencent product.",
+      "es": "El distintivo de Diamante Amarillo es un disfraz casero del sitio, no un producto de Tencent.",
+      "ko": "옐로 다이아 표시는 사이트에서 만든 장식이며, 텐센트 서비스가 아닙니다.",
+      "ja": "イエローダイヤの表示はこのサイトの手作りの飾りで、Tencentのサービスではありません。"
+    },
+    {
+      "zh": "主页",
+      "en": "Home",
+      "es": "Inicio",
+      "ko": "홈",
+      "ja": "ホーム"
+    },
+    {
+      "zh": "日志",
+      "en": "Logs",
+      "es": "Diario",
+      "ko": "로그",
+      "ja": "日誌"
+    },
+    {
+      "zh": "读书",
+      "en": "Reading",
+      "es": "Lectura",
+      "ko": "독서",
+      "ja": "読書"
+    },
+    {
+      "zh": "音乐",
+      "en": "Music",
+      "es": "Música",
+      "ko": "음악",
+      "ja": "音楽"
+    },
+    {
+      "zh": "桌游",
+      "en": "Games",
+      "es": "Juegos",
+      "ko": "보드게임",
+      "ja": "ボドゲ"
+    },
+    {
+      "zh": "推荐网站",
+      "en": "Sites",
+      "es": "Sitios",
+      "ko": "추천 사이트",
+      "ja": "おすすめ"
+    },
+    {
+      "zh": "留言板",
+      "en": "Guestbook",
+      "es": "Visitas",
+      "ko": "방명록",
+      "ja": "伝言板"
+    },
+    {
+      "zh": "个人档",
+      "en": "Profile",
+      "es": "Perfil",
+      "ko": "프로필",
+      "ja": "プロフィール"
+    },
+    {
+      "zh": "我是匡子闲，一名后端工程师。我做了 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> をつくりました。"
+    },
+    {
+      "zh": "累计阅读小时",
+      "en": "hours read",
+      "es": "horas leídas",
+      "ko": "누적 독서 시간",
+      "ja": "累計読書時間"
+    },
+    {
+      "zh": "有效阅读天数",
+      "en": "days with reading",
+      "es": "días con lectura",
+      "ko": "실제 독서 일수",
+      "ja": "読書した日数"
+    },
+    {
+      "zh": "读完的书",
+      "en": "books finished",
+      "es": "libros terminados",
+      "ko": "완독한 책",
+      "ja": "読み終えた本"
+    },
+    {
+      "zh": "今年读过 · 读完 11 本",
+      "en": "opened in 2026 · 11 finished",
+      "es": "abiertos en 2026 · 11 terminados",
+      "ko": "올해 읽음 · 11권 완독",
+      "ja": "今年読んだ本 · 11冊読了"
+    },
+    {
+      "zh": "即刻上一些还找得到的句子。知乎上有 71 条回答、1,301 个赞同，但回答列表接口未能打开，这里先不罗列单条内容。",
+      "en": "A few lines still visible on Jike. The Zhihu profile shows 71 answers and 1,301 upvotes, but the answers list could not be fetched, so individual answers are not listed here.",
+      "es": "Algunas frases que aún se ven en Jike. El perfil de Zhihu muestra 71 respuestas y 1.301 votos a favor, pero no se pudo abrir la lista de respuestas, así que aquí no se enumeran una a una.",
+      "ko": "즉각(Jike)에 아직 남아 있는 몇 문장입니다. 즈후 프로필에는 답변 71개, 찬성 1,301이 있지만, 답변 목록 API를 열지 못해 여기서는 개별 내용을 나열하지 않습니다.",
+      "ja": "即刻にまだ残っているいくつかの言葉です。知乎のプロフィールには71件の回答と1,301の賛成がありますが、回答一覧のAPIを開けなかったため、ここでは一件ずつは載せません。"
+    },
+    {
+      "zh": "即刻 · 检索时显示「9天前」",
+      "en": "Jike · shown as “9 days ago” when retrieved",
+      "es": "Jike · al recuperarlo figuraba «hace 9 días»",
+      "ko": "즉각 · 조회 당시 「9일 전」으로 표시",
+      "ja": "即刻 · 取得時は「9日前」と表示"
+    },
+    {
+      "zh": "即刻 · 检索时显示「1月前」",
+      "en": "Jike · shown as “1 month ago” when retrieved",
+      "es": "Jike · al recuperarlo figuraba «hace 1 mes»",
+      "ko": "즉각 · 조회 당시 「1개월 전」으로 표시",
+      "ja": "即刻 · 取得時は「1か月前」と表示"
+    },
+    {
+      "zh": "即刻 · 检索时显示「3月前」",
+      "en": "Jike · shown as “3 months ago” when retrieved",
+      "es": "Jike · al recuperarlo figuraba «hace 3 meses»",
+      "ko": "즉각 · 조회 당시 「3개월 전」으로 표시",
+      "ja": "即刻 · 取得時は「3か月前」と表示"
+    },
+    {
+      "zh": "即刻 · 检索时显示「7天前」",
+      "en": "Jike · shown as “7 days ago” when retrieved",
+      "es": "Jike · al recuperarlo figuraba «hace 7 días»",
+      "ko": "즉각 · 조회 당시 「7일 전」으로 표시",
+      "ja": "即刻 · 取得時は「7日前」と表示"
+    },
+    {
+      "zh": "来自微信读书，检索于 2026-11-14（Asia/Shanghai）。统计数字是官方汇总口径，可能包含未出现在公开书架上的记录。下面的书单、封面、划线和想法只展示公开书架里的内容；已排除 9 本私密书和「文章收藏」。",
+      "en": "From WeChat Reading, retrieved on 14 Nov 2026 (Asia/Shanghai). Official totals may include records not on the public shelf. Titles, covers and notes below are public-shelf items only; 9 private books and the “Articles” entry are omitted.",
+      "es": "De WeChat Reading, consultado el 14 nov 2026 (Asia/Shanghai). Los totales oficiales pueden incluir registros que no están en la estantería pública. Las listas, portadas, subrayados e ideas de abajo son solo de la estantería pública; se omiten 9 libros privados y la entrada «Artículos».",
+      "ko": "위챗 독서에서 가져왔으며, 2026년 11월 14일(Asia/Shanghai)에 조회했습니다. 공식 집계 숫자는 공개 책장에 없는 기록도 포함할 수 있습니다. 아래 책 목록, 표지, 밑줄과 생각은 공개 책장의 내용만 보여 주며, 비공개 책 9권과 「글 모음」은 빼 두었습니다.",
+      "ja": "WeChat読書から。2026年11月14日（Asia/Shanghai）に取得しました。公式集計の数字には、公開本棚に出てこない記録が含まれることがあります。以下のリスト、表紙、ハイライトと感想は公開本棚の内容だけです。非公開の9冊と「記事コレクション」は除いています。"
+    },
+    {
+      "zh": "2026 年阅读进度",
+      "en": "2026 reading progress",
+      "es": "Progreso de lectura en 2026",
+      "ko": "2026년 독서 진도",
+      "ja": "2026年の読書の進捗"
+    },
+    {
+      "zh": "截至 2026-11-14。数字来自微信读书官方统计，不是逐日打卡热力图。",
+      "en": "As of 14 Nov 2026. Official WeChat Reading totals, not a day-by-day heatmap.",
+      "es": "A 14 nov 2026. Totales oficiales de WeChat Reading, no un mapa de calor día a día.",
+      "ko": "2026년 11월 14일 기준. 수치는 위챗 독서의 공식 집계이며, 하루하루의 히트맵이 아닙니다.",
+      "ja": "2026年11月14日時点。数字はWeChat読書の公式集計で、日ごとのヒートマップではありません。"
+    },
+    {
+      "zh": "这一年已过",
+      "en": "Year elapsed",
+      "es": "Año transcurrido",
+      "ko": "올해가 지난 비율",
+      "ja": "この一年の経過"
+    },
+    {
+      "zh": "其中有阅读",
+      "en": "Days with reading",
+      "es": "Días con lectura",
+      "ko": "독서한 날",
+      "ja": "読書した日"
+    },
+    {
+      "zh": "11 月",
+      "en": "November",
+      "es": "Noviembre",
+      "ko": "11월",
+      "ja": "11月"
+    },
+    {
+      "zh": "今年已读 38 本、读完 11 本；11 月截至检索日，每天都有阅读。",
+      "en": "38 books opened and 11 finished this year. In November, every day up to the retrieval date had reading.",
+      "es": "Este año abrió 38 libros y terminó 11. En noviembre, hasta el día de la consulta, leyó todos los días.",
+      "ko": "올해 38권을 읽었고 11권을 완독했습니다. 11월은 조회일까지 매일 독서했습니다.",
+      "ja": "今年は38冊を開き、11冊を読み終えました。11月は取得日まで毎日読書しています。"
+    },
+    {
+      "zh": "随机抽一本书",
+      "en": "Random book",
+      "es": "Un libro al azar",
+      "ko": "무작위로 한 권",
+      "ja": "ランダムに一冊"
+    },
+    {
+      "zh": "官方统计累计读完 108 本、今年 11 本。这里只列出公开书架上能核对到读完时间的书。",
+      "en": "Official totals: 108 finished in all, 11 this year. Only public-shelf titles with a finish date are listed here.",
+      "es": "Totales oficiales: 108 terminados en total, 11 este año. Aquí solo se listan los de la estantería pública con fecha de término comprobable.",
+      "ko": "공식 집계로는 누적 108권 완독, 올해 11권입니다. 여기에는 공개 책장에서 완독 시점을 확인할 수 있는 책만 적었습니다.",
+      "ja": "公式集計では累計108冊読了、今年は11冊です。ここでは公開本棚で読了日を確かめられる本だけを挙げています。"
+    },
+    {
+      "zh": "简介摘自微信读书的书籍介绍，略作截取，不是我自己写的书评。",
+      "en": "Short blurbs are taken from WeChat Reading’s official book introductions, not personal reviews.",
+      "es": "Las sinopsis se toman de las presentaciones oficiales de WeChat Reading, recortadas; no son reseñas mías.",
+      "ko": "소개문은 위챗 독서의 책 소개에서 일부를 가져온 것으로, 제가 쓴 서평이 아닙니다.",
+      "ja": "紹介文はWeChat読書の書籍紹介から少し抜粋したもので、自分で書いた書評ではありません。"
+    },
+    {
+      "zh": "从公开书架里笔记较多的书中选了一部分自己的划线和想法。笔记总数按「想法 + 划线 + 书签」计算；这里不展示书签内容，也不收录他人书评。",
+      "en": "A selection of my own highlights and thoughts from public-shelf books with the most notes. Totals use thoughts + underlines + bookmarks; bookmark text and third-party reviews are not included.",
+      "es": "Una selección de mis propios subrayados e ideas, de los libros de la estantería pública con más notas. El total se calcula como «ideas + subrayados + marcadores»; aquí no se muestra el texto de los marcadores ni reseñas de terceros.",
+      "ko": "공개 책장에서 노트가 많은 책 가운데, 제 밑줄과 생각을 일부 골랐습니다. 노트 수는 「생각 + 밑줄 + 책갈피」로 세며, 책갈피 내용이나 다른 사람의 서평은 넣지 않습니다.",
+      "ja": "公開本棚でノートが多い本から、自分のハイライトと感想を一部選びました。ノート数は「感想＋ハイライト＋しおり」で数え、しおりの内容や他者の書評は載せていません。"
+    },
+    {
+      "zh": "先看一句精选划线或想法。",
+      "en": "A curated highlight or thought.",
+      "es": "Una cita o idea seleccionada.",
+      "ko": "골라 둔 밑줄이나 생각을 먼저 보세요.",
+      "ja": "選んだハイライトや感想をどうぞ。"
+    },
+    {
+      "zh": "换一句",
+      "en": "Another line",
+      "es": "Otra línea",
+      "ko": "다른 한 줄",
+      "ja": "別の一文"
+    },
+    {
+      "zh": "公开书架 179 本电子书 + 2 本有声书，按最近阅读排列。",
+      "en": "179 public ebooks and 2 audiobooks, sorted by last read.",
+      "es": "179 libros electrónicos públicos + 2 audiolibros, ordenados por la lectura más reciente.",
+      "ko": "공개 책장 전자책 179권 + 오디오북 2권, 최근 읽은 순입니다.",
+      "ja": "公開本棚の電子書籍179冊＋オーディオブック2冊。最近読んだ順です。"
+    },
+    {
+      "zh": "来自网易云歌单「匡子闲喜欢的音乐」，共 286 首，导出于 2026-11-17 15:48（Asia/Shanghai）。按网易云「我喜欢的音乐」默认顺序解读：第1首视为最新收藏，第286首较早。用户未另行确认排序。分析来自收藏，不是播放次数。 完整可视化报告可在本站打开，不必访问外部分析页。",
+      "en": "From the NetEase Cloud Music playlist “匡子闲喜欢的音乐”: 286 tracks, exported at 2026-11-17 15:48 (Asia/Shanghai). Read in NetEase Cloud Music’s default Liked Songs order: #1 is treated as the newest save, #286 as earlier. This order was not separately confirmed. The analysis is based on saves, not play counts. The full visual report is hosted on this site.",
+      "es": "De la lista de NetEase Cloud Music «匡子闲喜欢的音乐»: 286 canciones, exportadas el 17 nov 2026 a las 15:48 (Asia/Shanghai). Se lee en el orden por defecto de «Mis canciones favoritas»: la nº 1 se toma como la más reciente, la nº 286 como más antigua. Este orden no se confirmó por separado. El análisis se basa en canciones guardadas, no en reproducciones. El informe visual completo se puede abrir en este sitio, sin ir a una página de análisis externa.",
+      "ko": "넷이즈 클라우드 뮤직 플레이리스트 「匡子闲喜欢的音乐」에서 왔습니다. 모두 286곡이며, 2026년 11월 17일 15:48(Asia/Shanghai)에 내보냈습니다. 넷이즈 「내가 좋아하는 음악」 기본 순서로 읽습니다: 1번을 가장 최근 저장, 286번을 더 이른 것으로 봅니다. 이 순서는 따로 확인하지 않았습니다. 분석은 저장을 기준으로 하며, 재생 횟수가 아닙니다. 전체 시각화 리포트는 이 사이트에서 열 수 있어, 외부 분석 페이지에 갈 필요가 없습니다.",
+      "ja": "網易雲音楽のプレイリスト「匡子闲喜欢的音乐」から。全286曲、2026年11月17日 15:48（Asia/Shanghai）に書き出しました。網易雲「私の好きな音楽」のデフォルト順で読みます。1曲目を最新の保存、286曲目をより早いものと見なします。この順番は別途確認していません。分析は保存に基づき、再生回数ではありません。完全な可視化レポートはこのサイトで開けるので、外部の分析ページに行く必要はありません。"
+    },
+    {
+      "zh": "先把喜欢留下来",
+      "en": "A map of saved songs",
+      "es": "Un mapa de canciones guardadas",
+      "ko": "좋아하는 곡을 먼저 남겨 두기",
+      "ja": "好きを残しておく"
+    },
+    {
+      "zh": "依据286首收藏，不是播放次数。华语流行为主，民谣、日语与欧美流行并存。",
+      "en": "Based on 286 saved songs, not play counts. Mandopop is the main line, with folk, Japanese, and Western pop also present.",
+      "es": "Basado en 286 canciones guardadas, no en reproducciones. Predomina el pop chino, con folk, pop japonés y pop occidental también presentes.",
+      "ko": "286곡의 저장을 기준으로 하며, 재생 횟수가 아닙니다. 화어 팝이 중심이고, 민요·일본어·서양 팝도 함께 있습니다.",
+      "ja": "286曲の保存に基づき、再生回数ではありません。华语ポップが主軸で、フォーク、日本語、欧米ポップも並んでいます。"
+    },
+    {
+      "zh": "首收藏",
+      "en": "saved tracks",
+      "es": "canciones guardadas",
+      "ko": "곡 저장",
+      "ja": "曲の保存"
+    },
+    {
+      "zh": "位艺人（按参与计）",
+      "en": "artists (participations)",
+      "es": "artistas (participaciones)",
+      "ko": "명 아티스트(참여 기준)",
+      "ja": "組のアーティスト（参加で計測）"
+    },
+    {
+      "zh": "首已核实推荐",
+      "en": "verified recommendations",
+      "es": "recomendaciones verificadas",
+      "ko": "곡 확인된 추천",
+      "ja": "曲の確認済みおすすめ"
+    },
+    {
+      "zh": "出现最多的艺人",
+      "en": "Artists who appear most often",
+      "es": "Artistas que más aparecen",
+      "ko": "가장 많이 등장한 아티스트",
+      "ja": "いちばんよく登場するアーティスト"
+    },
+    {
+      "zh": "次数含合作与不同发行，不是播放次数，也不能直接当流派比例。专辑上收藏较多的有：毛不易《平凡的一天》4 首、陈粒《如也》3 首、莫文蔚《就 i Karen 莫文蔚精选》2 首。",
+      "en": "Counts include collaborations and different releases, not play counts, and are not genre shares. Albums with more saves: 毛不易 “平凡的一天” ×4; 陈粒 “如也” ×3; 莫文蔚 “就 i Karen 莫文蔚精选” ×2.",
+      "es": "Los recuentos incluyen colaboraciones y distintas ediciones, no son reproducciones ni se pueden tomar como proporción de géneros. Los álbumes con más canciones guardadas: Mao Buyi 《平凡的一天》 ×4, Chen Li 《如也》 ×3, Karen Mok 《就 i Karen 莫文蔚精选》 ×2.",
+      "ko": "횟수에는 콜라보와 다른 발매가 포함되며, 재생 횟수가 아니고 장르 비율로 바로 볼 수도 없습니다. 앨범에서 더 많이 담은 것은: 마오부이 《平凡的一天》 4곡, 천리 《如也》 3곡, 막문위 《就 i Karen 莫文蔚精选》 2곡입니다.",
+      "ja": "回数には共作と別リリースが含まれ、再生回数ではなく、ジャンル比率にもできません。アルバムで保存が多めなのは、毛不易『平凡的一天』4曲、陳粒『如也』3曲、莫文蔚『就 i Karen 莫文蔚精选』2曲です。"
+    },
+    {
+      "zh": "<li>艺人次数按演唱参与计，合作曲会叠加，不能当作流派占比。</li><li>同一首歌的不同发行只增加覆盖，不重复计为独立偏好。</li><li>没有播放次数、听歌年份或音频特征值。</li>",
+      "en": "<li>Artist counts include collaborations and are not additive genre shares.</li><li>Different releases of the same song add coverage, not extra preference votes.</li><li>No play counts, listening years, or audio features are inferred.</li>",
+      "es": "<li>Los recuentos de artistas incluyen colaboraciones y no son cuotas de género sumables.</li><li>Distintas ediciones de la misma canción suman cobertura, no votos extra de preferencia.</li><li>No se infieren reproducciones, años de escucha ni rasgos de audio.</li>",
+      "ko": "<li>아티스트 횟수는 보컬 참여로 세며, 콜라보 곡은 겹쳐 세므로 장르 비율로 볼 수 없습니다.</li><li>같은 곡의 다른 발매는 커버리지만 늘릴 뿐, 별도의 취향으로 중복 계산하지 않습니다.</li><li>재생 횟수, 청취 연도, 오디오 특징값은 없습니다.</li>",
+      "ja": "<li>アーティスト回数は歌唱参加で数え、共作は重ねて数えるためジャンル比率にはできません。</li><li>同じ曲の別リリースはカバーを増やすだけで、好みとして二重には数えません。</li><li>再生回数、聴取年、音声の特徴量はありません。</li>"
+    },
+    {
+      "zh": "歌单：<a href=\"https://music.163.com/#/playlist?id=114831730\" target=\"_blank\" rel=\"noopener noreferrer\">网易云「匡子闲喜欢的音乐」</a>",
+      "en": "Playlist: <a href=\"https://music.163.com/#/playlist?id=114831730\" target=\"_blank\" rel=\"noopener noreferrer\">NetEase “匡子闲喜欢的音乐”</a>",
+      "es": "Lista: <a href=\"https://music.163.com/#/playlist?id=114831730\" target=\"_blank\" rel=\"noopener noreferrer\">NetEase「匡子闲喜欢的音乐」</a>",
+      "ko": "플레이리스트: <a href=\"https://music.163.com/#/playlist?id=114831730\" target=\"_blank\" rel=\"noopener noreferrer\">넷이즈 「匡子闲喜欢的音乐」</a>",
+      "ja": "プレイリスト：<a href=\"https://music.163.com/#/playlist?id=114831730\" target=\"_blank\" rel=\"noopener noreferrer\">網易雲「匡子闲喜欢的音乐」</a>"
+    },
+    {
+      "zh": "华语流行是歌单的主轴",
+      "en": "Mandopop is the main line",
+      "es": "El pop chino es el eje de la lista",
+      "ko": "화어 팝이 플레이리스트의 주축입니다",
+      "ja": "华语ポップがプレイリストの主軸です"
+    },
+    {
+      "zh": "陈奕迅、邓紫棋、王力宏、孙燕姿、林俊杰、周杰伦、莫文蔚等反复出现。",
+      "en": "Eason Chan, G.E.M., Leehom Wang, Stefanie Sun, JJ Lin, Jay Chou and Karen Mok appear repeatedly.",
+      "es": "Eason Chan, G.E.M., Leehom Wang, Stefanie Sun, JJ Lin, Jay Chou y Karen Mok aparecen una y otra vez.",
+      "ko": "진혁신, 등자기, 왕력굉, 손연재, 임준걸, 주걸륜, 막문위 등이 반복해서 등장합니다.",
+      "ja": "陳奕迅、鄧紫棋、王力宏、孫燕姿、林俊傑、周杰倫、莫文蔚らが繰り返し現れます。"
+    },
+    {
+      "zh": "286首里，华语流行艺人最显眼：陈奕迅有《富士山下》《十年》《红玫瑰》《孤勇者》，邓紫棋有成组的《泡沫》《喜欢你》《光年之外》，王力宏连续多首，孙燕姿、林俊杰、周杰伦、莫文蔚、李荣浩、郭静也反复出现。这是收藏密度最高的一条线，但不是唯一的线。",
+      "en": "Across 286 songs, Mandopop artists are the most visible line: Eason Chan, a cluster of G.E.M. tracks, a run of Leehom Wang songs, plus Stefanie Sun, JJ Lin, Jay Chou, Karen Mok, Ronghao Li and Claire Kuo. It is the densest line, but not the only one.",
+      "es": "En las 286 canciones, los artistas de pop chino son la línea más visible: Eason Chan tiene «富士山下», «十年», «红玫瑰» y «孤勇者»; G.E.M. aparece en grupo con «泡沫», «喜欢你» y «光年之外»; Leehom Wang tiene varias seguidas; también reaparecen Stefanie Sun, JJ Lin, Jay Chou, Karen Mok, Ronghao Li y Claire Kuo. Es la línea de mayor densidad, pero no la única.",
+      "ko": "286곡 가운데 화어 팝 아티스트가 가장 눈에 띕니다. 진혁신은 「富士山下」「十年」「红玫瑰」「孤勇者」가 있고, 등자기는 「泡沫」「喜欢你」「光年之外」가 묶음으로 있으며, 왕력굉은 여러 곡이 이어집니다. 손연재, 임준걸, 저우제룬, 막문위, 리롱하오, 궈징도 반복해서 나옵니다. 저장 밀도가 가장 높은 줄이지만, 유일한 줄은 아닙니다.",
+      "ja": "286曲のなかで、华语ポップのアーティストがいちばん目立ちます。陳奕迅には「富士山下」「十年」「红玫瑰」「孤勇者」があり、鄧紫棋は「泡沫」「喜欢你」「光年之外」がまとまり、王力宏は連続して複数曲。孫燕姿、林俊傑、周杰倫、莫文蔚、李榮浩、郭静も繰り返し現れます。保存密度がいちばん高い線ですが、唯一の線ではありません。"
+    },
+    {
+      "zh": "城市民谣是第二条主线",
+      "en": "City folk is the second line",
+      "es": "El folk urbano es la segunda línea",
+      "ko": "도시 민요가 두 번째 주선입니다",
+      "ja": "都市フォークが二本目の主線です"
+    },
+    {
+      "zh": "陈粒、毛不易、赵雷、宋冬野、陈鸿宇、房东的猫在不同阶段反复出现。",
+      "en": "Chen Li, Mao Buyi, Zhao Lei, Song Dongye, Chen Hongyu and 房东的猫 return across stages.",
+      "es": "Chen Li, Mao Buyi, Zhao Lei, Song Dongye, Chen Hongyu y 房东的猫 reaparecen en distintas etapas.",
+      "ko": "천리, 마오부이, 자오레이, 쑹둥예, 천훙위, 집주인의 고양이가 다른 시기에 반복해서 등장합니다.",
+      "ja": "陳粒、毛不易、趙雷、宋冬野、陳鴻宇、房东的猫が、時期を変えて繰り返し現れます。"
+    },
+    {
+      "zh": "陈粒《走马》《小半》《易燃易爆炸》《历历万乡》覆盖《如也》与《小梦大半》。毛不易《消愁》《借》《一荤一素》《像我这样的人》集中来自《平凡的一天》。赵雷《成都》有两个发行，宋冬野《董小姐》也有两个版本。陈鸿宇、房东的猫让这条线不只是一两首歌。",
+      "en": "Chen Li covers 如也 and 小梦大半; Mao Buyi’s 消愁, 借, 一荤一素 and 像我这样的人 come from the same album. Zhao Lei’s “成都” and Song Dongye’s “董小姐” each appear in two releases. Chen Hongyu and 房东的猫 show the line is more than one or two songs.",
+      "es": "Chen Li cubre 《如也》 y 《小梦大半》 con «走马», «小半», «易燃易爆炸» y «历历万乡». «消愁», «借», «一荤一素» y «像我这样的人» de Mao Buyi salen sobre todo de 《平凡的一天》. «成都» de Zhao Lei tiene dos ediciones, y «董小姐» de Song Dongye también dos versiones. Chen Hongyu y 房东的猫 muestran que esta línea no es solo una o dos canciones.",
+      "ko": "천리의 「走马」「小半」「易燃易爆炸」「历历万乡」이 《如也》와 《小梦大半》을 덮습니다. 마오부이의 「消愁」「借」「一荤一素」「像我这样的人」은 《平凡的一天》에 모여 있습니다. 자오레이 「成都」는 두 발매가 있고, 쑹둥예 「董小姐」도 두 버전이 있습니다. 천훙위와 집주인의 고양이는 이 줄이 한두 곡이 아님을 보여 줍니다.",
+      "ja": "陳粒の「走马」「小半」「易燃易爆炸」「历历万乡」が『如也』と『小梦大半』を覆います。毛不易の「消愁」「借」「一荤一素」「像我这样的人」は『平凡的一天』に集中しています。趙雷「成都」は二つのリリース、宋冬野「董小姐」も二つの版があります。陳鴻宇と房东的猫は、この線が一二曲ではないことを示します。"
+    },
+    {
+      "zh": "熟歌会以不同发行再出现",
+      "en": "Familiar songs reappear in other releases",
+      "es": "Las canciones conocidas reaparecen en otras ediciones",
+      "ko": "익숙한 곡이 다른 발매로 다시 나옵니다",
+      "ja": "聞き覚えのある曲が別のリリースで再登場します"
+    },
+    {
+      "zh": "多首同名作品出现两次，增加的是发行覆盖，不是播放次数。",
+      "en": "Several same-title tracks appear twice. That adds release coverage, not play counts.",
+      "es": "Varios temas del mismo título aparecen dos veces. Eso suma cobertura de ediciones, no reproducciones.",
+      "ko": "같은 제목의 작품이 두 번 나오는 경우가 있습니다. 늘어나는 것은 발매 커버리지이지 재생 횟수가 아닙니다.",
+      "ja": "同名の作品が二度出てくることがあります。増えるのはリリースのカバーであり、再生回数ではありません。"
+    },
+    {
+      "zh": "《董小姐》有摩登天空7与《安和桥北》两个版本，《成都》《年少有为》《遇见》《Butter-Fly》《挪威的森林》《追光者》《护花使者》《Counting Stars》《红玫瑰》等也重复出现。这只说明同一作品被再次收进不同发行，不能推断哪一首听得更多，也不能当成两票偏好。",
+      "en": "“董小姐” appears in both Modern Sky 7 and 安和桥北 editions; “成都”, “年少有为”, “遇见”, Butter-Fly and others also repeat. This only shows the same work was saved again in another release. It does not say which one was played more, and it should not count as two preference votes.",
+      "es": "«董小姐» tiene las ediciones Modern Sky 7 y 《安和桥北》; también se repiten «成都», «年少有为», «遇见», «Butter-Fly», «挪威的森林», «追光者», «护花使者», «Counting Stars», «红玫瑰» y otras. Solo indica que la misma obra se guardó otra vez en otra edición; no permite inferir cuál se escuchó más, ni contarla como dos votos de preferencia.",
+      "ko": "「董小姐」는 모던스카이 7과 《安和桥北》 두 버전이 있고, 「成都」「年少有为」「遇见」「Butter-Fly」「挪威的森林」「追光者」「护花使者」「Counting Stars」「红玫瑰」 등도 반복됩니다. 이는 같은 작품이 다른 발매로 다시 담겼다는 뜻일 뿐, 어느 쪽을 더 들었는지 알 수 없고, 취향 두 표로 세면 안 됩니다.",
+      "ja": "「董小姐」には摩登天空7と『安和桥北』の二つの版があり、「成都」「年少有为」「遇见」「Butter-Fly」「挪威的森林」「追光者」「护花使者」「Counting Stars」「红玫瑰」なども繰り返されます。同じ作品が別リリースで再び保存された、ということだけを示し、どちらをより聴いたかまでは分からず、好み二票としても数えられません。"
+    },
+    {
+      "zh": "日语流行和动漫歌是稳定支线",
+      "en": "Japanese pop and anime songs are a steady side line",
+      "es": "El pop japonés y las canciones de anime son una línea lateral estable",
+      "ko": "일본 팝과 애니메 노래는 꾸준한 곁가지입니다",
+      "ja": "日本語ポップとアニソンは安定した支線です"
+    },
+    {
+      "zh": "米津玄師、YOASOBI、GARNiDELiA 与动画、游戏原声多次出现。",
+      "en": "Kenshi Yonezu, YOASOBI, GARNiDELiA, plus anime and game scores, appear more than once.",
+      "es": "Kenshi Yonezu, YOASOBI, GARNiDELiA, más bandas sonoras de anime y juegos, aparecen más de una vez.",
+      "ko": "요네즈 켄시, YOASOBI, GARNiDELiA와 애니·게임 사운드트랙이 여러 번 등장합니다.",
+      "ja": "米津玄師、YOASOBI、GARNiDELiA、それにアニメやゲームのサウンドトラックが何度も現れます。"
+    },
+    {
+      "zh": "米津玄師有《Lemon》《LOSER》《打上花火》《打ち上げ花火》。YOASOBI《群青》在较新一端，旁边还有中文翻唱。GARNiDELiA《極楽浄土》与 MARiA 版并存。和田光司《Butter-Fly》出现两次，另有初音相关作品、名侦探柯南主题、Silent Hill 2 原声和一人之下曲目。汉字书写的日语曲会被语言计数低估。",
+      "en": "Kenshi Yonezu appears with Lemon, LOSER and fireworks tracks; YOASOBI’s “群青” is near the newer end, with a Chinese cover nearby. GARNiDELiA and MARiA versions of 極楽浄土 both appear, as do Butter-Fly (twice), Vocaloid-related tracks, Detective Conan, Silent Hill 2 and Under One Person cues. Japanese titles written in kanji are easy to undercount.",
+      "es": "Kenshi Yonezu aparece con «Lemon», «LOSER», «打上花火» y «打ち上げ花火». YOASOBI «群青» está cerca del extremo más nuevo, con una versión en chino al lado. Convivien las versiones de GARNiDELiA «極楽浄土» y de MARiA. «Butter-Fly» de Kōji Wada aparece dos veces; también hay temas relacionados con Hatsune Miku, el opening de Detective Conan, la banda sonora de Silent Hill 2 y temas de 一人之下. Las canciones japonesas escritas en caracteres chinos son fáciles de subcontar en el recuento de idiomas.",
+      "ko": "요네즈 켄시는 「Lemon」「LOSER」「打上花火」「打ち上げ花火」가 있습니다. YOASOBI 「群青」은 더 새로운 쪽에 있고, 옆에 중국어 커버도 있습니다. GARNiDELiA 「極楽浄土」와 MARiA 버전이 함께 있습니다. 와다 코지 「Butter-Fly」는 두 번 나오고, 초음미쿠 관련 작품, 명탐정 코난 주제곡, Silent Hill 2 사운드트랙, 일인지하 곡도 있습니다. 한자로 적힌 일본어 곡은 언어 횟수에서 낮게 잡히기 쉽습니다.",
+      "ja": "米津玄師には「Lemon」「LOSER」「打上花火」「打ち上げ花火」があります。YOASOBI「群青」は新しい一端にあり、そばに中国語カバーもあります。GARNiDELiA「極楽浄土」とMARiA版が並びます。和田光司「Butter-Fly」は二度現れ、初音関連、名探偵コナンの主題、Silent Hill 2 のサウンドトラック、一人之下の曲もあります。漢字で書かれた日本語の曲は、言語カウントで過小評価されやすいです。"
+    },
+    {
+      "zh": "欧美流行和电影歌贯穿全单",
+      "en": "Western pop and film songs run through the list",
+      "es": "El pop occidental y las canciones de cine recorren toda la lista",
+      "ko": "서양 팝과 영화 음악이 리스트 전체에 贯穿합니다",
+      "ja": "欧米ポップと映画の曲がリスト全体を貫いています"
+    },
+    {
+      "zh": "从较早一端的电影歌，到电音和老牌流行，这条线一直没有消失。",
+      "en": "From earlier-end film songs to electronic and catalogue pop, this line never disappears.",
+      "es": "Desde las canciones de cine del extremo más antiguo hasta la electrónica y el pop de catálogo, esta línea nunca desaparece.",
+      "ko": "이른 쪽의 영화 음악부터 일렉트로닉과 올드 팝까지, 이 줄기는 사라지지 않습니다.",
+      "ja": "早い一端の映画の曲から、エレクトロニックや昔なじみのポップまで、この線は途切れません。"
+    },
+    {
+      "zh": "较早一端已有《See You Again》《Love The Way You Lie》《Love Me Like You Do》。之后还有《Counting Stars》《Sugar》《Faded》、The Beatles《Norwegian Wood》、《City Of Stars》，以及克莱德曼和 Silent Hill 原声。它们分散在各阶段，不像某一时期的突发兴趣。",
+      "en": "The earlier end already has See You Again, Love The Way You Lie and Love Me Like You Do. Later come Counting Stars, Sugar, Faded, The Beatles’ Norwegian Wood, City Of Stars, Clayderman piano and Silent Hill cues. They are spread across stages, not a short-lived burst.",
+      "es": "En el extremo más antiguo ya están «See You Again», «Love The Way You Lie» y «Love Me Like You Do». Después llegan «Counting Stars», «Sugar», «Faded», The Beatles «Norwegian Wood», «City Of Stars», más Clayderman y la banda sonora de Silent Hill. Están repartidas en distintas etapas, no como un interés repentino de un solo periodo.",
+      "ko": "이른 쪽에 이미 「See You Again」「Love The Way You Lie」「Love Me Like You Do」가 있습니다. 이후 「Counting Stars」「Sugar」「Faded」, 비틀즈 「Norwegian Wood」, 「City Of Stars」, 클라이더만과 Silent Hill 사운드트랙이 이어집니다. 한때의 반짝 관심처럼 보이지 않고, 여러 구간에 흩어져 있습니다.",
+      "ja": "早い一端にはすでに「See You Again」「Love The Way You Lie」「Love Me Like You Do」があります。その後「Counting Stars」「Sugar」「Faded」、The Beatles「Norwegian Wood」、「City Of Stars」、クレイダーマンと Silent Hill のサウンドトラックが続きます。ある時期だけの突発的な関心ではなく、各段階に散らばっています。"
+    },
+    {
+      "zh": "戏腔、古风和民族色彩反复出现",
+      "en": "Opera-tinged, guofeng and folk colors keep returning",
+      "es": "Los colores de ópera, guofeng y folk vuelven una y otra vez",
+      "ko": "희곡 창법, 고풍, 민족적 색채가 반복해서 나타납니다",
+      "ja": "戯曲の声、古風、民族的な色彩が繰り返し現れます"
+    },
+    {
+      "zh": "任素汐、凤凰传奇、古风翻唱、红昭愿与民歌并不是偶尔点缀。",
+      "en": "Ren Suxi, Phoenix Legend, guofeng covers, 红昭愿 and folk songs are not one-off ornaments.",
+      "es": "Ren Suxi, Phoenix Legend, versiones guofeng, 红昭愿 y canciones folclóricas no son un adorno ocasional.",
+      "ko": "런쑤시, 봉황전기, 고풍 커버, 홍소원과 민요는 어쩌다 한 점씩 찍힌 장식이 아닙니다.",
+      "ja": "任素汐、鳳凰伝説、古風のカバー、紅昭願や民謡は、たまに添える飾りではありません。"
+    },
+    {
+      "zh": "较新一端有任素汐《王招君》、凤凰传奇《奢香夫人》、闻人听書_《虞兮叹》、额尔古纳乐队《鸿雁》。更早还有任素汐《我要你》、以冬和不才的古风翻唱、音阙诗听《红昭愿》、戴荃《悟空》、刀郎《西海情歌》、双笙《我的一个道姑朋友》。这条线跨越多段，不是单次尝鲜。",
+      "en": "Near the newer end are Ren Suxi’s “王招君”, Phoenix Legend, 闻人听書_ and 鸿雁. Earlier stretches also have “我要你”, guofeng covers, 红昭愿, Dai Quan’s “悟空”, Dao Lang and 双笙. The line crosses several stages, not a single trial.",
+      "es": "Cerca del extremo más nuevo están Ren Suxi «王招君», Phoenix Legend «奢香夫人», 闻人听書_ «虞兮叹» y el Ergun Band «鸿雁». Más atrás también hay Ren Suxi «我要你», versiones guofeng de 以冬 y 不才, Yinque Shiting «红昭愿», Dai Quan «悟空», Dao Lang «西海情歌» y 双笙 «我的一个道姑朋友». Esta línea cruza varios tramos, no es una sola prueba.",
+      "ko": "더 새로운 쪽에는 런쑤시 「王招君」, 봉황전기 「奢香夫人」, 문인청서_ 「虞兮叹」, 어얼구나 밴드 「鸿雁」이 있습니다. 더 이른 쪽에는 런쑤시 「我要你」, 이둥과 부차이의 고풍 커버, 음궐시청 「红昭愿」, 다이취안 「悟空」, 다오랑 「西海情歌」, 솽성 「我的一个道姑朋友」도 있습니다. 이 줄은 여러 구간에 걸쳐 있으며, 한 번의 맛보기가 아닙니다.",
+      "ja": "新しい一端には任素汐「王招君」、鳳凰伝説「奢香夫人」、聞人聴書_「虞兮叹」、エルグナ楽隊「鸿雁」があります。より早いところには任素汐「我要你」、以冬と不才の古風カバー、音闕詩聽「红昭愿」、戴荃「悟空」、刀郎「西海情歌」、双笙「我的一个道姑朋友」もあります。この線は複数の区間にまたがり、一度の試し聞きではありません。"
+    },
+    {
+      "zh": "九段按确认的旧→新方向排列。因为按默认顺序第1首是最新的，时间线从第286首读到第1首。编号是歌单位置，不是年份。",
+      "en": "Nine stretches run from earlier saves to newer ones. Because #1 is treated as newest, the timeline reads from #286 to #1. Numbers are playlist positions, not years.",
+      "es": "Nueve tramos van de lo más antiguo a lo más nuevo. Como el nº 1 se toma como lo más reciente, la línea de tiempo se lee del 286 al 1. Los números son posiciones en la lista, no años.",
+      "ko": "아홉 구간은 확인된 옛것→새로운 방향으로 배열했습니다. 기본 순서에서 1번이 가장 최근이므로, 타임라인은 286번부터 1번까지 읽습니다. 번호는 플레이리스트 위치이지 연도가 아닙니다.",
+      "ja": "九つの区間は、確認した古いもの→新しい方向に並んでいます。デフォルト順では1曲が最新なので、タイムラインは286曲目から1曲目へ読みます。番号はプレイリスト上の位置であり、年代ではありません。"
+    },
+    {
+      "zh": "经典华语",
+      "en": "Classic Mandopop",
+      "es": "Mandopop clásico",
+      "ko": "클래식 화어 팝",
+      "ja": "クラシックな华语ポップ"
+    },
+    {
+      "zh": "情歌与电影里的声音",
+      "en": "Ballads and film songs",
+      "es": "Baladas y canciones de cine",
+      "ko": "정가와 영화 속 소리",
+      "ja": "バラードと映画の声"
+    },
+    {
+      "zh": "按默认顺序，这是歌单较早的一端",
+      "en": "Songs and film music, at the earlier end",
+      "es": "Según el orden por defecto, este es el extremo más antiguo de la lista",
+      "ko": "기본 순서상 플레이리스트의 이른 쪽입니다",
+      "ja": "デフォルト順では、プレイリストの早い一端です"
+    },
+    {
+      "zh": "较早一端以华语情歌和影视主题曲为主：梁静茹《爱久见人心》、李健《传奇》、齐秦《大约在冬季》，以及周杰伦《红尘客栈》《不能说的秘密》、陈奕迅《十年》。郭静连续出现多首。同时收有《See You Again》等欧美电影歌曲。宋冬野《董小姐》是摩登天空7版。",
+      "en": "The earlier end is mostly Mandopop ballads and film themes: Fish Leong, Li Jian, Chyi Chin, Jay Chou, Eason Chan, and a run of Claire Kuo tracks. Western film pop such as See You Again is already here. Song Dongye’s “董小姐” appears in the Modern Sky 7 edition.",
+      "es": "El extremo más antiguo son sobre todo baladas de pop chino y temas de cine: Fish Leong «爱久见人心», Li Jian «传奇», Chyi Chin «大约在冬季», Jay Chou «红尘客栈» y «不能说的秘密», Eason Chan «十年». Claire Kuo aparece en varias canciones seguidas. También está «See You Again» y otras de cine occidental. «董小姐» de Song Dongye es la edición Modern Sky 7.",
+      "ko": "이른 쪽은 화어 정가와 영상 주제곡이 중심입니다. 량징루 「爱久见人心」, 리젠 「传奇」, 치친 「大约在冬季」, 저우제룬 「红尘客栈」「不能说的秘密」, 진혁신 「十年」이 있고, 궈징의 곡이 연속으로 나옵니다. 「See You Again」 같은 서양 영화 노래도 들어 있습니다. 쑹둥예의 「董小姐」는 모던스카이 7 버전입니다.",
+      "ja": "早い一端は华语のバラードと映像の主題歌が中心です。梁静茹「爱久见人心」、李健「传奇」、齊秦「大约在冬季」、周杰倫「红尘客栈」「不能说的秘密」、陳奕迅「十年」。郭静が連続して現れます。「See You Again」など欧米映画の曲もあります。宋冬野「董小姐」は摩登天空7版です。"
+    },
+    {
+      "zh": "华语情歌是底座，影视与欧美流行已经并存。",
+      "en": "Mandopop ballads are the base; film and Western pop are already present.",
+      "es": "Las baladas de pop chino son la base; el cine y el pop occidental ya están presentes.",
+      "ko": "화어 정가가 바탕이고, 영상과 서양 팝이 이미 함께 있습니다.",
+      "ja": "华语のバラードが土台で、映像と欧米ポップもすでに並んでいます。"
+    },
+    {
+      "zh": "华语主力",
+      "en": "Mandopop core",
+      "es": "Núcleo mandopop",
+      "ko": "화어 主力",
+      "ja": "华语の主力"
+    },
+    {
+      "zh": "邓紫棋与王力宏成簇出现",
+      "en": "G.E.M. and Leehom Wang appear in clusters",
+      "es": "G.E.M. y Leehom Wang aparecen en racimos",
+      "ko": "등자기와 왕력굉이 뭉쳐 등장합니다",
+      "ja": "鄧紫棋と王力宏がまとまって現れます"
+    },
+    {
+      "zh": "同一艺人的多首作品被连续收进歌单",
+      "en": "Several artists appear in clusters",
+      "es": "Varios artistas aparecen en racimos",
+      "ko": "같은 아티스트의 여러 곡이 연속으로 들어갔습니다",
+      "ja": "同じアーティストの曲が連続してリストに入っています"
+    },
+    {
+      "zh": "王力宏《依然爱你》《你不知道的事》《唯一》《我们的歌》《心中的日月》连成一串，邓紫棋《后会无期》《泡沫》《喜欢你》《你把我灌醉》也成组出现。旁边还有林俊杰《她说》、薛之谦《丑八怪》，以及《Counting Stars》《Sugar》、初音相关和马頔《南山南》。",
+      "en": "Leehom Wang songs sit in a row, and G.E.M. also appears as a group, with JJ Lin, Xue Zhiqian, Counting Stars, Sugar, Vocaloid-related tracks and Ma Di’s “南山南” nearby.",
+      "es": "Las canciones de Leehom Wang «依然爱你», «你不知道的事», «唯一», «我们的歌» y «心中的日月» forman una fila; G.E.M. también aparece en grupo con «后会无期», «泡沫», «喜欢你» y «你把我灌醉». Al lado están JJ Lin «她说», Xue Zhiqian «丑八怪», «Counting Stars», «Sugar», temas relacionados con Hatsune Miku y Ma Di «南山南».",
+      "ko": "왕력굉의 「依然爱你」「你不知道的事」「唯一」「我们的歌」「心中的日月」이 한 줄로 이어지고, 등자기의 「后会无期」「泡沫」「喜欢你」「你把我灌醉」도 묶음으로 나옵니다. 옆에는 임준걸 「她说」, 쉐즈첸 「丑八怪」, 「Counting Stars」「Sugar」, 초음미쿠 관련 곡과 마디 「南山南」이 있습니다.",
+      "ja": "王力宏の「依然爱你」「你不知道的事」「唯一」「我们的歌」「心中的日月」が並び、鄧紫棋の「后会无期」「泡沫」「喜欢你」「你把我灌醉」もまとまって現れます。そばには林俊傑「她说」、薛之謙「丑八怪」、それに「Counting Stars」「Sugar」、初音関連と馬頔「南山南」があります。"
+    },
+    {
+      "zh": "流行偶像作品会成组收藏，不是零散点赞。",
+      "en": "Idol-pop tracks are saved in clusters, not as isolated likes.",
+      "es": "Las canciones de ídolos se guardan en grupos, no como likes sueltos.",
+      "ko": "아이돌 팝은 묶음으로 저장되며, 흩어진 좋아요가 아닙니다.",
+      "ja": "アイドルポップはまとめて保存されており、ばらばらのいいねではありません。"
+    },
+    {
+      "zh": "民谣城市",
+      "en": "City folk",
+      "es": "Folk urbano",
+      "ko": "민요 도시",
+      "ja": "都市フォーク"
+    },
+    {
+      "zh": "陈粒、成都与城市叙事",
+      "en": "Chen Li, Chengdu, and city narratives",
+      "es": "Chen Li, Chengdu y relatos de ciudad",
+      "ko": "천리, 청두, 그리고 도시의 이야기",
+      "ja": "陳粒、成都、都市の語り"
+    },
+    {
+      "zh": "民谣叙事和钢琴小品一起出现",
+      "en": "Folk narratives appear with piano pieces",
+      "es": "Las narraciones folk aparecen junto a piezas para piano",
+      "ko": "민요 서사와 피아노 소품이 함께 나옵니다",
+      "ja": "フォークの語りとピアノ小品が一緒に現れます"
+    },
+    {
+      "zh": "这一段出现陈粒《小半》、赵雷《成都》、陈鸿宇《理想三旬》、李荣浩《老街》、戴荃《悟空》。理查德·克莱德曼的《秋日私语》《星空》也被收进，说明器乐小品可以和华语叙事并存。金玟岐《岁月神偷》、杨宗纬《洋葱》仍是华语流行旋律。",
+      "en": "This stretch includes Chen Li’s “小半”, Zhao Lei’s “成都”, Chen Hongyu, Ronghao Li’s “老街”, and Dai Quan’s “悟空”. Richard Clayderman piano pieces sit beside them, along with Mandopop from Jin Wenqi and Aska Yang.",
+      "es": "En este tramo aparecen Chen Li «小半», Zhao Lei «成都», Chen Hongyu «理想三旬», Ronghao Li «老街» y Dai Quan «悟空». También se guardaron «秋日私语» y «星空» de Richard Clayderman: las piezas instrumentales pueden convivir con las historias en chino. Jin Wenqi «岁月神偷» y Aska Yang «洋葱» siguen siendo melodías de pop chino.",
+      "ko": "이 구간에 천리 「小半」, 자오레이 「成都」, 천훙위 「理想三旬」, 리롱하오 「老街」, 다이취안 「悟空」이 나옵니다. 리샤르 클라이더만의 「秋日私语」「星空」도 들어 있어, 기악 소품이 화어 서사와 함께할 수 있음을 보여 줍니다. 진원치 「岁月神偷」, 양쭝웨이 「洋葱」은 여전히 화어 팝 멜로디입니다.",
+      "ja": "この区間には陳粒「小半」、趙雷「成都」、陳鴻宇「理想三旬」、李榮浩「老街」、戴荃「悟空」が現れます。リチャード・クレイダーマンの「秋日私语」「星空」も入っており、器楽小品が华语の語りと共存できることを示します。金玟岐「岁月神偷」、楊宗緯「洋葱」は、いまも华语ポップの旋律です。"
+    },
+    {
+      "zh": "城市民谣开始与流行、器乐交错。",
+      "en": "City folk begins to interleave with pop and instrumental pieces.",
+      "es": "El folk urbano empieza a entrelazarse con el pop y la música instrumental.",
+      "ko": "도시 민요가 팝, 기악과 엇갈리기 시작합니다.",
+      "ja": "都市フォークがポップや器楽と交錯し始めます。"
+    },
+    {
+      "zh": "古风混编",
+      "en": "Guofeng mix",
+      "es": "Mezcla guofeng",
+      "ko": "고풍 믹스",
+      "ja": "古風ミックス"
+    },
+    {
+      "zh": "陈粒加厚，古风翻唱并置",
+      "en": "More Chen Li, with guofeng covers alongside",
+      "es": "Más Chen Li, con versiones guofeng al lado",
+      "ko": "천리가 두꺼워지고, 고풍 커버가 나란히 놓입니다",
+      "ja": "陳粒が厚くなり、古風カバーが並びます"
+    },
+    {
+      "zh": "原作与翻唱、古风与电影歌混在同一段",
+      "en": "Originals, covers, guofeng and film songs share the stretch",
+      "es": "Originales, versiones, guofeng y canciones de cine conviven en el mismo tramo",
+      "ko": "원곡과 커버, 고풍과 영화 노래가 같은 구간에 섞입니다",
+      "ja": "原曲とカバー、古風と映画の曲が同じ区間に混ざります"
+    },
+    {
+      "zh": "陈粒在这一段变密：《奇妙能力歌》《易燃易爆炸》《虚拟》《性空山》。旁边是以冬、不才的古风翻唱，以及任素汐《我要你》。同时再次出现 Eminem 的作品，还有《City Of Stars》《Galway Girl》。一人之下相关曲目也在其中。这是混编，不是单一风格替换。",
+      "en": "Chen Li becomes denser here (奇妙能力歌, 易燃易爆炸, 虚拟, 性空山), next to guofeng covers and Ren Suxi’s “我要你”. Eminem, City Of Stars and Galway Girl also appear, as do Under One Person soundtrack tracks. This is a mix, not a style replacement.",
+      "es": "Chen Li se densifica en este tramo: «奇妙能力歌», «易燃易爆炸», «虚拟», «性空山». Al lado hay versiones guofeng de 以冬 y 不才, y Ren Suxi «我要你». También reaparece Eminem, más «City Of Stars» y «Galway Girl». Hay temas relacionados con 一人之下. Es una mezcla, no el recambio de un solo estilo.",
+      "ko": "이 구간에서 천리가 짙어집니다. 「奇妙能力歌」「易燃易爆炸」「虚拟」「性空山」. 옆에는 이둥, 부차이의 고풍 커버와 런쑤시 「我要你」가 있습니다. 에미넴 작품이 다시 나오고, 「City Of Stars」「Galway Girl」도 있습니다. 일인지하 관련 곡도 들어 있습니다. 이것은 믹스이지, 한 장르로 바뀐 것이 아닙니다.",
+      "ja": "この区間で陳粒が濃くなります。「奇妙能力歌」「易燃易爆炸」「虚拟」「性空山」。そばには以冬、不才の古風カバーと、任素汐「我要你」。Eminemの作品も再登場し、「City Of Stars」「Galway Girl」もあります。一人之下関連の曲も入っています。これはミックスであり、単一スタイルへの置き換えではありません。"
+    },
+    {
+      "zh": "陈粒作品加厚，古风翻唱与欧美影视并存。",
+      "en": "Chen Li deepens; guofeng covers sit beside Western film pop.",
+      "es": "Se profundiza en Chen Li; las versiones guofeng conviven con pop de cine occidental.",
+      "ko": "천리 작품이 두꺼워지고, 고풍 커버와 서양 영상 팝이 공존합니다.",
+      "ja": "陳粒の作品が厚くなり、古風カバーと欧米の映像ポップが並びます。"
+    },
+    {
+      "zh": "跨界扩大",
+      "en": "Wider sources",
+      "es": "Fuentes más amplias",
+      "ko": "출처가 넓어지다",
+      "ja": "ソースが広がる"
+    },
+    {
+      "zh": "动漫、电音与华语并行",
+      "en": "Anime, electronic, and Mandopop in parallel",
+      "es": "Anime, electrónica y mandopop en paralelo",
+      "ko": "애니, 일렉트로닉, 화어 팝이 나란히",
+      "ja": "アニメ、エレクトロニック、华语ポップが並行"
+    },
+    {
+      "zh": "华语之外的来源明显变多",
+      "en": "Non-Chinese sources become more visible",
+      "es": "Las fuentes que no son chinas se vuelven claramente más visibles",
+      "ko": "중국어 외의 출처가 분명히 많아집니다",
+      "ja": "华语以外のソースがはっきり増えます"
+    },
+    {
+      "zh": "这一段来源更杂：米津玄師与 Daoko《打上花火》、邓紫棋《光年之外》、音阙诗听《红昭愿》、岑宁儿《追光者》，也有 TheFatRat《Monody》、Carpenters《Yesterday Once More》。许巍《蓝莲花》《曾经的你》和陈鸿宇《一如年少模样》把华语摇滚与民谣留在同一段。",
+      "en": "This stretch is more mixed: Kenshi Yonezu and Daoko’s “打上花火”, G.E.M.’s “光年之外”, “红昭愿”, “追光者”, plus TheFatRat and the Carpenters. Xu Wei and Chen Hongyu keep Chinese rock and folk in the same stretch.",
+      "es": "Este tramo es más variado: Kenshi Yonezu y Daoko «打上花火», G.E.M. «光年之外», Yinque Shiting «红昭愿», Yisa Yu «追光者», además de TheFatRat «Monody» y Carpenters «Yesterday Once More». Xu Wei «蓝莲花» y «曾经的你», y Chen Hongyu «一如年少模样», mantienen el rock y el folk chinos en el mismo tramo.",
+      "ko": "이 구간은 출처가 더 섞입니다. 요네즈 켄시와 Daoko 「打上花火」, 등자기 「光年之外」, 음궐시청 「红昭愿」, 천닝얼 「追光者」가 있고, TheFatRat 「Monody」, Carpenters 「Yesterday Once More」도 있습니다. 쉬웨이 「蓝莲花」「曾经的你」, 천훙위 「一如年少模样」이 화어 록과 민요를 같은 구간에 남겨 둡니다.",
+      "ja": "この区間はソースがより雑多です。米津玄師とDaoko「打上花火」、鄧紫棋「光年之外」、音闕詩聽「红昭愿」、岑寧兒「追光者」、それにTheFatRat「Monody」、カーペンターズ「Yesterday Once More」。許巍「蓝莲花」「曾经的你」と陳鴻宇「一如年少模样」が、华语ロックとフォークを同じ区間に残しています。"
+    },
+    {
+      "zh": "收藏范围变宽，但仍不断回看华语。",
+      "en": "The range widens, but the playlist keeps returning to Chinese songs.",
+      "es": "El rango se ensancha, pero la lista sigue volviendo a las canciones en chino.",
+      "ko": "소장 범위는 넓어지지만, 계속해서 화어로 돌아옵니다.",
+      "ja": "收藏の幅は広がりますが、何度でも华语に戻ってきます。"
+    },
+    {
+      "zh": "专辑加厚",
+      "en": "Album digging",
+      "es": "Profundizando en álbumes",
+      "ko": "앨범을 더 파기",
+      "ja": "アルバムを掘る"
+    },
+    {
+      "zh": "平凡之路与专辑深挖",
+      "en": "Ordinary Path and deeper album saves",
+      "es": "Camino ordinario y álbumes más a fondo",
+      "ko": "평범한 길과 앨범 깊게 파기",
+      "ja": "平凡之路とアルバムの深掘り"
+    },
+    {
+      "zh": "整专曲目和经典摇滚一起被收进来",
+      "en": "Full-album tracks and classic rock are added",
+      "es": "Se añaden temas de álbumes completos y rock clásico",
+      "ko": "앨범 수록곡과 클래식 록이 함께 들어옵니다",
+      "ja": "アルバム曲とクラシックロックが一緒に入ります"
+    },
+    {
+      "zh": "毛不易《像我这样的人》来自《平凡的一天》，李荣浩《年少有为》也在此出现。Beyond《海阔天空》《光辉岁月》、朴树《平凡之路》构成华语摇滚经典簇。陈粒《历历万乡》继续《如也》线。另有 Silent Hill 2 的《Promise》《Theme of Laura》，以及《Faded》和李健《贝加尔湖畔》。",
+      "en": "Mao Buyi’s “像我这样的人” comes from the album 平凡的一天; Ronghao Li’s “年少有为” is here too. Beyond, Pu Shu, Chen Li’s “历历万乡”, Silent Hill 2 cues, Faded and Li Jian’s “贝加尔湖畔” share the stretch.",
+      "es": "«像我这样的人» de Mao Buyi sale de 《平凡的一天》; también está «年少有为» de Ronghao Li. Beyond «海阔天空» y «光辉岁月», Pu Shu «平凡之路» forman un racimo de rock chino clásico. Chen Li «历历万乡» continúa la línea de 《如也》. También hay «Promise» y «Theme of Laura» de Silent Hill 2, «Faded» y Li Jian «贝加尔湖畔».",
+      "ko": "마오부이의 「像我这样的人」은 앨범 《平凡的一天》에서 왔고, 리롱하오 「年少有为」도 여기 있습니다. Beyond 「海阔天空」「光辉岁月」, 푸슈 「平凡之路」가 화어 록 클래식 묶음을 이룹니다. 천리 「历历万乡」은 《如也》의 줄을 잇습니다. Silent Hill 2의 「Promise」「Theme of Laura」, 「Faded」, 리젠 「贝加尔湖畔」도 있습니다.",
+      "ja": "毛不易「像我这样的人」はアルバム『平凡的一天』から。李榮浩「年少有为」もあります。Beyond「海阔天空」「光辉岁月」、朴樹「平凡之路」が华语ロックの古典のまとまりを作ります。陳粒「历历万乡」は『如也』の線を続けます。Silent Hill 2の「Promise」「Theme of Laura」、それに「Faded」と李健「贝加尔湖畔」もあります。"
+    },
+    {
+      "zh": "开始按专辑和经典专集补充，不只收单曲。",
+      "en": "Saves start filling out albums and classics, not only singles.",
+      "es": "Las guardadas empiezan a completar álbumes y clásicos, no solo singles.",
+      "ko": "싱글만이 아니라 앨범과 고전을 채우기 시작합니다.",
+      "ja": "シングルだけでなく、アルバムや古典を补い始めます。"
+    },
+    {
+      "zh": "再回民谣",
+      "en": "Folk again",
+      "es": "Otra vez folk",
+      "ko": "다시 민요로",
+      "ja": "再びフォークへ"
+    },
+    {
+      "zh": "消愁、成都与李荣浩",
+      "en": "Xiao Chou, Chengdu, and Ronghao Li",
+      "es": "Xiao Chou, Chengdu y Ronghao Li",
+      "ko": "「消愁」, 청두, 그리고 리롱하오",
+      "ja": "消愁、成都と李榮浩"
+    },
+    {
+      "zh": "毛不易专辑曲与城市民谣再次集中",
+      "en": "Mao Buyi album tracks and city folk concentrate again",
+      "es": "Las canciones de álbum de Mao Buyi y el folk urbano se concentran otra vez",
+      "ko": "마오부이 앨범 곡과 도시 민요가 다시 모입니다",
+      "ja": "毛不易のアルバム曲と都市フォークが再び集中します"
+    },
+    {
+      "zh": "毛不易《消愁》《借》《一荤一素》同属《平凡的一天》，和李荣浩《麻雀》《不将就》排在一起。赵雷《成都》是《无法长大》版，与前面的单曲版不是同一发行。还有陈奕迅《孤勇者》、房东的猫《云烟成雨》、米津玄師《Lemon》，以及伍佰的作品。华语民谣与流行再次拧紧。",
+      "en": "Mao Buyi’s 消愁, 借 and 一荤一素 (all from 平凡的一天) sit with Ronghao Li. Zhao Lei’s “成都” here is the 无法长大 edition, not the earlier single. Eason Chan’s “孤勇者”, 房东的猫, Kenshi Yonezu’s Lemon and Wu Bai also appear.",
+      "es": "«消愁», «借» y «一荤一素» de Mao Buyi pertenecen a 《平凡的一天》, junto a «麻雀» y «不将就» de Ronghao Li. «成都» de Zhao Lei es la edición de 《无法长大》, no el single anterior. También están Eason Chan «孤勇者», 房东的猫 «云烟成雨», Kenshi Yonezu «Lemon» y temas de Wu Bai. El folk y el pop chinos se entrelazan otra vez.",
+      "ko": "마오부이의 「消愁」「借」「一荤一素」는 모두 《平凡的一天》에 속하고, 리롱하오 「麻雀」「不将就」와 나란히 있습니다. 자오레이 「成都」는 《无法长大》 버전으로, 앞의 싱글 버전과 다른 발매입니다. 진혁신 「孤勇者」, 집주인의 고양이 「云烟成雨」, 요네즈 켄시 「Lemon」, 우바이의 작품도 있습니다. 화어 민요와 팝이 다시 꼬입니다.",
+      "ja": "毛不易の「消愁」「借」「一荤一素」はいずれも『平凡的一天』に属し、李榮浩「麻雀」「不将就」と並びます。趙雷「成都」は『无法长大』版で、前のシングル版とは別リリースです。陳奕迅「孤勇者」、房东的猫「云烟成雨」、米津玄師「Lemon」、伍佰の作品もあります。华语フォークとポップが再び撚り合わさります。"
+    },
+    {
+      "zh": "同一专辑会被继续补完，城市民谣再次集中。",
+      "en": "The same album continues to be completed; city folk concentrates again.",
+      "es": "Se sigue completando el mismo álbum; el folk urbano se concentra otra vez.",
+      "ko": "같은 앨범을 계속 채워 나가고, 도시 민요가 다시 모입니다.",
+      "ja": "同じアルバムを補完し続け、都市フォークが再び集中します。"
+    },
+    {
+      "zh": "重听对照",
+      "en": "Re-saves",
+      "es": "Reescuchas",
+      "ko": "다시 들으며 대조",
+      "ja": "聞き直し"
+    },
+    {
+      "zh": "走马、董小姐与再收藏",
+      "en": "Zouma, Miss Dong, and re-saves",
+      "es": "Zouma, Miss Dong y volver a guardar",
+      "ko": "走马, 董小姐, 그리고 다시 담기",
+      "ja": "走馬、董小姐と再收藏"
+    },
+    {
+      "zh": "许多熟歌以不同发行再次进入歌单",
+      "en": "Familiar songs re-enter in different releases",
+      "es": "Muchas canciones conocidas vuelven a entrar en otras ediciones",
+      "ko": "익숙한 많은 곡이 다른 발매로 다시 들어옵니다",
+      "ja": "多くの聞き覚えのある曲が、別のリリースで再び入ります"
+    },
+    {
+      "zh": "陈粒《走马》补上《如也》的重要一首。宋冬野《董小姐》是《安和桥北》版，与较早的摩登天空7版并存。孙燕姿《遇见》、李荣浩《年少有为》、和田光司《Butter-Fly》也以不同发行再出现。新加入的有草东没有派对《山海》、五月天《温柔》，以及米津玄師《LOSER》与《打ち上げ花火》。",
+      "en": "Chen Li’s “走马” adds a key 如也 track. Song Dongye’s “董小姐” appears in the 安和桥北 edition beside the earlier Modern Sky 7 edition. Stefanie Sun, Ronghao Li and Butter-Fly also reappear in other releases, with new adds from No Party For Cao Dong, Mayday and Kenshi Yonezu.",
+      "es": "«走马» de Chen Li añade un tema clave de 《如也》. «董小姐» de Song Dongye es la edición de 《安和桥北》, junto a la anterior Modern Sky 7. Stefanie Sun «遇见», Ronghao Li «年少有为» y Kōji Wada «Butter-Fly» también reaparecen en otras ediciones. Lo nuevo incluye No Party For Cao Dong «山海», Mayday «温柔», y Kenshi Yonezu «LOSER» y «打ち上げ花火».",
+      "ko": "천리 「走马」는 《如也》의 중요한 한 곡을 보탭니다. 쑹둥예 「董小姐」는 《安和桥北》 버전으로, 앞의 모던스카이 7 버전과 함께 있습니다. 손연재 「遇见」, 리롱하오 「年少有为」, 와다 코지 「Butter-Fly」도 다른 발매로 다시 나옵니다. 새로 들어온 것은 차오둥메이요파이두이 「山海」, 오월천 「温柔」, 요네즈 켄시 「LOSER」와 「打ち上げ花火」입니다.",
+      "ja": "陳粒「走马」は『如也』の重要な一曲を足します。宋冬野「董小姐」は『安和桥北』版で、前の摩登天空7版と並びます。孫燕姿「遇见」、李榮浩「年少有为」、和田光司「Butter-Fly」も別リリースで再登場。新規には草東沒有派對「山海」、五月天「温柔」、米津玄師「LOSER」と「打ち上げ花火」があります。"
+    },
+    {
+      "zh": "熟歌换发行再收，同时补进摇滚与日语。",
+      "en": "Familiar songs are saved again in other editions, while rock and Japanese tracks are added.",
+      "es": "Las canciones conocidas se vuelven a guardar en otras ediciones, y se añaden rock y temas en japonés.",
+      "ko": "익숙한 곡을 다른 발매로 다시 담고, 록과 일본어도 보탭니다.",
+      "ja": "聞き覚えのある曲を別リリースで再保存しつつ、ロックと日本語も足します。"
+    },
+    {
+      "zh": "最近收藏",
+      "en": "Latest saves",
+      "es": "Guardadas más recientes",
+      "ko": "최근 收藏",
+      "ja": "いちばん新しい保存"
+    },
+    {
+      "zh": "晚风、富士山与戏腔回声",
+      "en": "Evening wind, Fuji, and opera-tinged echoes",
+      "es": "Viento de atardecer, Fuji y ecos de ópera",
+      "ko": "저녁 바람, 후지산, 그리고 희곡의 메아리",
+      "ja": "晩風、富士山、戯曲の残響"
+    },
+    {
+      "zh": "按默认顺序，第1首是最新收藏",
+      "en": "By the default order, #1 is the newest save",
+      "es": "Según el orden por defecto, la nº 1 es la más reciente",
+      "ko": "기본 순서에서 1번이 가장 최근 저장입니다",
+      "ja": "デフォルト順では、1曲が最新の保存です"
+    },
+    {
+      "zh": "按网易云「我喜欢的音乐」默认，第1首《晚风心里吹》视为最新。紧邻的是陈奕迅《富士山下》、孙燕姿《我怀念的》、李玟与周杰伦《刀马旦》。任素汐《王招君》、凤凰传奇《奢香夫人》、闻人听書_《虞兮叹》让戏腔和民族色彩再次出现。YOASOBI《群青》和许嵩《如果当时》说明主线仍是华语，来源更杂。",
+      "en": "Under NetEase’s default Liked-Songs order, “晚风心里吹” is treated as the newest save, next to Eason Chan’s “富士山下”, Stefanie Sun, and Leehom/Jay’s “刀马旦”. Ren Suxi, Phoenix Legend and 闻人听書_ bring opera-tinged and folk colors back. YOASOBI’s “群青” and Xu Song show the main line is still Mandopop, just from more sources.",
+      "es": "Según el orden por defecto de «Mis canciones favoritas» de NetEase, la nº 1 «晚风心里吹» se toma como la más reciente. Junto a ella están Eason Chan «富士山下», Stefanie Sun «我怀念的», CoCo Lee y Jay Chou «刀马旦». Ren Suxi «王招君», Phoenix Legend «奢香夫人» y 闻人听書_ «虞兮叹» hacen volver los colores de ópera y folk. YOASOBI «群青» y Xu Song «如果当时» muestran que el eje sigue siendo el pop chino, solo que de más fuentes.",
+      "ko": "넷이즈 「내가 좋아하는 음악」 기본 순서에서, 1번 「晚风心里吹」를 가장 최근으로 봅니다. 바로 옆은 진혁신 「富士山下」, 손연재 「我怀念的」, 리원과 저우제룬 「刀马旦」입니다. 런쑤시 「王招君」, 봉황전기 「奢香夫人」, 문인청서_ 「虞兮叹」이 희곡과 민족 색채를 다시 불러옵니다. YOASOBI 「群青」과 쉬쑹 「如果当时」는 주축이 여전히 화어 팝이며, 출처만 더 다양하다는 것을 보여 줍니다.",
+      "ja": "網易雲「私の好きな音楽」のデフォルト順では、1曲目「晚风心里吹」を最新とみなします。すぐ隣は陳奕迅「富士山下」、孫燕姿「我怀念的」、李玟と周杰倫「刀马旦」。任素汐「王招君」、鳳凰伝説「奢香夫人」、聞人聴書_「虞兮叹」が戯曲と民族の色彩を再び出します。YOASOBI「群青」と許嵩「如果当时」は、主軸がいまも华语ポップで、ソースだけがより雑多だということを示します。"
+    },
+    {
+      "zh": "最新一端仍以华语流行为主，戏腔与日语穿插其中。",
+      "en": "The newest end is still mainly Mandopop, with opera-tinged and Japanese tracks mixed in.",
+      "es": "El extremo más nuevo sigue siendo sobre todo pop chino, con ópera y japonés entremezclados.",
+      "ko": "가장 최근 끝도 화어 팝이 중심이고, 희곡과 일본어가 섞여 있습니다.",
+      "ja": "いちばん新しい一端も华语ポップが主で、戯曲と日本語が交じります。"
+    },
+    {
+      "zh": "12 首都不在这张歌单里，曲目和封面都已核对过来源。喜欢与否要听过才知道。",
+      "en": "None of these 12 tracks were found in the playlist. Titles, artists and covers were verified against official sources. Whether they fit still depends on a listen.",
+      "es": "Ninguna de estas 12 canciones está en esta lista. Los temas y las portadas se comprobaron con las fuentes. Si gustan o no, solo se sabe después de escucharlas.",
+      "ko": "이 12곡은 이 플레이리스트에 없습니다. 곡과 커버는 출처와 대조해 확인했습니다. 맞는지 아닌지는 들어 봐야 압니다.",
+      "ja": "この12曲はいずれもこのプレイリストにありません。曲とジャケットはソースと照合済みです。合うかどうかは、聴いてみないとわかりません。"
+    },
+    {
+      "zh": "大概率合口味",
+      "en": "Very likely",
+      "es": "Muy probable",
+      "ko": "잘 맞을 가능성 큼",
+      "ja": "合う見込みが高い"
+    },
+    {
+      "zh": "歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。",
+      "en": "歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。",
+      "es": "La lista ya tiene «富士山下», «十年» y «红玫瑰». Esta es otra pieza representativa en cantonés de Eason Chan, cercana en melodía e intensidad emocional; habrá que confirmarlo al escucharla.",
+      "ko": "리스트에는 이미 「富士山下」「十年」「红玫瑰」가 있습니다. 이 곡도 진혁신의 광둥어 대표곡으로, 선율과 감정의 농도가 비슷하니, 들어 본 뒤에 확인하면 됩니다.",
+      "ja": "リストにはすでに「富士山下」「十年」「红玫瑰」があります。これは陳奕迅の粤語の代表作のひとつで、旋律と感情の濃度が近いので、聴いてから確認してください。"
+    },
+    {
+      "zh": "可能的差别：粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。",
+      "en": "What may not fit: 粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。",
+      "es": "Qué puede no encajar: la dicción cantonesa y la letra de Wyman Wong son más densas; si prefieres la lírica en mandarín, puede resultarte cargada.",
+      "ko": "맞지 않을 수 있는 점: 광둥어 발음과 황웨이원의 가사가 더 촘촘해서, 보통화 서정을 더 좋아하면 빽빽하게 느껴질 수 있습니다.",
+      "ja": "合わないかもしれない点：粤語の発音と黄偉文の詞がより密で、普通話の抒情が好みなら、込み入って感じることがあります。"
+    },
+    {
+      "zh": "已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。",
+      "en": "已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。",
+      "es": "Ya están guardadas «走马» y «易燃易爆炸» de 《如也》, y «小半» y «虚拟» de 《小梦大半》. Esta canción también es de 《小梦大半》, y sirve para completar el mismo álbum.",
+      "ko": "이미 《如也》의 「走马」「易燃易爆炸」와 《小梦大半》의 「小半」「虚拟」를 담았습니다. 이 곡도 《小梦大半》에 속하니, 같은 앨범을 보완할 수 있습니다.",
+      "ja": "すでに『如也』の「走马」「易燃易爆炸」と『小梦大半』の「小半」「虚拟」を収めています。この曲も『小梦大半』に属し、同じアルバムを補えます。"
+    },
+    {
+      "zh": "可能的差别：口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。",
+      "en": "What may not fit: 口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。",
+      "es": "Qué puede no encajar: el tono es más juguetón y más corto; si solo te gusta la narración lenta de «走马», puede resultarte saltarina.",
+      "ko": "맞지 않을 수 있는 점: 말투가 더 발랄하고 더 짧아서, 「走马」처럼 느린 서사만 좋아하면 튀게 느껴질 수 있습니다.",
+      "ja": "合わないかもしれない点：口調がより軽く短く、｢走马｣のようなゆっくりした語りだけが好みなら、跳ねて感じることがあります。"
+    },
+    {
+      "zh": "已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。",
+      "en": "已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。",
+      "es": "Ya están en el mismo álbum «消愁», «借», «一荤一素» y «像我这样的人», pero aún no aparece la canción título. Sirve para completar el eje de este disco.",
+      "ko": "같은 앨범의 「消愁」「借」「一荤一素」「像我这样的人」은 이미 있지만, 타이틀곡은 아직 없습니다. 이 앨범의 주축을 보완하는 용도입니다.",
+      "ja": "同じアルバムの「消愁」「借」「一荤一素」「像我这样的人」はすでにありますが、タイトル曲はまだ出ていません。このアルバムの主軸を補うための一曲です。"
+    },
+    {
+      "zh": "可能的差别：标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。",
+      "en": "What may not fit: 标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。",
+      "es": "Qué puede no encajar: la canción título es más grave y más lenta; si te engancha más el estribillo de «消愁», puede que no te guste igual.",
+      "ko": "맞지 않을 수 있는 점: 타이틀곡이 더 무겁고 느려서, 「消愁」의 코러스 훅을 더 좋아하면 똑같이 마음에 들지 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：タイトル曲はより沈み、より遅く、「消愁」のサビのフックが好みなら、同じようには気に入らないことがあります。"
+    },
+    {
+      "zh": "已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。",
+      "en": "已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。",
+      "es": "Ya están «泡沫», «喜欢你», «光年之外» y «再见». Esta canción comparte el arreglo pop de voz potente, y sirve para probar su lado más oscuro y enérgico.",
+      "ko": "이미 「泡沫」「喜欢你」「光年之外」「再见」이 있습니다. 이 곡도 강한 보컬의 팝 편곡이라, 조금 더 어둡고 힘 있는 면을 시험해 보는 용도입니다.",
+      "ja": "すでに「泡沫」「喜欢你」「光年之外」「再见」があります。この曲も強い声線のポップアレンジで、より暗く、力のある一面を試すための一曲です。"
+    },
+    {
+      "zh": "可能的差别：比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。",
+      "en": "What may not fit: 比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。",
+      "es": "Qué puede no encajar: es más afilada y electrónica que «泡沫»; si solo te gusta su lírica temprana, puede resultarte dura.",
+      "ko": "맞지 않을 수 있는 점: 「泡沫」보다 더 날카롭고 전자적이라, 초기 서정만 좋아하면 딱딱하게 느껴질 수 있습니다.",
+      "ja": "合わないかもしれない点：「泡沫」より鋭く電子的で、初期の抒情だけが好みなら、硬く感じることがあります。"
+    },
+    {
+      "zh": "已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。",
+      "en": "已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。",
+      "es": "Ya están «老街», «不将就», «麻雀» y dos ediciones de «年少有为». Esta es la canción título de su álbum homónimo; la voz y el ritmo están cerca.",
+      "ko": "이미 「老街」「不将就」「麻雀」과 두 가지 발매의 「年少有为」가 있습니다. 이 곡은 동명 앨범의 타이틀곡으로, 음색과 리듬이 가깝습니다.",
+      "ja": "すでに「老街」「不将就」「麻雀」、それに二つのリリースの「年少有为」があります。これは同名アルバムのタイトル曲で、声とリズムが近いです。"
+    },
+    {
+      "zh": "可能的差别：口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。",
+      "en": "What may not fit: 口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。",
+      "es": "Qué puede no encajar: el tono es más juguetón y el ritmo más saltarín; si solo te gustan sus baladas narrativas lentas, puede no encajar.",
+      "ko": "맞지 않을 수 있는 점: 말투가 더 발랄하고 드럼이 더 튀어서, 느린 서사곡만 좋아하면 맞지 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：口調が軽く、ドラムが跳ねるので、ゆっくりした語りの曲だけが好みなら、合わないことがあります。"
+    },
+    {
+      "zh": "已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。",
+      "en": "已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。",
+      "es": "Ya están «我怀念的», «遇见» y «天黑黑». Esta es una rápida representativa de su etapa temprana, para ver si también guardas su lado más brillante.",
+      "ko": "이미 「我怀念的」「遇见」「天黑黑」이 있습니다. 이 곡은 초기 빠른 노래의 대표작으로, 밝은 면도 담는지 보는 용도입니다.",
+      "ja": "すでに「我怀念的」「遇见」「天黑黑」があります。これは初期のアップテンポの代表作で、明るい一面も収めるかどうかを見るための一曲です。"
+    },
+    {
+      "zh": "可能的差别：节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。",
+      "en": "What may not fit: 节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。",
+      "es": "Qué puede no encajar: el ritmo es más rápido y más claro; se diferencia claramente de la lírica lenta de «我怀念的».",
+      "ko": "맞지 않을 수 있는 점: 리듬이 더 빠르고 밝아서, 「我怀念的」의 느린 서정과 차이가 분명합니다.",
+      "ja": "合わないかもしれない点：リズムが速く明るく、「我怀念的」のゆっくりした抒情とは違いがはっきりしています。"
+    },
+    {
+      "zh": "相邻风格",
+      "en": "Nearby style",
+      "es": "Estilo cercano",
+      "ko": "인접한 스타일",
+      "ja": "近いスタイル"
+    },
+    {
+      "zh": "《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。",
+      "en": "《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。",
+      "es": "De «董小姐» ya están las ediciones de 《安和桥北》 y Modern Sky 7. Esta es otra pieza representativa del mismo álbum; habrá que oírla para ver si va por el mismo camino.",
+      "ko": "「董小姐」는 이미 《安和桥北》과 모던스카이 7 두 발매가 있습니다. 이 곡은 같은 앨범의 다른 대표작이라, 들어 본 뒤 같은 길인지 확인하면 됩니다.",
+      "ja": "「董小姐」はすでに『安和桥北』と摩登天空7の二つのリリースがあります。これは同じアルバムの別の代表作で、聴いてから同じ方向かどうか確認してください。"
+    },
+    {
+      "zh": "可能的差别：更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。",
+      "en": "What may not fit: 更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。",
+      "es": "Qué puede no encajar: es más grave y fría; si solo te gusta la cercanía narrativa de «董小姐», puede que no te quedes.",
+      "ko": "맞지 않을 수 있는 점: 더 무겁고 차가워서, 「董小姐」의 다정한 서사만 좋아하면 머무르지 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：より沈んで冷たく、「董小姐」の語りの親しさだけが好みなら、留まらないことがあります。"
+    },
+    {
+      "zh": "已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。",
+      "en": "已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。",
+      "es": "Ya están «刀马旦», «红尘客栈», «时光机» y «不能说的秘密», pero aún no aparece la pieza china-style representativa de 《我很忙》.",
+      "ko": "이미 「刀马旦」「红尘客栈」「时光机」「不能说的秘密」가 있지만, 《我很忙》의 중국풍 대표작은 아직 없습니다.",
+      "ja": "すでに「刀马旦」「红尘客栈」「时光机」「不能说的秘密」がありますが、『我很忙』の中国風の代表作はまだ出ていません。"
+    },
+    {
+      "zh": "可能的差别：古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。",
+      "en": "What may not fit: 古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。",
+      "es": "Qué puede no encajar: las imágenes clásicas y el detalle son más densos que en «晴天» o «不能说的秘密»; no a todo el mundo le sienta igual.",
+      "ko": "맞지 않을 수 있는 점: 고전적 이미지와 세부가 「晴天」이나 「不能说的秘密」보다 더 가득 차 있어, 모두에게 맞지는 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：古典的なイメージと描写が「晴天」や「不能说的秘密」より濃く、誰にでも合うとは限りません。"
+    },
+    {
+      "zh": "已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。",
+      "en": "已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。",
+      "es": "Ya están YOASOBI «群青» y Kenshi Yonezu «Lemon» y «打上花火». Esta es una representante del mismo pop japonés, para comprobar esa línea lateral.",
+      "ko": "이미 YOASOBI 「群青」과 요네즈 켄시 「Lemon」「打上花火」가 있습니다. 이 곡은 같은 줄기의 일본 팝 대표곡으로, 이 곁가지를 확인해 보는 용도입니다.",
+      "ja": "すでにYOASOBI「群青」と米津玄師「Lemon」「打上花火」があります。これは同じ系統の日本語ポップの代表で、この支線を確かめるための一曲です。"
+    },
+    {
+      "zh": "可能的差别：叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。",
+      "en": "What may not fit: 叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。",
+      "es": "Qué puede no encajar: la narración es más urgente y el arreglo electrónico más lleno; si solo te gusta el coro de «群青», puede que no te quedes igual.",
+      "ko": "맞지 않을 수 있는 점: 서사가 더 급하고 전자 편곡이 더 가득 차서, 「群青」의 코러스만 좋아하면 똑같이 머무르지 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：語りが急で電子アレンジがより厚く、「群青」のサビの感じだけが好みなら、同じようには留まらないことがあります。"
+    },
+    {
+      "zh": "歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。",
+      "en": "歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。",
+      "es": "En la lista ya hay canciones de cine como «See You Again», «City Of Stars» y «Love Me Like You Do». Esta es un tema del mismo tipo, con una voz más gruesa.",
+      "ko": "리스트에는 이미 「See You Again」「City Of Stars」「Love Me Like You Do」 같은 영화 노래가 있습니다. 이 곡도 같은 종류의 주제곡이며, 목소리가 더 두텁습니다.",
+      "ja": "リストにはすでに「See You Again」「City Of Stars」「Love Me Like You Do」などの映画の曲があります。これは同種の主題歌で、声がより厚いです。"
+    },
+    {
+      "zh": "可能的差别：比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。",
+      "en": "What may not fit: 比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。",
+      "es": "Qué puede no encajar: es más larga y teatral que la mayoría del pop occidental de la lista; no es un single ligero de radio.",
+      "ko": "맞지 않을 수 있는 점: 리스트의 대부분의 서양 팝보다 더 길고 드라마틱해서, 가벼운 라디오 싱글이 아닙니다.",
+      "ja": "合わないかもしれない点：リストの多くの欧米ポップより長く演劇的で、軽快なラジオシングルではありません。"
+    },
+    {
+      "zh": "探索",
+      "en": "Explore",
+      "es": "Explorar",
+      "ko": "탐색",
+      "ja": "探索"
+    },
+    {
+      "zh": "已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。",
+      "en": "已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。",
+      "es": "Ya está No Party For Cao Dong «山海», y también Xu Wei, Pu Shu y Beyond. Esta canción lleva la narración urbana hacia un tono más frío y de banda, para probar el borde.",
+      "ko": "이미 차오둥메이요파이두이 「山海」가 있고, 쉬웨이, 푸슈, Beyond도 있습니다. 이 곡은 도시 서사를 더 차고 밴드에 가까운 쪽으로 밀어, 경계를 시험해 보는 용도입니다.",
+      "ja": "すでに草東沒有派對「山海」があり、許巍、朴樹、Beyondもあります。この曲は都市の語りをより冷たく、バンド寄りの方向へ押し、境界を試すための一曲です。"
+    },
+    {
+      "zh": "可能的差别：编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。",
+      "en": "What may not fit: 编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。",
+      "es": "Qué puede no encajar: el arreglo es más delgado y la letra más densa; se aleja claramente del eje del pop chino, y puede costar acostumbrarse.",
+      "ko": "맞지 않을 수 있는 점: 편곡이 더 가늘고 가사가 더 촘촘해서, 화어 팝 주축과 거리가 분명하고 귀에 익지 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：アレンジが細く詞が密で、华语ポップの主軸から距離がはっきりしており、耳になじまないことがあります。"
+    },
+    {
+      "zh": "已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。",
+      "en": "已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。",
+      "es": "Ya están el pop japonés y temas de anime de YOASOBI y Yonezu. Esta canción es de la película «Your Name», para ver si también encajan los temas de cine en japonés.",
+      "ko": "이미 YOASOBI와 요네즈의 일본 팝·애니 관련 곡이 있습니다. 이 곡은 영화 《너의 이름은》에서 와, 일본 영화 주제곡도 성립하는지 보는 용도입니다.",
+      "ja": "すでにYOASOBIと米津の日本語ポップやアニメ関連曲があります。この曲は映画『君の名は。』からで、日本語の映画主題歌も成り立つかを試すための一曲です。"
+    },
+    {
+      "zh": "可能的差别：电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。",
+      "en": "What may not fit: 电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。",
+      "es": "Qué puede no encajar: el desarrollo de un tema de cine es más largo, y la sensación en vivo no es la de un single pop; puede que no se guarde por sí sola.",
+      "ko": "맞지 않을 수 있는 점: 영화 주제곡의 전개가 더 길고, 현장감이 팝 싱글과 달라서, 따로 담지 않을 수 있습니다.",
+      "ja": "合わないかもしれない点：映画主題歌の展開が長く、ライブ感がポップシングルとは違うので、単独では保存しないことがあります。"
+    },
+    {
+      "zh": "完整报告",
+      "en": "Full report",
+      "es": "Informe completo",
+      "ko": "전체 리포트",
+      "ja": "フルレポート"
+    },
+    {
+      "zh": "玩过、也爱玩的桌游。后面想起再补。下面只写公开的人数和类型，没有个人评分或对局次数。",
+      "en": "Board games he has played and enjoys. More will be added later. Each entry lists only public player counts and genre, not personal ratings or play counts.",
+      "es": "Juegos de mesa que ha jugado y le gustan. Irá añadiendo más. Cada entrada solo indica el número público de jugadores y el género, no valoraciones personales ni partidas jugadas.",
+      "ko": "직접 해보고 좋아하는 보드게임입니다. 나중에 떠오르는 대로 더 넣을 예정입니다. 아래에는 공개된 인원과 장르만 적었고, 개인적인 평점이나 플레이 횟수는 없습니다.",
+      "ja": "遊んだことのある、好きなボードゲームです。思いついたらまた足します。掲載しているのは公開されている人数とジャンルだけで、個人の評価や対局数はありません。"
+    },
+    {
+      "zh": "狼人杀",
+      "en": "Werewolf",
+      "es": "Hombre lobo",
+      "ko": "마피아(웨어울프)",
+      "ja": "人狼"
+    },
+    {
+      "zh": "Werewolf",
+      "en": "狼人杀",
+      "es": "Hombre lobo",
+      "ko": "마피아(웨어울프)",
+      "ja": "人狼"
+    },
+    {
+      "zh": "社交推理派对游戏，人数视版本而定，常见 6–18 人。",
+      "en": "A social deduction party game; player count depends on the edition, often 6–18.",
+      "es": "Juego de fiesta de deducción social; el número de jugadores depende de la edición, a menudo 6–18.",
+      "ko": "소셜 추론 파티 게임으로, 인원은 버전에 따라 다르며 흔히 6–18명입니다.",
+      "ja": "ソーシャル推理のパーティーゲーム。人数は版によって異なり、よくあるのは6–18人です。"
+    },
+    {
+      "zh": "阿瓦隆",
+      "en": "The Resistance: Avalon",
+      "es": "The Resistance: Avalon",
+      "ko": "아발론",
+      "ja": "アヴァロン"
+    },
+    {
+      "zh": "The Resistance: Avalon",
+      "en": "阿瓦隆",
+      "es": "The Resistance: Avalon",
+      "ko": "아발론",
+      "ja": "アヴァロン"
+    },
+    {
+      "zh": "社交推理游戏，5–10 人，隐藏阵营、任务投票。",
+      "en": "A social deduction game for 5–10 players, with hidden teams and quest votes.",
+      "es": "Juego de deducción social para 5–10 jugadores, con bandos ocultos y votaciones de misión.",
+      "ko": "5–10인용 소셜 추론 게임으로, 진영을 숨기고 임무에 투표합니다.",
+      "ja": "5–10人のソーシャル推理ゲーム。陣営を隠し、クエストに投票します。"
+    },
+    {
+      "zh": "璀璨宝石",
+      "en": "Splendor",
+      "es": "Splendor",
+      "ko": "스플렌더",
+      "ja": "宝石の煌き"
+    },
+    {
+      "zh": "Splendor",
+      "en": "璀璨宝石",
+      "es": "Splendor",
+      "ko": "스플렌더",
+      "ja": "宝石の煌き"
+    },
+    {
+      "zh": "引擎构建卡牌游戏，2–4 人，收集宝石卡发展引擎。",
+      "en": "An engine-building card game for 2–4 players, collecting gem cards to grow an engine.",
+      "es": "Juego de cartas de construcción de motor para 2–4 jugadores, reuniendo gemas para desarrollar el motor.",
+      "ko": "2–4인용 엔진 빌딩 카드 게임으로, 보석 카드를 모아 엔진을 키웁니다.",
+      "ja": "2–4人のエンジン構築カードゲーム。宝石カードを集めてエンジンを育てます。"
+    },
+    {
+      "zh": "Scout",
+      "en": "Scout",
+      "es": "Scout",
+      "ko": "Scout",
+      "ja": "Scout"
+    },
+    {
+      "zh": "Oink Games 的爬梯出牌游戏，2–5 人。",
+      "en": "A ladder-climbing card game from Oink Games, for 2–5 players.",
+      "es": "Un juego de cartas de escalera de Oink Games, para 2–5 jugadores.",
+      "ko": "Oink Games의 래더 클라이밍 카드 게임으로, 2–5인용입니다.",
+      "ja": "Oink Games の梯子出しカードゲーム。2–5人用です。"
+    },
+    {
+      "zh": "炸弹猫",
+      "en": "Exploding Kittens",
+      "es": "Exploding Kittens",
+      "ko": "익스플로딩 키튼",
+      "ja": "爆発する子猫"
+    },
+    {
+      "zh": "Exploding Kittens",
+      "en": "炸弹猫",
+      "es": "Exploding Kittens",
+      "ko": "익스플로딩 키튼",
+      "ja": "爆発する子猫"
+    },
+    {
+      "zh": "派对卡牌游戏，原版 2–5 人。",
+      "en": "A party card game; the original edition is for 2–5 players.",
+      "es": "Juego de cartas de fiesta; la edición original es para 2–5 jugadores.",
+      "ko": "파티 카드 게임으로, 원판은 2–5인용입니다.",
+      "ja": "パーティー向けカードゲーム。原版は2–5人です。"
+    },
+    {
+      "zh": "花砖物语",
+      "en": "Azul",
+      "es": "Azul",
+      "ko": "아줄",
+      "ja": "アズール"
+    },
+    {
+      "zh": "Azul",
+      "en": "花砖物语",
+      "es": "Azul",
+      "ko": "아줄",
+      "ja": "アズール"
+    },
+    {
+      "zh": "抽象铺砖游戏，2–4 人，起草花砖并摆进墙面。",
+      "en": "An abstract tile-placement game for 2–4 players, drafting tiles onto a wall.",
+      "es": "Juego abstracto de colocación de teselas para 2–4 jugadores, eligiendo azulejos y colocándolos en un muro.",
+      "ko": "2–4인용 추상 타일 배치 게임으로, 타일을 골라 벽에 놓습니다.",
+      "ja": "2–4人のアブストラクトなタイル配置ゲーム。タイルをドラフトして壁に置きます。"
+    },
+    {
+      "zh": "奶酪大盗",
+      "en": "Cheese Thief",
+      "es": "Cheese Thief",
+      "ko": "치즈 도둑",
+      "ja": "チーズ泥棒"
+    },
+    {
+      "zh": "Cheese Thief",
+      "en": "奶酪大盗",
+      "es": "Cheese Thief",
+      "ko": "치즈 도둑",
+      "ja": "チーズ泥棒"
+    },
+    {
+      "zh": "社交推理聚会游戏，4–8 人，约 10–15 分钟。",
+      "en": "A social deduction party game for 4–8 players, about 10–15 minutes.",
+      "es": "Juego de fiesta de deducción social para 4–8 jugadores, de unos 10–15 minutos.",
+      "ko": "4–8인용 소셜 추론 파티 게임으로, 약 10–15분입니다.",
+      "ja": "4–8人のソーシャル推理パーティーゲーム。所要は約10–15分です。"
+    },
+    {
+      "zh": "推荐看看的网站。标了「自己做的」的是匡子闲自己的项目。后面想到再补。介绍只摘自站点自己的公开信息，没有编造。",
+      "en": "Sites he recommends. Cards marked “Made by me” are his own projects. More will be added later. Descriptions are taken from the sites themselves and are not invented.",
+      "es": "Sitios que recomienda. Las tarjetas con «Hecho por mí» son sus propios proyectos. Irá añadiendo más. Las descripciones se toman de los propios sitios, no se inventan.",
+      "ko": "추천하는 사이트입니다. 「직접 만든 것」이라고 표시된 카드는 본인 프로젝트입니다. 나중에 더 추가할 예정입니다. 소개 문구는 각 사이트에 공개된 내용에서 가져왔으며, 지어내지 않았습니다.",
+      "ja": "おすすめのサイトです。「自分で作った」とあるカードは本人のプロジェクトです。思いついたらまた足します。紹介文は各サイトの公開情報から抜粋したもので、創作していません。"
+    },
+    {
+      "zh": "自己做的",
+      "en": "Made by me",
+      "es": "Hecho por mí",
+      "ko": "직접 만든 것",
+      "ja": "自分で作った"
+    },
+    {
+      "zh": "和 ChatGPT 的一些对话，按文章的方式放在这里。点进去是完整对话，内容在本站打开，不必访问 chatgpt.com。",
+      "en": "A few conversations with ChatGPT, presented as writing. Each piece opens on this site, so it can be read without chatgpt.com.",
+      "es": "Algunas conversaciones con ChatGPT, presentadas como artículos. Al entrar se ve el diálogo completo; el contenido se abre en este sitio, sin ir a chatgpt.com.",
+      "ko": "ChatGPT와의 대화를 글처럼 모아 두었습니다. 들어가면 전체 대화가 이 사이트에서 열리며, chatgpt.com에 갈 필요가 없습니다.",
+      "ja": "ChatGPTとの対話を、文章のかたちで置いています。開くと完全な対話がこのサイトで読め、chatgpt.comに行く必要はありません。"
+    },
+    {
+      "zh": "对话",
+      "en": "Conversation",
+      "es": "Conversación",
+      "ko": "대화",
+      "ja": "対話"
+    },
+    {
+      "zh": "AI 能攻破比特币吗？",
+      "en": "Can AI Break Bitcoin?",
+      "es": "¿Puede la IA quebrar Bitcoin?",
+      "ko": "AI는 비트코인을 뚫을 수 있을까?",
+      "ja": "AIはビットコインを突破できるか？"
+    },
+    {
+      "zh": "Bitcoin Core 已被 AI 找出过能把节点打挂的真实漏洞，但“攻破比特币”可能指四种完全不同的事。截至 2026 年 11 月 17 日，没有可靠证据表明 AI 已经能在不知道私钥的情况下花走别人的币。",
+      "en": "AI has already found a real Bitcoin Core bug that can crash nodes, but “breaking Bitcoin” can mean four very different things. As of 17 Nov 2026, there is no reliable public evidence that AI can spend someone else’s coins without the private key.",
+      "es": "La IA ya encontró un fallo real en Bitcoin Core que puede tumbar nodos, pero «quebrar Bitcoin» puede significar cuatro cosas muy distintas. Hasta el 17 de noviembre de 2026, no hay pruebas fiables de que la IA pueda gastar las monedas de otra persona sin la clave privada.",
+      "ko": "AI가 노드를 다운시킬 수 있는 실제 Bitcoin Core 버그를 찾아낸 적은 있지만, “비트코인을 뚫는다”는 말은 전혀 다른 네 가지를 가리킬 수 있습니다. 2026년 11월 17일 기준으로, 개인키 없이 다른 사람의 코인을 쓸 수 있다는 믿을 만한 증거는 없습니다.",
+      "ja": "AIはすでに、ノードを落とせる本物の Bitcoin Core の欠陥を見つけています。ただし「ビットコインを突破する」はまったく異なる四つの意味になり得ます。2026年11月17日時点で、秘密鍵なしに他人のコインを使えるという信頼できる証拠はありません。"
+    },
+    {
+      "zh": "别再优化人生的架构了，先把人生上线",
+      "en": "Stop Architecting Your Life. Ship It.",
+      "es": "Deja de arquitecturar tu vida. Lánzala.",
+      "ko": "인생 아키텍처 최적화는 그만, 일단 출시하라",
+      "ja": "人生の設計を磨くのはやめて、まずローンチしよう"
+    },
+    {
+      "zh": "我让 GPT 根据过往聊天记录毫不留情地骂了我一顿。它从后端工程、创业规划、投资、小红书运营和用 AI 的方式说起，最后指出：我不是缺一个更强的模型，而是缺把事情做完并上线的执行力。",
+      "en": "I asked GPT to roast me, no holding back, based on our past chats. It went after my backend work, startup plans, investing, Xiaohongshu ops, and how I use AI — and landed on this: I don’t need a stronger model, I need to ship something.",
+      "es": "Le pedí a GPT que me recriminara sin piedad, a partir de nuestras conversaciones. Tocó mi trabajo de backend, los planes de startup, las inversiones, Xiaohongshu y cómo uso la IA, y concluyó: no me falta un modelo más potente, me falta terminar las cosas y lanzarlas.",
+      "ko": "지난 대화들을 바탕으로 GPT에게 사정없이 야단쳐 달라고 했습니다. 백엔드 일, 창업 계획, 투자, 샤오홍슈 운영, AI를 쓰는 방식까지 짚은 뒤, 더 강한 모델이 부족한 게 아니라 일을 끝내고 출시하는 실행력이 부족하다고 했습니다.",
+      "ja": "これまでの会話をもとに、遠慮なく私を叱ってほしいと GPT に頼みました。バックエンドの仕事、起業の計画、投資、小紅書の運営、AI の使い方に触れ、最後にこう指摘しました。足りないのはより強いモデルではなく、物事を仕上げて公開する実行力だ、と。"
+    },
+    {
+      "zh": "既要有不工作的自由，也要有影响世界的机会",
+      "en": "Freedom From Work, and the Chance to Shape the World",
+      "es": "Libertad de no trabajar, y la oportunidad de dar forma al mundo",
+      "ko": "일하지 않을 자유와, 세상을 바꿀 기회",
+      "ja": "働かない自由と、世界に関わる機会の両方を"
+    },
+    {
+      "zh": "我问 GPT：如果 AI 帮助突破可控核聚变，普通人是否会变得只剩吃喝玩乐，只有少数明星研究员才有工作的特权。它认为物质极大丰富不一定等于精神极大自由，更值得争取的是：人既有不工作的自由，也有参与和影响世界的机会。",
+      "en": "I asked whether a fusion-powered, AI-rich future would leave most people at home entertaining themselves, with only a few star researchers still allowed to work. GPT’s reply: abundance is not the same as freedom. The better goal is both the freedom not to work, and a real chance to shape the world.",
+      "es": "Pregunté si un futuro con fusión e IA dejaría a la mayoría en casa entreteniéndose, y solo a unos pocos investigadores estrella con el privilegio de trabajar. GPT respondió que la abundancia material no es lo mismo que la libertad interior. Lo que merece la pena es tener tanto la libertad de no trabajar como una oportunidad real de participar e influir en el mundo.",
+      "ko": "AI가 제어 핵융합을 도와 돌파한다면, 보통 사람들은 먹고 놀기만 하고 소수의 스타 연구자만 일할 특권을 갖게 될지 물었습니다. GPT는 물질이 크게 풍요로워진다고 해서 정신의 자유가 커지는 것은 아니며, 일하지 않을 자유와 세상에 참여하고 영향을 미칠 기회를 함께 얻는 쪽이 더 값지다고 보았습니다.",
+      "ja": "AI が制御核融合の突破を助けるなら、多くの人は楽しむだけになり、少数のスター研究者だけが働く特権を持つのか、と尋ねました。GPT は、物質が豊かでも心の自由が同じだけ増えるわけではなく、働かない自由と、世界に関わり影響を与える機会の両方を目指すべきだと考えました。"
+    },
+    {
+      "zh": "GitHub 上确认是原创（非 fork）的公开仓库。没有简介的仓库只放名字，不编造说明。",
+      "en": "Public GitHub repositories confirmed as originals (not forks). Repositories without a description are listed by name only.",
+      "es": "Repositorios públicos de GitHub confirmados como originales (no forks). Los que no tienen descripción se listan solo por el nombre, sin inventar una ficha.",
+      "ko": "GitHub에서 원작(포크가 아님)으로 확인된 공개 저장소입니다. 소개가 없는 저장소는 이름만 적고, 설명을 지어내지 않습니다.",
+      "ja": "GitHub 上でオリジナル（フォークではない）と確認できた公開リポジトリです。説明がないものは名前だけを載せ、説明を作りません。"
+    },
+    {
+      "zh": "本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知。",
+      "en": "A local-first project manager with AI Q&amp;A, MCP integration, and multi-channel notifications.",
+      "es": "Un gestor de proyectos local-first, con preguntas y respuestas de IA, integración MCP y notificaciones por varios canales.",
+      "ko": "로컬 우선 프로젝트 관리 시스템으로, AI 질의응답, MCP 연동, 여러 채널 알림을 지원합니다.",
+      "ja": "ローカル優先のプロジェクト管理システム。AI の質疑応答、MCP 連携、複数チャネルの通知に対応します。"
+    },
+    {
+      "zh": "公开仓库，暂无简介。",
+      "en": "Public repository; no description published.",
+      "es": "Repositorio público; aún no hay descripción publicada.",
+      "ko": "공개 저장소이며, 아직 소개가 없습니다.",
+      "ja": "公開リポジトリで、まだ説明は公開されていません。"
+    },
+    {
+      "zh": "只放已经核对过、显示名精确匹配「匡子闲」的主页。小红书、微博、抖音和 X 目前还没能公开确认，不编造链接。",
+      "en": "Only profiles verified with the exact display name 匡子闲 are linked. Xiaohongshu, Weibo, Douyin and X could not be publicly confirmed, so no guessed URLs are included.",
+      "es": "Solo se enlazan perfiles comprobados cuyo nombre visible coincide exactamente con「匡子闲」. Xiaohongshu, Weibo, Douyin y X no se han podido confirmar en público, así que no se inventan enlaces.",
+      "ko": "표시 이름이 「匡子闲」과 정확히 일치하는지 확인한 페이지만 올립니다. 샤오홍슈, 웨이보, 더우인, X는 아직 공개적으로 확인하지 못해, 링크를 지어내지 않습니다.",
+      "ja": "表示名が「匡子闲」と正確に一致すると確認したページだけを載せます。小紅書、微博、抖音、X はまだ公開では確認できていないため、リンクを作りません。"
+    },
+    {
+      "zh": "计科，炒股<br>计算机软件 · 上海市",
+      "en": "Headline: 计科，炒股<br>Computer software · Shanghai",
+      "es": "Titular: 计科，炒股<br>Software informático · Shanghái",
+      "ko": "소개: 计科，炒股<br>컴퓨터 소프트웨어 · 상하이",
+      "ja": "見出し：计科，炒股<br>コンピュータソフトウェア · 上海"
+    },
+    {
+      "zh": "检索时这些平台未能找到精确匹配的公开主页，或站点拦截了访问。确认账号后可以补上。",
+      "en": "No exact-match public profile could be retrieved, or the site blocked access. Links can be added once the accounts are confirmed.",
+      "es": "Al consultarlos no se encontró una página pública de coincidencia exacta, o el sitio bloqueó el acceso. Los enlaces se pueden añadir cuando se confirmen las cuentas.",
+      "ko": "조회 당시 이들 플랫폼에서 정확히 일치하는 공개 페이지를 찾지 못했거나, 사이트가 접근을 막았습니다. 계정이 확인되면 링크를 보완할 수 있습니다.",
+      "ja": "取得時、これらのプラットフォームで正確に一致する公開ページは見つからないか、サイトがアクセスを拒否しました。アカウントが確認できればリンクを足せます。"
+    },
+    {
+      "zh": "来坐坐，留个名字和一句话就行，不用登录。请不要放链接。",
+      "en": "Leave a nickname and a short note. No login required. Please don’t include links.",
+      "es": "Pasa un rato, deja un nombre y una frase. No hace falta iniciar sesión. Por favor, no pongas enlaces.",
+      "ko": "잠깐 들러 이름과 한 마디만 남기면 됩니다. 로그인은 필요 없습니다. 링크는 넣지 말아 주세요.",
+      "ja": "ちょっと座って、名前と一言を残してください。ログインは不要です。リンクは入れないでください。"
+    },
+    {
+      "zh": "昵称",
+      "en": "Nickname",
+      "es": "Apodo",
+      "ko": "닉네임",
+      "ja": "ニックネーム"
+    },
+    {
+      "zh": "留言",
+      "en": "Note",
+      "es": "Mensaje",
+      "ko": "글",
+      "ja": "伝言"
+    },
+    {
+      "zh": "写下留言",
+      "en": "Post note",
+      "es": "Publicar",
+      "ko": "남기기",
+      "ja": "書き込む"
+    },
+    {
+      "zh": "正在载入留言…",
+      "en": "Loading notes…",
+      "es": "Cargando mensajes…",
+      "ko": "글을 불러오는 중…",
+      "ja": "伝言を読み込み中…"
+    },
+    {
+      "zh": "播放",
+      "en": "Play",
+      "es": "Reproducir",
+      "ko": "재생",
+      "ja": "再生"
+    },
+    {
+      "zh": "网易云",
+      "en": "NetEase",
+      "es": "NetEase",
+      "ko": "넷이즈",
+      "ja": "網易雲"
+    },
+    {
+      "zh": "使用网易云官方外链播放器，点播放后才会加载，不会自动播放。",
+      "en": "Official NetEase Cloud Music player. It loads only after you click, and never autoplays.",
+      "es": "Reproductor oficial externo de NetEase Cloud Music. Solo se carga después de pulsar reproducir, y nunca se inicia solo.",
+      "ko": "넷이즈 클라우드 뮤직 공식 외부 플레이어입니다. 재생을 누른 뒤에만 불러오며, 자동 재생되지 않습니다.",
+      "ja": "網易雲音楽の公式埋め込みプレーヤーです。再生を押したあとだけ読み込み、自動再生はしません。"
+    },
+    {
+      "zh": "匡子闲 · 本页资料均来自 2026-11-14（Asia/Shanghai）检索到的公开信息，未收录未核实的账号。",
+      "en": "匡子闲 · Facts on this page come from public sources retrieved on 14 Nov 2026 (Asia/Shanghai). Unverified accounts are omitted.",
+      "es": "匡子闲 · Los datos de esta página proceden de información pública recuperada el 14 nov 2026 (Asia/Shanghai). No se incluyen cuentas no verificadas.",
+      "ko": "匡子闲 · 이 페이지의 자료는 2026년 11월 14일(Asia/Shanghai)에 찾은 공개 정보이며, 확인되지 않은 계정은 넣지 않았습니다.",
+      "ja": "匡子闲 · このページの資料は 2026年11月14日（Asia/Shanghai）に取得した公開情報で、未確認のアカウントは載せていません。"
+    },
+    {
+      "zh": "你发现了彩蛋",
+      "en": "You found the easter egg",
+      "es": "Encontraste el huevo de pascua",
+      "ko": "숨은 이스터에그를 찾았습니다",
+      "ja": "隠し要素を見つけました"
+    },
+    {
+      "zh": "匡子闲从 2015-10-10 起在微信读书留下记录，已经有效阅读 2,001 天，累计 1,267 小时，偏好夜晚、也偏好文学。他自己说过：多喝咖啡！",
+      "en": "匡子闲 has been on WeChat Reading since 10 Oct 2015: 2,001 days with reading, 1,267 hours in all, usually at night, often in literature. In his own words: 多喝咖啡！",
+      "es": "匡子闲 deja rastro en WeChat Reading desde el 10 oct 2015: ya lleva 2.001 días con lectura y 1.267 horas en total, suele leer de noche y a menudo literatura. En sus propias palabras: 多喝咖啡！",
+      "ko": "匡子闲은 2015년 10월 10일부터 위챗 독서에 기록이 있으며, 실제 독서 2,001일, 누적 1,267시간입니다. 밤과 문학을 좋아하고, 스스로 한 말은: 多喝咖啡！",
+      "ja": "匡子闲は2015年10月10日からWeChat読書に記録があり、実際に読んだ日は2,001日、累計1,267時間です。夜と文学を好み、本人の言葉は：多喝咖啡！"
+    },
+    {
+      "zh": "收起来",
+      "en": "Close",
+      "es": "Cerrar",
+      "ko": "닫기",
+      "ja": "閉じる"
+    },
+    {
+      "zh": "我是匡子闲，一名后端工程师。我做了 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> をつくりました。"
+    },
+    {
+      "zh": "我是匡子闲，一名后端工程师。我做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
+    },
+    {
+      "zh": "返回日志",
+      "en": "Back to logs",
+      "es": "Volver a los diarios",
+      "ko": "로그로",
+      "ja": "日誌に戻る"
+    },
+    {
+      "zh": "返回首页",
+      "en": "Back home",
+      "es": "Volver al inicio",
+      "ko": "홈으로",
+      "ja": "ホームに戻る"
+    },
+    {
+      "zh": "走丢了",
+      "en": "Page not found",
+      "es": "Te has perdido",
+      "ko": "길을 잃었습니다",
+      "ja": "道に迷いました"
+    },
+    {
+      "zh": "空间里没有这个页面",
+      "en": "This page isn’t in the zone.",
+      "es": "Esta página no está en el espacio.",
+      "ko": "공간에 이 페이지가 없습니다.",
+      "ja": "このページは空間にありません。"
+    },
+    {
+      "zh": "这个地址没有对应的内容。可能是链接写错了，或页面已经换了地方。",
+      "en": "Nothing lives at this address. The link may be mistyped, or the page has moved.",
+      "es": "No hay nada en esta dirección. Puede que el enlace esté mal escrito o que la página se haya mudado.",
+      "ko": "이 주소에는 해당하는 내용이 없습니다. 링크가 잘못되었거나 페이지가 옮겨졌을 수 있습니다.",
+      "ja": "このアドレスには内容がありません。リンクの誤りか、ページが移ったのかもしれません。"
+    },
+    {
+      "zh": "回到首页",
+      "en": "Back to home",
+      "es": "Volver al inicio",
+      "ko": "홈으로",
+      "ja": "ホームに戻る"
+    },
+    {
+      "zh": "去看日志",
+      "en": "Read the logs",
+      "es": "Ver los diarios",
+      "ko": "로그 보기",
+      "ja": "日誌を見る"
+    },
+    {
+      "zh": "← 返回文章列表",
+      "en": "← Back to writing",
+      "es": "← Volver a los textos",
+      "ko": "← 글 목록으로",
+      "ja": "← 記事一覧に戻る"
+    },
+    {
+      "zh": "匡子闲 与 GPT",
+      "en": "匡子闲 and GPT",
+      "es": "匡子闲 y GPT",
+      "ko": "匡子闲과 GPT",
+      "ja": "匡子闲とGPT"
+    },
+    {
+      "zh": "我的问题",
+      "en": "My question",
+      "es": "Mi pregunta",
+      "ko": "내 질문",
+      "ja": "わたしの質問"
+    },
+    {
+      "zh": "我的 Prompt",
+      "en": "My prompt",
+      "es": "Mi prompt",
+      "ko": "내 프롬프트",
+      "ja": "わたしのプロンプト"
+    },
+    {
+      "zh": "原始 ChatGPT 分享链接",
+      "en": "Original ChatGPT share link",
+      "es": "Enlace original de ChatGPT",
+      "ko": "원래 ChatGPT 공유 링크",
+      "ja": "元の ChatGPT 共有リンク"
+    },
+    {
+      "zh": "原始 Prompt 分享链接",
+      "en": "Original prompt share link",
+      "es": "Enlace original del prompt",
+      "ko": "원래 프롬프트 공유 링크",
+      "ja": "元のプロンプト共有リンク"
+    },
+    {
+      "zh": "匡子闲 · 对话原文在本站呈现，便于国内访问。",
+      "en": "匡子闲 · The conversation is hosted here so it can be read without chatgpt.com.",
+      "es": "匡子闲 · La conversación está en este sitio para poder leerla sin ir a chatgpt.com.",
+      "ko": "匡子闲 · 대화 원문은 이 사이트에 두어, chatgpt.com 없이도 읽을 수 있습니다.",
+      "ja": "匡子闲 · 対話の原文はこのサイトで読めるので、chatgpt.com に行かなくても大丈夫です。"
+    },
+    {
+      "zh": "首页",
+      "en": "Home",
+      "es": "Inicio",
+      "ko": "홈",
+      "ja": "ホーム"
+    },
+    {
+      "zh": "页面不存在 · 匡子闲",
+      "en": "Page not found · 匡子闲",
+      "es": "Página no encontrada · 匡子闲",
+      "ko": "페이지 없음 · 匡子闲",
+      "ja": "ページがありません · 匡子闲"
+    },
+    {
+      "zh": "这个地址在匡子闲的空间里找不到对应页面。",
+      "en": "This address has no matching page in 匡子闲’s space.",
+      "es": "Esta dirección no tiene una página en el espacio de 匡子闲.",
+      "ko": "이 주소는 匡子闲의 공간에 해당하는 페이지가 없습니다.",
+      "ja": "このアドレスは匡子闲の空間に該当するページがありません。"
+    },
+    {
+      "zh": "Log",
+      "en": "Log",
+      "es": "Diario",
+      "ko": "로그",
+      "ja": "日誌"
+    }
+  ]
+}

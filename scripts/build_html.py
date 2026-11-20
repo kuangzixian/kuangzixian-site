@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from md import escape_html, render_markdown
+import i18n_lib
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://kuangzixian.pages.dev"
@@ -64,7 +65,7 @@ def tags_html(tags: list | None) -> str:
     return f'<div class="article-tags">{inner}</div>'
 
 
-def site_card_html(site: dict) -> str:
+def site_card_html(site: dict, loc: str = "zh") -> str:
     url = site.get("url") or site.get("canonical") or ""
     name = site.get("name") or site.get("title") or url
     domain = site.get("domain") or ""
@@ -73,6 +74,8 @@ def site_card_html(site: dict) -> str:
     emoji = site.get("emoji") or "🌐"
     alt = site.get("image_alt") or name
     src = site.get("image") or site.get("favicon") or ""
+    if src and not src.startswith(("http://", "https://", "/")):
+        src = "/" + src
     if src:
         icon = (
             '<span class="site-icon-wrap">'
@@ -104,67 +107,58 @@ def site_card_html(site: dict) -> str:
     )
 
 
-def sites_list_html(sites_data: dict) -> str:
-    return "\n        ".join(site_card_html(s) for s in (sites_data.get("sites") or []))
+def sites_list_html(sites_data: dict, loc: str = "zh") -> str:
+    return "\n        ".join(site_card_html(s, loc) for s in (sites_data.get("sites") or []))
 
 
-def writing_card_html(chat: dict) -> str:
-    href = f"/writing/{attr(chat.get('id') or '')}"
-    title = escape_html(chat.get("title") or "")
-    title_en = escape_html(chat.get("title_en") or chat.get("title") or "")
-    summary = escape_html(chat.get("summary") or "")
-    summary_en = escape_html(chat.get("summary_en") or chat.get("summary") or "")
-    date = escape_html(chat.get("date") or "")
-    time_html = f'<time datetime="{date}">{date}</time>' if date else ""
+def writing_card_html(chat: dict, loc: str = "zh") -> str:
+    href = i18n_lib.localize_path(f"/writing/{chat.get('id') or ''}", loc)
+    title = escape_html(i18n_lib.pick(chat, "title", loc))
+    summary = escape_html(i18n_lib.pick(chat, "summary", loc))
+    date = chat.get("date") or ""
+    date_label = i18n_lib.format_date(date, loc) if date else ""
+    time_html = f'<time datetime="{escape_html(date)}">{escape_html(date_label)}</time>' if date else ""
     return (
         f'<a class="card article" href="{href}">'
         f'<div class="meta"><span class="zh">对话</span><span class="en-only">Conversation</span>{time_html}</div>'
-        f'<h3><span class="zh">{title}</span><span class="en-only">{title_en}</span></h3>'
-        f'<p class="zh">{summary}</p>'
-        f'<p class="en-only">{summary_en}</p>'
+        f"<h3>{title}</h3>"
+        f"<p>{summary}</p>"
         f"{tags_html(chat.get('tags'))}"
         "</a>"
     )
 
 
-def writing_list_html(chats: list[dict]) -> str:
-    return "\n        ".join(writing_card_html(c) for c in chats)
+def writing_list_html(chats: list[dict], loc: str = "zh") -> str:
+    return "\n        ".join(writing_card_html(c, loc) for c in chats)
 
 
-def boardgame_card_html(game: dict) -> str:
+def boardgame_card_html(game: dict, loc: str = "zh") -> str:
     gid = game.get("id") or ""
     emoji = game.get("emoji") or "🎲"
+    name = i18n_lib.pick(game, "name", loc)
     name_zh = game.get("name_zh") or ""
-    name_en = game.get("name_en") or ""
-    blurb_zh = game.get("blurb_zh") or ""
-    blurb_en = game.get("blurb_en") or ""
+    blurb = i18n_lib.pick(game, "blurb", loc)
     aka = ""
-    if name_en and name_zh and name_en != name_zh:
-        aka = (
-            f'<p class="bgame-aka zh">{escape_html(name_en)}</p>'
-            f'<p class="bgame-aka en-only">{escape_html(name_zh)}</p>'
-        )
-    desc = ""
-    if blurb_zh:
-        desc += f'<p class="bgame-desc zh">{escape_html(blurb_zh)}</p>'
-    if blurb_en:
-        desc += f'<p class="bgame-desc en-only">{escape_html(blurb_en)}</p>'
+    if loc == "zh":
+        name_en = game.get("name_en") or ""
+        if name_en and name_zh and name_en != name_zh:
+            aka = f'<p class="bgame-aka">{escape_html(name_en)}</p>'
+    elif name_zh and name and name_zh != name:
+        aka = f'<p class="bgame-aka">{escape_html(name_zh)}</p>'
+    desc = f'<p class="bgame-desc">{escape_html(blurb)}</p>' if blurb else ""
     return (
         f'<article class="card bgame-card" data-game="{attr(gid)}">'
         f'<span class="bgame-icon" data-game="{attr(gid)}" aria-hidden="true">{escape_html(emoji)}</span>'
         '<div class="bgame-body">'
-        "<h3 class=\"bgame-name\">"
-        f'<span class="zh">{escape_html(name_zh or name_en)}</span>'
-        f'<span class="en-only">{escape_html(name_en or name_zh)}</span>'
-        "</h3>"
+        f'<h3 class="bgame-name">{escape_html(name)}</h3>'
         f"{aka}{desc}"
         "</div>"
         "</article>"
     )
 
 
-def boardgames_list_html(data: dict) -> str:
-    return "\n        ".join(boardgame_card_html(g) for g in (data.get("games") or []))
+def boardgames_list_html(data: dict, loc: str = "zh") -> str:
+    return "\n        ".join(boardgame_card_html(g, loc) for g in (data.get("games") or []))
 
 
 def visible_messages(chat: dict) -> list[dict]:
@@ -259,10 +253,10 @@ def article_html(chat: dict) -> str:
     )
 
 
-def json_ld(chat: dict) -> str:
-    title = chat.get("title") or ""
-    summary = chat.get("summary") or title
-    url = writing_url(chat["id"])
+def json_ld(chat: dict, loc: str = "zh") -> str:
+    title = i18n_lib.pick(chat, "title", loc) or chat.get("title") or ""
+    summary = i18n_lib.pick(chat, "summary", loc) or title
+    url = i18n_lib.abs_url(f"/writing/{chat['id']}", loc)
     published = chat.get("datetime") or chat.get("date") or ""
     comments = []
     if chat.get("prompt"):
@@ -283,13 +277,13 @@ def json_ld(chat: dict) -> str:
         "@context": "https://schema.org",
         "@type": "DiscussionForumPosting",
         "headline": title,
-        "alternativeHeadline": chat.get("title_en") or title,
+        "alternativeHeadline": chat.get("title_en") or chat.get("title") or title,
         "description": summary,
         "url": url,
         "mainEntityOfPage": url,
         "image": AVATAR,
         "datePublished": published,
-        "inLanguage": "zh-CN",
+        "inLanguage": i18n_lib.locales()[loc]["html_lang"],
         "author": {"@type": "Person", "name": "匡子闲", "alternateName": "kuangzixian", "@id": PERSON_ID, "url": f"{SITE}/"},
         "publisher": {"@type": "Person", "name": "匡子闲", "@id": PERSON_ID},
         "text": summary,
@@ -301,27 +295,11 @@ def json_ld(chat: dict) -> str:
 
 
 def skin_boot_script() -> str:
-    return """  <script>
-  (function () {
-    try {
-      var l = localStorage.getItem("kuang-lang");
-      if (l === "en") document.documentElement.setAttribute("lang", "en");
-      var s = localStorage.getItem("kuang-skin");
-      if (s !== "blue" && s !== "pink" && s !== "night") {
-        s = localStorage.getItem("kuang-theme") === "dark" ? "night" : "blue";
-      }
-      document.documentElement.setAttribute("data-skin", s);
-      document.documentElement.setAttribute("data-theme", s === "night" ? "dark" : "light");
-      var colors = { blue: "#4a9de0", pink: "#ee7aa8", night: "#1b1530" };
-      var m = document.getElementById("themeColor");
-      if (m) m.setAttribute("content", colors[s] || colors.blue);
-    } catch (e) {}
-  })();
-  </script>"""
+    return i18n_lib.BOOT_SCRIPT
 
 
 def topbar_html(*, back_href: str = "/#writing", back_zh: str = "返回日志", back_en: str = "Back to logs") -> str:
-    return f"""  <a class="skip" href="#main">跳到正文 Skip to content</a>
+    return f"""  <a class="skip" href="#main"><span class="zh">跳到正文</span><span class="en-only">Skip to content</span></a>
   <div class="qz-topbar">
     <div class="qz-topbar-inner">
       <a class="qz-top-name" href="/">匡子闲的空间</a>
@@ -335,8 +313,8 @@ def topbar_html(*, back_href: str = "/#writing", back_zh: str = "返回日志", 
           <button type="button" class="qz-skin-dot" data-skin-set="blue" title="晴空蓝" aria-label="晴空蓝皮肤"></button>
           <button type="button" class="qz-skin-dot" data-skin-set="pink" title="粉钻粉" aria-label="粉钻粉皮肤"></button>
           <button type="button" class="qz-skin-dot" data-skin-set="night" title="夜空" aria-label="夜空皮肤"></button>
-          <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">EN</button>
         </div>
+        <div class="qz-lang-slot" data-lang-slot="top"></div>
         <div class="qz-menu">
           <button type="button" id="qzMenuBtn" class="qz-menu-btn" aria-expanded="false" aria-controls="qzMenuPanel">
             <span class="zh">设置</span><span class="en-only">Menu</span>
@@ -351,7 +329,7 @@ def topbar_html(*, back_href: str = "/#writing", back_zh: str = "返回日志", 
             <button type="button" id="qzSnowToggle" class="qz-snow-toggle" aria-pressed="true">
               <span class="zh">飘雪特效：开</span><span class="en-only">Snow: On</span>
             </button>
-            <button class="lang-toggle qz-menu-lang" type="button" id="langToggleMobile" aria-label="Switch language">EN</button>
+            <div data-lang-slot="menu"></div>
           </div>
         </div>
       </div>
@@ -435,23 +413,23 @@ def music_box_html() -> str:
 
 
 def page_scripts(*extra: str) -> str:
-    srcs = ["/js/main.js", "/js/qzone.js", "/js/snow.js", "/js/visits.js", *extra]
+    srcs = ["/js/i18n.js", "/js/main.js", "/js/qzone.js", "/js/snow.js", "/js/visits.js", *extra]
     return "\n".join(f'  <script src="{s}"></script>' for s in srcs)
 
 
-def build_chat_page(chat: dict) -> str:
-    title = chat.get("title") or ""
-    title_en = chat.get("title_en") or title
+
+def build_chat_page(chat: dict, loc: str = "zh") -> str:
+    title = i18n_lib.pick(chat, "title", loc) or chat.get("title") or ""
+    desc = i18n_lib.pick(chat, "summary", loc) or title
     full_title = f"{title} · 匡子闲"
-    desc = chat.get("summary") or title
-    url = writing_url(chat["id"])
+    url = i18n_lib.abs_url(f"/writing/{chat['id']}", loc)
     date = chat.get("date") or ""
     published = chat.get("datetime") or date
     md_href = f"/writing/{chat['id']}.md"
     published_meta = (
         f'  <meta property="article:published_time" content="{attr(published)}">\n' if published else ""
     )
-    return f"""<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -467,7 +445,6 @@ def build_chat_page(chat: dict) -> str:
   <meta property="og:image" content="{AVATAR}">
   <meta property="og:image:alt" content="匡子闲">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:locale:alternate" content="en_US">
 {published_meta}  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{attr(full_title)}">
   <meta name="twitter:description" content="{attr(desc)}">
@@ -482,7 +459,7 @@ def build_chat_page(chat: dict) -> str:
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/qzone.css">
   <script type="application/ld+json">
-{json_ld(chat)}
+{json_ld(chat, loc)}
   </script>
 </head>
 <body class="qzone-body chat-page">
@@ -512,19 +489,21 @@ def build_chat_page(chat: dict) -> str:
     </div>
   </footer>
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-  <script src="/js/main.js"></script>
-  <script src="/js/markdown.js"></script>
-  <script src="/js/chat.js"></script>
-  <script src="/js/qzone.js"></script>
-  <script src="/js/snow.js"></script>
-  <script src="/js/visits.js"></script>
+{page_scripts("/js/markdown.js", "/js/chat.js")}
 </body>
 </html>
 """
+    return i18n_lib.localize_document(
+        html,
+        loc,
+        path=f"/writing/{chat['id']}",
+        title=full_title,
+        desc=desc,
+    )
 
 
-def build_404_page() -> str:
-    return f"""<!DOCTYPE html>
+def build_404_page(loc: str = "zh") -> str:
+    html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -574,53 +553,49 @@ def build_404_page() -> str:
 </body>
 </html>
 """
+    return i18n_lib.localize_document(
+        html,
+        loc,
+        path="/404",
+        title=i18n_lib.t_ui("not_found_code_title", loc),
+        desc=i18n_lib.t_ui("not_found_desc", loc),
+    )
 
 
-def patch_index(html: str, *, chats: list[dict], sites: dict, boardgames: dict) -> str:
+def patch_index(html: str, *, chats: list[dict], sites: dict, boardgames: dict, loc: str = "zh") -> str:
     html = html.replace("<h1 class=\"qz-space-name\">匡子闲的空间</h1>", '<p class="qz-space-name">匡子闲的空间</p>')
     html = html.replace('href="music/report.html"', 'href="/music/report"')
     html = html.replace('href="chat.html?id=', 'href="/writing/')
-    # After the naive replace, href="/writing/ai-hack-bitcoin" is already correct if we also
-    # strip the old prefix carefully. chat.html?id=X becomes /writing/X — good.
-    html = replace_inner_by_id(html, "qzSitesList", sites_list_html(sites))
-    html = replace_inner_by_id(html, "writingList", writing_list_html(chats))
-    html = replace_inner_by_id(html, "qzBoardgamesList", boardgames_list_html(boardgames))
-    intro_zh = sites.get("intro_zh")
-    intro_en = sites.get("intro_en")
-    if intro_zh:
-        html = re.sub(
-            r'(<p class="lede zh" id="qzSitesIntroZh">)(.*?)(</p>)',
-            lambda m: m.group(1) + escape_html(intro_zh) + m.group(3),
-            html,
-            count=1,
-            flags=re.S,
-        )
-    if intro_en:
-        html = re.sub(
-            r'(<p class="lede en-only" id="qzSitesIntroEn">)(.*?)(</p>)',
-            lambda m: m.group(1) + escape_html(intro_en) + m.group(3),
-            html,
-            count=1,
-            flags=re.S,
-        )
-    bg_intro_zh = boardgames.get("intro_zh")
-    bg_intro_en = boardgames.get("intro_en")
-    if bg_intro_zh:
-        html = re.sub(
-            r'(<p class="lede zh" id="qzBoardgamesIntroZh">)(.*?)(</p>)',
-            lambda m: m.group(1) + escape_html(bg_intro_zh) + m.group(3),
-            html,
-            count=1,
-            flags=re.S,
-        )
-    if bg_intro_en:
-        html = re.sub(
-            r'(<p class="lede en-only" id="qzBoardgamesIntroEn">)(.*?)(</p>)',
-            lambda m: m.group(1) + escape_html(bg_intro_en) + m.group(3),
-            html,
-            count=1,
-            flags=re.S,
-        )
+    html = replace_inner_by_id(html, "qzSitesList", sites_list_html(sites, loc))
+    html = replace_inner_by_id(html, "writingList", writing_list_html(chats, loc))
+    html = replace_inner_by_id(html, "qzBoardgamesList", boardgames_list_html(boardgames, loc))
+
+    def set_intro(html: str, zh_id: str, en_id: str, data: dict, prefix: str) -> str:
+        zh = data.get(f"{prefix}zh") or data.get("intro_zh")
+        en = data.get(f"{prefix}en") or data.get("intro_en")
+        # keep both so localize_pairs can translate via catalog / locale field
+        loc_text = data.get("intro_zh" if loc == "zh" else f"intro_{loc}") or en or zh
+        if zh:
+            html = re.sub(
+                rf'(<p class="lede zh" id="{zh_id}">)(.*?)(</p>)',
+                lambda m, text=zh: m.group(1) + escape_html(text) + m.group(3),
+                html,
+                count=1,
+                flags=re.S,
+            )
+        if en:
+            html = re.sub(
+                rf'(<p class="lede en-only" id="{en_id}">)(.*?)(</p>)',
+                lambda m, text=en: m.group(1) + escape_html(text) + m.group(3),
+                html,
+                count=1,
+                flags=re.S,
+            )
+        return html
+
+    html = set_intro(html, "qzSitesIntroZh", "qzSitesIntroEn", sites, "intro_")
+    html = set_intro(html, "qzBoardgamesIntroZh", "qzBoardgamesIntroEn", boardgames, "intro_")
+    html = i18n_lib.localize_document(html, loc, path="/")
     return html
 
 
@@ -630,23 +605,29 @@ def write_pages(dest: Path) -> None:
     sites = load_json("sites.json")
     boardgames = load_json("boardgames.json")
 
-    index_path = dest / "index.html"
-    index_path.write_text(
-        patch_index(index_path.read_text(encoding="utf-8"), chats=chats, sites=sites, boardgames=boardgames),
-        encoding="utf-8",
-    )
+    raw_index = (dest / "index.html").read_text(encoding="utf-8")
 
-    writing_dir = dest / "writing"
-    writing_dir.mkdir(parents=True, exist_ok=True)
-    for chat in chats:
-        chat_id = chat.get("id")
-        if not chat_id:
-            continue
-        # writing/<id>.html is served at the pretty URL /writing/<id> with HTTP 200.
-        # A directory index would 308 /writing/<id> to /writing/<id>/.
-        (writing_dir / f"{chat_id}.html").write_text(build_chat_page(chat), encoding="utf-8")
+    for loc in i18n_lib.ORDER:
+        html = patch_index(raw_index, chats=chats, sites=sites, boardgames=boardgames, loc=loc)
+        if loc == "zh":
+            (dest / "index.html").write_text(html, encoding="utf-8")
+        else:
+            folder = dest / loc
+            folder.mkdir(parents=True, exist_ok=True)
+            (folder / "index.html").write_text(html, encoding="utf-8")
 
-    (dest / "404.html").write_text(build_404_page(), encoding="utf-8")
+        writing_dir = dest / "writing" if loc == "zh" else dest / loc / "writing"
+        writing_dir.mkdir(parents=True, exist_ok=True)
+        for chat in chats:
+            chat_id = chat.get("id")
+            if not chat_id:
+                continue
+            (writing_dir / f"{chat_id}.html").write_text(build_chat_page(chat, loc), encoding="utf-8")
+
+        if loc == "zh":
+            (dest / "404.html").write_text(build_404_page(loc), encoding="utf-8")
+        else:
+            (dest / loc / "404.html").write_text(build_404_page(loc), encoding="utf-8")
 
 
 if __name__ == "__main__":

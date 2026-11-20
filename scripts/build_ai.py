@@ -362,6 +362,36 @@ def shelf_line(item: dict) -> str:
     return "- " + " ".join(bits)
 
 
+
+PROJECT_DISPLAY_NAMES = {"easy-life": "EasyLife", "easy-offer": "EasyOffer"}
+I18N_LOCALES = ("zh", "en", "es", "ko", "ja")
+HREFLANG = {"zh": "zh-CN", "en": "en", "es": "es", "ko": "ko", "ja": "ja"}
+
+
+def project_display_name(proj: dict) -> str:
+    name = (proj.get("name") or "").strip()
+    return PROJECT_DISPLAY_NAMES.get(name, name)
+
+
+def locale_page_url(path: str, loc: str) -> str:
+    if path == "/":
+        return f"{SITE}/" if loc == "zh" else f"{SITE}/{loc}/"
+    prefix = "" if loc == "zh" else f"/{loc}"
+    return f"{SITE}{prefix}{path}"
+
+
+def xhtml_links(path: str) -> list[str]:
+    lines = []
+    for loc in I18N_LOCALES:
+        lines.append(
+            f'    <xhtml:link rel="alternate" hreflang="{HREFLANG[loc]}" href="{xml_escape(locale_page_url(path, loc))}"/>'
+        )
+    lines.append(
+        f'    <xhtml:link rel="alternate" hreflang="x-default" href="{xml_escape(locale_page_url(path, "zh"))}"/>'
+    )
+    return lines
+
+
 def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict | None = None) -> str:
     bio = profile.get("bio") or {}
     shelf = reading.get("public_shelf") or {}
@@ -375,6 +405,10 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "## Canonical URLs",
         "",
         f"- [Homepage]({SITE}/)",
+        f"- [English]({SITE}/en/)",
+        f"- [Español]({SITE}/es/)",
+        f"- [한국어]({SITE}/ko/)",
+        f"- [日本語]({SITE}/ja/)",
         f"- [Agent-optimized homepage]({SITE}/?mode=agent)",
         f"- [Markdown homepage]({SITE}/index.md)",
         f"- [Reading]({SITE}/reading.md)",
@@ -398,14 +432,14 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "## What this site is",
         "",
         "这是匡子闲的个人主页，页面装扮成经典 QQ 空间的样子，用选项卡分别查看主页、日志、读书、音乐、桌游、推荐网站、留言板和个人档。本站不是公开 API、SDK 文档，也不是产品定价或登录平台。",
-        "站点用中文为主，部分界面有英文对照。对话正文托管在本站，方便中国大陆和海外访问。",
+        "站点提供中文、英语、西班牙语、韩语和日语界面：中文首页在 `/`，其他语言分别在 `/en/`、`/es/`、`/ko/`、`/ja/`。对话正文仍以原文托管在本站，方便中国大陆和海外访问。",
         "机器可读入口是 `/llms.txt`、`/llms-full.txt`、各页 Markdown，以及 `/data/profile.json`、`/data/reading.json`、`/data/chats.json`、`/data/sites.json`、`/data/music.json`、`/data/boardgames.json`。",
         "",
         "## Best-known work",
         "",
     ]
     for proj in profile.get("projects") or []:
-        name = proj.get("name") or ""
+        name = project_display_name(proj)
         url = proj.get("url") or ""
         desc = proj.get("description")
         note = proj.get("note")
@@ -494,7 +528,6 @@ def build_index_md(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "# 匡子闲",
         "",
         bio["combined_zh"],
-        f"空间签名：「{bio.get('signature_zh') or ''}」",
         "",
         "这是他的个人主页，页面装扮成经典 QQ 空间的样子。用来介绍自己、公开的微信读书记录、音乐口味、玩过的桌游、推荐网站、开源项目，以及与 GPT 的对话。本站不是公开 API。",
         "",
@@ -507,7 +540,7 @@ def build_index_md(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "",
     ]
     for proj in profile.get("projects") or []:
-        name = proj.get("name") or ""
+        name = project_display_name(proj)
         url = proj.get("url") or ""
         title = f"[{name}]({url})" if url else name
         if proj.get("description"):
@@ -820,7 +853,6 @@ def build_llms_full(profile: dict, reading: dict, chats: list[dict], sites: dict
         f"- 拉丁名 / handle：{profile.get('latin_handle') or 'kuangzixian'}",
         f"- 职业：{bio.get('juejin_title') or '后端工程师'}",
         f"- 知乎签名：{bio.get('zhihu') or ''}",
-        f"- 空间签名：{bio.get('signature_zh') or ''}",
         f"- 资料更新时间：{profile.get('updated_at')}（{profile.get('timezone') or 'Asia/Shanghai'}）",
         "",
         "已核实的社交主页：",
@@ -918,10 +950,16 @@ def build_sitemap_md(chats: list[dict]) -> str:
         "## HTML",
         "",
         f"- [首页]({SITE}/)",
+        f"- [English]({SITE}/en/)",
+        f"- [Español]({SITE}/es/)",
+        f"- [한국어]({SITE}/ko/)",
+        f"- [日本語]({SITE}/ja/)",
         f"- [Agent 视图]({SITE}/?mode=agent)（重定向到 /index.md）",
     ]
     for chat in chats:
         lines.append(f"- [{chat['title']}]({writing_html_url(chat['id'])})")
+        for loc in ("en", "es", "ko", "ja"):
+            lines.append(f"- [{chat['title']}]({SITE}/{loc}/writing/{chat['id']})（{loc}）")
     lines += [f"- [留言板]({SITE}/#guestbook)", f"- [音乐]({SITE}/#music)", f"- [音乐完整报告]({SITE}/music/report)", f"- [桌游]({SITE}/#boardgames)", f"- [推荐网站]({SITE}/#sites)", "", "## Markdown 与文本", ""]
     for path, title in [
         ("/index.md", "首页"),
@@ -957,7 +995,6 @@ def build_sitemap_xml(profile: dict, reading: dict, chats: list[dict], music: di
     home_last = latest_dates(profile, reading, chats, music, boardgames, sites)
     reading_last = iso_date(reading.get("retrieved_at")) or home_last
     urls: list[tuple[str, str, str]] = [
-        (f"{SITE}/", home_last, "weekly"),
         (f"{SITE}/index.md", home_last, "weekly"),
         (f"{SITE}/reading.md", reading_last, "weekly"),
         (f"{SITE}/writing.md", home_last, "weekly"),
@@ -971,12 +1008,29 @@ def build_sitemap_xml(profile: dict, reading: dict, chats: list[dict], music: di
     ]
     for chat in chats:
         last = iso_date(chat.get("date") or chat.get("datetime")) or home_last
-        urls.append((f"{SITE}/writing/{chat['id']}", last, "monthly"))
         urls.append((f"{SITE}/writing/{chat['id']}.md", last, "monthly"))
+    # Language-specific HTML pages with hreflang alternates.
+    alt_paths: list[tuple[str, str, str]] = [
+        ("/", home_last, "weekly"),
+    ]
+    for chat in chats:
+        last = iso_date(chat.get("date") or chat.get("datetime")) or home_last
+        alt_paths.append((f"/writing/{chat['id']}", last, "monthly"))
+
     parts = [
         '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
     ]
+    for path, lastmod, freq in alt_paths:
+        for loc in I18N_LOCALES:
+            parts += [
+                "  <url>",
+                f"    <loc>{xml_escape(locale_page_url(path, loc))}</loc>",
+                *xhtml_links(path),
+                f"    <lastmod>{xml_escape(lastmod)}</lastmod>",
+                f"    <changefreq>{freq}</changefreq>",
+                "  </url>",
+            ]
     for loc, lastmod, freq in urls:
         parts += [
             "  <url>",

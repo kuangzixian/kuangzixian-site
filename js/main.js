@@ -1,6 +1,6 @@
 (function () {
   var root = document.documentElement;
-  var langToggles = document.querySelectorAll(".lang-toggle");
+  var I18N = window.KUANG_I18N || {};
   var themeToggle = document.getElementById("themeToggle");
   var header = document.querySelector(".site-header");
   var themeColorMeta = document.getElementById("themeColor");
@@ -10,26 +10,10 @@
   } catch (e) {}
 
   function isEn() {
-    return root.getAttribute("lang") === "en";
+    return (I18N.locale || root.getAttribute("lang") || "zh") === "en" || root.getAttribute("lang") === "en";
   }
 
-  function setLang(lang) {
-    var en = lang === "en";
-    root.setAttribute("lang", en ? "en" : "zh-CN");
-    langToggles.forEach(function (btn) { btn.textContent = en ? "中文" : "EN"; });
-    try { localStorage.setItem("kuang-lang", en ? "en" : "zh"); } catch (err) {}
-    refreshThemeLabel();
-    refreshDynamicLang();
-  }
-
-  var savedLang = null;
-  try { savedLang = localStorage.getItem("kuang-lang"); } catch (e) {}
-  setLang(savedLang === "en" ? "en" : "zh");
-  langToggles.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      setLang(isEn() ? "zh" : "en");
-    });
-  });
+  if (I18N.initSwitcher) I18N.initSwitcher();
 
   window.addEventListener("scroll", function () {
     if (!header) return;
@@ -69,9 +53,15 @@
   function refreshThemeLabel() {
     if (!themeToggle) return;
     var dark = currentTheme() === "dark";
-    themeToggle.setAttribute("aria-label", isEn()
-      ? (dark ? "Switch to light theme" : "Switch to dark theme")
-      : (dark ? "切换到浅色主题" : "切换到深色主题"));
+    var labels = {
+      zh: dark ? "切换到浅色主题" : "切换到深色主题",
+      en: dark ? "Switch to light theme" : "Switch to dark theme",
+      es: dark ? "Cambiar a tema claro" : "Cambiar a tema oscuro",
+      ko: dark ? "밝은 테마로 전환" : "어두운 테마로 전환",
+      ja: dark ? "ライトテーマに切り替え" : "ダークテーマに切り替え"
+    };
+    var loc = (I18N.locale || "zh");
+    themeToggle.setAttribute("aria-label", labels[loc] || labels.en);
   }
 
   function setTheme(theme, persist) {
@@ -106,7 +96,7 @@
   }
 
   /* typewriter on the space signature */
-  var mottoTarget = document.querySelector(isEn() ? ".qz-sign.en-only .type-target" : ".qz-sign.zh .type-target")
+  var mottoTarget = document.querySelector(".qz-sign .type-target")
     || document.querySelector(".motto .type-target");
   if (mottoTarget) {
     var mottoText = mottoTarget.textContent.trim();
@@ -135,7 +125,9 @@
 
   var countEls = document.querySelectorAll("[data-count]");
   function formatCount(n, format) {
-    var s = String(Math.round(n));
+    n = Math.round(n);
+    if (format === "comma" && I18N.formatNumber) return I18N.formatNumber(n);
+    var s = String(n);
     if (format === "comma") s = s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return s;
   }
@@ -244,10 +236,9 @@
 
   function quoteHTML(q) {
     if (!q) {
-      return '<p class="tiny zh">这本书在精选笔记里还没有摘录。</p><p class="tiny en-only">No curated highlight for this title.</p>';
+      return '<p class="tiny">' + escapeHtml((I18N.t && I18N.t("noHighlight")) || "No curated highlight for this title.") + "</p>";
     }
-    var kindZh = q.type === "thought" ? "想法" : "划线";
-    var kindEn = q.type === "thought" ? "Thought" : "Highlight";
+    var kind = (I18N.t && I18N.t(q.type === "thought" ? "thought" : "highlight")) || (q.type === "thought" ? "Thought" : "Highlight");
     var body = "";
     if (q.type === "thought" && q.quote) {
       body += "<blockquote>" + escapeHtml(q.quote) + "</blockquote>";
@@ -255,15 +246,15 @@
     } else {
       body += "<blockquote>" + escapeHtml(q.text) + "</blockquote>";
     }
-    return '<span class="pill"><span class="zh">' + kindZh + '</span><span class="en-only">' + kindEn + "</span></span>" + body;
+    return '<span class="pill">' + escapeHtml(kind) + "</span>" + body;
   }
 
   function renderDraw(book) {
     if (!drawResult || !book) return;
     var q = book.quotes && book.quotes.length ? pickOne(book.quotes) : null;
-    var alt = isEn() ? ("Cover of " + book.title) : ("《" + book.title + "》封面");
+    var alt = (I18N.t && I18N.t("coverOf", { title: book.title })) || ("Cover of " + book.title);
     var kind = book.kind === "album"
-      ? '<span class="zh">有声书</span><span class="en-only">Audiobook</span>'
+      ? escapeHtml((I18N.t && I18N.t("audiobook")) || "Audiobook")
       : escapeHtml(book.category || "");
     drawResult.innerHTML =
       '<a class="book-link" href="' + escapeHtml(book.link) + '" rel="noopener noreferrer">' +
@@ -310,9 +301,8 @@
 
   function renderQuote(q) {
     if (!quoteCard || !q) return;
-    var foot = isEn()
-      ? ("From " + q.title + " · " + q.author)
-      : ("出自《" + q.title + "》· " + q.author);
+    var foot = (I18N.t && I18N.t("fromBook", { title: q.title, author: q.author }))
+      || ("From " + q.title + " · " + q.author);
     quoteCard.innerHTML =
       quoteHTML(q) +
       "<footer><a href=\"" + escapeHtml(q.link) + "\" rel=\"noopener noreferrer\">" + escapeHtml(foot) + "</a></footer>";

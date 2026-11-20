@@ -10,28 +10,29 @@
       .replace(/"/g, "&quot;");
   }
 
+  function pick(game, base) {
+    var loc = (window.KUANG_I18N && window.KUANG_I18N.locale) || "zh";
+    return game[base + "_" + loc] || game[base + "_en"] || game[base + "_zh"] || "";
+  }
+
   function cardHtml(game) {
     var id = game.id || "";
     var emoji = game.emoji || "🎲";
+    var loc = (window.KUANG_I18N && window.KUANG_I18N.locale) || "zh";
+    var name = pick(game, "name") || "Game";
     var nameZh = game.name_zh || "";
     var nameEn = game.name_en || "";
-    var title = nameZh || nameEn || "Game";
-    var blurbZh = game.blurb_zh || "";
-    var blurbEn = game.blurb_en || "";
+    var blurb = pick(game, "blurb");
+    var aka = "";
+    if (loc === "zh" && nameEn && nameZh && nameEn !== nameZh) aka = '<p class="bgame-aka">' + esc(nameEn) + "</p>";
+    else if (loc !== "zh" && nameZh && name && nameZh !== name) aka = '<p class="bgame-aka">' + esc(nameZh) + "</p>";
     return (
       '<article class="card bgame-card" data-game="' + esc(id) + '">' +
         '<span class="bgame-icon" data-game="' + esc(id) + '" aria-hidden="true">' + esc(emoji) + "</span>" +
         '<div class="bgame-body">' +
-          '<h3 class="bgame-name">' +
-            '<span class="zh">' + esc(nameZh || nameEn) + "</span>" +
-            '<span class="en-only">' + esc(nameEn || nameZh) + "</span>" +
-          "</h3>" +
-          (nameEn && nameZh && nameEn !== nameZh
-            ? '<p class="bgame-aka zh">' + esc(nameEn) + "</p>" +
-              '<p class="bgame-aka en-only">' + esc(nameZh) + "</p>"
-            : "") +
-          (blurbZh ? '<p class="bgame-desc zh">' + esc(blurbZh) + "</p>" : "") +
-          (blurbEn ? '<p class="bgame-desc en-only">' + esc(blurbEn) + "</p>" : "") +
+          '<h3 class="bgame-name">' + esc(name) + "</h3>" +
+          aka +
+          (blurb ? '<p class="bgame-desc">' + esc(blurb) + "</p>" : "") +
         "</div>" +
       "</article>"
     );
@@ -41,13 +42,17 @@
     var games = (data && data.games) || [];
     if (!games.length) return;
     list.innerHTML = games.map(cardHtml).join("");
-    var introZh = document.getElementById("qzBoardgamesIntroZh");
-    var introEn = document.getElementById("qzBoardgamesIntroEn");
-    if (introZh && data.intro_zh) introZh.textContent = data.intro_zh;
-    if (introEn && data.intro_en) introEn.textContent = data.intro_en;
+    var loc = (window.KUANG_I18N && window.KUANG_I18N.locale) || "zh";
+    var intro = document.getElementById("qzBoardgamesIntro") || document.getElementById("qzBoardgamesIntroZh");
+    var key = loc === "zh" ? "intro_zh" : "intro_" + loc;
+    if (intro && (data[key] || data.intro_en || data.intro_zh)) {
+      intro.textContent = data[key] || data.intro_en || data.intro_zh;
+    }
   }
 
-  fetch("data/boardgames.json", { cache: "no-store" })
+  if (list.getAttribute("data-static") === "1") return;
+
+  fetch("/data/boardgames.json", { cache: "no-store" })
     .then(function (res) {
       if (!res.ok) throw new Error("boardgames.json " + res.status);
       return res.json();

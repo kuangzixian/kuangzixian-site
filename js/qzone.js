@@ -183,7 +183,10 @@
     var title = (track.querySelector(".qz-track-title") || {}).textContent || "song";
     if (!allowed) {
       slot.hidden = false;
-      slot.innerHTML = '<p class="qz-track-unavailable"><span class="zh">这首歌未开放外链播放，请到网易云打开。</span><span class="en-only">Outchain playback is not available for this track. Open it on NetEase Cloud Music.</span></p>';
+      var msg = (window.KUANG_I18N && window.KUANG_I18N.t && window.KUANG_I18N.t("trackUnavailable"))
+        || "Outchain playback is not available for this track. Open it on NetEase Cloud Music.";
+      slot.innerHTML = '<p class="qz-track-unavailable"></p>';
+      slot.firstChild.textContent = msg;
       return;
     }
     if (!slot.getAttribute("data-loaded")) {
@@ -202,8 +205,7 @@
     }
     slot.hidden = false;
     if (btn) {
-      var en = root.getAttribute("lang") === "en";
-      btn.textContent = en ? "Ready" : "已加载";
+      btn.textContent = (window.KUANG_I18N && window.KUANG_I18N.t && window.KUANG_I18N.t("ready")) || "Ready";
     }
   }
 

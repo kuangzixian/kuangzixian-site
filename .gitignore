@@ -41,3 +41,6 @@ Desktop.ini
 *.swo
 .idea/
 .vscode/
+
+# i18n extract intermediates
+data/_i18n*

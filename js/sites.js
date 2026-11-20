@@ -22,6 +22,7 @@
     var emoji = site.emoji || "🌐";
     var alt = site.image_alt || name;
     var src = site.image || site.favicon || "";
+    if (src && src.indexOf("http") !== 0 && src.charAt(0) !== "/") src = "/" + src;
     var fallback = '<span class="site-fallback" aria-hidden="true">' + esc(emoji) + "</span>";
     if (!src) return fallback;
     return (
@@ -34,12 +35,8 @@
 
   function badgeHtml(site) {
     if (!site.own) return "";
-    return (
-      '<span class="site-badge">' +
-        '<span class="zh">自己做的</span>' +
-        '<span class="en-only">Made by me</span>' +
-      "</span>"
-    );
+    var label = (window.KUANG_I18N && window.KUANG_I18N.t && window.KUANG_I18N.t("madeByMe")) || "Made by me";
+    return '<span class="site-badge">' + esc(label) + "</span>";
   }
 
   function cardHtml(site) {
@@ -67,13 +64,17 @@
     var sites = (data && (data.sites || data.friends)) || [];
     if (!sites.length) return;
     list.innerHTML = sites.map(cardHtml).join("");
-    var introZh = document.getElementById("qzSitesIntroZh");
-    var introEn = document.getElementById("qzSitesIntroEn");
-    if (introZh && data.intro_zh) introZh.textContent = data.intro_zh;
-    if (introEn && data.intro_en) introEn.textContent = data.intro_en;
+    var loc = (window.KUANG_I18N && window.KUANG_I18N.locale) || "zh";
+    var intro = document.getElementById("qzSitesIntro") || document.getElementById("qzSitesIntroZh");
+    var key = loc === "zh" ? "intro_zh" : "intro_" + loc;
+    if (intro && (data[key] || data.intro_en || data.intro_zh)) {
+      intro.textContent = data[key] || data.intro_en || data.intro_zh;
+    }
   }
 
-  fetch("data/sites.json", { cache: "no-store" })
+  if (list.getAttribute("data-static") === "1") return;
+
+  fetch("/data/sites.json", { cache: "no-store" })
     .then(function (res) {
       if (!res.ok) throw new Error("sites.json " + res.status);
       return res.json();

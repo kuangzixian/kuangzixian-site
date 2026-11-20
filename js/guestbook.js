@@ -9,47 +9,26 @@
   var submitBtn = document.getElementById("gbSubmit");
   if (!form || !listEl) return;
 
-  var MESSAGES = {
-    zh: {
-      empty: "还没有留言，来写第一条吧。",
-      unavailable: "留言板暂时连不上，过一会儿再试试。",
-      invalid_nickname: "昵称需要 1 到 20 个字。",
-      invalid_content: "留言需要 1 到 500 个字。",
-      has_link: "为了减少广告，留言里先不要放链接。",
-      spam: "这条看起来像广告，没有发出去。",
-      too_fast: "写得有点勤，请过几分钟再留。",
-      network: "网络不太稳，请稍后再试。",
-      sent: "已记下。",
-      sending: "正在发送…",
-      justNow: "刚刚",
-      minutes: function (n) { return n + " 分钟前"; },
-      hours: function (n) { return n + " 小时前"; },
-      days: function (n) { return n + " 天前"; },
-    },
-    en: {
-      empty: "No notes yet — be the first to write one.",
-      unavailable: "The guestbook is temporarily unavailable. Please try again later.",
-      invalid_nickname: "Nickname must be 1 to 20 characters.",
-      invalid_content: "The note must be 1 to 500 characters.",
-      has_link: "Please leave the note without links, to keep spam down.",
-      spam: "This looked like an ad, so it was not posted.",
-      too_fast: "That is a bit quick. Please wait a few minutes.",
-      network: "The network hiccuped. Please try again.",
-      sent: "Saved.",
-      sending: "Sending…",
-      justNow: "just now",
-      minutes: function (n) { return n + " min ago"; },
-      hours: function (n) { return n + " hr ago"; },
-      days: function (n) { return n + " days ago"; },
-    },
-  };
-
-  function isEn() {
-    return document.documentElement.getAttribute("lang") === "en";
-  }
+  function I() { return window.KUANG_I18N || {}; }
 
   function t() {
-    return isEn() ? MESSAGES.en : MESSAGES.zh;
+    var tr = I().t || function (k) { return k; };
+    return {
+      empty: tr("gbEmpty"),
+      unavailable: tr("gbUnavailable"),
+      invalid_nickname: tr("gbInvalidNickname"),
+      invalid_content: tr("gbInvalidContent"),
+      has_link: tr("gbHasLink"),
+      spam: tr("gbSpam"),
+      too_fast: tr("gbTooFast"),
+      network: tr("gbNetwork"),
+      sent: tr("gbSent"),
+      sending: tr("gbSending"),
+      justNow: tr("justNow"),
+      minutes: function (n) { return tr("minutesAgo", { n: n }); },
+      hours: function (n) { return tr("hoursAgo", { n: n }); },
+      days: function (n) { return tr("daysAgo", { n: n }); },
+    };
   }
 
   function charLen(s) {
@@ -149,7 +128,7 @@
       el.setAttribute("data-floor", String(floor));
       var span = el.querySelector(".gb-floor");
       if (!span) return;
-      span.innerHTML = '<span class="zh">第' + floor + '楼</span><span class="en-only">Floor ' + floor + "</span>";
+      span.textContent = (I().t && I().t("gbFloor", { n: floor })) || ("Floor " + floor);
     });
   }
 

@@ -220,7 +220,8 @@ html[data-skin="night"] .qz-banner-text { text-shadow: 0 2px 8px rgba(0,0,0,0.6)
 .qz-sign {
   margin: 8px 0 0;
   font-size: 14px;
-  max-width: 36em;
+  max-width: 46em;
+  line-height: 1.45;
 }
 
 /* shell */
@@ -639,15 +640,9 @@ html[data-skin="night"] .qz-track { background: rgba(255,255,255,0.04); }
   .qz-banner { height: 112px; }
   .qz-banner-text { padding: 16px 86px 0 4px; }
   .qz-space-name { font-size: 1.45rem; letter-spacing: 0.04em; }
-  .qz-sign {
-    font-size: 12px;
-    margin-top: 4px;
-    max-width: 100%;
-    line-height: 1.35;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  /* The same bio appears in the profile card; hide the banner copy so long
+     translations do not collide with the overlapping card or the sun graphic. */
+  .qz-sign { display: none; }
   .qz-cloud, .qz-sun { transform: scale(0.75); transform-origin: top right; }
   .qz-sparkle { display: none; }
 
@@ -1269,3 +1264,33 @@ html[data-skin="night"] .site-desc { color: var(--ink-soft, #c8c4bc); }
   margin: 28px 0 0;
 }
 .qz-404-actions .play-btn { text-decoration: none; padding: 8px 16px; }
+
+
+/* language switcher in the Qzone chrome */
+.qz-top-actions .qz-lang-slot { display: inline-flex; align-items: center; }
+.qz-topbar .lang-switcher-btn {
+  color: #fff;
+  border-color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.08);
+  min-height: 32px;
+  padding: 4px 8px 4px 10px;
+}
+.qz-topbar .lang-switcher-btn:hover { background: rgba(255,255,255,0.16); }
+.lang-list { display: grid; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+.lang-list a {
+  display: block;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--qz-line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 24px;
+}
+.lang-list a[aria-current="true"],
+.lang-list a:hover { outline: 2px solid var(--qz-gold); }
+@media (max-width: 800px) {
+  .qz-topbar .lang-switcher-btn { min-height: 44px; font-size: 13px; padding: 8px 10px; }
+}

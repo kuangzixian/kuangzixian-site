@@ -1,8 +1,8 @@
 # 匡子闲的个人主页
 
-[匡子闲（kuangzixian）的个人主页](https://kuangzixian.pages.dev/)，也是一个 QQ 空间风格的小站。我是一名后端工程师，做过 [Easy Offer](https://github.com/kuangzixian/easy-offer) 和[「好好生活」](https://github.com/kuangzixian/easy-life)。
+[匡子闲（kuangzixian）的个人主页](https://kuangzixian.pages.dev/)，也是一个 QQ 空间风格的小站。我是一名后端工程师，做过 [EasyOffer](https://github.com/kuangzixian/easy-offer) 和 [EasyLife](https://github.com/kuangzixian/easy-life)。
 
-静态 HTML / CSS / 原生 JavaScript，部署在 Cloudflare Pages。没有构建工具链，也不引用会被中国大陆拦截的外部字体或脚本 CDN。主页、日志、读书、音乐、桌游、推荐网站、留言板、个人档用选项卡切换。留言板和访问量由 Cloudflare Pages Functions + D1 提供；访问量每人每天最多计 1 次。
+静态 HTML / CSS / 原生 JavaScript，部署在 Cloudflare Pages。没有构建工具链，也不引用会被中国大陆拦截的外部字体或脚本 CDN。主页、日志、读书、音乐、桌游、推荐网站、留言板、个人档用选项卡切换。留言板和访问量由 Cloudflare Pages Functions + D1 提供；访问量每人每天最多计 1 次。 站点支持中文、英语、西班牙语、韩语和日语。中文在 `/`，其他语言分别在 `/en/`、`/es/`、`/ko/`、`/ja/`。界面文案会翻译，书名、歌名、对话正文和留言保持原文。语言选择会记在浏览器里，也可以用页面上的语言开关切换。
 
 ## 本地预览
 
@@ -16,6 +16,7 @@
 - 音乐口味：`data/music.json`
 - 桌游：`data/boardgames.json`
 - 推荐网站：`data/sites.json`
+- 界面翻译：`data/i18n.json`
 
 页面上的互动（抽书、换一句、主题切换等）都是本地脚本，不依赖外部 CDN。
 
@@ -39,7 +40,7 @@ npx wrangler pages deploy dist --project-name kuangzixian --branch main
 - **推荐网站**：往 `data/sites.json` 的 `sites` 数组追加一条（必填 `id`、`url`、`name`；可选 `canonical`、`domain`、`title`、`description`、`image`、`image_alt`、`image_source`、`favicon`、`emoji`、`own`）。`own` 为 true 时显示「自己做的 / Made by me」标记。介绍只摘自站点自己的公开信息，不要编造，网址保持原样。数组顺序就是页面上的顺序。旧地址 `#friends`、`#links` 会转到 `#sites`。
 - **音乐**：口味数据在 `data/music.json`，分析报告在 `/music/report`。
 
-改完数据后运行 `python3 scripts/build_dist.py` 再部署。构建时会把 `data/sites.json`、`data/chats.json` 和 `data/boardgames.json` 写进 `dist/index.html`，并为每篇对话生成独立的 `/writing/<id>` 页面（含标题、摘要、正文和结构化数据）。未知路径由 `404.html` 以 HTTP 404 返回，不要加 SPA 回退。`index.html` 里仍保留一份静态底稿，JavaScript 会再用 JSON 覆盖。
+改完数据后运行 `python3 scripts/build_dist.py` 再部署。构建时会把 `data/sites.json`、`data/chats.json` 和 `data/boardgames.json` 写进 `dist/index.html`，并为每篇对话生成独立的 `/writing/<id>` 页面（含标题、摘要、正文和结构化数据）。未知路径由 `404.html` 以 HTTP 404 返回，不要加 SPA 回退。构建时还会为每种语言生成对应的首页和 `/writing/<id>` 页面，并带上 hreflang。已经写进页面的推荐网站、日志和桌游列表带有 `data-static="1"`，前端脚本不会再用 JSON 覆盖，以免把已翻译的内容冲掉。
 
 ## AI 友好页面
 
