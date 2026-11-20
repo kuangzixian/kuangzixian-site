@@ -149,9 +149,6 @@ html[data-skin="pink"] .site-header {
 .qz-skin-dot[data-skin-set="pink"] { background: #ee7aa8; }
 .qz-skin-dot[data-skin-set="night"] { background: #2a2160; }
 .qz-skin-dot.is-on { box-shadow: 0 0 0 2px #ffe56a, 0 0 0 3px rgba(0,0,0,0.3); }
-.qz-music.is-on { background: rgba(255,229,106,0.35); color: #fff8d0; }
-.qz-music-state { opacity: 0.92; }
-
 /* banner */
 .qz-banner {
   position: relative;
@@ -500,74 +497,9 @@ html[data-skin="night"] .gb-floor { background: #3a2a10; color: #f5c400; border-
   margin: 8px 0 0;
 }
 
-/* music box + settings menu (desktop defaults) */
+/* settings menu (desktop defaults) */
 .qz-menu { display: none; }
 .qz-desktop-tools { display: flex; align-items: center; gap: 4px; }
-.qz-music-box {
-  position: fixed;
-  z-index: 40;
-  inset: 0;
-  background: rgba(20, 30, 50, 0.35);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 56px 12px 12px;
-}
-.qz-music-box[hidden] { display: none !important; }
-.qz-music-box-inner {
-  width: min(420px, 100%);
-  background: linear-gradient(180deg, #fffdf7, #fff6d8);
-  border: 1px solid #d4a000;
-  border-radius: 6px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.28), 0 1px 0 #fff inset;
-  padding: 12px 12px 14px;
-  color: var(--ink);
-}
-html[data-skin="night"] .qz-music-box-inner {
-  background: linear-gradient(180deg, #2a2160, #1b1530);
-  border-color: #f5c400;
-  color: var(--ink);
-}
-.qz-music-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 10px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(212,160,0,0.45);
-}
-.qz-music-close {
-  width: 36px;
-  height: 36px;
-  border: 0;
-  background: transparent;
-  font-size: 22px;
-  line-height: 1;
-  cursor: pointer;
-  color: inherit;
-}
-.qz-playlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.qz-track {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 6px 8px;
-  align-items: center;
-  padding: 8px;
-  border: 1px solid var(--qz-line);
-  border-radius: 4px;
-  background: rgba(255,255,255,0.55);
-}
-html[data-skin="night"] .qz-track { background: rgba(255,255,255,0.04); }
-.qz-track-meta { min-width: 0; }
-.qz-track-title { display: block; font-weight: 700; }
-.qz-track-artist { display: block; font-size: 12px; color: var(--muted); }
-.qz-track-load { padding: 8px 12px; min-height: 36px; }
-.qz-track-link { font-size: 12px; white-space: nowrap; }
-.qz-track-player { grid-column: 1 / -1; min-width: 0; }
-.qz-track-player iframe { width: 100%; max-width: 100%; border: 0; display: block; }
-.qz-track-unavailable { margin: 0; font-size: 13px; color: var(--cinnabar); }
-.qz-music-note { margin: 10px 0 0; font-size: 12px; color: var(--muted); }
 .qz-menu-panel {
   position: absolute;
   right: 0;
@@ -633,9 +565,7 @@ html[data-skin="night"] .qz-track { background: rgba(255,255,255,0.04); }
     padding: 8px 12px !important;
     font-size: 14px !important;
   }
-  .qz-music { min-height: 44px; padding: 8px 10px !important; font-size: 14px !important; }
   .qz-snow-btn { min-height: 44px; min-width: 44px; padding: 8px 10px !important; font-size: 16px !important; }
-  .qz-music-state .zh, .qz-music-state .en-only { /* keep compact */ }
 
   .qz-banner { height: 112px; }
   .qz-banner-text { padding: 16px 86px 0 4px; }
@@ -774,9 +704,6 @@ html[data-skin="night"] .qz-track { background: rgba(255,255,255,0.04); }
   }
   .qzone-body .gb-field textarea { min-height: 8rem; }
   .qzone-body .gb-item-head { gap: 6px; }
-  .qz-track { grid-template-columns: 1fr; }
-  .qz-track-load, .qz-track-link { justify-self: start; min-height: 44px; display: inline-flex; align-items: center; }
-
   .nav { display: none; }
 }
 
@@ -1266,8 +1193,18 @@ html[data-skin="night"] .site-desc { color: var(--ink-soft, #c8c4bc); }
 .qz-404-actions .play-btn { text-decoration: none; padding: 8px 16px; }
 
 
-/* language switcher in the Qzone chrome */
-.qz-top-actions .qz-lang-slot { display: inline-flex; align-items: center; }
+/* language switcher in the Qzone chrome.
+   .qz-topbar a/button are forced white; the menu must set its own ink/paper
+   with higher specificity so options stay readable on every skin. */
+.qz-topbar,
+.qz-topbar-inner,
+.qz-top-actions,
+.qz-lang-slot,
+.qz-topbar .lang-switcher {
+  overflow: visible;
+}
+.qz-topbar { position: relative; z-index: 30; }
+.qz-top-actions .qz-lang-slot { display: inline-flex; align-items: center; position: relative; }
 .qz-topbar .lang-switcher-btn {
   color: #fff;
   border-color: rgba(255,255,255,0.55);
@@ -1275,22 +1212,93 @@ html[data-skin="night"] .site-desc { color: var(--ink-soft, #c8c4bc); }
   min-height: 32px;
   padding: 4px 8px 4px 10px;
 }
-.qz-topbar .lang-switcher-btn:hover { background: rgba(255,255,255,0.16); }
+.qz-topbar .lang-switcher-btn:hover,
+.qz-topbar .lang-switcher-btn:focus-visible {
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+  outline: 2px solid #ffe56a;
+  outline-offset: 2px;
+}
+.qz-topbar .lang-switcher-menu {
+  z-index: 90;
+  background: var(--qz-panel);
+  color: var(--ink);
+  border: 1px solid var(--qz-line);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+}
+.qz-topbar .lang-switcher-menu a,
+.qz-topbar .lang-switcher-menu a:visited,
+.qz-topbar .lang-switcher-menu a:hover,
+.qz-topbar .lang-switcher-menu a:focus,
+.qz-topbar .lang-switcher-menu a:focus-visible,
+.qz-topbar .lang-switcher-menu a[aria-current="true"] {
+  color: var(--ink);
+  background: transparent;
+  text-decoration: none;
+}
+.qz-topbar .lang-switcher-menu a:hover,
+.qz-topbar .lang-switcher-menu a:focus-visible {
+  background: rgba(29, 111, 184, 0.14);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.qz-topbar .lang-switcher-menu a[aria-current="true"] {
+  background: rgba(245, 196, 0, 0.32);
+  font-weight: 700;
+}
+.qz-topbar .lang-switcher-menu a[aria-current="true"]:hover,
+.qz-topbar .lang-switcher-menu a[aria-current="true"]:focus-visible {
+  background: rgba(245, 196, 0, 0.45);
+  outline: 2px solid var(--qz-gold);
+  outline-offset: -2px;
+}
+html[data-skin="night"] .qz-topbar .lang-switcher-menu a:hover,
+html[data-skin="night"] .qz-topbar .lang-switcher-menu a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  outline-color: var(--qz-gold);
+}
+html[data-skin="night"] .qz-topbar .lang-switcher-menu a[aria-current="true"] {
+  background: rgba(245, 196, 0, 0.28);
+  color: #fff8e8;
+}
+html[data-skin="night"] .qz-topbar .lang-switcher-menu a[aria-current="true"]:hover,
+html[data-skin="night"] .qz-topbar .lang-switcher-menu a[aria-current="true"]:focus-visible {
+  background: rgba(245, 196, 0, 0.4);
+  color: #fff8e8;
+}
 .lang-list { display: grid; gap: 6px; margin: 8px 0 0; padding: 0; list-style: none; }
+.qz-topbar .lang-list a,
 .lang-list a {
-  display: block;
+  display: flex;
+  align-items: center;
   min-height: 44px;
   padding: 10px 12px;
   border: 1px solid var(--qz-line);
   border-radius: 4px;
-  background: var(--paper);
+  background: var(--qz-panel);
   color: var(--ink);
   text-decoration: none;
   font-size: 15px;
   line-height: 24px;
 }
+.qz-topbar .lang-list a[aria-current="true"],
+.qz-topbar .lang-list a:hover,
+.qz-topbar .lang-list a:focus-visible,
 .lang-list a[aria-current="true"],
-.lang-list a:hover { outline: 2px solid var(--qz-gold); }
+.lang-list a:hover,
+.lang-list a:focus-visible {
+  outline: 2px solid var(--qz-gold);
+  color: var(--ink);
+  background: var(--qz-panel);
+}
+.qz-topbar .lang-list a[aria-current="true"],
+.lang-list a[aria-current="true"] {
+  background: rgba(245, 196, 0, 0.28);
+  font-weight: 700;
+}
 @media (max-width: 800px) {
+  .qz-topbar { z-index: 30; }
   .qz-topbar .lang-switcher-btn { min-height: 44px; font-size: 13px; padding: 8px 10px; }
+  .qz-topbar .lang-switcher-menu { min-width: 12.5em; }
+  .qz-topbar .lang-switcher-menu a { min-height: 44px; font-size: 15px; }
 }

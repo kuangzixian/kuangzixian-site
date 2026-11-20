@@ -161,77 +161,9 @@
     });
   }
 
-  /* NetEase Cloud Music official outchain player, lazy-loaded, never autoplay */
-  var musicBtn = document.getElementById("qzMusic");
-  var musicBox = document.getElementById("qzMusicBox");
-  var musicClose = document.getElementById("qzMusicClose");
-
-  function setMusicOpen(open) {
-    if (!musicBox || !musicBtn) return;
-    musicBox.hidden = !open;
-    musicBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    musicBtn.classList.toggle("is-on", open);
-    if (open) setMenuOpen(false);
-  }
-
-  function loadTrack(track) {
-    var slot = track.querySelector(".qz-track-player");
-    var btn = track.querySelector(".qz-track-load");
-    if (!slot) return;
-    var id = track.getAttribute("data-song-id");
-    var allowed = track.getAttribute("data-outchain") === "1";
-    var title = (track.querySelector(".qz-track-title") || {}).textContent || "song";
-    if (!allowed) {
-      slot.hidden = false;
-      var msg = (window.KUANG_I18N && window.KUANG_I18N.t && window.KUANG_I18N.t("trackUnavailable"))
-        || "Outchain playback is not available for this track. Open it on NetEase Cloud Music.";
-      slot.innerHTML = '<p class="qz-track-unavailable"></p>';
-      slot.firstChild.textContent = msg;
-      return;
-    }
-    if (!slot.getAttribute("data-loaded")) {
-      var iframe = document.createElement("iframe");
-      iframe.setAttribute("title", title);
-      iframe.setAttribute("width", "100%");
-      iframe.setAttribute("height", "86");
-      iframe.setAttribute("frameborder", "no");
-      iframe.setAttribute("border", "0");
-      iframe.setAttribute("allow", "autoplay; encrypted-media");
-      // auto=0: never autoplay. src is set only after the user clicks.
-      iframe.src = "https://music.163.com/outchain/player?type=2&id=" + encodeURIComponent(id) + "&auto=0&height=66";
-      slot.innerHTML = "";
-      slot.appendChild(iframe);
-      slot.setAttribute("data-loaded", "1");
-    }
-    slot.hidden = false;
-    if (btn) {
-      btn.textContent = (window.KUANG_I18N && window.KUANG_I18N.t && window.KUANG_I18N.t("ready")) || "Ready";
-    }
-  }
-
-  if (musicBtn && musicBox) {
-    musicBtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      setMusicOpen(musicBox.hidden);
-    });
-    if (musicClose) {
-      musicClose.addEventListener("click", function () { setMusicOpen(false); });
-    }
-    musicBox.addEventListener("click", function (e) {
-      if (e.target === musicBox) setMusicOpen(false);
-    });
-    musicBox.querySelectorAll(".qz-track-load").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var track = btn.closest(".qz-track");
-        if (track) loadTrack(track);
-      });
-    });
-  }
-
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Escape") return;
     setMenuOpen(false);
-    setMusicOpen(false);
   });
 
   window.qzoneShowTab = showTab;

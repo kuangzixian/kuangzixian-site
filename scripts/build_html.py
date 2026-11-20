@@ -305,9 +305,6 @@ def topbar_html(*, back_href: str = "/#writing", back_zh: str = "返回日志", 
       <a class="qz-top-name" href="/">匡子闲的空间</a>
       <a href="{attr(back_href)}"><span class="zh">{escape_html(back_zh)}</span><span class="en-only">{escape_html(back_en)}</span></a>
       <div class="qz-top-actions">
-        <button type="button" id="qzMusic" class="qz-music" aria-expanded="false" aria-controls="qzMusicBox" aria-label="背景音乐">
-          ♫ <span id="qzMusicState" class="qz-music-state"><span class="zh">背景音乐</span><span class="en-only">Music</span></span>
-        </button>
         <button type="button" id="qzSnowBtn" class="qz-snow-btn" aria-pressed="true" title="飘雪特效" aria-label="飘雪特效：开">❄</button>
         <div class="qz-desktop-tools">
           <button type="button" class="qz-skin-dot" data-skin-set="blue" title="晴空蓝" aria-label="晴空蓝皮肤"></button>
@@ -369,47 +366,6 @@ def tabs_html(current: str) -> str:
             f'<a{on} href="{href}"><span class="zh">{zh}</span><span class="en-only">{en}</span></a>'
         )
     return '      <nav class="qz-tabs" aria-label="空间栏目">\n        ' + "\n        ".join(links) + "\n      </nav>"
-
-
-def music_box_html() -> str:
-    return """  <div id="qzMusicBox" class="qz-music-box" hidden>
-    <div class="qz-music-box-inner" role="dialog" aria-modal="true" aria-labelledby="qzMusicTitle">
-      <header class="qz-music-head">
-        <strong id="qzMusicTitle"><span class="zh">背景音乐</span><span class="en-only">Background music</span></strong>
-        <button type="button" class="qz-music-close" id="qzMusicClose" aria-label="关闭音乐盒">×</button>
-      </header>
-      <ul class="qz-playlist">
-        <li class="qz-track" data-song-id="167827" data-outchain="1">
-          <div class="qz-track-meta">
-            <span class="qz-track-title">素颜</span>
-            <span class="qz-track-artist">许嵩 / 何曼婷</span>
-          </div>
-          <button type="button" class="qz-track-load play-btn">
-            <span class="zh">播放</span><span class="en-only">Play</span>
-          </button>
-          <a class="qz-track-link" href="https://music.163.com/song?id=167827" target="_blank" rel="noopener noreferrer">
-            <span class="zh">网易云</span><span class="en-only">NetEase</span>
-          </a>
-          <div class="qz-track-player" hidden></div>
-        </li>
-        <li class="qz-track" data-song-id="174956" data-outchain="1">
-          <div class="qz-track-meta">
-            <span class="qz-track-title">坏女孩</span>
-            <span class="qz-track-artist">徐良 / 小凌</span>
-          </div>
-          <button type="button" class="qz-track-load play-btn">
-            <span class="zh">播放</span><span class="en-only">Play</span>
-          </button>
-          <a class="qz-track-link" href="https://music.163.com/song?id=174956" target="_blank" rel="noopener noreferrer">
-            <span class="zh">网易云</span><span class="en-only">NetEase</span>
-          </a>
-          <div class="qz-track-player" hidden></div>
-        </li>
-      </ul>
-      <p class="qz-music-note zh">使用网易云官方外链播放器，点播放后才会加载，不会自动播放。</p>
-      <p class="qz-music-note en-only">Official NetEase Cloud Music player. It loads only after you click, and never autoplays.</p>
-    </div>
-  </div>"""
 
 
 def page_scripts(*extra: str) -> str:
@@ -478,8 +434,6 @@ def build_chat_page(chat: dict, loc: str = "zh") -> str:
     </div>
   </div>
 
-{music_box_html()}
-
   <footer class="site-footer">
     <div class="wrap">
       <p class="zh">匡子闲 · 对话原文在本站呈现，便于国内访问。</p>
@@ -538,8 +492,6 @@ def build_404_page(loc: str = "zh") -> str:
       </main>
     </div>
   </div>
-
-{music_box_html()}
 
   <footer class="site-footer">
     <div class="wrap">

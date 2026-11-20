@@ -187,13 +187,6 @@
       "ko": "匡子闲의 공개 즉각 프로필 사진: 강남 수향을 배경으로 한 개인 사진",
       "ja": "匡子闲の公開即刻アイコン。江南の水郷を背景にした個人写真"
     },
-    "close_music": {
-      "zh": "关闭音乐盒",
-      "en": "Close the music box",
-      "es": "Cerrar la caja de música",
-      "ko": "음악 상자 닫기",
-      "ja": "音楽ボックスを閉じる"
-    },
     "show_all": {
       "zh": "显示全部 {n} 册",
       "en": "Show all {n}",
@@ -734,13 +727,6 @@
       "es": "Apariencia Diamante Amarillo",
       "ko": "옐로 다이아 스킨",
       "ja": "イエローダイヤの装飾"
-    },
-    {
-      "zh": "背景音乐",
-      "en": "Music",
-      "es": "Música de fondo",
-      "ko": "배경 음악",
-      "ja": "BGM"
     },
     {
       "zh": "设置",
@@ -2036,27 +2022,6 @@
       "es": "Cargando mensajes…",
       "ko": "글을 불러오는 중…",
       "ja": "伝言を読み込み中…"
-    },
-    {
-      "zh": "播放",
-      "en": "Play",
-      "es": "Reproducir",
-      "ko": "재생",
-      "ja": "再生"
-    },
-    {
-      "zh": "网易云",
-      "en": "NetEase",
-      "es": "NetEase",
-      "ko": "넷이즈",
-      "ja": "網易雲"
-    },
-    {
-      "zh": "使用网易云官方外链播放器，点播放后才会加载，不会自动播放。",
-      "en": "Official NetEase Cloud Music player. It loads only after you click, and never autoplays.",
-      "es": "Reproductor oficial externo de NetEase Cloud Music. Solo se carga después de pulsar reproducir, y nunca se inicia solo.",
-      "ko": "넷이즈 클라우드 뮤직 공식 외부 플레이어입니다. 재생을 누른 뒤에만 불러오며, 자동 재생되지 않습니다.",
-      "ja": "網易雲音楽の公式埋め込みプレーヤーです。再生を押したあとだけ読み込み、自動再生はしません。"
     },
     {
       "zh": "匡子闲 · 本页资料均来自 2026-11-14（Asia/Shanghai）检索到的公开信息，未收录未核实的账号。",

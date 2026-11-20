@@ -424,15 +424,16 @@ def lang_switcher_html(loc: str, *, variant: str = "dropdown") -> str:
         )
     items = []
     for code in ORDER:
+        selected = "true" if code == loc else "false"
         cur = ' aria-current="true"' if code == loc else ""
         href = (prefix(code) + "/") if prefix(code) else "/"
         items.append(
-            f'<li><a href="{href}" hreflang="{info[code]["hreflang"]}" lang="{info[code]["html_lang"]}" data-lang="{code}"{cur}>{info[code]["name"]}</a></li>'
+            f'<li role="none"><a href="{href}" role="option" id="lang-opt-{code}" aria-selected="{selected}" hreflang="{info[code]["hreflang"]}" lang="{info[code]["html_lang"]}" data-lang="{code}"{cur}>{info[code]["name"]}</a></li>'
         )
     return (
         f'<div class="lang-switcher" data-lang-switcher>'
-        f'<button type="button" class="lang-switcher-btn" aria-expanded="false" aria-haspopup="listbox" aria-label="{label}">{current}</button>'
-        f'<ul class="lang-switcher-menu" hidden role="listbox">{"".join(items)}</ul>'
+        f'<button type="button" class="lang-switcher-btn" id="lang-switcher-btn" aria-expanded="false" aria-haspopup="listbox" aria-controls="lang-switcher-menu" aria-label="{label}">{current}</button>'
+        f'<ul class="lang-switcher-menu" id="lang-switcher-menu" hidden role="listbox" aria-labelledby="lang-switcher-btn">{"".join(items)}</ul>'
         f"</div>"
     )
 
@@ -738,8 +739,6 @@ def apply_plain_ui(html: str, loc: str) -> str:
         ('aria-label="访问量"', f'aria-label="{t_ui("visits", loc)}"'),
         ('aria-label="空间栏目"', f'aria-label="{t_ui("tabs_label", loc)}"'),
         ('aria-label="阅读概览"', f'aria-label="{t_ui("reading_overview", loc)}"'),
-        ('aria-label="背景音乐"', f'aria-label="{t_ui("music", loc) if loc != "zh" else "背景音乐"}"'),
-        ('aria-label="关闭音乐盒"', f'aria-label="{t_ui("close_music", loc)}"'),
         ('title="空间装扮：自制黄钻徽章 LV7，非腾讯会员标识"', f'title="{t_ui("vip_title", loc)}"'),
         ('alt="匡子闲的公开即刻头像：江南水乡场景中的个人照片"', f'alt="{t_ui("avatar_alt", loc)}"'),
         (">晴空蓝<", f'>{t_ui("skin_blue", loc)}<'),

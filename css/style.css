@@ -279,7 +279,7 @@ html[lang="en"] .en-only { display: revert; }
 html[lang="zh-CN"] .en-only { display: none !important; }
 html[lang="zh-CN"] .zh { display: revert; }
 
-.lang-switcher { position: relative; display: inline-flex; }
+.lang-switcher { position: relative; display: inline-flex; z-index: 40; }
 .lang-switcher-btn {
   border: 1px solid var(--line-strong, rgba(255,255,255,0.45));
   background: transparent;
@@ -298,32 +298,55 @@ html[lang="zh-CN"] .zh { display: revert; }
 }
 .lang-switcher-btn::after { content: "▾"; font-size: 0.65em; opacity: 0.75; }
 .lang-switcher-btn:hover { border-color: currentColor; }
+.lang-switcher-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
 .lang-switcher-menu {
   position: absolute;
   right: 0;
   top: calc(100% + 6px);
-  min-width: 9em;
+  min-width: 12em;
   margin: 0;
   padding: 6px;
   list-style: none;
-  background: var(--paper, #fff);
-  color: var(--ink, #222);
-  border: 1px solid var(--line-strong, #ddd);
+  background: var(--paper, #fffdf7);
+  color: var(--ink, #1c1814);
+  border: 1px solid var(--line-strong, #cfc3b0);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
-  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 80;
 }
 .lang-switcher-menu[hidden] { display: none !important; }
 .lang-switcher-menu a {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
   padding: 8px 10px;
   border-radius: 8px;
   text-decoration: none;
-  color: inherit;
-  font-size: 0.88rem;
+  color: var(--ink, #1c1814);
+  background: transparent;
+  font-size: 0.92rem;
+  line-height: 1.3;
 }
 .lang-switcher-menu a:hover,
-.lang-switcher-menu a[aria-current="true"] { background: rgba(0,0,0,0.06); }
+.lang-switcher-menu a:focus-visible {
+  background: rgba(29, 111, 184, 0.12);
+  color: var(--ink, #1c1814);
+  outline: 2px solid var(--accent, #1d6fb8);
+  outline-offset: -2px;
+}
+.lang-switcher-menu a[aria-current="true"] {
+  background: rgba(245, 196, 0, 0.28);
+  color: var(--ink, #1c1814);
+  font-weight: 700;
+}
+.lang-switcher-menu a[aria-current="true"]:hover,
+.lang-switcher-menu a[aria-current="true"]:focus-visible {
+  background: rgba(245, 196, 0, 0.4);
+  color: var(--ink, #1c1814);
+}
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 36px; }

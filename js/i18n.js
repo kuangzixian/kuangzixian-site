@@ -46,15 +46,6 @@
       ko: "눈 효과 꺼짐(움직임 줄이기)",
       ja: "雪の演出はオフです（動きを減らす設定）"
     },
-    play: { zh: "播放", en: "Play", es: "Reproducir", ko: "재생", ja: "再生" },
-    ready: { zh: "已加载", en: "Ready", es: "Listo", ko: "준비됨", ja: "読み込み済み" },
-    trackUnavailable: {
-      zh: "这首歌未开放外链播放，请到网易云打开。",
-      en: "Outchain playback is not available for this track. Open it on NetEase Cloud Music.",
-      es: "Esta canción no permite la reproducción externa. Ábrela en NetEase Cloud Music.",
-      ko: "이 곡은 외부 재생이 열려 있지 않습니다. 넷이즈 클라우드 뮤직에서 열어 주세요.",
-      ja: "この曲は外部プレーヤーに対応していません。網易雲音楽で開いてください。"
-    },
     coverOf: {
       zh: "《{title}》封面",
       en: "Cover of {title}",
@@ -233,35 +224,89 @@
     });
   }
 
+  function menuItems(menu) {
+    return Array.prototype.slice.call(menu.querySelectorAll("[data-lang]"));
+  }
+
+  function openMenu(box) {
+    var btn = box.querySelector(".lang-switcher-btn");
+    var menu = box.querySelector(".lang-switcher-menu");
+    if (!btn || !menu) return;
+    closeMenus();
+    btn.setAttribute("aria-expanded", "true");
+    menu.hidden = false;
+    var current = menu.querySelector("[aria-current='true']") || menuItems(menu)[0];
+    if (current) current.focus();
+  }
+
+  function moveFocus(menu, delta) {
+    var items = menuItems(menu);
+    if (!items.length) return;
+    var i = items.indexOf(document.activeElement);
+    if (i < 0) {
+      i = items.findIndex(function (a) { return a.getAttribute("aria-current") === "true"; });
+      if (i < 0) i = 0;
+    } else {
+      i = (i + delta + items.length) % items.length;
+    }
+    items[i].focus();
+  }
+
+  function bindLangLink(a, loc) {
+    var code = a.getAttribute("data-lang");
+    if (!LOCALES[code] || !loc) return;
+    a.setAttribute("href", localizePath(loc.pathname, code, loc.search, loc.hash));
+    if (code === locale) a.setAttribute("aria-current", "true");
+    else a.removeAttribute("aria-current");
+    a.addEventListener("click", function () { setSavedLang(code); });
+  }
+
   function initSwitcher() {
     var loc = global.location;
     document.querySelectorAll("[data-lang-switcher]").forEach(function (box) {
       var btn = box.querySelector(".lang-switcher-btn");
       var menu = box.querySelector(".lang-switcher-menu");
       if (!btn || !menu) return;
-      box.querySelectorAll("[data-lang]").forEach(function (a) {
-        var code = a.getAttribute("data-lang");
-        if (!LOCALES[code] || !loc) return;
-        a.setAttribute("href", localizePath(loc.pathname, code, loc.search, loc.hash));
-        if (code === locale) a.setAttribute("aria-current", "true");
-        else a.removeAttribute("aria-current");
-      });
+      box.querySelectorAll("[data-lang]").forEach(function (a) { bindLangLink(a, loc); });
       btn.addEventListener("click", function (e) {
         e.stopPropagation();
         var open = btn.getAttribute("aria-expanded") === "true";
-        closeMenus();
-        if (!open) {
-          btn.setAttribute("aria-expanded", "true");
-          menu.hidden = false;
+        if (open) {
+          closeMenus();
+          btn.focus();
+        } else {
+          openMenu(box);
+        }
+      });
+      btn.addEventListener("keydown", function (e) {
+        if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+        e.preventDefault();
+        openMenu(box);
+        if (e.key === "ArrowUp") {
+          var items = menuItems(menu);
+          if (items.length) items[items.length - 1].focus();
+        }
+      });
+      menu.addEventListener("click", function (e) { e.stopPropagation(); });
+      menu.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown") { e.preventDefault(); moveFocus(menu, 1); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); moveFocus(menu, -1); }
+        else if (e.key === "Home") { e.preventDefault(); var first = menuItems(menu)[0]; if (first) first.focus(); }
+        else if (e.key === "End") {
+          e.preventDefault();
+          var items = menuItems(menu);
+          if (items.length) items[items.length - 1].focus();
+        } else if (e.key === "Escape") {
+          e.preventDefault();
+          closeMenus();
+          btn.focus();
+        } else if (e.key === "Tab") {
+          closeMenus();
         }
       });
     });
     document.querySelectorAll("[data-lang-list] [data-lang]").forEach(function (a) {
-      var code = a.getAttribute("data-lang");
-      if (!LOCALES[code] || !loc) return;
-      a.setAttribute("href", localizePath(loc.pathname, code, loc.search, loc.hash));
-      if (code === locale) a.setAttribute("aria-current", "true");
-      else a.removeAttribute("aria-current");
+      bindLangLink(a, loc);
     });
     document.addEventListener("click", function () { closeMenus(); });
     document.addEventListener("keydown", function (e) {
