@@ -425,13 +425,6 @@
       "ko": "찬성",
       "ja": "賛成"
     },
-    "unverified": {
-      "zh": "未确认",
-      "en": "unverified",
-      "es": "sin confirmar",
-      "ko": "미확인",
-      "ja": "未確認"
-    },
     "display_company": {
       "zh": "显示名 匡子闲 · 公司字段 IFTech",
       "en": "Display name 匡子闲 · company field IFTech",
@@ -753,13 +746,6 @@
       "es": "匡子闲 · La conversación está alojada aquí para poder leerla sin entrar en chatgpt.com.",
       "ko": "匡子闲 · 대화 원문은 이 사이트에 두어, chatgpt.com 없이도 읽을 수 있습니다.",
       "ja": "匡子闲 · 対話の本文はこのサイトに置いてあり、chatgpt.com がなくても読めます。"
-    },
-    "unconfirmed_platforms": {
-      "zh": "小红书 · 微博 · 抖音",
-      "en": "Xiaohongshu · Weibo · Douyin",
-      "es": "Xiaohongshu · Weibo · Douyin",
-      "ko": "샤오홍슈 · 웨이보 · 더우인",
-      "ja": "小紅書 · 微博 · 抖音"
     },
     "my_question": {
       "zh": "我的问题",
@@ -2101,11 +2087,11 @@
       "ja": "公開リポジトリで、まだ説明は公開されていません。"
     },
     {
-      "zh": "只放已经核对过、显示名精确匹配「匡子闲」的主页。小红书、微博和抖音目前还没能公开确认，不编造链接。",
-      "en": "Only profiles verified with the exact display name 匡子闲 are linked. Xiaohongshu, Weibo and Douyin could not be publicly confirmed, so no guessed URLs are included.",
-      "es": "Solo se enlazan perfiles comprobados cuyo nombre visible coincide exactamente con「匡子闲」. Xiaohongshu, Weibo y Douyin no se han podido confirmar en público, así que no se inventan enlaces.",
-      "ko": "표시 이름이 「匡子闲」과 정확히 일치하는지 확인한 페이지만 올립니다. 샤오홍슈, 웨이보, 더우인은 아직 공개적으로 확인하지 못해, 링크를 지어내지 않습니다.",
-      "ja": "表示名が「匡子闲」と正確に一致すると確認したページだけを載せます。小紅書、微博、抖音はまだ公開では確認できていないため、リンクを作りません。"
+      "zh": "只放已经核对过、显示名精确匹配「匡子闲」的主页。",
+      "en": "Only profiles verified with the exact display name 匡子闲 are linked.",
+      "es": "Solo se enlazan perfiles comprobados cuyo nombre visible coincide exactamente con「匡子闲」.",
+      "ko": "표시 이름이 「匡子闲」과 정확히 일치하는지 확인한 페이지만 올립니다.",
+      "ja": "表示名が「匡子闲」と正確に一致すると確認したページだけを載せます。"
     },
     {
       "zh": "计科，炒股<br>计算机软件 · 上海市",
@@ -2113,13 +2099,6 @@
       "es": "Lema: Informática, bolsa<br>Software informático · Shanghái",
       "ko": "소개: 컴공, 주식<br>컴퓨터 소프트웨어 · 상하이",
       "ja": "紹介：情報科学、株式<br>コンピュータソフトウェア · 上海市"
-    },
-    {
-      "zh": "检索时这些平台未能找到精确匹配的公开主页，或站点拦截了访问。确认账号后可以补上。",
-      "en": "No exact-match public profile could be retrieved, or the site blocked access. Links can be added once the accounts are confirmed.",
-      "es": "Al consultarlos no se encontró una página pública de coincidencia exacta, o el sitio bloqueó el acceso. Los enlaces se pueden añadir cuando se confirmen las cuentas.",
-      "ko": "조회 당시 이들 플랫폼에서 정확히 일치하는 공개 페이지를 찾지 못했거나, 사이트가 접근을 막았습니다. 계정이 확인되면 링크를 보완할 수 있습니다.",
-      "ja": "取得時、これらのプラットフォームで正確に一致する公開ページは見つからないか、サイトがアクセスを拒否しました。アカウントが確認できればリンクを足せます。"
     },
     {
       "zh": "来坐坐，留个名字和一句话就行，不用登录。请不要放链接。",

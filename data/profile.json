@@ -3,9 +3,7 @@
   "latin_handle": "kuangzixian",
   "bio": {
     "jike": "前游戏从业者，现在在黄即搞后端。",
-    "juejin": "Talk is cheap，show me your code",
     "job_title": "后端开发工程师",
-    "juejin_title": "后端工程师",
     "combined_zh": "匡子闲（kuangzixian）是一名后端开发工程师。他之前做了三年游戏，现在在即刻做后端开发。业余开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
     "combined_en": "匡子闲 (kuangzixian) is a backend engineer. He spent three years working on games, and now does backend development at Jike (即刻). He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
     "zhihu": "计科，炒股",
@@ -18,26 +16,23 @@
     "first_ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했고, 지금은 Jike에서 백엔드 개발을 하고 있습니다. 여가 시간에 GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
     "first_ja": "匡子闲（kuangzixian）です。バックエンドエンジニアで、以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。余暇に、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
   },
-  "updated_at": "2026-11-21T18:00:00+08:00",
+  "updated_at": "2026-11-21T21:00:00+08:00",
   "timezone": "Asia/Shanghai",
   "research_retrieved_at": "2026-11-14T22:34:00+08:00",
   "profiles": [
     {
-      "platform": "juejin",
-      "platform_zh": "掘金",
+      "platform": "github",
+      "platform_zh": "GitHub",
       "name": "匡子闲",
-      "url": "https://juejin.cn/user/395479918591006",
-      "user_id": "395479918591006",
-      "title": "后端工程师",
-      "bio": "Talk is cheap，show me your code",
-      "followers": 2,
-      "following": 21,
-      "article_count": 5,
-      "article_views": 4863,
-      "level": 2,
-      "power": 86,
-      "registered_at": "2020-04-04T15:02:00+08:00",
-      "status": "verified"
+      "username": "kuangzixian",
+      "url": "https://github.com/kuangzixian",
+      "company": "IFTech",
+      "public_repos": 17,
+      "followers": 7,
+      "following": 27,
+      "joined_at": "2017-01-26T11:50:04+08:00",
+      "status": "verified",
+      "note": "GitHub 不在最初点名的平台列表中，但登录名 kuangzixian、显示名精确匹配「匡子闲」，故一并收录。joined_at 由 GitHub 返回的 2017-01-26T03:50:04Z 转换而来。"
     },
     {
       "platform": "jike",
@@ -53,18 +48,16 @@
       "note": "即刻不在最初点名的平台列表中，但公开主页用户名精确匹配「匡子闲」，故一并收录。"
     },
     {
-      "platform": "github",
-      "platform_zh": "GitHub",
-      "name": "匡子闲",
-      "username": "kuangzixian",
-      "url": "https://github.com/kuangzixian",
-      "company": "IFTech",
-      "public_repos": 17,
-      "followers": 7,
-      "following": 27,
-      "joined_at": "2017-01-26T11:50:04+08:00",
+      "platform": "x",
+      "platform_zh": "X / Twitter",
       "status": "verified",
-      "note": "GitHub 不在最初点名的平台列表中，但登录名 kuangzixian、显示名精确匹配「匡子闲」，故一并收录。joined_at 由 GitHub 返回的 2017-01-26T03:50:04Z 转换而来。"
+      "source": "user-provided URL, confirmed on 2026-11-21",
+      "name": "匡子闲",
+      "username": "kuangjg",
+      "url": "https://x.com/kuangjg",
+      "url_alt": "https://twitter.com/kuangjg",
+      "access": "ok",
+      "detail": "用户提供主页链接 https://x.com/kuangjg。显示名精确匹配「匡子闲」，用户名为 kuangjg。"
     },
     {
       "platform": "zhihu",
@@ -111,81 +104,6 @@
       ],
       "answers_access": "blocked",
       "detail": "用户提供主页链接后，通过 https://www.zhihu.com/api/v4/members/{id|url_token} 取到公开资料，显示名精确匹配「匡子闲」。个人主页 HTML 仍返回 403。回答列表接口需登录或返回无权限，未能取得 71 条回答的标题与链接。文章数为 0。抓到 2 条想法（徽章佩戴留念）。检索于 2026-11-14T22:34:00+08:00。"
-    },
-    {
-      "platform": "xiaohongshu",
-      "platform_zh": "小红书",
-      "status": "not_found",
-      "access": "blocked",
-      "detail": "网页搜索未找到用户名精确匹配「匡子闲」的小红书主页。直接抓取搜索页被重定向后返回空响应（HTTP 500 / 0 bytes）。"
-    },
-    {
-      "platform": "weibo",
-      "platform_zh": "微博",
-      "status": "not_found",
-      "access": "blocked",
-      "detail": "网页搜索未找到用户名精确匹配「匡子闲」的微博账号。访问微博搜索被跳转到新浪访客系统（登录墙），页面中不含「匡子闲」。"
-    },
-    {
-      "platform": "douyin",
-      "platform_zh": "抖音",
-      "status": "not_found",
-      "access": "blocked",
-      "detail": "网页搜索未找到用户名精确匹配「匡子闲」的抖音主页。直接抓取搜索页得到前端壳页面，源码中不含「匡子闲」，无法确认账号是否存在。"
-    },
-    {
-      "platform": "x",
-      "platform_zh": "X / Twitter",
-      "status": "verified",
-      "source": "user-provided URL, confirmed on 2026-11-21",
-      "name": "匡子闲",
-      "username": "kuangjg",
-      "url": "https://x.com/kuangjg",
-      "url_alt": "https://twitter.com/kuangjg",
-      "access": "ok",
-      "detail": "用户提供主页链接 https://x.com/kuangjg。显示名精确匹配「匡子闲」，用户名为 kuangjg。"
-    }
-  ],
-  "articles": [
-    {
-      "title": "AMQP  Error: connect ECONNREFUSED ::1:5672 at TCPConnectWrap.afterConnect [as on",
-      "url": "https://juejin.cn/post/7379511966273978431",
-      "platform": "juejin",
-      "published_at": "2024-06-13",
-      "views": 271,
-      "summary_zh": "在 Mac 上用 Node.js 连接 RabbitMQ 时，localhost 被解析成 IPv6 的 ::1，而服务只监听 127.0.0.1，改成 127.0.0.1 或修正 hosts 后恢复。"
-    },
-    {
-      "title": "could not execute statement; SQL [n/a]; constraint [null];",
-      "url": "https://juejin.cn/post/6867391768665686024",
-      "platform": "juejin",
-      "published_at": "2020-09-01",
-      "views": 2615,
-      "summary_zh": "测试环境出现 Hibernate ConstraintViolationException。原因是开发库把某字段改成可空后，未同步到测试库，同步后问题解决。"
-    },
-    {
-      "title": "一道合并数组算法题引发的血案",
-      "url": "https://juejin.cn/post/6858624851557482504",
-      "platform": "juejin",
-      "published_at": "2020-08-08",
-      "views": 287,
-      "summary_zh": "面试时被要求在十分钟内写出合并 n 个有序数组，现场没写完。事后记录了双指针、从后往前合并，以及两两归并的解法。"
-    },
-    {
-      "title": "Not able to find Java executable or version. Please check your Java installation",
-      "url": "https://juejin.cn/post/6857073999642542093",
-      "platform": "juejin",
-      "published_at": "2020-08-04",
-      "views": 1141,
-      "summary_zh": "启动 JMeter 5.3 报找不到 Java 可执行文件。JAVA_HOME 路径含空格，后来用 java -jar ApacheJMeter.jar 直接启动解决。"
-    },
-    {
-      "title": "IDEA如何实现对远程服务器代码进行debug操作",
-      "url": "https://juejin.cn/post/6854573209379930126",
-      "platform": "juejin",
-      "published_at": "2020-07-17",
-      "views": 549,
-      "summary_zh": "同一段代码在本地和开发服务器正常、测试服务器报错。记录了给远程 Jar 加 JDWP 参数，再在 IDEA Remote 里对接调试的步骤。"
     }
   ],
   "jike_posts": [

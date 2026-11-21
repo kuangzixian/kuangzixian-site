@@ -14,7 +14,7 @@ DATA = ROOT / "data"
 HAN = re.compile(r"[\u4e00-\u9fff]+")
 HANGUL = re.compile(r"[\uac00-\ud7af]")
 SIMP = set("这那们为发现经对会时过还没从里后说吗吧着给让儿喽啥咱们已经问题")
-ALLOWED = {"匡子闲", "中文", "沈新宇", "珍珠阿西", "日本語", "小紅書", "微博", "抖音", "周大福", "長鑫", "长鑫"}
+ALLOWED = {"匡子闲", "中文", "沈新宇", "珍珠阿西", "日本語", "周大福", "長鑫", "长鑫"}
 
 
 def load_allowed_originals() -> set[str]:

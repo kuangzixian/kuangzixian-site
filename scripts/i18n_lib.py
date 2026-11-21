@@ -888,7 +888,6 @@ def apply_plain_ui(html: str, loc: str) -> str:
         ('aria-label="代表封面"', f'aria-label="{t_ui("featured_covers", loc)}"'),
 
         (">显示名 匡子闲 · 公司字段 IFTech<", f'>{t_ui("display_company", loc)}<'),
-        (">未确认 / unverified<", f'>{t_ui("unverified", loc)} / unverified<' if loc == "zh" else f'>{t_ui("unverified", loc)}<'),
     ]
     for old, new in replacements:
         html = html.replace(old, new)
@@ -934,10 +933,8 @@ def apply_plain_ui(html: str, loc: str) -> str:
         html,
     )
     if loc != "zh":
-        html = html.replace("JUEJIN · 掘金", "Juejin")
         html = html.replace("JIKE · 即刻", "Jike")
         html = html.replace("ZHIHU · 知乎", "Zhihu")
-        html = html.replace("小红书 · 微博 · 抖音", t_ui("unconfirmed_platforms", loc))
     html = html.replace("<h3>easy-life</h3>", "<h3>EasyLife</h3>")
     html = html.replace("<h3>easy-offer</h3>", "<h3>EasyOffer</h3>")
     return html
