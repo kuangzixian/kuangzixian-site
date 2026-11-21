@@ -883,6 +883,7 @@ def apply_plain_ui(html: str, loc: str) -> str:
         ('aria-label="晴空蓝皮肤"', f'aria-label="{t_ui("skin_blue_aria", loc)}"'),
         ('aria-label="粉钻粉皮肤"', f'aria-label="{t_ui("skin_pink_aria", loc)}"'),
         ('aria-label="夜空皮肤"', f'aria-label="{t_ui("skin_night_aria", loc)}"'),
+        (">后端开发工程师<", f'>{t_ui("job_title", loc)}<'),
         (">后端工程师<", f'>{t_ui("job_title", loc)}<'),
         (">计科，炒股<", f'>{t_ui("tag_cs_stocks", loc)}<'),
         (">按时长排列，来自官方阅读统计。<", f'>{t_ui("by_duration", loc)}<'),

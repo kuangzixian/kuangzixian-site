@@ -878,7 +878,7 @@ def build_llms_full(profile: dict, reading: dict, chats: list[dict], sites: dict
         "",
         f"- 姓名：匡子闲",
         f"- 拉丁名 / handle：{profile.get('latin_handle') or 'kuangzixian'}",
-        f"- 职业：{bio.get('juejin_title') or '后端工程师'}",
+        f"- 职业：{bio.get('job_title') or '后端开发工程师'}",
         f"- 知乎签名：{bio.get('zhihu') or ''}",
         f"- 资料更新时间：{profile.get('updated_at')}（{profile.get('timezone') or 'Asia/Shanghai'}）",
         "",

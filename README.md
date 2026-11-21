@@ -1,6 +1,6 @@
 # 匡子闲的个人主页
 
-[匡子闲（kuangzixian）的个人主页](https://kuangzixian.pages.dev/)，也是一个 QQ 空间风格的小站。我是一名后端工程师，做过 [EasyOffer](https://github.com/kuangzixian/easy-offer) 和 [EasyLife](https://github.com/kuangzixian/easy-life)。
+[匡子闲（kuangzixian）的个人主页](https://kuangzixian.pages.dev/)，也是一个 QQ 空间风格的小站。我是一名后端开发工程师，之前做了三年游戏，现在在即刻做后端开发。业余做了 [EasyOffer](https://github.com/kuangzixian/easy-offer) 和 [EasyLife](https://github.com/kuangzixian/easy-life)。
 
 静态 HTML / CSS / 原生 JavaScript，部署在 Cloudflare Pages。没有构建工具链，也不引用会被中国大陆拦截的外部字体或脚本 CDN。主页、日志、读书、音乐、桌游、推荐网站、留言板、个人档用选项卡切换。留言板和访问量由 Cloudflare Pages Functions + D1 提供；访问量每人每天最多计 1 次。 站点支持中文、英语、西班牙语、韩语和日语。中文在 `/`，其他语言分别在 `/en/`、`/es/`、`/ko/`、`/ja/`。界面文案会翻译，书名、歌名、对话正文和留言保持原文。语言选择会记在浏览器里，也可以用页面上的语言开关切换。
 

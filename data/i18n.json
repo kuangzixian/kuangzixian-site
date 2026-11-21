@@ -55,18 +55,18 @@
   ],
   "ui": {
     "page_title": {
-      "zh": "匡子闲（kuangzixian）｜后端工程师的个人主页",
+      "zh": "匡子闲（kuangzixian）｜后端开发工程师的个人主页",
       "en": "匡子闲 (kuangzixian) | Backend engineer’s homepage",
       "es": "匡子闲 (kuangzixian) | Página personal de un ingeniero de backend",
       "ko": "匡子闲 (kuangzixian) | 백엔드 엔지니어의 개인 홈페이지",
       "ja": "匡子闲（kuangzixian）｜バックエンドエンジニアの個人サイト"
     },
     "page_desc": {
-      "zh": "匡子闲（kuangzixian）是一名后端工程师。他开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
-      "en": "匡子闲 (kuangzixian) is a backend engineer. He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
-      "es": "匡子闲 (kuangzixian) es un ingeniero de backend. Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
-      "ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
-      "ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。"
+      "zh": "匡子闲（kuangzixian）是一名后端开发工程师。他之前做了三年游戏，现在在即刻做后端开发。业余开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
+      "en": "匡子闲 (kuangzixian) is a backend engineer. He spent three years working on games, and now does backend development at Jike (即刻). He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
+      "es": "匡子闲 (kuangzixian) es un ingeniero de backend. Trabajó tres años en videojuegos y ahora se dedica al desarrollo de backend en Jike (即刻). Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
+      "ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했으며, 지금은 Jike에서 백엔드 개발을 하고 있습니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
+      "ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。"
     },
     "site_name": {
       "zh": "匡子闲的空间",
@@ -90,11 +90,11 @@
       "ja": "本文へスキップ"
     },
     "job_title": {
-      "zh": "后端工程师",
+      "zh": "后端开发工程师",
       "en": "Backend engineer",
       "es": "Ingeniero de backend",
-      "ko": "백엔드 엔지니어",
-      "ja": "バックエンドエンジニア"
+      "ko": "백엔드 개발 엔지니어",
+      "ja": "バックエンド開発エンジニア"
     },
     "tag_cs_stocks": {
       "zh": "计科，炒股",
@@ -482,18 +482,18 @@
       "ja": ""
     },
     "bio_first": {
-      "zh": "我是匡子闲，一名后端工程师。我做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
-      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
-      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
-      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
-      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
+      "zh": "我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Trabajé tres años en videojuegos y ahora me dedico al desarrollo de backend en Jike (即刻). En mi tiempo libre creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했고, 지금은 Jike에서 백엔드 개발을 하고 있습니다. 여가 시간에 GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアで、以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。余暇に、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
     },
     "bio_meta": {
-      "zh": "匡子闲（kuangzixian）是一名后端工程师。他开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
-      "en": "匡子闲 (kuangzixian) is a backend engineer. He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
-      "es": "匡子闲 (kuangzixian) es un ingeniero de backend. Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
-      "ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
-      "ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。"
+      "zh": "匡子闲（kuangzixian）是一名后端开发工程师。他之前做了三年游戏，现在在即刻做后端开发。业余开发了 EasyOffer，用 GitHub 项目经历帮工程师整理简历，也做了 EasyLife，方便读者按问题查找有出处的生活建议。",
+      "en": "匡子闲 (kuangzixian) is a backend engineer. He spent three years working on games, and now does backend development at Jike (即刻). He built EasyOffer to help engineers write résumés from their GitHub work, and EasyLife to help readers find sources for everyday advice.",
+      "es": "匡子闲 (kuangzixian) es un ingeniero de backend. Trabajó tres años en videojuegos y ahora se dedica al desarrollo de backend en Jike (即刻). Desarrolló EasyOffer para ayudar a los ingenieros a redactar currículums a partir de su trabajo en GitHub, y EasyLife para que los lectores encuentren las fuentes de consejos para el día a día.",
+      "ko": "匡子闲(kuangzixian)은 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했으며, 지금은 Jike에서 백엔드 개발을 하고 있습니다. GitHub 프로젝트 경험을 이력서로 정리하는 EasyOffer와, 일상 질문에 대한 조언과 출처를 찾아볼 수 있는 EasyLife를 개발했습니다.",
+      "ja": "匡子闲（kuangzixian）はバックエンドエンジニアです。以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。GitHubの制作物から履歴書をまとめる EasyOffer と、日常の疑問に対して出典のあるアドバイスを探せる EasyLife を開発しました。"
     },
     "reading_now": {
       "zh": "正在读",
@@ -974,11 +974,11 @@
       "ja": "プロフィール"
     },
     {
-      "zh": "我是匡子闲，一名后端工程师。我做了 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>，输入日常问题，就能找到相关建议和出处。",
-      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.",
-      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
-      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>도 만들었습니다.",
-      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> をつくりました。"
+      "zh": "我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Trabajé tres años en videojuegos y ahora me dedico al desarrollo de backend en Jike (即刻). En mi tiempo libre creé <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했고, 지금은 Jike에서 백엔드 개발을 하고 있습니다. 여가 시간에 GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアで、以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。余暇に、GitHubの制作物を履歴書にまとめる <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> をつくりました。"
     },
     {
       "zh": "累计阅读小时",
@@ -2185,18 +2185,18 @@
       "ja": "閉じる"
     },
     {
-      "zh": "我是匡子闲，一名后端工程师。我做了 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>，输入日常问题，就能找到相关建议和出处。",
-      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.",
-      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
-      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>도 만들었습니다.",
-      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> をつくりました。"
+      "zh": "我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Trabajé tres años en videojuegos y ahora me dedico al desarrollo de backend en Jike (即刻). En mi tiempo libre creé <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했고, 지금은 Jike에서 백엔드 개발을 하고 있습니다. 여가 시간에 GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a>를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a>도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアで、以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。余暇に、GitHubの制作物を履歴書にまとめる <a href=\"https://github.com/kuangzixian/easy-offer\">EasyOffer</a> と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる <a href=\"https://github.com/kuangzixian/easy-life\">EasyLife</a> をつくりました。"
     },
     {
-      "zh": "我是匡子闲，一名后端工程师。我做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
-      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
-      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
-      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
-      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアとして、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
+      "zh": "我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。",
+      "en": "I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.",
+      "es": "Soy 匡子闲 (kuangzixian), ingeniero de backend. Trabajé tres años en videojuegos y ahora me dedico al desarrollo de backend en Jike (即刻). En mi tiempo libre creé EasyOffer para ayudar a los ingenieros a convertir su trabajo en GitHub en un currículum, y EasyLife para consultar preguntas cotidianas y rastrear los consejos hasta su fuente.",
+      "ko": "저는 匡子闲(kuangzixian)이고, 백엔드 엔지니어입니다. 이전에 게임 일을 3년 했고, 지금은 Jike에서 백엔드 개발을 하고 있습니다. 여가 시간에 GitHub에서 진행한 프로젝트를 이력서에 담을 수 있도록 EasyOffer를 만들었고, 일상적인 질문을 입력하면 관련 조언과 출처를 찾을 수 있는 EasyLife도 만들었습니다.",
+      "ja": "匡子闲（kuangzixian）です。バックエンドエンジニアで、以前はゲームの仕事を3年しており、現在は Jike（即刻）でバックエンド開発をしています。余暇に、GitHubの制作物を履歴書にまとめる EasyOffer と、日常の疑問を入力するだけで根拠のあるアドバイスを探せる EasyLife をつくりました。"
     },
     {
       "zh": "返回日志",
