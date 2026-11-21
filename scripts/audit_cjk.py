@@ -20,9 +20,9 @@ ALLOWED = {"匡子闲", "中文", "沈新宇", "珍珠阿西", "日本語", "小
 def load_allowed_originals() -> set[str]:
     acc: set[str] = set(ALLOWED)
     keys = {
-        "title", "author", "name", "category", "category_name", "label",
+        "title", "author", "name", "label",
         "text", "quote", "content", "annotation", "markText", "abstract",
-        "artist", "album", "song",
+        "artist", "album", "song", "intro", "intro_short", "short_title",
     }
 
     def walk(obj, bag):

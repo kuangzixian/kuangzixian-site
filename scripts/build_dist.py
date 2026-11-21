@@ -64,6 +64,10 @@ def should_skip(path: Path) -> bool:
 
 
 def main() -> None:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from i18n_lib import write_reading_terms_js
+    write_reading_terms_js(ROOT / "js" / "reading-terms.js")
+
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)

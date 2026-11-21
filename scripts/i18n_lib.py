@@ -32,6 +32,66 @@ def t_ui(key: str, loc: str, **fmt) -> str:
     return text
 
 
+@lru_cache(maxsize=1)
+def reading_terms() -> dict:
+    path = ROOT / "data" / "reading_terms.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+_HAN = re.compile(r"[\u4e00-\u9fff]")
+
+
+def t_term(zh: str, loc: str) -> str:
+    """Translate a WeRead category, preference, or time-of-day value.
+
+    Unknown values fall back to the original string. Composite labels such as
+    「计算机-编程设计」 are translated part by part when each part is known.
+    """
+    text = (zh or "").strip()
+    if not text or loc == "zh":
+        return zh if zh is not None else ""
+    table = reading_terms()
+
+    def one(key: str) -> str | None:
+        pack = table.get(key)
+        if not pack:
+            return None
+        return pack.get(loc) or pack.get("en") or key
+
+    direct = one(text)
+    if direct is not None:
+        return direct
+    if "-" in text:
+        parts = text.split("-")
+        mapped: list[str] = []
+        for part in parts:
+            item = one(part)
+            if item is None:
+                if _HAN.search(part):
+                    return text
+                mapped.append(part)
+            else:
+                mapped.append(item)
+        return " · ".join(mapped)
+    return text
+
+
+def write_reading_terms_js(dest: Path | None = None) -> Path:
+    dest = dest or (ROOT / "js" / "reading-terms.js")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    payload = json.dumps(reading_terms(), ensure_ascii=False, indent=2)
+    dest.write_text(
+        "/* Generated from data/reading_terms.json. Do not edit by hand. */\n"
+        "(function (global) {\n"
+        f"  global.KUANG_READING_TERMS = {payload};\n"
+        "})(window);\n",
+        encoding="utf-8",
+    )
+    return dest
+
+
 def pick(obj: dict, base: str, loc: str, default: str = "") -> str:
     if loc == "zh":
         return obj.get(base) or obj.get(base + "_zh") or default
@@ -580,17 +640,26 @@ def update_jsonld(html: str, loc: str, *, url: str, page_name: str | None = None
 
 
 def ensure_i18n_script(html: str) -> str:
-    if 'src="/js/i18n.js"' in html or "src=\"js/i18n.js\"" in html:
-        html = html.replace('src="js/i18n.js"', 'src="/js/i18n.js"')
-        return html
-    html = re.sub(
-        r'(<script src="(?:/)?js/main\.js"></script>)',
-        '  <script src="/js/i18n.js"></script>\n  \\1',
-        html,
-        count=1,
-    )
+    html = html.replace('src="js/reading-terms.js"', 'src="/js/reading-terms.js"')
+    html = html.replace('src="js/i18n.js"', 'src="/js/i18n.js"')
+    if 'js/reading-terms.js' not in html:
+        needle = '<script src="/js/i18n.js"></script>'
+        inject = '<script src="/js/reading-terms.js"></script>\n  ' + needle
+        if needle in html:
+            html = html.replace(needle, inject, 1)
+        else:
+            html = re.sub(
+                r'(<script src="(?:/)?js/main\.js"></script>)',
+                '  <script src="/js/reading-terms.js"></script>\n  <script src="/js/i18n.js"></script>\n  \\1',
+                html,
+                count=1,
+            )
     if 'src="/js/i18n.js"' not in html:
-        html = html.replace("</body>", '  <script src="/js/i18n.js"></script>\n</body>', 1)
+        html = html.replace(
+            "</body>",
+            '  <script src="/js/reading-terms.js"></script>\n  <script src="/js/i18n.js"></script>\n</body>',
+            1,
+        )
     return html
 
 
@@ -657,13 +726,20 @@ def apply_reading_chrome(html: str, loc: str) -> str:
     html = _rewrite_class_text(html, "k", kv_label, tags="span")
 
     def value(text: str) -> str:
-        return format_zh_counts(format_zh_duration(text, loc), loc)
+        text = format_zh_counts(format_zh_duration(text, loc), loc)
+        stripped = text.strip()
+        mapped = t_term(stripped, loc)
+        return mapped if mapped != stripped else text
     html = _rewrite_class_text(html, "v", value, tags="span")
 
     def bar_count(m):
         inner = format_zh_counts(m.group(1), loc)
         return f"</div><span>{inner}</span></div>"
     html = re.sub(r"</div><span>([^<]*本)</span></div>", bar_count, html)
+
+    def bar_name(m):
+        return m.group(1) + t_term(m.group(2), loc) + m.group(3)
+    html = re.sub(r'(<div class="bar-row"><span>)([^<]+)(</span>)', bar_name, html)
 
     def meta(text: str) -> str:
         text = text.replace("尚未阅读", t_ui("not_started", loc))
@@ -672,7 +748,11 @@ def apply_reading_chrome(html: str, loc: str) -> str:
         text = text.replace("后来又翻到", t_ui("reread_to", loc))
         # "最近" after a category middot, not inside last_read which already replaced
         text = re.sub(r"(· )最近( )", lambda m: m.group(1) + t_ui("last", loc) + m.group(2), text)
-        return format_zh_counts(format_zh_duration(text, loc), loc)
+        text = format_zh_counts(format_zh_duration(text, loc), loc)
+        m = re.match(r"^(.+?)( · )", text)
+        if m:
+            text = t_term(m.group(1), loc) + m.group(2) + text[m.end():]
+        return text
     html = _rewrite_class_text(html, "meta", meta, tags="p")
 
     def note_count(text: str) -> str:
@@ -688,6 +768,52 @@ def apply_reading_chrome(html: str, loc: str) -> str:
         key = mapping.get(s)
         return t_ui(key, loc) if key else text
     html = _rewrite_class_text(html, "pill", pill, tags="span")
+
+    html = re.sub(
+        r'alt="《([^"]+)》封面"',
+        lambda m: f'alt="{t_ui("cover_of", loc, title=m.group(1))}"',
+        html,
+    )
+    html = re.sub(
+        r'aria-label="进度 (\d+)%"',
+        lambda m: f'aria-label="{t_ui("progress", loc, n=m.group(1))}"',
+        html,
+    )
+
+    def chip_visible(m):
+        prefix, cat, label, suffix = m.group(1), m.group(2), m.group(3), m.group(4)
+        if cat == "all":
+            return m.group(0)
+        parts = label.rsplit(None, 1)
+        if len(parts) == 2 and re.fullmatch(r"[\d,]+", parts[1]):
+            return f"{prefix}{t_term(parts[0], loc)} {parts[1]}{suffix}"
+        return f"{prefix}{t_term(label, loc)}{suffix}"
+
+    html = re.sub(
+        r'(<button\b[^>]*data-shelf-filter="([^"]+)"[^>]*>)([^<]*)(</button>)',
+        chip_visible,
+        html,
+    )
+    return html
+
+
+def apply_music_chrome(html: str, loc: str) -> str:
+    """Translate music kickers, evidence captions, and cover alt chrome."""
+    html = _rewrite_class_text(html, "music-kicker", lambda t: t_term(t.strip(), loc), tags="p")
+
+    def ev_caption(m):
+        return m.group(1) + t_term(m.group(2).strip(), loc)
+
+    html = re.sub(
+        r'(<span class="music-ev-artist">[^<]*</span>\s*—\s*)([^<]+)',
+        ev_caption,
+        html,
+    )
+    html = re.sub(
+        r'alt="([^"]+?) 封面"',
+        lambda m: f'alt="{t_ui("cover_of", loc, title=m.group(1))}"',
+        html,
+    )
     return html
 
 
@@ -768,6 +894,7 @@ def apply_plain_ui(html: str, loc: str) -> str:
         ('title="飘雪特效"', f'title="{t_ui("snow_btn_title", loc)}"'),
         ('aria-label="飘雪特效：开"', f'aria-label="{t_ui("snow_on", loc)}"'),
         ('aria-label="随机抽一本书"', f'aria-label="{t_ui("random_book", loc)}"'),
+        ('aria-label="代表封面"', f'aria-label="{t_ui("featured_covers", loc)}"'),
 
         (">显示名 匡子闲 · 公司字段 IFTech<", f'>{t_ui("display_company", loc)}<'),
         (">未确认 / unverified<", f'>{t_ui("unverified", loc)} / unverified<' if loc == "zh" else f'>{t_ui("unverified", loc)}<'),
@@ -842,6 +969,7 @@ def localize_document(html: str, loc: str, *, path: str = "/", title: str | None
     html = apply_section_heads(html, loc)
     html = apply_plain_ui(html, loc)
     html = apply_reading_chrome(html, loc)
+    html = apply_music_chrome(html, loc)
     html = format_time_tags(html, loc)
     html = set_html_lang(html, loc)
     url = abs_url(path, loc)

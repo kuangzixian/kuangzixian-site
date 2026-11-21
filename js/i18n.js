@@ -177,6 +177,36 @@
     return text;
   }
 
+  function term(zh) {
+    if (zh == null) return "";
+    var text = String(zh).trim();
+    if (!text || locale === "zh") return text;
+    var table = global.KUANG_READING_TERMS || {};
+    function one(key) {
+      var pack = table[key];
+      if (!pack) return null;
+      return pack[locale] || pack.en || key;
+    }
+    var direct = one(text);
+    if (direct) return direct;
+    if (text.indexOf("-") !== -1) {
+      var parts = text.split("-");
+      var out = [];
+      var i;
+      for (i = 0; i < parts.length; i += 1) {
+        var mapped = one(parts[i]);
+        if (mapped == null) {
+          if (/[\u4e00-\u9fff]/.test(parts[i])) return text;
+          out.push(parts[i]);
+        } else {
+          out.push(mapped);
+        }
+      }
+      return out.join(" · ");
+    }
+    return text;
+  }
+
   function formatNumber(n) {
     try {
       return new Intl.NumberFormat(LOCALES[locale].intl).format(n);
@@ -328,6 +358,7 @@
     locales: LOCALES,
     order: ORDER,
     t: t,
+    term: term,
     formatNumber: formatNumber,
     formatDate: formatDate,
     pathLocale: pathLocale,

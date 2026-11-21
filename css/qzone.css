@@ -681,7 +681,17 @@ html[data-skin="night"] .gb-floor { background: #3a2a10; color: #f5c400; border-
   }
   .qzone-body .yp-label { grid-column: 1 / -1; }
   .qzone-body .yp-num { min-width: 0; text-align: right; }
-  .qzone-body .bar-row { grid-template-columns: 1fr auto; font-size: 13px; }
+  .qzone-body .bar-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "name count"
+      "bar bar";
+    gap: 4px 10px;
+    font-size: 13px;
+  }
+  .qzone-body .bar-row > span:first-child { grid-area: name; align-self: end; }
+  .qzone-body .bar-row > .bar { grid-area: bar; }
+  .qzone-body .bar-row > span:last-child { grid-area: count; align-self: end; white-space: nowrap; }
   .qzone-body .shelf-card h3,
   .qzone-body .card,
   .qzone-body p { overflow-wrap: anywhere; }

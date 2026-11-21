@@ -830,6 +830,27 @@
       "es": "más tarde volvió al",
       "ko": "나중에 다시",
       "ja": "あとで再び"
+    },
+    "progress": {
+      "zh": "进度 {n}%",
+      "en": "Progress {n}%",
+      "es": "Progreso {n}%",
+      "ko": "진행률 {n}%",
+      "ja": "進捗 {n}%"
+    },
+    "featured_covers": {
+      "zh": "代表封面",
+      "en": "Featured covers",
+      "es": "Portadas destacadas",
+      "ko": "대표 표지",
+      "ja": "代表的なジャケット"
+    },
+    "cover_of": {
+      "zh": "《{title}》封面",
+      "en": "Cover of {title}",
+      "es": "Portada de {title}",
+      "ko": "《{title}》 표지",
+      "ja": "『{title}』の表紙"
     }
   },
   "pairs": [
@@ -1278,7 +1299,7 @@
       "zh": "欧美流行和电影歌贯穿全单",
       "en": "Western pop and film songs run through the list",
       "es": "El pop occidental y las canciones de cine recorren toda la lista",
-      "ko": "서양 팝과 영화 음악이 리스트 전체에 贯穿합니다",
+      "ko": "서양 팝과 영화 음악이 리스트 전체에 걸쳐 있습니다",
       "ja": "欧米ポップと映画の曲がリスト全体を貫いています"
     },
     {

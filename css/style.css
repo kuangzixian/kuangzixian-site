@@ -439,7 +439,16 @@ html[lang="zh-CN"] .zh { display: revert; }
   border-radius: 99px;
 }
 .bars { display: grid; gap: 8px; }
-.bar-row { display: grid; grid-template-columns: 72px 1fr 48px; gap: 10px; align-items: center; font-size: 0.8rem; color: var(--muted); }
+.bar-row {
+  display: grid;
+  grid-template-columns: minmax(6.5em, 11em) 1fr auto;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.bar-row > span:first-child { line-height: 1.25; overflow-wrap: anywhere; }
+.bar-row > span:last-child { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .pill {
   display: inline-block;
   font-size: 0.7rem;

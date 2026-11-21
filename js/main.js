@@ -255,7 +255,7 @@
     var alt = (I18N.t && I18N.t("coverOf", { title: book.title })) || ("Cover of " + book.title);
     var kind = book.kind === "album"
       ? escapeHtml((I18N.t && I18N.t("audiobook")) || "Audiobook")
-      : escapeHtml(book.category || "");
+      : escapeHtml((I18N.term && I18N.term(book.category)) || book.category || "");
     drawResult.innerHTML =
       '<a class="book-link" href="' + escapeHtml(book.link) + '" rel="noopener noreferrer">' +
         '<img class="cover" src="' + escapeHtml(book.cover) + '" alt="' + escapeHtml(alt) + '" width="88" height="118">' +
