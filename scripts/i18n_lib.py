@@ -937,7 +937,7 @@ def apply_plain_ui(html: str, loc: str) -> str:
         html = html.replace("JUEJIN · 掘金", "Juejin")
         html = html.replace("JIKE · 即刻", "Jike")
         html = html.replace("ZHIHU · 知乎", "Zhihu")
-        html = html.replace("小红书 · 微博 · 抖音 · X", t_ui("unconfirmed_platforms", loc))
+        html = html.replace("小红书 · 微博 · 抖音", t_ui("unconfirmed_platforms", loc))
     html = html.replace("<h3>easy-life</h3>", "<h3>EasyLife</h3>")
     html = html.replace("<h3>easy-offer</h3>", "<h3>EasyOffer</h3>")
     return html

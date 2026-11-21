@@ -755,11 +755,11 @@
       "ja": "匡子闲 · 対話の本文はこのサイトに置いてあり、chatgpt.com がなくても読めます。"
     },
     "unconfirmed_platforms": {
-      "zh": "小红书 · 微博 · 抖音 · X",
-      "en": "Xiaohongshu · Weibo · Douyin · X",
-      "es": "Xiaohongshu · Weibo · Douyin · X",
-      "ko": "샤오홍슈 · 웨이보 · 더우인 · X",
-      "ja": "小紅書 · 微博 · 抖音 · X"
+      "zh": "小红书 · 微博 · 抖音",
+      "en": "Xiaohongshu · Weibo · Douyin",
+      "es": "Xiaohongshu · Weibo · Douyin",
+      "ko": "샤오홍슈 · 웨이보 · 더우인",
+      "ja": "小紅書 · 微博 · 抖音"
     },
     "my_question": {
       "zh": "我的问题",
@@ -2101,11 +2101,11 @@
       "ja": "公開リポジトリで、まだ説明は公開されていません。"
     },
     {
-      "zh": "只放已经核对过、显示名精确匹配「匡子闲」的主页。小红书、微博、抖音和 X 目前还没能公开确认，不编造链接。",
-      "en": "Only profiles verified with the exact display name 匡子闲 are linked. Xiaohongshu, Weibo, Douyin and X could not be publicly confirmed, so no guessed URLs are included.",
-      "es": "Solo se enlazan perfiles comprobados cuyo nombre visible coincide exactamente con「匡子闲」. Xiaohongshu, Weibo, Douyin y X no se han podido confirmar en público, así que no se inventan enlaces.",
-      "ko": "표시 이름이 「匡子闲」과 정확히 일치하는지 확인한 페이지만 올립니다. 샤오홍슈, 웨이보, 더우인, X는 아직 공개적으로 확인하지 못해, 링크를 지어내지 않습니다.",
-      "ja": "表示名が「匡子闲」と正確に一致すると確認したページだけを載せます。小紅書、微博、抖音、X はまだ公開では確認できていないため、リンクを作りません。"
+      "zh": "只放已经核对过、显示名精确匹配「匡子闲」的主页。小红书、微博和抖音目前还没能公开确认，不编造链接。",
+      "en": "Only profiles verified with the exact display name 匡子闲 are linked. Xiaohongshu, Weibo and Douyin could not be publicly confirmed, so no guessed URLs are included.",
+      "es": "Solo se enlazan perfiles comprobados cuyo nombre visible coincide exactamente con「匡子闲」. Xiaohongshu, Weibo y Douyin no se han podido confirmar en público, así que no se inventan enlaces.",
+      "ko": "표시 이름이 「匡子闲」과 정확히 일치하는지 확인한 페이지만 올립니다. 샤오홍슈, 웨이보, 더우인은 아직 공개적으로 확인하지 못해, 링크를 지어내지 않습니다.",
+      "ja": "表示名が「匡子闲」と正確に一致すると確認したページだけを載せます。小紅書、微博、抖音はまだ公開では確認できていないため、リンクを作りません。"
     },
     {
       "zh": "计科，炒股<br>计算机软件 · 上海市",

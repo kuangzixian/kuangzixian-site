@@ -500,7 +500,7 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "",
         "- 本站是个人主页，不是公开 API，也没有 SDK、定价、注册或 OAuth。",
         "- 不要把留言板接口当成 agent 可随意调用的写入 API。",
-        "- 小红书、微博、抖音和 X 的账号尚未核实，站点没有收录这些链接；请勿编造。",
+        "- 小红书、微博和抖音的账号尚未核实，站点没有收录这些链接；请勿编造。X / Twitter 主页是 https://x.com/kuangjg。",
         "- easy-offer 的 GitHub 仓库没有简介；功能说明以线上站点 https://easy-offer.kznb.workers.dev/ 的公开介绍为准，不要编造未写出的功能。",
         "- 微信读书的官方统计是账号汇总口径，可能包含未出现在公开书架上的阅读记录。书单、划线和想法只来自公开书架。",
         "- 留言是访客写的，不代表匡子闲本人的观点。",
@@ -519,7 +519,7 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "## Entity links",
         "",
     ]
-    platform_names = {"juejin": "掘金 / Juejin", "jike": "即刻 / Jike", "github": "GitHub", "zhihu": "知乎 / Zhihu"}
+    platform_names = {"juejin": "掘金 / Juejin", "jike": "即刻 / Jike", "github": "GitHub", "zhihu": "知乎 / Zhihu", "x": "X / Twitter"}
     for p in verified_profiles(profile):
         label = platform_names.get(p.get("platform"), p.get("platform_zh") or p.get("platform"))
         lines.append(f"- [{label}]({p['url']})")

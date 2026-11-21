@@ -136,9 +136,14 @@
     {
       "platform": "x",
       "platform_zh": "X / Twitter",
-      "status": "not_found",
+      "status": "verified",
+      "source": "user-provided URL, confirmed on 2026-11-21",
+      "name": "匡子闲",
+      "username": "kuangjg",
+      "url": "https://x.com/kuangjg",
+      "url_alt": "https://twitter.com/kuangjg",
       "access": "ok",
-      "detail": "使用 X 官方接口搜索用户「匡子闲」无精确匹配。用户名 kuangzixian 不存在。相近拼写账号的显示名均不是「匡子闲」，故不收录。"
+      "detail": "用户提供主页链接 https://x.com/kuangjg。显示名精确匹配「匡子闲」，用户名为 kuangjg。"
     }
   ],
   "articles": [
