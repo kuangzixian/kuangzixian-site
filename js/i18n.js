@@ -234,6 +234,16 @@
     try { localStorage.setItem("kuang-lang", loc); } catch (e) {}
   }
 
+  // Remember an explicit choice from the language switcher for a year.
+  // functions/_middleware.js honours this cookie over the visitor's country.
+  function setLangCookie(loc) {
+    if (!LOCALES[loc]) return;
+    try {
+      document.cookie = "lang=" + loc + "; Max-Age=31536000; Path=/; SameSite=Lax" +
+        (global.location && global.location.protocol === "https:" ? "; Secure" : "");
+    } catch (e) {}
+  }
+
   function maybeRedirect() {
     if (isBot()) return;
     var loc = global.location;
@@ -297,7 +307,7 @@
     a.setAttribute("href", localizePath(loc.pathname, code, loc.search, loc.hash));
     if (code === locale) a.setAttribute("aria-current", "true");
     else a.removeAttribute("aria-current");
-    a.addEventListener("click", function () { setSavedLang(code); });
+    a.addEventListener("click", function () { setSavedLang(code); setLangCookie(code); });
   }
 
   function initSwitcher() {
@@ -366,6 +376,7 @@
     detectBrowserLocale: detectBrowserLocale,
     maybeRedirect: maybeRedirect,
     setSavedLang: setSavedLang,
+    setLangCookie: setLangCookie,
     initSwitcher: initSwitcher
   };
 })(window);

@@ -418,29 +418,19 @@ BOOT_SCRIPT = r"""  <script>
         return /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|linkedinbot|pinterest|googleother|wget|curl|python-requests/i.test(navigator.userAgent || "");
       }
       var cur = pathLocale(location.pathname);
-      var saved = null;
-      try { saved = localStorage.getItem("kuang-lang"); } catch (e) {}
-      if (saved && !LOCALES.hasOwnProperty(saved)) saved = null;
+      // The server picks the default language for "/" from the visitor's country
+      // (functions/_middleware.js). The client only follows an explicit choice
+      // made in the language switcher, stored in the "lang" cookie.
+      var picked = null;
+      try {
+        var cm = document.cookie.match(/(?:^|;\s*)lang=(zh|en|es|ko|ja)(?:;|$)/);
+        if (cm) picked = cm[1];
+      } catch (e) {}
       if (cur !== "zh") {
-        if (saved !== cur) try { localStorage.setItem("kuang-lang", cur); } catch (e) {}
-      } else if (!isBot()) {
-        var want = saved;
-        if (!want) {
-          var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
-          for (var i = 0; i < (list || []).length && !want; i++) {
-            var n = String(list[i] || "").toLowerCase();
-            if (n.indexOf("zh") === 0) want = "zh";
-            else if (n.indexOf("en") === 0) want = "en";
-            else if (n.indexOf("es") === 0) want = "es";
-            else if (n.indexOf("ko") === 0) want = "ko";
-            else if (n.indexOf("ja") === 0) want = "ja";
-          }
-        }
-        if (want && want !== "zh" && LOCALES.hasOwnProperty(want)) {
-          try { localStorage.setItem("kuang-lang", want); } catch (e) {}
-          var next = dest(location.pathname, want, location.search, location.hash);
-          if (next !== location.pathname + location.search + location.hash) location.replace(next);
-        }
+        try { localStorage.setItem("kuang-lang", cur); } catch (e) {}
+      } else if (!isBot() && picked && picked !== "zh") {
+        var next = dest(location.pathname, picked, location.search, location.hash);
+        if (next !== location.pathname + location.search + location.hash) location.replace(next);
       }
       var s = localStorage.getItem("kuang-skin");
       if (s !== "blue" && s !== "pink" && s !== "night") {
@@ -511,7 +501,7 @@ def replace_boot_script(html: str) -> str:
 
     new, n = re.subn(
         r"  <script>\s*\(function \(\) \{.*?kuang-lang[\s\S]*?</script>",
-        BOOT_SCRIPT,
+        repl,
         html,
         count=1,
     )
