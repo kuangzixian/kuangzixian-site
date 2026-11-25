@@ -453,6 +453,8 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         note = proj.get("note")
         lang = proj.get("language") or ""
         title = f"[{name}]({url})" if url else name
+        if proj.get("demo_url"):
+            title += f"（在线体验：{proj['demo_url']}）"
         if desc:
             extra = desc.rstrip()
             if extra and extra[-1] not in "。．.！？!?":
@@ -500,7 +502,7 @@ def build_llms_txt(profile: dict, reading: dict, chats: list[dict], sites: dict 
         "",
         "- 本站是个人主页，不是公开 API，也没有 SDK、定价、注册或 OAuth。",
         "- 不要把留言板接口当成 agent 可随意调用的写入 API。",
-        "- easy-offer 的 GitHub 仓库没有简介；功能说明以线上站点 https://easy-offer.kznb.workers.dev/ 的公开介绍为准，不要编造未写出的功能。",
+        "- 项目的名称、一句话介绍、在线体验地址和源码地址以 `/data/projects.json` 为准（`/data/profile.json` 的 projects 由它生成）。不要补充其中没有写出的功能。",
         "- 微信读书的官方统计是账号汇总口径，可能包含未出现在公开书架上的阅读记录。书单、划线和想法只来自公开书架。",
         "- 留言是访客写的，不代表匡子闲本人的观点。",
         "- 音乐栏目来自公开的网易云收藏歌单，不是播放次数或听歌年份。默认把第 1 首当作最新收藏，这一排序未经另行确认。不要把推荐写成他已经在听的歌。",
@@ -550,6 +552,8 @@ def build_index_md(profile: dict, reading: dict, chats: list[dict], sites: dict 
         name = project_display_name(proj)
         url = proj.get("url") or ""
         title = f"[{name}]({url})" if url else name
+        if proj.get("demo_url"):
+            title += f"（在线体验：{proj['demo_url']}）"
         if proj.get("description"):
             lines.append(f"- {title}：{proj['description']}")
         else:
@@ -908,7 +912,8 @@ def build_llms_full(profile: dict, reading: dict, chats: list[dict], sites: dict
         created = proj.get("created_at") or ""
         lang = proj.get("language") or ""
         desc = proj.get("description") or proj.get("note") or "公开仓库无简介。"
-        lines.append(f"- [{proj.get('name')}]({proj.get('url')})（{lang}，创建于 {created}）：{desc}")
+        demo = f"，在线体验：{proj['demo_url']}" if proj.get("demo_url") else ""
+        lines.append(f"- [{proj.get('name')}]({proj.get('url')})（{lang}，创建于 {created}{demo}）：{desc}")
     lines += ["", "## 即刻动态", ""]
     for post in profile.get("jike_posts") or []:
         when = post.get("relative_time_as_retrieved") or ""

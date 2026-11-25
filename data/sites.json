@@ -3,8 +3,8 @@
   "timezone": "Asia/Shanghai",
   "note": "Names, titles, descriptions and images were taken from the live sites (latest check 2026-11-18). Nothing here is invented. URLs are stored exactly as published. Entries with own=true are 匡子闲's own projects.",
   "how_to_add": "Append a new object to the sites array with id, url, name, and optional canonical, domain, title, description, image, image_alt, image_source, favicon, emoji, own. Set own to true for 匡子闲's own projects (shows a 自己做的 / Made by me badge). Keep url exactly as given. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
-  "intro_zh": "推荐看看的网站。标了「自己做的」的是匡子闲自己的项目。后面想到再补。介绍只摘自站点自己的公开信息，没有编造。",
-  "intro_en": "Sites he recommends. Cards marked “Made by me” are his own projects. More will be added later. Descriptions are taken from the sites themselves and are not invented.",
+  "intro_zh": "我推荐的网站。标着「自己做的」的是我自己的项目，想到再补。",
+  "intro_en": "Sites I recommend. Cards marked “Made by me” are my own projects. I’ll add more over time.",
   "sites": [
     {
       "id": "sinyu1012",
@@ -141,7 +141,7 @@
       "image_alt_ja": "Board Game Arena のロゴ"
     }
   ],
-  "intro_es": "Sitios que recomienda. Las tarjetas con “Hecho por mí” son sus propios proyectos. Irá añadiendo más. Las descripciones se toman de los propios sitios, no se inventan.",
-  "intro_ko": "추천하는 사이트입니다. 「직접 만든 것」이라고 표시된 카드는 본인 프로젝트입니다. 나중에 더 추가할 예정입니다. 소개 문구는 각 사이트에 공개된 내용에서 가져왔으며, 지어내지 않았습니다.",
-  "intro_ja": "おすすめのサイトです。「自分で作った」とあるカードは本人のプロジェクトです。思いついたらまた足します。紹介文は各サイトの公開情報から抜粋したもので、創作していません。"
+  "intro_es": "Sitios que recomiendo. Las tarjetas con «Hecho por mí» son mis propios proyectos. Iré añadiendo más.",
+  "intro_ko": "제가 추천하는 사이트입니다. 「직접 만든 것」 표시가 있는 카드는 제 프로젝트예요. 생각나면 더 추가할게요.",
+  "intro_ja": "私のおすすめサイトです。「自分で作った」とあるカードは私のプロジェクトです。思いついたら足していきます。"
 }

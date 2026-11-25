@@ -105,6 +105,28 @@
     });
   });
 
+
+  /* mobile: fade/arrow hint on the right of the scrollable tab bar */
+  (function () {
+    var tabs = document.getElementById("qzTabs");
+    var wrap = tabs && tabs.parentElement;
+    if (!wrap || !wrap.classList.contains("qz-tabs-wrap")) return;
+    function update() {
+      var end = tabs.scrollLeft + tabs.clientWidth >= tabs.scrollWidth - 4;
+      wrap.classList.toggle("is-end", end);
+    }
+    tabs.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    window.addEventListener("qzone:tabchange", function () {
+      var on = tabs.querySelector(".qz-tab.is-on, .qz-tab[aria-selected='true']");
+      if (on && tabs.scrollWidth > tabs.clientWidth && on.scrollIntoView) {
+        try { on.scrollIntoView({ block: "nearest", inline: "nearest" }); } catch (e) {}
+      }
+      update();
+    });
+    update();
+  })();
+
   /* skins */
   function setSkin(skin, persist) {
     if (skin !== "blue" && skin !== "pink" && skin !== "night") skin = "blue";

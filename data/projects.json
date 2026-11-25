@@ -1,0 +1,51 @@
+{
+  "note": "Single source of truth for 匡子闲's projects. Used by the homepage project cards, the profile tab, data/profile.json, llms.txt / llms-full.txt and JSON-LD. Edit here, then rebuild.",
+  "updated_at": "2026-11-24T00:00:00+08:00",
+  "projects": [
+    {
+      "id": "easy-offer",
+      "name": "EasyOffer",
+      "repo": "easy-offer",
+      "demo_url": "https://easy-offer.kznb.workers.dev/",
+      "source_url": "https://github.com/kuangzixian/easy-offer",
+      "language": "TypeScript",
+      "created_at": "2026-04-15T14:18:52+08:00",
+      "featured": true,
+      "one_liner_zh": "帮工程师把 GitHub 上做过的项目写进简历，也能用 AI 准备简历和面试。",
+      "one_liner_en": "Helps engineers turn their GitHub projects into a résumé, with AI help for résumés and interview prep.",
+      "one_liner_es": "Ayuda a los ingenieros a convertir sus proyectos de GitHub en un currículum, con ayuda de IA para el currículum y las entrevistas.",
+      "one_liner_ko": "엔지니어가 GitHub에서 한 프로젝트를 이력서에 담도록 돕고, AI로 이력서와 면접 준비도 할 수 있습니다.",
+      "one_liner_ja": "エンジニアが GitHub でつくったプロジェクトを履歴書にまとめるのを手伝い、AI で履歴書と面接の準備もできます。"
+    },
+    {
+      "id": "easy-life",
+      "name": "EasyLife",
+      "repo": "easy-life",
+      "demo_url": "https://easy-life.kznb.workers.dev/",
+      "source_url": "https://github.com/kuangzixian/easy-life",
+      "language": "JavaScript",
+      "created_at": "2026-09-30T00:29:16+08:00",
+      "featured": true,
+      "one_liner_zh": "输入日常问题，就能找到相关的生活建议和出处。也可以顺序阅读，或随机抽一张建议卡。",
+      "one_liner_en": "Type in an everyday question and find related life advice with its source. You can also read in order or draw a random advice card.",
+      "one_liner_es": "Escribe una pregunta cotidiana y encuentra consejos de vida relacionados con su fuente. También puedes leer en orden o sacar una carta de consejo al azar.",
+      "one_liner_ko": "일상적인 질문을 입력하면 관련 생활 조언과 출처를 찾을 수 있습니다. 순서대로 읽거나 조언 카드를 무작위로 뽑을 수도 있습니다.",
+      "one_liner_ja": "日常の疑問を入力すると、関連する暮らしのアドバイスと出典が見つかります。順番に読んだり、アドバイスカードをランダムに引いたりもできます。"
+    },
+    {
+      "id": "strawberrrrrrry",
+      "name": "Strawberrrrrrry",
+      "repo": "Strawberrrrrrry",
+      "demo_url": null,
+      "source_url": "https://github.com/kuangzixian/Strawberrrrrrry",
+      "language": "TypeScript",
+      "created_at": "2026-04-04T00:11:47+08:00",
+      "featured": false,
+      "one_liner_zh": "本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知。",
+      "one_liner_en": "A local-first project manager with AI Q&A, MCP integration, and multi-channel notifications.",
+      "one_liner_es": "Un gestor de proyectos local-first, con preguntas y respuestas de IA, integración MCP y notificaciones por varios canales.",
+      "one_liner_ko": "로컬 우선 프로젝트 관리 시스템으로, AI 질의응답, MCP 연동, 여러 채널 알림을 지원합니다.",
+      "one_liner_ja": "ローカル優先のプロジェクト管理システム。AI の質疑応答、MCP 連携、複数チャネルの通知に対応します。"
+    }
+  ]
+}

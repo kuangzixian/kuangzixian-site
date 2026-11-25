@@ -3,8 +3,8 @@
   "timezone": "Asia/Shanghai",
   "note": "Games 匡子闲 has played and enjoys. Descriptions are factual (player count and genre) only; no personal ratings, rankings, or play counts are recorded.",
   "how_to_add": "Append a new object to the games array with id, name_zh, name_en, name_es, name_ko, name_ja, players, genre_* and blurb_* fields, and emoji. Then run: python3 scripts/build_dist.py && npx wrangler pages deploy dist --project-name kuangzixian --branch main",
-  "intro_zh": "玩过、也爱玩的桌游。后面想起再补。下面只写公开的人数和类型，没有个人评分或对局次数。",
-  "intro_en": "Board games he has played and enjoys. More will be added later. Each entry lists only public player counts and genre, not personal ratings or play counts.",
+  "intro_zh": "我玩过、也爱玩的桌游，想起来再补。",
+  "intro_en": "Board games I’ve played and enjoy. I’ll add more as I remember them.",
   "games": [
     {
       "id": "werewolf",
@@ -147,7 +147,7 @@
       "blurb_ja": "4–8人のソーシャル推理パーティーゲーム。所要は約10–15分です。"
     }
   ],
-  "intro_es": "Juegos de mesa que ha jugado y le gustan. Irá añadiendo más. Cada entrada solo indica el número de jugadores y el género, no valoraciones personales ni partidas jugadas.",
-  "intro_ko": "직접 해보고 좋아하는 보드게임입니다. 나중에 떠오르는 대로 더 넣을 예정입니다. 아래에는 공개된 인원과 장르만 적었고, 개인적인 평점이나 플레이 횟수는 없습니다.",
-  "intro_ja": "遊んだことのある、好きなボードゲームです。思いついたらまた足します。掲載しているのは公開されている人数とジャンルだけで、個人の評価や対局数はありません。"
+  "intro_es": "Juegos de mesa que he jugado y me gustan. Añadiré más cuando me acuerde.",
+  "intro_ko": "제가 해 봤고 좋아하는 보드게임입니다. 생각나면 더 추가할게요.",
+  "intro_ja": "遊んだことがあって好きなボードゲームです。思い出したら足していきます。"
 }

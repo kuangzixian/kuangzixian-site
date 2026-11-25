@@ -156,26 +156,34 @@
   ],
   "projects": [
     {
-      "name": "easy-life",
+      "name": "EasyOffer",
+      "repo": "easy-offer",
+      "url": "https://github.com/kuangzixian/easy-offer",
+      "demo_url": "https://easy-offer.kznb.workers.dev/",
+      "description": "帮工程师把 GitHub 上做过的项目写进简历，也能用 AI 准备简历和面试。",
+      "description_en": "Helps engineers turn their GitHub projects into a résumé, with AI help for résumés and interview prep.",
+      "language": "TypeScript",
+      "fork": false,
+      "created_at": "2026-04-15T14:18:52+08:00"
+    },
+    {
+      "name": "EasyLife",
+      "repo": "easy-life",
       "url": "https://github.com/kuangzixian/easy-life",
-      "description": "EasyLife：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。",
+      "demo_url": "https://easy-life.kznb.workers.dev/",
+      "description": "输入日常问题，就能找到相关的生活建议和出处。也可以顺序阅读，或随机抽一张建议卡。",
+      "description_en": "Type in an everyday question and find related life advice with its source. You can also read in order or draw a random advice card.",
       "language": "JavaScript",
       "fork": false,
       "created_at": "2026-09-30T00:29:16+08:00"
     },
     {
-      "name": "easy-offer",
-      "url": "https://github.com/kuangzixian/easy-offer",
-      "description": null,
-      "language": "TypeScript",
-      "fork": false,
-      "created_at": "2026-04-15T14:18:52+08:00",
-      "note": "公开仓库无简介，站点上仅展示仓库名，不编造功能说明。"
-    },
-    {
       "name": "Strawberrrrrrry",
+      "repo": "Strawberrrrrrry",
       "url": "https://github.com/kuangzixian/Strawberrrrrrry",
-      "description": "本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知",
+      "demo_url": null,
+      "description": "本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知。",
+      "description_en": "A local-first project manager with AI Q&A, MCP integration, and multi-channel notifications.",
       "language": "TypeScript",
       "fork": false,
       "created_at": "2026-04-04T00:11:47+08:00"

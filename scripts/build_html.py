@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from md import escape_html, render_markdown
 import i18n_lib
+import projects_lib
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://kuangzixian.pages.dev"
@@ -566,8 +567,25 @@ def patch_index(html: str, *, chats: list[dict], sites: dict, boardgames: dict, 
 
     html = set_intro(html, "qzSitesIntroZh", "qzSitesIntroEn", sites, "intro_")
     html = set_intro(html, "qzBoardgamesIntroZh", "qzBoardgamesIntroEn", boardgames, "intro_")
+    html = replace_inner_by_id(html, "homeProjects", projects_lib.home_cards_html(loc))
+    html = replace_inner_by_id(html, "profileProjects", projects_lib.profile_cards_html(loc))
     html = i18n_lib.localize_document(html, loc, path="/")
+    html = add_project_jsonld(html, loc)
     return html
+
+
+def add_project_jsonld(html: str, loc: str) -> str:
+    m = re.search(r'(<script type="application/ld\+json">\s*)(\{.*?\})(\s*</script>)', html, re.S)
+    if not m:
+        return html
+    try:
+        data = json.loads(m.group(2))
+    except json.JSONDecodeError:
+        return html
+    person = data.get("mainEntity") if isinstance(data.get("mainEntity"), dict) else data
+    person["@reverse"] = {"author": projects_lib.jsonld(loc)}
+    dumped = json.dumps(data, ensure_ascii=False, indent=2)
+    return html[: m.start(2)] + dumped + html[m.end(2) :]
 
 
 def write_pages(dest: Path) -> None:

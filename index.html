@@ -150,8 +150,8 @@
     <span class="qz-sparkle"></span>
     <div class="qz-banner-text">
       <p class="qz-space-name">匡子闲的空间</p>
-      <p class="qz-sign zh"><span class="type-target">我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。</span></p>
-      <p class="qz-sign en-only"><span class="type-target">I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.</span></p>
+      <p class="qz-sign zh"><span class="type-target">写后端，也写点自己想用的小东西。</span></p>
+      <p class="qz-sign en-only"><span class="type-target">I build backends, and small things I want to use myself.</span></p>
     </div>
   </div>
 
@@ -206,6 +206,7 @@
     </aside>
 
     <div class="qz-content">
+      <div class="qz-tabs-wrap">
       <nav class="qz-tabs" id="qzTabs" role="tablist" aria-label="空间栏目">
         <a class="qz-tab" role="tab" data-tab="home" href="#home" aria-controls="home"><span class="zh">主页</span><span class="en-only">Home</span></a>
         <a class="qz-tab" role="tab" data-tab="writing" href="#writing" aria-controls="writing"><span class="zh">日志</span><span class="en-only">Logs</span></a>
@@ -216,6 +217,7 @@
         <a class="qz-tab" role="tab" data-tab="guestbook" href="#guestbook" aria-controls="guestbook"><span class="zh">留言板</span><span class="en-only">Guestbook</span></a>
         <a class="qz-tab" role="tab" data-tab="profile" href="#profile" aria-controls="profile"><span class="zh">个人档</span><span class="en-only">Profile</span></a>
       </nav>
+      </div>
 
       <main id="main" class="qz-main">
         <div id="home" class="tab-panel" role="tabpanel" aria-labelledby="home">
@@ -224,8 +226,8 @@
         <p class="kicker">Personal homepage</p>
         <h1>匡子闲</h1>
         <p class="handle"><a href="https://github.com/kuangzixian" rel="me">@kuangzixian</a></p>
-        <p class="bio zh">我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 <a href="https://github.com/kuangzixian/easy-offer">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href="https://github.com/kuangzixian/easy-life">EasyLife</a>，输入日常问题，就能找到相关建议和出处。</p>
-        <p class="bio en-only">I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built <a href="https://github.com/kuangzixian/easy-offer">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href="https://github.com/kuangzixian/easy-life">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.</p>
+        <p class="bio zh">我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 <a href="https://easy-offer.kznb.workers.dev/">EasyOffer</a>，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 <a href="https://easy-life.kznb.workers.dev/">EasyLife</a>，输入日常问题，就能找到相关建议和出处。</p>
+        <p class="bio en-only">I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built <a href="https://easy-offer.kznb.workers.dev/">EasyOffer</a> to help engineers turn their GitHub work into a résumé, and <a href="https://easy-life.kznb.workers.dev/">EasyLife</a> so readers can look up everyday questions and trace the advice back to its source.</p>
         <div class="tags">
           <span class="tag">后端开发工程师</span>
           <span class="tag">IFTech</span>
@@ -233,6 +235,8 @@
         </div>
       </div>
     </section>
+
+    <section class="home-projects" id="homeProjects"></section>
 
     <div class="hero-stats" aria-label="阅读概览">
       <a class="rstat" href="#reading">
@@ -263,33 +267,33 @@
         <h2>说说</h2>
         <span class="en">Mood</span>
       </div>
-      <p class="lede zh">即刻上一些还找得到的句子。知乎上有 71 条回答、1,301 个赞同，但回答列表接口未能打开，这里先不罗列单条内容。</p>
-      <p class="lede en-only">A few lines still visible on Jike. The Zhihu profile shows 71 answers and 1,301 upvotes, but the answers list could not be fetched, so individual answers are not listed here.</p>
+      <p class="lede zh">我在即刻上随手发的几句。</p>
+      <p class="lede en-only">A few things I posted on Jike.</p>
 
       <div class="thoughts">
         <article class="card thought">
           <blockquote>相信国运，定投科创。珍爱生命，远离纳指。</blockquote>
-          <footer><span class="zh">即刻 · 检索时显示「9天前」</span><span class="en-only">Jike · shown as “9 days ago” when retrieved</span></footer>
+          <footer><span class="zh">即刻 · 2026 年 11 月摘录</span><span class="en-only">Jike · excerpted Nov 2026</span></footer>
         </article>
         <article class="card thought">
           <blockquote>距离生产端越近，距离消费端就越远。</blockquote>
-          <footer><span class="zh">即刻 · 检索时显示「1月前」</span><span class="en-only">Jike · shown as “1 month ago” when retrieved</span></footer>
+          <footer><span class="zh">即刻 · 2026 年 11 月摘录</span><span class="en-only">Jike · excerpted Nov 2026</span></footer>
         </article>
         <article class="card thought">
           <blockquote>落枕做理疗的时候想，朱自清他爸可能也是因为落枕了🤔</blockquote>
-          <footer><span class="zh">即刻 · 检索时显示「3月前」</span><span class="en-only">Jike · shown as “3 months ago” when retrieved</span></footer>
+          <footer><span class="zh">即刻 · 2026 年 11 月摘录</span><span class="en-only">Jike · excerpted Nov 2026</span></footer>
         </article>
         <article class="card thought">
           <blockquote>就这么听着歌，看完一本小说，无所事事也挺好。要是不感冒就更棒了😏</blockquote>
-          <footer><span class="zh">即刻 · 检索时显示「3月前」</span><span class="en-only">Jike · shown as “3 months ago” when retrieved</span></footer>
+          <footer><span class="zh">即刻 · 2026 年 11 月摘录</span><span class="en-only">Jike · excerpted Nov 2026</span></footer>
         </article>
         <article class="card thought">
           <blockquote>像《东京八平米》里面描述的一样，第一次体验🤓</blockquote>
-          <footer><span class="zh">即刻 · 检索时显示「7天前」</span><span class="en-only">Jike · shown as “7 days ago” when retrieved</span></footer>
+          <footer><span class="zh">即刻 · 2026 年 11 月摘录</span><span class="en-only">Jike · excerpted Nov 2026</span></footer>
         </article>
         <article class="card thought">
           <blockquote>多喝咖啡！</blockquote>
-          <footer><span class="zh">即刻 · 检索时显示「1月前」</span><span class="en-only">Jike · shown as “1 month ago” when retrieved</span></footer>
+          <footer><span class="zh">即刻 · 2026 年 11 月摘录</span><span class="en-only">Jike · excerpted Nov 2026</span></footer>
         </article>
       </div>
     </section>
@@ -301,13 +305,13 @@
         <h2>读书</h2>
         <span class="en">Reading</span>
       </div>
-      <p class="lede zh">来自微信读书，检索于 2026-11-14（Asia/Shanghai）。统计数字是官方汇总口径，可能包含未出现在公开书架上的记录。下面的书单、封面、划线和想法只展示公开书架里的内容；已排除 9 本私密书和「文章收藏」。</p>
-      <p class="lede en-only">From WeChat Reading, retrieved on 14 Nov 2026 (Asia/Shanghai). Official totals may include records not on the public shelf. Titles, covers and notes below are public-shelf items only; 9 private books and the “Articles” entry are omitted.</p>
+      <p class="lede zh">我在微信读书上的阅读记录：读了多少、爱读什么，还有书架上的书和划线。</p>
+      <p class="lede en-only">My reading on WeChat Reading: how much I read, what I like, and the books and highlights on my shelf.</p>
 
       <article class="card year-progress">
         <h3><span class="zh">2026 年阅读进度</span><span class="en-only">2026 reading progress</span></h3>
-        <p class="tiny zh">截至 2026-11-14。数字来自微信读书官方统计，不是逐日打卡热力图。</p>
-        <p class="tiny en-only">As of 14 Nov 2026. Official WeChat Reading totals, not a day-by-day heatmap.</p>
+        <p class="tiny zh">截至 2026-11-14。</p>
+        <p class="tiny en-only">As of 14 Nov 2026.</p>
         <div class="yp-rows">
           <div class="yp-row">
             <div class="yp-label"><span class="zh">这一年已过</span><span class="en-only">Year elapsed</span></div>
@@ -325,8 +329,8 @@
             <div class="yp-num">14<span class="yp-den"> / 14</span></div>
           </div>
         </div>
-        <p class="tiny zh">今年已读 38 本、读完 11 本；11 月截至检索日，每天都有阅读。</p>
-        <p class="tiny en-only">38 books opened and 11 finished this year. In November, every day up to the retrieval date had reading.</p>
+        <p class="tiny zh">今年已读 38 本、读完 11 本；11 月到 14 日为止，每天都有阅读。</p>
+        <p class="tiny en-only">38 books opened and 11 finished this year. In November I read every day through the 14th.</p>
       </article>
 
       <aside class="draw-panel" aria-label="随机抽一本书">
@@ -417,8 +421,8 @@
       </div>
 
       <h3 class="subhead">读完</h3>
-      <p class="lede zh">官方统计累计读完 108 本、今年 11 本。这里只列出公开书架上能核对到读完时间的书。</p>
-      <p class="lede en-only">Official totals: 108 finished in all, 11 this year. Only public-shelf titles with a finish date are listed here.</p>
+      <p class="lede zh">我一共读完了 108 本，今年 11 本。这里列的是书架上标了读完日期的几本。</p>
+      <p class="lede en-only">I’ve finished 108 books in all, 11 of them this year. These are the ones on my shelf with a finish date.</p>
       <div class="fin-grid">
         <article class="card fin-card"><a class="book-link" href="https://weread.qq.com/web/reader/c4332ab0813ab7f5cg017038" rel="noopener noreferrer">
         <img class="cover" src="images/books/b-3300063647.jpg" alt="《东京八平米》封面" width="72" height="96" loading="lazy">
@@ -479,8 +483,8 @@
       </div>
 
       <h3 class="subhead">笔记与划线</h3>
-      <p class="lede zh">从公开书架里笔记较多的书中选了一部分自己的划线和想法。笔记总数按「想法 + 划线 + 书签」计算；这里不展示书签内容，也不收录他人书评。</p>
-      <p class="lede en-only">A selection of my own highlights and thoughts from public-shelf books with the most notes. Totals use thoughts + underlines + bookmarks; bookmark text and third-party reviews are not included.</p>
+      <p class="lede zh">从笔记比较多的几本书里，挑了一些我划的线和写下的想法。</p>
+      <p class="lede en-only">A few of my highlights and notes, picked from the books I’ve annotated most.</p>
       <div class="quote-stage">
         <div class="quote-toolbar">
           <p class="tiny zh">先看一句精选划线或想法。</p>
@@ -1235,8 +1239,8 @@
         <h2>音乐</h2>
         <span class="en">Music</span>
       </div>
-      <p class="lede zh">来自网易云歌单「匡子闲喜欢的音乐」，共 286 首，导出于 2026-11-17 15:48（Asia/Shanghai）。按网易云「我喜欢的音乐」默认顺序解读：第1首视为最新收藏，第286首较早。用户未另行确认排序。分析来自收藏，不是播放次数。 完整可视化报告可在本站打开，不必访问外部分析页。</p>
-      <p class="lede en-only">From the NetEase Cloud Music playlist “匡子闲喜欢的音乐”: 286 tracks, exported at 2026-11-17 15:48 (Asia/Shanghai). Read in NetEase Cloud Music’s default Liked Songs order: #1 is treated as the newest save, #286 as earlier. This order was not separately confirmed. The analysis is based on saves, not play counts. The full visual report is hosted on this site.</p>
+      <p class="lede zh">我在网易云「匡子闲喜欢的音乐」里收藏了 286 首歌，大多是华语流行，也有民谣、日语和欧美流行。下面是这些收藏里能看出的偏好，还有一些我还没听过的推荐。</p>
+      <p class="lede en-only">I’ve saved 286 songs in my NetEase Cloud Music playlist “匡子闲喜欢的音乐”. Most are Mandopop, with folk, Japanese and Western pop too. Below is the taste these saves show, plus some songs I haven’t heard yet.</p>
       <div class="music-heroes" aria-label="代表封面">
         <a class="music-hero" href="https://music.163.com/#/song?id=65766" target="_blank" rel="noopener noreferrer">
           <img src="images/music/fuji.jpg" alt="富士山下 — 陈奕迅 封面" width="160" height="160" loading="lazy">
@@ -1257,19 +1261,17 @@
       </div>
       <article class="card music-summary">
         <h3><span class="zh">先把喜欢留下来</span><span class="en-only">A map of saved songs</span></h3>
-        <p class="zh">依据286首收藏，不是播放次数。华语流行为主，民谣、日语与欧美流行并存。</p>
-        <p class="en-only">Based on 286 saved songs, not play counts. Mandopop is the main line, with folk, Japanese, and Western pop also present.</p>
+        <p class="zh">华语流行为主，民谣、日语与欧美流行也都有。</p>
+        <p class="en-only">Mostly Mandopop, with folk, Japanese and Western pop as well.</p>
         <ul class="music-stats">
           <li><strong>286</strong><span class="zh">首收藏</span><span class="en-only">saved tracks</span></li>
           <li><strong>243</strong><span class="zh">位艺人（按参与计）</span><span class="en-only">artists (participations)</span></li>
-          <li><strong>12</strong><span class="zh">首已核实推荐</span><span class="en-only">verified recommendations</span></li>
+          <li><strong>12</strong><span class="zh">首推荐</span><span class="en-only">recommendations</span></li>
         </ul>
         <h4><span class="zh">出现最多的艺人</span><span class="en-only">Artists who appear most often</span></h4>
         <ul class="music-artists"><li><span class="music-artist-name">陈粒</span><span class="music-artist-n">7</span></li><li><span class="music-artist-name">G.E.M.邓紫棋</span><span class="music-artist-n">7</span></li><li><span class="music-artist-name">陈奕迅</span><span class="music-artist-n">6</span></li><li><span class="music-artist-name">王力宏</span><span class="music-artist-n">6</span></li><li><span class="music-artist-name">莫文蔚</span><span class="music-artist-n">5</span></li><li><span class="music-artist-name">李荣浩</span><span class="music-artist-n">5</span></li><li><span class="music-artist-name">孙燕姿</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">周杰伦</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">张宇</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">杨宗纬</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">米津玄師</span><span class="music-artist-n">4</span></li><li><span class="music-artist-name">毛不易</span><span class="music-artist-n">4</span></li></ul>
-        <p class="tiny zh">次数含合作与不同发行，不是播放次数，也不能直接当流派比例。专辑上收藏较多的有：毛不易《平凡的一天》4 首、陈粒《如也》3 首、莫文蔚《就 i Karen 莫文蔚精选》2 首。</p>
-        <p class="tiny en-only">Counts include collaborations and different releases, not play counts, and are not genre shares. Albums with more saves: 毛不易 “平凡的一天” ×4; 陈粒 “如也” ×3; 莫文蔚 “就 i Karen 莫文蔚精选” ×2.</p>
-        <ul class="tiny music-limits zh"><li>艺人次数按演唱参与计，合作曲会叠加，不能当作流派占比。</li><li>同一首歌的不同发行只增加覆盖，不重复计为独立偏好。</li><li>没有播放次数、听歌年份或音频特征值。</li></ul>
-        <ul class="tiny music-limits en-only"><li>Artist counts include collaborations and are not additive genre shares.</li><li>Different releases of the same song add coverage, not extra preference votes.</li><li>No play counts, listening years, or audio features are inferred.</li></ul>
+        <p class="tiny zh">专辑里收得比较多的有：毛不易《平凡的一天》4 首、陈粒《如也》3 首、莫文蔚《就 i Karen 莫文蔚精选》2 首。</p>
+        <p class="tiny en-only">Albums I’ve saved the most from: 毛不易 “平凡的一天” ×4; 陈粒 “如也” ×3; 莫文蔚 “就 i Karen 莫文蔚精选” ×2.</p>
         <p class="tiny zh">歌单：<a href="https://music.163.com/#/playlist?id=114831730" target="_blank" rel="noopener noreferrer">网易云「匡子闲喜欢的音乐」</a></p>
         <p class="tiny en-only">Playlist: <a href="https://music.163.com/#/playlist?id=114831730" target="_blank" rel="noopener noreferrer">NetEase “匡子闲喜欢的音乐”</a></p>
       </article>
@@ -1343,8 +1345,8 @@
         <h3>风格时间线</h3>
         <span class="en">Timeline</span>
       </div>
-      <p class="tiny music-tl-note zh">九段按确认的旧→新方向排列。因为按默认顺序第1首是最新的，时间线从第286首读到第1首。编号是歌单位置，不是年份。</p>
-      <p class="tiny music-tl-note en-only">Nine stretches run from earlier saves to newer ones. Because #1 is treated as newest, the timeline reads from #286 to #1. Numbers are playlist positions, not years.</p>
+      <p class="tiny music-tl-note zh">从最早的收藏到最近的收藏，分成九段。编号是歌在歌单里的位置，不是年份。</p>
+      <p class="tiny music-tl-note en-only">Nine stretches, from my earliest saves to the latest. Numbers are playlist positions, not years.</p>
       <ol class="music-timeline">
         <li class="card music-stage">
           <p class="music-stage-tag"><span class="zh">经典华语</span><span class="en-only">Classic Mandopop</span> <span class="music-range">#286–#256</span></p>
@@ -1459,8 +1461,8 @@
         <h3>推荐</h3>
         <span class="en">Recommendations</span>
       </div>
-      <p class="tiny zh">12 首都不在这张歌单里，曲目和封面都已核对过来源。喜欢与否要听过才知道。</p>
-      <p class="tiny en-only">None of these 12 tracks were found in the playlist. Titles, artists and covers were verified against official sources. Whether they fit still depends on a listen.</p>
+      <p class="tiny zh">这 12 首还不在我的歌单里，是照着已经收藏的歌挑的。合不合口味，听过才知道。</p>
+      <p class="tiny en-only">These 12 songs aren’t in my playlist yet; they were picked to match what I’ve already saved. I’ll only know if they fit after a listen.</p>
       <div class="music-recs">
         <section class="music-tier">
           <h4><span class="zh">大概率合口味</span><span class="en-only">Very likely</span></h4>
@@ -1473,9 +1475,9 @@
                 <h3>最佳损友</h3>
                 <p class="music-rec-artist">陈奕迅 · Life Continues…</p>
                 <p class="zh">歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。</p>
-                <p class="en-only">歌单已收《富士山下》《十年》《红玫瑰》。这首同是陈奕迅粤语代表作，旋律与情感浓度接近，待听后确认。</p>
+                <p class="en-only">Already saved: “富士山下”, “十年” and “红玫瑰”. This is another of Eason Chan’s signature Cantonese songs, close in melody and emotional weight. Still to be confirmed by listening.</p>
                 <p class="tiny zh">可能的差别：粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。</p>
-                <p class="tiny en-only">What may not fit: 粤语咬字和黄伟文词作更密，若更吃国语抒情可能会觉得密。</p>
+                <p class="tiny en-only">What may not fit: the Cantonese diction and Wyman Wong’s lyrics are denser; if Mandarin ballads are more my thing, it may feel heavy.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1486,9 +1488,9 @@
                 <h3>桥豆麻袋</h3>
                 <p class="music-rec-artist">陈粒 · 小梦大半</p>
                 <p class="zh">已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。</p>
-                <p class="en-only">已收《如也》的《走马》《易燃易爆炸》和《小梦大半》的《小半》《虚拟》。此曲同属《小梦大半》，可补同一张专辑。</p>
+                <p class="en-only">Already saved: “走马” and “易燃易爆炸” from 如也, and “小半” and “虚拟” from 小梦大半. This track is also from 小梦大半 and rounds out the same album.</p>
                 <p class="tiny zh">可能的差别：口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。</p>
-                <p class="tiny en-only">What may not fit: 口气更俏皮、更短，如果只喜欢《走马》那种缓慢叙事，可能会觉得跳。</p>
+                <p class="tiny en-only">What may not fit: it is more playful and shorter; next to the slow storytelling of “走马” it may feel jumpy.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1499,9 +1501,9 @@
                 <h3>平凡的一天</h3>
                 <p class="music-rec-artist">毛不易 · 平凡的一天</p>
                 <p class="zh">已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。</p>
-                <p class="en-only">已收同专辑《消愁》《借》《一荤一素》《像我这样的人》，但标题曲尚未出现。用来补完这张专辑的主轴。</p>
+                <p class="en-only">Already saved from the same album: “消愁”, “借”, “一荤一素” and “像我这样的人”, but not the title track. This one completes the core of that album.</p>
                 <p class="tiny zh">可能的差别：标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。</p>
-                <p class="tiny en-only">What may not fit: 标题曲更沉、更慢，如果更吃《消愁》的合唱钩子，未必同样喜欢。</p>
+                <p class="tiny en-only">What may not fit: the title track is heavier and slower; if the sing-along hook of “消愁” is the draw, it may not land the same way.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1512,9 +1514,9 @@
                 <h3>来自天堂的魔鬼</h3>
                 <p class="music-rec-artist">G.E.M.邓紫棋 · 新的心跳</p>
                 <p class="zh">已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。</p>
-                <p class="en-only">已收《泡沫》《喜欢你》《光年之外》《再见》。此曲同属强声线的流行编曲，用来试她偏暗、偏力度的一面。</p>
+                <p class="en-only">Already saved: “泡沫”, “喜欢你”, “光年之外” and “再见”. This track shares the big-voice pop arrangement and shows her darker, more forceful side.</p>
                 <p class="tiny zh">可能的差别：比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。</p>
-                <p class="tiny en-only">What may not fit: 比《泡沫》更锐、更电子，若只喜欢她早期抒情，可能会觉得硬。</p>
+                <p class="tiny en-only">What may not fit: sharper and more electronic than “泡沫”; next to her early ballads it may feel hard-edged.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1525,9 +1527,9 @@
                 <h3>模特</h3>
                 <p class="music-rec-artist">李荣浩 · 模特</p>
                 <p class="zh">已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。</p>
-                <p class="en-only">已收《老街》《不将就》《麻雀》，以及两个发行的《年少有为》。这首是他同名专辑标题曲，声线和节奏都接近。</p>
+                <p class="en-only">Already saved: “老街”, “不将就”, “麻雀” and two releases of “年少有为”. This is the title track of his self-titled album, close in voice and rhythm.</p>
                 <p class="tiny zh">可能的差别：口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。</p>
-                <p class="tiny en-only">What may not fit: 口吻更俏皮，鼓点更跳，如果只喜欢他慢的叙事歌，不一定合。</p>
+                <p class="tiny en-only">What may not fit: the tone is more playful and the drums bouncier; it may not suit a preference for his slow story songs.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1538,9 +1540,9 @@
                 <h3>绿光</h3>
                 <p class="music-rec-artist">孙燕姿 · 风筝</p>
                 <p class="zh">已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。</p>
-                <p class="en-only">已收《我怀念的》《遇见》《天黑黑》。这首是她早期快歌代表，用来看你是否也收她明快的一面。</p>
+                <p class="en-only">Already saved: “我怀念的”, “遇见” and “天黑黑”. This is one of her signature early up-tempo songs, a test of whether her brighter side fits too.</p>
                 <p class="tiny zh">可能的差别：节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。</p>
-                <p class="tiny en-only">What may not fit: 节奏更快、更亮，和《我怀念的》的缓慢抒情差别明显。</p>
+                <p class="tiny en-only">What may not fit: faster and brighter, clearly different from the slow ballad feel of “我怀念的”.</p>
               </div>
             </article>
           </div>
@@ -1556,9 +1558,9 @@
                 <h3>安和桥</h3>
                 <p class="music-rec-artist">宋冬野 · 安和桥北</p>
                 <p class="zh">《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。</p>
-                <p class="en-only">《董小姐》已收《安和桥北》和摩登天空7两个发行。此曲是同一张专辑的另一首代表作，待听后确认是否同路。</p>
+                <p class="en-only">“董小姐” is already saved in two releases (安和桥北 and Modern Sky 7). This is another signature track from the same album; still to be confirmed by listening.</p>
                 <p class="tiny zh">可能的差别：更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。</p>
-                <p class="tiny en-only">What may not fit: 更沉、更冷，如果只喜欢《董小姐》的叙事亲切感，不一定停留。</p>
+                <p class="tiny en-only">What may not fit: heavier and colder; without the warm storytelling of “董小姐” it may not stick.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1569,9 +1571,9 @@
                 <h3>青花瓷</h3>
                 <p class="music-rec-artist">周杰伦 · 我很忙</p>
                 <p class="zh">已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。</p>
-                <p class="en-only">已收《刀马旦》《红尘客栈》《时光机》《不能说的秘密》，但《我很忙》里的中国风代表作尚未出现。</p>
+                <p class="en-only">Already saved: “刀马旦”, “红尘客栈”, “时光机” and “不能说的秘密”, but not the signature Chinese-style song from 我很忙.</p>
                 <p class="tiny zh">可能的差别：古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。</p>
-                <p class="tiny en-only">What may not fit: 古典意象和细描比《晴天》或《不能说的秘密》更满，不一定人人都吃。</p>
+                <p class="tiny en-only">What may not fit: the classical imagery and detail are denser than in “晴天” or “不能说的秘密”; not for everyone.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1582,9 +1584,9 @@
                 <h3>夜に駆ける</h3>
                 <p class="music-rec-artist">YOASOBI · 夜に駆ける</p>
                 <p class="zh">已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。</p>
-                <p class="en-only">已收 YOASOBI《群青》，以及米津玄師《Lemon》《打上花火》。此曲是同路的日语流行代表，用来验证这条支线。</p>
+                <p class="en-only">Already saved: YOASOBI’s “群青”, plus Kenshi Yonezu’s “Lemon” and “打上花火”. This is a signature song from the same J-pop line, a test of that side branch.</p>
                 <p class="tiny zh">可能的差别：叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。</p>
-                <p class="tiny en-only">What may not fit: 叙事更急、电子编曲更满，若只喜欢《群青》的合唱感，未必同样停留。</p>
+                <p class="tiny en-only">What may not fit: the storytelling is more urgent and the electronic arrangement fuller; if the choral feel of “群青” is the draw, it may not stick the same way.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1595,9 +1597,9 @@
                 <h3>Skyfall</h3>
                 <p class="music-rec-artist">Adele · Skyfall - Single</p>
                 <p class="zh">歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。</p>
-                <p class="en-only">歌单里已有《See You Again》《City Of Stars》《Love Me Like You Do》等电影歌。这首是同类的主题曲，声线更厚。</p>
+                <p class="en-only">The playlist already has film songs such as “See You Again”, “City Of Stars” and “Love Me Like You Do”. This is a theme song of the same kind, with a fuller voice.</p>
                 <p class="tiny zh">可能的差别：比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。</p>
-                <p class="tiny en-only">What may not fit: 比歌单里多数欧美流行更长、更戏剧，不是轻快的电台单曲。</p>
+                <p class="tiny en-only">What may not fit: longer and more theatrical than most of the Western pop on the playlist; not a breezy radio single.</p>
               </div>
             </article>
           </div>
@@ -1613,9 +1615,9 @@
                 <h3>杀死那个石家庄人</h3>
                 <p class="music-rec-artist">万能青年旅店 · 万能青年旅店 同名专辑</p>
                 <p class="zh">已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。</p>
-                <p class="en-only">已收草东没有派对《山海》，也有许巍、朴树、Beyond。此曲把城市叙事推到更冷、更乐队化的方向，用来试边界。</p>
+                <p class="en-only">Already saved: No Party For Cao Dong’s “山海”, plus Xu Wei, Pu Shu and Beyond. This track pushes city storytelling toward a colder, more band-driven sound, a test of the edges.</p>
                 <p class="tiny zh">可能的差别：编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。</p>
-                <p class="tiny en-only">What may not fit: 编曲更瘦、词更密，和华语流行主轴距离明显，可能听不惯。</p>
+                <p class="tiny en-only">What may not fit: a sparser arrangement and denser lyrics, clearly far from the Mandopop core; it may take getting used to.</p>
               </div>
             </article>
             <article class="card music-rec">
@@ -1626,16 +1628,16 @@
                 <h3>前前前世 (movie ver.)</h3>
                 <p class="music-rec-artist">RADWIMPS · 君の名は。</p>
                 <p class="zh">已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。</p>
-                <p class="en-only">已收 YOASOBI 与米津的日语流行和动画相关曲。此曲来自电影《你的名字》，用来试日语电影主题曲是否也成立。</p>
+                <p class="en-only">Already saved: J-pop and anime-related songs by YOASOBI and Kenshi Yonezu. This track is from the film Your Name, a test of whether Japanese film themes fit too.</p>
                 <p class="tiny zh">可能的差别：电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。</p>
-                <p class="tiny en-only">What may not fit: 电影主题曲的铺陈更长，现场感与流行单曲不同，未必单独收藏。</p>
+                <p class="tiny en-only">What may not fit: a film theme builds up longer and feels different from a pop single; it may not get saved on its own.</p>
               </div>
             </article>
           </div>
         </section>
       </div>
       <p class="music-report-actions">
-        <a class="play-btn" href="/music/report"> <span class="zh">完整报告</span><span class="en-only">Full report</span></a>
+        <a class="play-btn" href="/music/report" hreflang="zh-CN"> <span class="zh">完整报告</span><span class="en-only">Full report (in Chinese)</span></a>
       </p>
       <p class="music-powered">
         <a class="music-powered-link" href="https://github.com/ryohgicc/musicanalysis" target="_blank" rel="noopener noreferrer">
@@ -1650,8 +1652,8 @@
         <h2>桌游</h2>
         <span class="en">Board games</span>
       </div>
-      <p class="lede zh" id="qzBoardgamesIntroZh">玩过、也爱玩的桌游。后面想起再补。下面只写公开的人数和类型，没有个人评分或对局次数。</p>
-      <p class="lede en-only" id="qzBoardgamesIntroEn">Board games he has played and enjoys. More will be added later. Each entry lists only public player counts and genre, not personal ratings or play counts.</p>
+      <p class="lede zh" id="qzBoardgamesIntroZh">我玩过、也爱玩的桌游，想起来再补。</p>
+      <p class="lede en-only" id="qzBoardgamesIntroEn">Board games I’ve played and enjoy. I’ll add more as I remember them.</p>
       <div class="bgames-grid" id="qzBoardgamesList">
         <article class="card bgame-card" data-game="werewolf">
           <span class="bgame-icon" data-game="werewolf" aria-hidden="true">🐺</span>
@@ -1730,8 +1732,8 @@
         <h2>推荐网站</h2>
         <span class="en">Recommended sites</span>
       </div>
-      <p class="lede zh" id="qzSitesIntroZh">推荐看看的网站。标了「自己做的」的是匡子闲自己的项目。后面想到再补。介绍只摘自站点自己的公开信息，没有编造。</p>
-      <p class="lede en-only" id="qzSitesIntroEn">Sites he recommends. Cards marked “Made by me” are his own projects. More will be added later. Descriptions are taken from the sites themselves and are not invented.</p>
+      <p class="lede zh" id="qzSitesIntroZh">我推荐的网站。标着「自己做的」的是我自己的项目，想到再补。</p>
+      <p class="lede en-only" id="qzSitesIntroEn">Sites I recommend. Cards marked “Made by me” are my own projects. I’ll add more over time.</p>
       <div class="sites-grid" id="qzSitesList">
         <a class="card site-card" href="https://sinyu1012.cn/" target="_blank" rel="noopener noreferrer">
           <span class="site-icon-wrap">
@@ -1841,40 +1843,22 @@
         <h2>项目</h2>
         <span class="en">Projects</span>
       </div>
-      <p class="lede zh">GitHub 上确认是原创（非 fork）的公开仓库。没有简介的仓库只放名字，不编造说明。</p>
-      <p class="lede en-only">Public GitHub repositories confirmed as originals (not forks). Repositories without a description are listed by name only.</p>
-      <div class="project-grid">
-        <a class="card project" href="https://github.com/kuangzixian/easy-life" rel="noopener noreferrer">
-          <span class="lang-pill">JavaScript</span>
-          <h3>EasyLife</h3>
-          <p>EasyLife：基于 HowToLiveBetter 的微信小程序，支持顺序阅读、带出处的本地问句检索和随机建议卡片。</p>
-        </a>
-        <a class="card project" href="https://github.com/kuangzixian/Strawberrrrrrry" rel="noopener noreferrer">
-          <span class="lang-pill">TypeScript</span>
-          <h3>Strawberrrrrrry</h3>
-          <p class="zh">本地优先的项目管理系统，支持 AI 智能问答、MCP 集成和多渠道通知。</p>
-          <p class="en-only">A local-first project manager with AI Q&amp;A, MCP integration, and multi-channel notifications.</p>
-        </a>
-        <a class="card project" href="https://github.com/kuangzixian/easy-offer" rel="noopener noreferrer">
-          <span class="lang-pill">TypeScript</span>
-          <h3>EasyOffer</h3>
-          <p class="zh">公开仓库，暂无简介。</p>
-          <p class="en-only">Public repository; no description published.</p>
-        </a>
-      </div>
+      <p class="lede zh">我在 GitHub 上公开的项目，每个做什么都写在卡片上。</p>
+      <p class="lede en-only">Projects I’ve published on GitHub, with what each one does.</p>
+      <div class="project-grid" id="profileProjects"></div>
     </section>
 
     <section id="social">
       <div class="section-head">
         <h2>社交链接</h2>
         <span class="en">Social</span></div>
-      <p class="lede zh">只放已经核对过、显示名精确匹配「匡子闲」的主页。</p>
-      <p class="lede en-only">Only profiles verified with the exact display name 匡子闲 are linked.</p>
+      <p class="lede zh">你可以在这些地方找到我。</p>
+      <p class="lede en-only">You can find me here.</p>
       <div class="social-grid">
         <a class="card social" href="https://github.com/kuangzixian" rel="noopener noreferrer">
           <div class="platform">GITHUB</div>
           <h3>kuangzixian</h3>
-          <p>显示名 匡子闲 · 公司字段 IFTech</p>
+          <p>IFTech</p>
           <div class="counts">7 关注者 · 17 个公开仓库 · 2017 年加入</div>
         </a>
         <a class="card social" href="https://m.okjike.com/users/7200D7D3-3A5A-47E7-B206-FC4033D97E0F" rel="noopener noreferrer">
@@ -1936,9 +1920,19 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p class="zh">匡子闲 · 本页资料均来自 2026-11-14（Asia/Shanghai）检索到的公开信息，未收录未核实的账号。</p>
-      <p class="en-only">匡子闲 · Facts on this page come from public sources retrieved on 14 Nov 2026 (Asia/Shanghai). Unverified accounts are omitted.</p>
-      <p><a href="data/profile.json">profile.json</a> · <a href="data/reading.json">reading.json</a> · <a href="data/chats.json">chats.json</a> · <a href="data/sites.json">sites.json</a> · <a href="data/music.json">music.json</a> · <a href="data/boardgames.json">boardgames.json</a></p>
+      <p class="zh">匡子闲 · 2026 年 11 月更新</p>
+      <p class="en-only">匡子闲 · Updated Nov 2026</p>
+      <details class="data-sources">
+        <summary><span class="zh">数据来源</span><span class="en-only">Data sources</span></summary>
+        <ul class="tiny">
+          <li class="zh">社交主页和即刻动态整理自公开页面，时间是 2026-11-14（Asia/Shanghai）。即刻动态没有单独链接和准确日期，只标摘录月份。</li><li class="en-only">Social profiles and Jike posts were collected from public pages on 14 Nov 2026 (Asia/Shanghai). Jike posts have no individual links or exact dates, so only the month they were excerpted is shown.</li>
+          <li class="zh">社交链接只放显示名为「匡子闲」的主页。知乎有 71 条回答、1,301 个赞同，回答列表需要登录才能读取，所以没有逐条列出。</li><li class="en-only">Social links only include profiles with the display name 匡子闲. Zhihu shows 71 answers and 1,301 upvotes; the answer list needs a login to read, so individual answers aren’t listed.</li>
+          <li class="zh">读书数据来自微信读书（2026-11-14）。统计数字是官方汇总口径，可能包含公开书架以外的记录；书单、封面、划线和想法只取公开书架，已排除 9 本私密书和「文章收藏」。</li><li class="en-only">Reading data comes from WeChat Reading (14 Nov 2026). Totals are official account-wide figures and may include records not on the public shelf; titles, covers, highlights and notes come from the public shelf only, with 9 private books and the “Articles” entry left out.</li>
+          <li class="zh">音乐分析基于网易云歌单「匡子闲喜欢的音乐」的 286 首收藏（导出于 2026-11-17 15:48，Asia/Shanghai），不是播放次数。按「我喜欢的音乐」默认顺序，把第 1 首视为最新收藏。艺人次数按演唱参与计，合作曲会叠加，同一首歌的不同发行不重复计为偏好，不能当作流派占比。12 首推荐的曲目和封面都对照过官方来源。</li><li class="en-only">The music analysis uses 286 saved songs from the NetEase playlist “匡子闲喜欢的音乐” (exported 17 Nov 2026 15:48, Asia/Shanghai), not play counts. Following the default Liked Songs order, #1 is taken as the newest save. Artist counts include collaborations, extra releases of the same song are not counted as extra preference, and the counts are not genre shares. Titles and covers of the 12 recommendations were checked against official sources.</li>
+          <li class="zh">桌游只写公开的人数和类型；推荐网站的介绍摘自各站点自己的公开信息。</li><li class="en-only">Board game entries list only public player counts and genres; site descriptions are taken from each site’s own public pages.</li>
+        </ul>
+      </details>
+      <p><a href="data/profile.json">profile.json</a> · <a href="data/projects.json">projects.json</a> · <a href="data/reading.json">reading.json</a> · <a href="data/chats.json">chats.json</a> · <a href="data/sites.json">sites.json</a> · <a href="data/music.json">music.json</a> · <a href="data/boardgames.json">boardgames.json</a></p>
       <p><a href="/llms.txt">For AI agents: llms.txt</a></p>
     </div>
   </footer>
@@ -1946,8 +1940,8 @@
   <div class="egg" id="egg" role="dialog" aria-modal="true" aria-labelledby="eggTitle" hidden>
     <div class="card egg-card">
       <h2 id="eggTitle"><span class="zh">你发现了彩蛋</span><span class="en-only">You found the easter egg</span></h2>
-      <p class="zh">匡子闲从 2015-10-10 起在微信读书留下记录，已经有效阅读 2,001 天，累计 1,267 小时，偏好夜晚、也偏好文学。他自己说过：多喝咖啡！</p>
-      <p class="en-only">匡子闲 has been on WeChat Reading since 10 Oct 2015: 2,001 days with reading, 1,267 hours in all, usually at night, often in literature. In his own words: 多喝咖啡！</p>
+      <p class="zh">我从 2015-10-10 起在微信读书留下记录，已经有效阅读 2,001 天，累计 1,267 小时，多在夜里读，最常读文学。还有一句：多喝咖啡！</p>
+      <p class="en-only">I’ve been on WeChat Reading since 10 Oct 2015: 2,001 days with reading, 1,267 hours in all, mostly at night and mostly literature. One more thing: drink more coffee!</p>
       <p class="motto-line zh">我是匡子闲，一名后端开发工程师。之前做了三年游戏，现在在即刻做后端开发。业余做了 EasyOffer，帮工程师把 GitHub 上做过的项目写进简历。另一个作品是 EasyLife，输入日常问题，就能找到相关建议和出处。</p>
       <p class="motto-line en-only">I'm 匡子闲 (kuangzixian), a backend engineer. I spent three years working on games, and I now do backend development at Jike (即刻). In my spare time I built EasyOffer to help engineers turn their GitHub work into a résumé, and EasyLife so readers can look up everyday questions and trace the advice back to its source.</p>
       <button class="play-btn" type="button" id="eggClose"><span class="zh">收起来</span><span class="en-only">Close</span></button>
