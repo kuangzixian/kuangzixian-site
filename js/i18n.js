@@ -307,7 +307,22 @@
     a.setAttribute("href", localizePath(loc.pathname, code, loc.search, loc.hash));
     if (code === locale) a.setAttribute("aria-current", "true");
     else a.removeAttribute("aria-current");
-    a.addEventListener("click", function () { setSavedLang(code); setLangCookie(code); });
+    a.addEventListener("click", function () {
+      // Recompute from the live URL so the current tab (#music etc.) is kept.
+      var cur = global.location;
+      if (cur) a.setAttribute("href", localizePath(cur.pathname, code, cur.search, cur.hash));
+      setSavedLang(code);
+      setLangCookie(code);
+    });
+  }
+
+  function refreshLangLinks() {
+    var cur = global.location;
+    if (!cur) return;
+    document.querySelectorAll("[data-lang-switcher] [data-lang], [data-lang-list] [data-lang]").forEach(function (a) {
+      var code = a.getAttribute("data-lang");
+      if (LOCALES[code]) a.setAttribute("href", localizePath(cur.pathname, code, cur.search, cur.hash));
+    });
   }
 
   function initSwitcher() {
@@ -357,6 +372,9 @@
     document.querySelectorAll("[data-lang-list] [data-lang]").forEach(function (a) {
       bindLangLink(a, loc);
     });
+    global.addEventListener("hashchange", refreshLangLinks);
+    global.addEventListener("popstate", refreshLangLinks);
+    global.addEventListener("qzone:tabchange", function () { setTimeout(refreshLangLinks, 0); });
     document.addEventListener("click", function () { closeMenus(); });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenus();
@@ -377,6 +395,7 @@
     maybeRedirect: maybeRedirect,
     setSavedLang: setSavedLang,
     setLangCookie: setLangCookie,
-    initSwitcher: initSwitcher
+    initSwitcher: initSwitcher,
+    refreshLangLinks: refreshLangLinks
   };
 })(window);
